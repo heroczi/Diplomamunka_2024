@@ -1,0 +1,15 @@
+\select@language {magyar} \contentsline {section}{\numberline {1}Bevezetés}{2}{section.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.1}Az automata fegyverrendszerekről}{2}{subsection.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2}Irodalomkutatás}{3}{subsection.1.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {1.2.1}Valós rendszerek}{3}{subsubsection.1.2.1}%
+\select@language {magyar} \contentsline {paragraph}{CROWS \cite {crows}}{3}{section*.2}%
+\select@language {magyar} \contentsline {paragraph}{Arbalet-DM \cite {arbalet}}{4}{section*.3}%
+\select@language {magyar} \contentsline {paragraph}{DeFNder \cite {arbalet}}{5}{section*.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {1.2.2}Tüzelési mechanizmus}{6}{subsubsection.1.2.2}%
+\select@language {magyar} \contentsline {paragraph}{Paintball}{6}{section*.5}%
+\select@language {magyar} \contentsline {paragraph}{Nerf}{7}{section*.6}%
+\select@language {magyar} \contentsline {paragraph}{Airsoft}{7}{section*.7}%
+\select@language {magyar} \contentsline {section}{\numberline {2}Megvalósítás}{7}{section.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1}Hardver}{7}{subsection.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {2.1.1}Mikrovezérlő}{7}{subsubsection.2.1.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {2.1.2}Elsütő mechanizmus}{8}{subsubsection.2.1.2}%
