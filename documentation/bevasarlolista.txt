@@ -1,0 +1,10 @@
+Raspberry PI: 		bármilyen jó ami a tanszéken van
+Raspberry PI kamera: 	bármilyen jó ami a tanszéken van
+
+NEMA-17 x 2: 		https://www.hestore.hu/prod_10036719.html
+A4988-MR x 2:		https://www.hestore.hu/prod_10042911.html
+HEA-995 x2: 		https://www.hestore.hu/prod_10035834.html
+
+jumper kábel: 		https://www.hestore.hu/prod_10035720.html
+
+végálláskapcsoló: 	https://www.hestore.hu/prod_10041709.html
