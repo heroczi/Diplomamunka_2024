@@ -13,6 +13,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \usepackage{anyfontsize,lettrine}
+\usepackage{pdfpages}
 
 %-------------------Settings-------------------%
 \graphicspath{{./images/}}
@@ -36,7 +37,12 @@
 \definecolor{BMEbordo}{HTML}{862633}
 
 
+\newcommand{\w}[1]{\; \mathrm{#1}}
+\newcommand{\q}[1]{\; \left[\mathrm{#1}\right]}
+
 \begin{document}
+
+\includepdf[pages=-]{feladatkiiras.pdf}
 
 \begin{titlepage}
 	\begin{adjustwidth}{-2.5cm}{-2.5cm}
@@ -75,6 +81,24 @@
 \tableofcontents
 
 \pagebreak
+
+\section*{Hallgatói nyilatkozat}
+
+Alulírott Herőczi Sándor, szigorló hallgató kijelentem, hogy ezt a diplomatervet meg nem engedett segítség nélkül, saját magam készítettem, csak a megadott forrásokat (szakirodalom, eszközök stb.) használtam fel. Minden olyan részt, melyet szó szerint, vagy azonos értelemben, de átfogalmazva más forrásból átvettem, egyértelműen, a forrás megadásával megjelöltem.\\
+
+Hozzájárulok, hogy a jelen munkám alapadatait (szerző(k), cím, angol és magyar nyelvű tartalmi kivonat, készítés éve, konzulens(ek) neve) a BME VIK nyilvánosan hozzáférhető elektronikus formában, a munka teljes szövegét pedig az egyetem belső hálózatán keresztül (vagy hitelesített felhasználók számára) közzétegye. Kijelentem, hogy a benyújtott munka és annak elektronikus verziója megegyezik. Dékáni engedéllyel titkosított diplomatervek esetén a dolgozat szövege csak 3 év eltelte után válik hozzáférhetővé.\\
+
+Kelt: \LOCATION, 2024.06.02.\\
+
+\hfill
+\begin{tabular}{c}
+	........................................... \\
+	Herőczi Sándor \\
+\end{tabular}
+
+\pagebreak
+
+
 \section{Bevezetés}
 
 \subsection{Az automata fegyverrendszerekről}
@@ -93,11 +117,29 @@ A következő lépés az automatizálás. Hiszen egyre erősebb hardverekkel ren
 
 A technológiát érthető módon leggyakrabban védelmi célokra használják, sokszor légvédelemre. A gyakorlatban nagy szerepe van Dél-Korea és Izrael védelmében, ahol a rakétatámadások mindennapos veszélyt jelentenek. Offenzív célokra a gyakorlatban még csak rakéták célzására használnak automatikát, a "terminátor" jellegű gyilkos robotok még csak fejlesztési fázisban vannak.
 
+\subsection{Követelmények}\label{sec:kov}
+
+A követelményeket egyrészt a később említett irodalomkutatás, másrészt pedig a saját ötleteim és a konzulensemmel való egyeztetés alapján alakítottam ki. Az "autonóm fegyverrendszer" alatt én egy olyan eszközt értek, ami egy pontban elhelyezve képes a környezetében felismerni a betanított célpontot, és arra tüzelni. Erre jó fikciós példa a \textsl{Portal} című játékban található \textsl{Sentry turret}, amely a \ref{portalsentry}. ábrán látható. Természetesen a konstrukciós tervezéshez nem ezt vettem alapul, de a működési elvhez adhat jó ötleteket akkor is, ha csak fikció. \\
+
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{portalsentry}
+	\caption{Sentry Turret}
+	\label{portalsentry}
+\end{wrapfigure}
+
+Szeretném a rendszert úgy megvalósítani, hogy a célfelismerés és tüzelést lehessen vezérelni "kézi vezérléssel", ahogy a valós katonai rendszerek többsége működik, illetve egy teljesen automatikus gépi látás algoritmussal. Automata működés során is talán az lenne a legéletszerűbb, hogy a célpont megtalálása és becélzása lenne automatikus, a tüzelés pedig emberi engedélyezést igényel, ezzel egy fokkal morálisabbá téve a projektet.\\
+
+A hatásos távolságot én 10m-ben határoztam meg. Ezen a távolságon fel kell ismernie és el kell találnia egy 30x30 cm-es célpontot. Ezentúl szeretném, ha le tudná követni a 10 km/h-val futó ember mozgását. Ezek a határértékek a konstrukció tervezésénél fontos szempontok lesznek, tehát a későbbi fejezetekben számolok velük.\\
+
+
+\pagebreak
+
 
 \subsection{Irodalomkutatás}
 A legjelentősebb katonai hatalmak mindegyike rendelkezik távvezérelt fegyverrendszerekkel, leggyakrabban valamilyen távolról irányított gépfegyver formájában. Azonban se az egyes országok nemzetbiztonságának, se a fegyveripari partnercégeknek nem áll érdekében a szükségesnél több információt kiadni. Ez egy kicsit megnehezítette az irodalomkutatást, de a képek alapján azért sok információt ki lehet nyerni.
 
-\subsubsection{Valós rendszerek}
+\subsubsection{Valós rendszerek} \label{sec:valos}
 
 \paragraph{CROWS \cite{crows}}
 Az egyik legnagyobb darabszámban gyártott távirányított fegyverrendszer az amerikai \textsl{CROWS} rendszer, amely a NATO-országokban, köztük Magyarországon is rendszeresített. Ennek értelmében telepíthető sok NATO által használt páncélozott járműre, köztük a Humvee-ra, a Stryker-re, és a Buffalo MRAP-re. Több verziója létezik több kaliberrel, a \ref{fig:irod_crows}. ábrán egy M240B géppuskával látható.\\
@@ -168,36 +210,63 @@ Az airsoft fegyverek hasonló módon működnek, mint a Nerf puskák, de egy kis
 
 Az airsoft fegyverek legnagyobb előnye a többi lehetőséggel szemben, hogy van egy kompakt egység, a "gearbox", ami felelős az elsütésért. Ezt ki lehet szedni egy fegyverből, vagy akár külön is meg lehet venni. Ez okkal nagyobb szabadságot ad a beépítéshez, és a végeredmény is sokkal kompaktabb lesz. Az elsütés is csak az áramkör zárását jelenti a gearboxban, ami egyszerűen vezérelhető a mikrokontrollerrel.
 
-%\subsection{Levont következtetések}
-%
-%A valós megvalósítások alapján egész jól körvonalazódott, milyen eszközt szeretnék tervezni. A követelményeket az alábbi felsorolásban gyűjtöttem össze:
-%
-%
-%
-%\begin{table}[h!]
-%	\centering
-%	\begin{tabular}{ll}
-%		Kivitelezés       & 2 tengely, a szerelék 2 keret között a nagyobb stabilitásért        \\ \hline
-%		Mozgástartomány   & Vízszintes tengelyen $-20^{\circ}$-tól $+70^{\circ}$-ig  \\
-%						  & Függőleges tengelyen $360^\circ$-ban \\
-%		Hatékony távolság & 10 m                                                               \\
-%		Pontosság         & 30 cm x 30 xm-es célpont                                            \\
-%		Vezérlés          & Kézi vezérlés és automata                                          
-%	\end{tabular}
-%	\caption{Követelményjegyzék}
-%	\label{tab:kovetelmenyek}
-%\end{table}
-%
-%
-%
-%
-%
-%
-%
-% Egy platformra szerelhető torony, amely 2 tengelyen tud mozogni. A "puska" részét két oldat megtámasztva nagy stabilitás érhető el. A vertikális tengelyen $360^\circ$ tudjon elfordulni, a horizontális tengelyen pedig minimum $-20^{\circ}$-tól $+70^{\circ}$. Pontosságra én önkényesen azt szeretném 
+
 
 \section{Megvalósítás}
-\subsection{Hardver}
+
+A \ref{sec:valos}. bekezdésben vizsgált rendszerek alapján körvonalazódott, milyen megoldást szeretnék én is alkalmazni. Nagyon leegyszerűsítve egy 360 fokban forgó toronyról lenne szó, aminek a tetején helyezkedik el a billenthető fegyverzet. Szemléltetésképpen készítettem a \ref{fig:megval_mockup}. ábrát. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{mockup}
+	\caption{A rendszerelrendezés}
+	\label{fig:megval_mockup}
+\end{figure}
+
+Ki kellett számolnom bizonyos geometriai megkötéseket, amelyek szükségesek a tervezéshez, illetve az alkatrészek kiválasztásához. \\
+
+A torony szükséges fordulatszámát a következőképpen lehet kiszámolni:
+
+
+\begin{equation}
+	rpm_{min} = \frac{v_t}{2 \cdot \pi \cdot r} = \frac{2.778 \w{m/s}}{2 \cdot \pi \cdot \w{m}} = 0.442 \w{1/s} = 26.526 \w{1/min}
+\end{equation}
+
+ahol:
+
+\begin{tabular}{cl}
+	$v\_t$ & A célpont sebessége a fegyvercsőre merőlegesen, \\
+	$r$ & A távolság a célpont és a rendszer között\\
+\end{tabular}
+
+Meg lehet állapítani a torony mozgásának felbontását is, tehát hogy hány fokonként lehet állítani a mozgását.
+
+\begin{equation}
+	\alpha_{min} = \arcsin\left(\frac{a}{2 \cdot r}\right) \cdot 2 = \arcsin\left(\frac{0.3 \w{m}}{2 \cdot 10 \w{m}}\right) \cdot 2 = 1.719 {^\circ}
+\end{equation}
+
+ahol:
+
+\begin{tabular}{cl}
+	$a$ & A célpont mérete  \\
+	$r$ & A távolság a célpont és a rendszer között\\
+\end{tabular}
+
+
+
+
+
+
+%\subsection{Motorok}
+%
+%A motorok kiválasztáshoz először a 
+%
+%
+%\subsection{Hardver}
+%
+%A hardver tervezését először egy 
+%
+
 \subsubsection{Mikrovezérlő}
 
 A mikrokontroller kiválasztásánál több opciót vizsgálta, többek között az {Arduino}, az \textsl{STM-32} és a \textsl{Raspberry PI} modelleket. Azonban ahogy összehasonlítottam a különböző opciókat, körvonalazódott, hogy a \textsl{Raspberry PI} lesz a megfelelő megoldás. A kamera illesztése különösen fontos a végtermék működése szempontjából, és ezen a területen magasan kiemelkedik a Raspberry a többi mikrovezérlő közül, mivel magán a gyártó a termékcsaládon belül ajánl több kamera modult, amik illesztése már kiforrott az összes Raspberry-hez.\\
@@ -206,7 +275,14 @@ Ezentúl a \textsl{Raspberry PI} erősebb, mint a fentebb említett mikrokontrol
 
 
 \subsubsection{Elsütő mechanizmus}
-Az elsütő mechanizmusnak egy \textsl{Specna Arms M4}-ből kiszerelt gearbox-ot, illetve csövet használtam. A gearbox-on belül kellett alakítanom a működésen, hogy megfelelően bele lehessen illeszteni a rendszerbe. Az elsütőbillentyűt, a tűzkapcsolót és minden ehhez tartozó mechanikai elemet kiszereltem, illetve áthuzaloztam. Erre azért volt szükség, mert különben csak a ravasz meghúzásával lehetett volna tüzelni, ami bonyolít a rendszer megvalósításán.   {\color{red} IDE KELL KÉP}\\
+Az elsütő mechanizmusnak egy \textsl{Specna Arms M4}-ből kiszerelt gearbox-ot, illetve csövet használtam. A gearbox-on belül kellett alakítanom a működésen, hogy megfelelően bele lehessen illeszteni a rendszerbe. Az elsütőbillentyűt, a tűzkapcsolót és minden ehhez tartozó mechanikai elemet kiszereltem, illetve áthuzaloztam. Erre azért volt szükség, mert különben csak a ravasz meghúzásával lehetett volna tüzelni, ami bonyolít a rendszer megvalósításán. A gearbox belső kialakítása a \ref{fig:gearboxbele}. ábrán látható.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{gearboxbele}
+	\caption{A gearbox belseje}
+	\label{fig:gearboxbele}
+\end{figure}
 
 A fegyver gearbox-ot körülvevő alkatrészeiről le tudtam venni méreteket, ez alapján alakítottam ki később a 3D nyomtatott alkatrészeket. Így végeredményben egy magába zárt alkatrészem lett, amin habár mechanikus nem lehet állítani a tüzelés módját, de csupán két vezetékkel csatlakozik az elektronikához. 
 
