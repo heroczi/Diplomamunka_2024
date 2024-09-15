@@ -1,0 +1,52 @@
+CSAVAROK
+
+DT-1000:
+4x BKNY M3x16
+4x BKNY M3x10
+
+DT-2000:
+4x BKNY M3x16
+
+DT-3000:
+4x laposfejű M3x10
+4x BKNY M4x20
+4x anya M4
+
+DT-4000:
+8x BKNY M4x20
+8x anya M4
+
+DT-5000:
+8x BKNY M4x25
+8x BKNY M4x20
+16x Anya M4
+
+Raspberry:
+16x D-fejű M2.5x6
+4x távtartó M2.5 5-6
+4x távtartó M2.5 20-belső
+4x távtartó M2.5 10-belső
+
+MECHANIKA
+
+2x csapágy D10xD26x8
+2x szorító   D8xD18x9
+pillanaragasztó
+
+ELEKTRONIKA
+
+Konverter
+2x nema-17
+Relé
+12x zöld led
+12x piros led
+12x kék led
+Drót a ledeknek LOPNI
+Ellenállás a ledeknek LOPNI
+Általános vezeték piros-fekete
+Csatlakozók
+Ethernet-usb adapter
+Optokapu
+Lézer
+Kamera kábel
+kapcsoló
