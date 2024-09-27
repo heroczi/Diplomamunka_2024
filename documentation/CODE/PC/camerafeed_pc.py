@@ -1,51 +1,49 @@
 import socket
 import cv2
-import pickle
-import struct
+import pygame
+import numpy as np
 
-# Create a TCP/IP socket
-client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# Initialize Pygame window
+pygame.init()
+window_size = (640, 480)
+window = pygame.display.set_mode(window_size)
+pygame.display.set_caption("Real-Time Video Stream")
 
-# Connect to the Raspberry Pi server
-server_ip = '192.168.100.2'  # Use the Raspberry Pi's IP address
-port = 8000
-client_socket.connect((server_ip, port))
+# Initialize UDP socket for receiving video stream
+recv_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+recv_sock.bind(("0.0.0.0", 5000))  # Bind to the port used by the server
 
-# Buffer size
-data = b""
-payload_size = struct.calcsize("L")  # Size of unsigned long (the frame size)
 
-while True:
-    # Retrieve the size of the frame
-    while len(data) < payload_size:
-        packet = client_socket.recv(4096)  # Receive data in chunks
-        if not packet:
-            break
-        data += packet
+def receive_video_stream():
+    """Receive video stream from the server."""
+    while True:
+        data, _ = recv_sock.recvfrom(65507)  # Max UDP packet size
 
-    packed_msg_size = data[:payload_size]
-    data = data[payload_size:]
-    msg_size = struct.unpack("L", packed_msg_size)[0]  # Unpack the frame size
+        # Convert the received data to a numpy array and decode it using OpenCV
+        np_arr = np.frombuffer(data, np.uint8)
+        frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
 
-    # Retrieve the actual frame data based on the size
-    while len(data) < msg_size:
-        data += client_socket.recv(4096)
+        if frame is not None:
+            # Resize frame to fit Pygame window
+            frame = cv2.resize(frame, window_size)
 
-    frame_data = data[:msg_size]
-    data = data[msg_size:]
+            # Convert the OpenCV image (BGR) to RGB for Pygame
+            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-    # Deserialize the frame
-    frame = pickle.loads(frame_data)
+            # Convert the image to a surface that Pygame can display
+            pygame_surface = pygame.surfarray.make_surface(frame_rgb)
 
-    # Decode the JPEG back into an image
-    frame = cv2.imdecode(frame, cv2.IMREAD_COLOR)
+            # Blit the surface onto the Pygame window and update
+            window.blit(pygame.transform.rotate(pygame_surface, -90), (0, 0))
+            pygame.display.update()
 
-    # Display the frame
-    cv2.imshow('Video Stream', frame)
 
-    # Exit if the user presses 'q'
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-client_socket.close()
-cv2.destroyAllWindows()
+if __name__ == "__main__":
+    try:
+        receive_video_stream()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        recv_sock.close()
+        send_sock.close()
+        pygame.quit()
