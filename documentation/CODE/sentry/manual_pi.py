@@ -28,14 +28,16 @@ def main():
 
         # Check and move motor 1 for horizontal (x) movement
         if x_movement != 0:
-            #print("X Movement:", x_movement)
             dirx = 1 if x_movement > 0 else -1
+            print("X Movement:", x_movement)
+            print("X direction:", dirx)
             Motor1.TurnStep(dirx, 1, stepdelay=0)
             
         # Check and move motor 2 for vertical (y) movement
         if y_movement != 0:
-            #print("Y Movement:", y_movement)
             diry = 1 if y_movement > 0 else -1
+            print("Y Movement:", y_movement)
+            print("Y direction:", diry)
             Motor2.TurnStep(diry, 1, stepdelay=0)
 
 

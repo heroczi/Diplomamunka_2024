@@ -5,7 +5,7 @@ import pygame
 RPI_IP = "192.168.100.2"
 RPI_PORT = 5000
 
-# Initialize pygame for keyboard input
+# Initialize pygame
 pygame.init()
 screen = pygame.display.set_mode((1920, 1080))
 
@@ -25,4 +25,4 @@ while running:
             sock.sendto(data.encode(), (RPI_IP, RPI_PORT))
 
 pygame.quit()
-sock.close()
+sock.close() 

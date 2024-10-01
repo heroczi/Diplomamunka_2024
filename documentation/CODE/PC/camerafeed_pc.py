@@ -1,49 +1,37 @@
 import socket
 import cv2
-import pygame
 import numpy as np
 
-# Initialize Pygame window
-pygame.init()
-window_size = (640, 480)
-window = pygame.display.set_mode(window_size)
-pygame.display.set_caption("Real-Time Video Stream")
+# Socket setup
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect(('192.168.100.2', 6000))  # Connect to the Raspberry Pi's IP and port
 
-# Initialize UDP socket for receiving video stream
-recv_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-recv_sock.bind(("0.0.0.0", 5000))  # Bind to the port used by the server
-
-
-def receive_video_stream():
-    """Receive video stream from the server."""
+try:
     while True:
-        data, _ = recv_sock.recvfrom(65507)  # Max UDP packet size
+        # Receive the size of the frame first (4 bytes)
+        frame_size_data = client_socket.recv(4)
+        frame_size = int.from_bytes(frame_size_data, byteorder='big')
 
-        # Convert the received data to a numpy array and decode it using OpenCV
-        np_arr = np.frombuffer(data, np.uint8)
-        frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+        # Now receive the actual frame
+        data = b''
+        while len(data) < frame_size:
+            packet = client_socket.recv(frame_size - len(data))
+            if not packet:
+                break
+            data += packet
 
-        if frame is not None:
-            # Resize frame to fit Pygame window
-            frame = cv2.resize(frame, window_size)
+        # Convert the received bytes back into a numpy array and decode the JPEG
+        frame = np.frombuffer(data, dtype=np.uint8)
+        frame = cv2.imdecode(frame, cv2.IMREAD_COLOR)
 
-            # Convert the OpenCV image (BGR) to RGB for Pygame
-            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        # Display the frame
+        cv2.imshow('Video Stream', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 
-            # Convert the image to a surface that Pygame can display
-            pygame_surface = pygame.surfarray.make_surface(frame_rgb)
+except Exception as e:
+    print(f"Error: {e}")
 
-            # Blit the surface onto the Pygame window and update
-            window.blit(pygame.transform.rotate(pygame_surface, -90), (0, 0))
-            pygame.display.update()
-
-
-if __name__ == "__main__":
-    try:
-        receive_video_stream()
-    except KeyboardInterrupt:
-        pass
-    finally:
-        recv_sock.close()
-        send_sock.close()
-        pygame.quit()
+finally:
+    client_socket.close()
+    cv2.destroyAllWindows()

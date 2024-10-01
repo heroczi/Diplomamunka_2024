@@ -1,41 +1,42 @@
 import socket
 import cv2
+import numpy as np
 from picamera2 import Picamera2
-from picamera2.encoders import MJPEGEncoder
-from io import BytesIO
 
-RPI_IP = "192.168.100.2"
-PC_IP = "192.168.100.1"
-RPI_PORT = 5000
-
-# Initialize Picamera2
+# Configure the camera
 picam2 = Picamera2()
-
-# Start the camera preview
+picam2.configure(picam2.create_video_configuration(main={"size": (1920, 1080)}))
 picam2.start()
 
-# Initialize UDP socket
-with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
-    sock.connect((PC_IP, RPI_PORT))  # Replace CLIENT_IP with the receiver's IP address
+# Socket setup
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.bind(('192.168.100.2', 6000))  # Bind to the Pi's IP and port 5000
+server_socket.listen(1)
+print("Waiting for a connection...")
+conn, addr = server_socket.accept()
+print("Connected to:", addr)
 
-    # Create a BytesIO buffer for sending over the network
-    stream = BytesIO()
+try:
+    while True:
+        # Capture frame
+        frame = picam2.capture_array()
 
-    try:
-        print("Streaming video indefinitely. Press Ctrl+C to stop.")
-        
-        # Stream indefinitely
-        while True:
-            # Capture an image from the camera
-            picam2.capture_file(stream, format='jpeg')
+        # Compress the frame using JPEG to reduce the data size
+        encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 90]
+        result, frame = cv2.imencode('.jpg', frame, encode_param)
 
-            # Send the data over the socket
-            sock.sendall(stream.getvalue())
+        # Convert frame to bytes
+        data = frame.tobytes()
 
-            # Clear the stream for the next frame
-            stream.seek(0)
-            stream.truncate()
-            
-    except KeyboardInterrupt:
-        print("Stopping video stream...")
-        picam2.stop()
+        # Send the size of the frame first
+        conn.sendall(len(data).to_bytes(4, byteorder='big'))
+
+        # Send the frame
+        conn.sendall(data)
+
+except Exception as e:
+    print(f"Error: {e}")
+
+finally:
+    conn.close()
+    server_socket.close()
