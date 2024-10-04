@@ -78,8 +78,6 @@
 	\end{tikzpicture}
 \end{titlepage}
 
-\tableofcontents
-
 \pagebreak
 
 \section*{Hallgatói nyilatkozat}
@@ -98,12 +96,48 @@ Kelt: \LOCATION, 2024.06.02.\\
 
 \pagebreak
 
+\section*{Összefoglaló}
+A diplomamunkám célja egy autonóm fegyverrendszer fejlesztése és elkészítése, amely funkciójában hasonlít a valós, éles helyzetben alkalmazott rendszerekhez. Ez annyit takar, hogy a fegyvernek képesnek kell egy bizonyos méretű területet belátni, ebben felismerni és azonosítani a célpontokat, majd tüzelni, vagy engedélyt kérni tüzelésre. Ezentúl szükséges funkciója a manuális vezérlés, amely segítségével az operátor valós időben tudja távolról irányítani az eszközt, egy asztali számítógép segítségével.\\
+
+Az eszköz alkatrészei 3D nyomtatási technológiával készültek, a kötőelemeket, csapágyakat és elektronikai elemeket kivéve, első feladatom ezek nyomtatáshelyes megtervezése volt. A következő lépés a hardver és elektronikai rendszer tervezése volt, majd a szükséges modulok, szenzorok, mikrovezérlő kiválasztása és megrendelése. Az utolsó alfeladat pedig a szoftver fejlesztése, amely jelentette mind a beágyazott vezérlő szoftvert, és a számítógépen futó felhasználói felületet is.\\
+
+A projekt megvalósítása során végig sok időt emésztett fel a rendszer tesztelése, amelyet párhuzamosan kellett végezni a későbbi alfeladatok tervezésével. Kihívást jelentett a megfelelően részletes szakirodalom felkutatása is, ugyanis a valós megoldások paramétereit gyakran nem teszik elérhetővé civilek számára, illetve a jelenleg folyó fejlesztések is titkosítottak.\\
+
+Úgy gondolom, a téma interdiszciplináris jellegét tekintve jól illik a mechatronikai tanulmányaiba, ugyanis egyaránt érinti a műszaki mechanika,  a gyártástechnológia, a szoftverkészítés és a jelfeldolgozás területeit.\\
+
+Diplomamunkám eredményeként megvalósítok egy működő prototípust, amit előadás keretében fogok bemutatni. Végül pedig kitérek az esetleges hibákra amiket elkövettem, a tanulságokra és a továbbfejlesztési lehetőségekre.
+
+\pagebreak
+
+\section*{Abstract}
+The aim of my thesis is to develop and build an autonomous weapon system that functions similarly to real-world systems used in live scenarios. This means that the weapon must be able to monitor a designated area, recognize and identify targets, then fire or request permission to fire. Additionally, a necessary feature is manual control, allowing the operator to remotely control the device in real-time using a desktop computer.\\
+
+The components of the device were created using 3D printing technology, except for the fasteners, bearings, and electronic elements. My first task was to design these components to be suitable for printing. The next step was to design the hardware and electronic system, followed by selecting and ordering the necessary modules, sensors, and microcontroller. The final subtask was the development of the software, which included both the embedded controller software and the user interface running on a computer.\\
+
+Throughout the project, significant time was consumed by system testing, which had to be carried out simultaneously with the planning of subsequent subtasks. A challenge was also posed by finding sufficiently detailed technical literature, as the parameters of real-world solutions are often not made available to civilians, and current developments are often classified.\\
+
+I believe that the interdisciplinary nature of this topic fits well with my mechatronics studies, as it encompasses areas such as mechanical engineering, manufacturing technology, software development, and signal processing.\\
+
+As a result of my thesis, I will produce a working prototype, which I will present during my final defense. Lastly, I will address any mistakes I made, lessons learned, and possibilities for future development.
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
 
 \section{Bevezetés}
 
-\subsection{Az automata fegyverrendszerekről}
+\subsection{Motiváció és háttér}
 
-\lettrine{M}{int} manapság az ipar minden területén, így a fegyveriparban is egyre nagyobb mértékű a digitalizáció és az automatizáció. Ennek ékes példája a távolról irányítható lőállások térnyerése, amelyeknek nagy előnye a fegyver és a tüzér egymástól való elkülönítése, aminek több előnye is van. Természetesen a legfontosabb és leginkább szembetűnő, hogy ezzel a módszerrel minimalizálható, vagy akár megszüntethető a saját embereink életének kockáztatása. Ezentúl olyan helyen is tudjuk használni ezeket az eszközöket, ahova egy tradicionális géppuskafészek telepítése nehézkes lenne, például mostoha természeti körülmények közé, egy torony tetejére, vagy akár egy hadihajó oldalára. Szintén egy nagy előny, hogy ezek az eszközök felszerelhetők több kezeléssegítő alegységgel, például hőkamerával vagy éjjellátóval. Majdnem minden, számottevő hadsereggel rendelkező országnak van saját fejlesztésű távirányított fegyverrendszere.\\
+\lettrine{E}zt a projektet nem a tanszéki diplomamunkatémák listáján találtam, hanem én kerestem hozzá konzulest. Szeretném ezért először megemlíteni a személyes motivációmat, és érdekeltségeimet vele kapcsolatban. Mint a legtöbb reál beállítottságú fiú, engem is fiatal korom óta érdekel a technológia, a járművek, a gépek, vagy a fegyverek. Ezek közös metszéspontja a haditechnológia, ami általában jóval fejlettebb, mint amivel a civil életben találkozhatunk. Ez az érdeklődés megmaradt kamaszkoromra is, amikor a videojátékok által új ingerként értek a \textsl{Team Fortress 2}-ben és a \textsl{Portal}-ban lévő ún. \textbf{Sentry Gun}-ok. Ezek olyan lövegek , amelyek a lábukon állva képesek voltak forogni, és ha az ellenség a látóterükbe jutott, akkor arra tüzet nyitottak. Nyilván játékokról van szó, tehát mindig azt hittem hogy ez csak a jövő technológiája, de nem sokkal később rá kellett jönnöm, hogy nagyon is valódiak. Ezután, mikor már egyetemre jártunk, egy barátommal egyre komolyabban kezdtünk beszélgetni arról, hogy esetleg mi is tudnánk egyet építeni. Végül az egyetemi éveim végére érve el is jött a tökéletes alkalom, hogy megvalósítsam régi álmomat. \\
+
+A szentimentalitást félretéve, természetesen nem választottam volna ezt a témát, ha nem lenne a tanulmányaim szempontjából is releváns. Úgy gondolom, ez a projekt a mechatronika oktatás sok fontos elemét magában hordozza. A feladat a mechanikai konstrukcióval kezdődik és a CAD modellezéssel, amely a gépészeti oldalát hasznosítja a képzésünknek. Foglakozni kell a hardverrel, amihez elektronikai ismeretek szükségesek. Végül pedig a szoftvert kell lefejleszteni, ami informatikai szempontból érdekes. Ráadásul az egész beágyazott környezetben történik, ami miatt még relevánsabb az \textsl{intelligens beágyazott rendszerek} specializációmhoz. Véleményem szerint a projekt nehézsége és kihívása nem az egyes alfeladatokban rejlik, hanem az egész rendszer integrálásában, egymáshoz illesztésében. \\
+
+Szintén fontosnak tartom megemlíteni, hogy a feladat lehetőséget ad megismerni és használni pár igen modern technológiát. A közelmúltban elérhetővé (és megfizethetővé) váltak civil felhasználásra a 3D nyomtatók, valamint a fejlődés a \textsl{Deep Learning} algoritmusok terén nagyban befolyásolta a gépi látás szakterületét is. Többek között a célom, hogy jobban megismerkedjek ezekkel a módszerekkel, és alkalmazzam őket.
+
+\pagebreak
+
+Mint manapság az ipar minden területén, így a fegyveriparban is egyre nagyobb mértékű a digitalizáció és az automatizáció. Ennek ékes példája a távolról irányítható lőállások térnyerése, amelyeknek nagy előnye a fegyver és a tüzér egymástól való elkülönítése, aminek több előnye is van. Természetesen a legfontosabb és leginkább szembetűnő, hogy ezzel a módszerrel minimalizálható, vagy akár megszüntethető a saját embereink életének kockáztatása. Ezentúl olyan helyen is tudjuk használni ezeket az eszközöket, ahova egy tradicionális géppuskafészek telepítése nehézkes lenne, például mostoha természeti körülmények közé, egy torony tetejére, vagy akár egy hadihajó oldalára. Szintén egy nagy előny, hogy ezek az eszközök felszerelhetők több kezeléssegítő alegységgel, például hőkamerával vagy éjjellátóval. Majdnem minden, számottevő hadsereggel rendelkező országnak van saját fejlesztésű távirányított fegyverrendszere.\\
 
 
 \begin{wrapfigure}{r}{0.45\textwidth}
@@ -116,22 +150,47 @@ Kelt: \LOCATION, 2024.06.02.\\
 A következő lépés az automatizálás. Hiszen egyre erősebb hardverekkel rendelkezünk, egyre jobb algoritmusokat tudunk implementálni, és elértük az a szintet, hogy bizonyos helyzetekben a "gép" jobb munkát tud végezni, mint egy ember. Az első automatikus célzórendszerrel rendelkező légvédelmi gépágyú az amerikai \textsl{Phalanx CIWS} az 1970-es években került kifejlesztésre, ezzel megszületett a "Lethal autonomous weapon (LAW)" kifejezés.\\
 
 A technológiát érthető módon leggyakrabban védelmi célokra használják, sokszor légvédelemre. A gyakorlatban nagy szerepe van Dél-Korea és Izrael védelmében, ahol a rakétatámadások mindennapos veszélyt jelentenek. Offenzív célokra a gyakorlatban még csak rakéták célzására használnak automatikát, a "terminátor" jellegű gyilkos robotok még csak fejlesztési fázisban vannak.
+\pagebreak 
 
-\subsection{Követelmények}\label{sec:kov}
+\subsection{Kihívások és célkitűzések}
 
-A követelményeket egyrészt a később említett irodalomkutatás, másrészt pedig a saját ötleteim és a konzulensemmel való egyeztetés alapján alakítottam ki. Az "autonóm fegyverrendszer" alatt én egy olyan eszközt értek, ami egy pontban elhelyezve képes a környezetében felismerni a betanított célpontot, és arra tüzelni. Erre jó fikciós példa a \textsl{Portal} című játékban található \textsl{Sentry turret}, amely a \ref{portalsentry}. ábrán látható. Természetesen a konstrukciós tervezéshez nem ezt vettem alapul, de a működési elvhez adhat jó ötleteket akkor is, ha csak fikció. \\
+A hagyományos, ember által irányított biztonsági rendszerek, illetve manuálisan vezérelt fegyverek hatékonysága korlátozott. Az ember reakcióideje lassú lehet krízishelyzetben, különösen ha nagy sebességű, gyors reagálású, esetleg automatizált a célpont. További gyengesége az embernek, hogy hajlamos hibázni. A fáradtság, stressz, éhség, és rengeteg egyéb tényező kényszerítheti hibára. Ez szükségessé teszi egy olyan automata rendszer kifejlesztését, amely képes azonnal reagálni, felismerni a fenyegetéseket és pontosan célozni.\\
 
-\begin{wrapfigure}{r}{0.45\textwidth}
-	\centering
-	\includegraphics[width=0.8\linewidth]{portalsentry}
-	\caption{Sentry Turret}
-	\label{portalsentry}
-\end{wrapfigure}
+Az automatikus gépágyúk fejlesztése során számos technikai kihívás merül fel:
 
-Szeretném a rendszert úgy megvalósítani, hogy a célfelismerés és tüzelést lehessen vezérelni "kézi vezérléssel", ahogy a valós katonai rendszerek többsége működik, illetve egy teljesen automatikus gépi látás algoritmussal. Automata működés során is talán az lenne a legéletszerűbb, hogy a célpont megtalálása és becélzása lenne automatikus, a tüzelés pedig emberi engedélyezést igényel, ezzel egy fokkal morálisabbá téve a projektet.\\
+\begin{list}{}{}
+	\item \textbf{Célpontok felismerése és követése:} A gépágyúnak gyorsan és pontosan kell érzékelnie és nyomon követnie mozgó célpontokat. Ez kihívást jelenthet változó fényviszonyok, mozgássebességek és környezeti zavaró tényezők mellett. A gépágyúnak gyorsan és pontosan kell érzékelnie és nyomon követnie mozgó célpontokat. Ez kihívást jelenthet változó fényviszonyok, mozgássebességek és környezeti zavaró tényezők mellett. \\
+	\item \textbf{Pontosság és reakcióidő:} A rendszernek gyorsan kell döntéseket hoznia, ugyanakkor elengedhetetlen a pontos célzás. A mechanikai mozgásvezérlés, a számítógépes látás és az elektronikai rendszerek szinkronizációja mind kritikus tényező a rendszer hatékonysága szempontjából. \\
+	\item \textbf{Környezetérzékenység:} Külső környezeti tényezők (pl. időjárás, akadályok, fényviszonyok) befolyásolhatják a rendszer működését, ezért a szoftvernek és a hardvernek rugalmasnak és robusztusnak kell lennie. 
+\end{list}
+A dolgozatom célja egy innovatív megoldás kidolgozása, amely eleget tesz a megszabott követelményeknek és megoldást nyújt a fenti problémákra. \\
 
-A hatásos távolságot én 10m-ben határoztam meg. Ezen a távolságon fel kell ismernie és el kell találnia egy 30x30 cm-es célpontot. Ezentúl szeretném, ha le tudná követni a 10 km/h-val futó ember mozgását. Ezek a határértékek a konstrukció tervezésénél fontos szempontok lesznek, tehát a későbbi fejezetekben számolok velük.\\
+\pagebreak
 
+Kiemelt célok:
+\begin{list}{}{}
+	\item Egy megbízható célpontfelismerési rendszer fejlesztése, amely változó környezeti feltételek mellett is képes hatékonyan működni.
+	\item Egy stabil és erős mechanikai konstrukció tervezése, amely képes képes követni a szoftver utasításait.
+	\item Egy olyan valós idejű szoftvervezérlési rendszer megalkotása, amely gyorsan reagál a célpontok mozgására és változására.
+\end{list}
+
+Összegezve \textbf{Egy olyan automata gépágyú fejlesztése és megépítése, amely magabiztosan képes felismerni egy célpontot, követni azt, célozni, és tüzelni.}
+
+\subsection{Korlátozások}
+
+Természetesen tisztában kell lenni bizonyos korlátozásokkal a projekt elkészítése közben. Két félévem van lefejleszteni az eszközt a nulláról, egyedül vagyok, és nincsen százmilliós büdzsém, mint az iparban hasonló kutatással foglalkozó csapatoknak. Ebből kifolyólag reálisan kell látni a helyzetet, és úgy meghatározni a követelményeket, hogy egy egyetemi hallgató számára is elérhető legyen. \\
+
+A kamerarendszer például, amit a valós megoldásokban használnak, önmagában tízmilliós tétel szokott lenni. Sajnos az én megvalósításom valószínűleg nem fog működni sötétben, nagy távolságokban, vagy esőben, hiszen a költségvetésbe nem fér bele az éjjellátó, a hőkamera, az optikai zoom vagy több kamerából álló rendszer.\\
+
+Nem áll rendelkezésemre korlátlanul se CNC gép, se fém 3D nyomtató, így a legtöbb alkatrész műanyagból kell 3D nyomtatnom. Ez befolyásolhatja a szerkezet stabilitását, amit figyelembe kell venni a későbbiekben.\\
+
+És végül fontos megemlíteni, hogy mivel éles fegyvert alkalmazni minden bizonnyal a törvénybe ütközne, ezért valamilyen játékfegyvert kell majd használnom. Ez befolyásolni fogja a gépágyú pontosságát, amit szintén figyelembe kell venni a tervezéskor és értékeléskor.\\
+
+
+\pagebreak
+
+\subsection{Erkölcsi nyilatkozat}
+Fegyver rossz
 
 \pagebreak
 
@@ -139,7 +198,7 @@ A hatásos távolságot én 10m-ben határoztam meg. Ezen a távolságon fel kel
 \subsection{Irodalomkutatás}
 A legjelentősebb katonai hatalmak mindegyike rendelkezik távvezérelt fegyverrendszerekkel, leggyakrabban valamilyen távolról irányított gépfegyver formájában. Azonban se az egyes országok nemzetbiztonságának, se a fegyveripari partnercégeknek nem áll érdekében a szükségesnél több információt kiadni. Ez egy kicsit megnehezítette az irodalomkutatást, de a képek alapján azért sok információt ki lehet nyerni.
 
-\subsubsection{Valós rendszerek} \label{sec:valos}
+\subsubsection{Megvalósult rendszerek} \label{sec:valos}
 
 \paragraph{CROWS \cite{crows}}
 Az egyik legnagyobb darabszámban gyártott távirányított fegyverrendszer az amerikai \textsl{CROWS} rendszer, amely a NATO-országokban, köztük Magyarországon is rendszeresített. Ennek értelmében telepíthető sok NATO által használt páncélozott járműre, köztük a Humvee-ra, a Stryker-re, és a Buffalo MRAP-re. Több verziója létezik több kaliberrel, a \ref{fig:irod_crows}. ábrán egy M240B géppuskával látható.\\
@@ -165,7 +224,7 @@ A \textsl{CROWS} rendszer orosz megfelelője a hasonló kialakítású \textsl{A
 
 A rendszer $360^\circ$-ban képes elfordulni, és $-20^{\circ}$-tól $+70^{\circ}$-ig tud billenni, tehát egy kicsit nagyobb részt tud lefedni, mint a CROWS. A hatótáv nappal 2000 m, éjszaka 1500 m. Ez a rendszer is el van látva hőkamerával és lézeres távolságmérővel.
 
-\paragraph{DeFNder \cite{arbalet}}
+\paragraph{DeFNder \cite{defnder}}
 A következő megoldás a belga \textsl{DeFNder} termékcsalád, amelynek két tagja a \textsl{Light} és a \textsl{Medium}(\ref{fig:irod_defnder}. ábra). Értelem szerűen kettő közül az utóbbi az, amelyre nehezebb fegyverzetet lehet telepíteni. A függőleges tengelyen $360^\circ$-ban képes elfordulni 90 fok/másodperc sebességgel, a vízszintes tengelyen $-45^{\circ}$-tól $+75^{\circ}$-ig tud billenni, 60 fok/másodperc sebességgel. Opcionálisan ellátható infravörös- és hőkamerával a rossz látási körülmények esetére, valamint lézeres távolságmérővel a ballisztikai kompenzációhoz.
 \begin{figure}[h!]
 	\centering
@@ -174,8 +233,19 @@ A következő megoldás a belga \textsl{DeFNder} termékcsalád, amelynek két t
 	\label{fig:irod_defnder}
 \end{figure}
 
-
 Elég sok közös vonást találtam a fentebb említett rendszerekben. Az elrendezésük nagyon hasonló, van egy függőleges forgástengely nagyjából a teljes rendszer súlypontján keresztül, valamint egy vízszintes forgástengely, nagyjából a fegyver csövével egy síkban. Erre valószínűleg azért van szükség, hogy a tüzelés során keletkező erők ne ébresszenek csavarónyomatékot a mozgató mechanizmuson. Az én esetemben nagy erők nem fognak ébredni, de a tervezési elvet érdemes követni.
+
+\paragraph{Samsung SGR-A1}
+Az egyetlen, valós harci helyzetben használt, teljesen autonóm gépágyú a koreai fejlesztésű \textsl{Samsung SGR-A1}. A két Korea között húzódó demilitarizált övezet (DMZ) egy 250 km hosszú, 4 km széles sáv, amelyet mind a két oldalon szigorúan ellenőriznek. A határ folyamatos felügyelete rengeteg ember munkájába kerül, ami egy demográfiai válságban lévő ország csökkenő hadseregében egyre értékesebb. Főleg annak tekintetében, hogy csupán járőrözni és figyelni a határt nem feltétlenül igényli egy ember jelenlétét. Ennek tudatában fejlesztették ki a Samsung és a Korea Egyetem mérnökei az SGR-A1 fegyverrendszert. Hőkamerával és éjjellátóval felszerelve napközben 4 km-ről, éjszaka 2 km-ről képes azonosítani potenciális célpontokat, tehát tulajdonképpen a DMZ teljes szélességében. Képes felismerni az embereket, követni őket, és megkülönböztetni az állatoktól. Hangfelismeréssel képes azonosítani a közeledő személyeket: amennyiben valaki 10 m-nél közelebb kerül és nem azonosítja magát, a rendszer riaszthat, gumilövedéket lőhet, vagy használhatja a K-3 gépfegyverét.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{irod_samsung}
+	\caption{Samsung SGR-A1}
+	\label{fig:irod_samsung}
+\end{figure}
+
+Sok szakértő találgatja, hogy a rendszer lőhet-e emberi engedély nélkül, és a hivatalos koreai álláspont az, hogy nem. Azonban ha már bemérte és ellenségként azonosította a célpontot, akkor nehéz elképzelni, hogy pont a ravaszt ne tudná meghúzni.
 
 \pagebreak
 
@@ -209,6 +279,24 @@ Ezek a fegyverek modelltől függően 10000 Ft. - 40000 Ft. között mozognak, d
 Az airsoft fegyverek hasonló módon működnek, mint a Nerf puskák, de egy kisebb, műanyag golyót lőnek. Az elektromos airsoft fegyverek torkolati sebessége általában 300 fps és 400 fps között van, ami befolyásol a golyók tömege, a rugó minősége és rengeteg egyéb alkatrész. A hatótávjuk az átlagos fegyvereknek kb. 50 m, de fejlesztésekkel elérheti a 90 m-t is. A lövedék itt is golyó és a cső sincs huzagolva, mint a paintballnál, azonban az airsoft esetében használnak ún. hop-up kamrákat, amelyek perdületet adnak a golyónak.\\
 
 Az airsoft fegyverek legnagyobb előnye a többi lehetőséggel szemben, hogy van egy kompakt egység, a "gearbox", ami felelős az elsütésért. Ezt ki lehet szedni egy fegyverből, vagy akár külön is meg lehet venni. Ez okkal nagyobb szabadságot ad a beépítéshez, és a végeredmény is sokkal kompaktabb lesz. Az elsütés is csak az áramkör zárását jelenti a gearboxban, ami egyszerűen vezérelhető a mikrokontrollerrel.
+\section{Rendszertervezés és követelmények}
+\subsection{Rendszerterv}
+
+
+\subsection{Követelmények}\label{sec:kov}
+
+A követelményeket egyrészt a később említett irodalomkutatás, másrészt pedig a saját ötleteim és a konzulensemmel való egyeztetés alapján alakítottam ki. Az "autonóm fegyverrendszer" alatt én egy olyan eszközt értek, ami egy pontban elhelyezve képes a környezetében felismerni a betanított célpontot, és arra tüzelni. Erre jó fikciós példa a \textsl{Portal} című játékban található \textsl{Sentry turret}, amely a \ref{portalsentry}. ábrán látható. Természetesen a konstrukciós tervezéshez nem ezt vettem alapul, de a működési elvhez adhat jó ötleteket akkor is, ha csak fikció. \\
+
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{portalsentry}
+	\caption{Sentry Turret}
+	\label{portalsentry}
+\end{wrapfigure}
+
+Szeretném a rendszert úgy megvalósítani, hogy a célfelismerés és tüzelést lehessen vezérelni "kézi vezérléssel", ahogy a valós katonai rendszerek többsége működik, illetve egy teljesen automatikus gépi látás algoritmussal. Automata működés során is talán az lenne a legéletszerűbb, hogy a célpont megtalálása és becélzása lenne automatikus, a tüzelés pedig emberi engedélyezést igényel, ezzel egy fokkal morálisabbá téve a projektet.\\
+
+A hatásos távolságot én 10m-ben határoztam meg. Ezen a távolságon fel kell ismernie és el kell találnia egy 30x30 cm-es célpontot. Ezentúl szeretném, ha le tudná követni a 10 km/h-val futó ember mozgását. Ezek a határértékek a konstrukció tervezésénél fontos szempontok lesznek, tehát a későbbi fejezetekben számolok velük.\\
 
 
 
@@ -330,9 +418,12 @@ A fegyver gearbox-ot körülvevő alkatrészeiről le tudtam venni méreteket, e
 	\bibitem{arbalet}
 	Leírás az Arbalet-DM rendszerről \hfill (Hozzáférés: 2024.01.22.) \\
 	{\footnotesize \url{http://roe.ru/eng/catalog/land-forces/RWS/arbalet-dm/}},
-	\bibitem{arbalet}
+	\bibitem{defnder}
 	Leírás az deFNder Medium rendszerről \hfill (Hozzáférés: 2024.01.22.) \\
 	{\footnotesize \url{https://fnamerica.com/products/weapon-systems/defnder-medium/}},
+	\bibitem{samsung}
+	Leírás a Samsung SGR-A1 rendszerről \hfill (Hozzáférés: 2024.02.10.) \\
+	{\footnotesize \url{https://www.globalsecurity.org/military/world/rok/sgr-a1.htm}},
 
 
 \end{thebibliography}
