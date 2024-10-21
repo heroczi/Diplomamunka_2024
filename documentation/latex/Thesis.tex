@@ -195,10 +195,10 @@ Fegyver rossz
 \pagebreak
 
 
-\subsection{Irodalomkutatás}
+\section{Irodalomkutatás}
 A legjelentősebb katonai hatalmak mindegyike rendelkezik távvezérelt fegyverrendszerekkel, leggyakrabban valamilyen távolról irányított gépfegyver formájában. Azonban se az egyes országok nemzetbiztonságának, se a fegyveripari partnercégeknek nem áll érdekében a szükségesnél több információt kiadni. Ez egy kicsit megnehezítette az irodalomkutatást, de a képek alapján azért sok információt ki lehet nyerni.
 
-\subsubsection{Megvalósult rendszerek} \label{sec:valos}
+\subsection{Megvalósult rendszerek} \label{sec:valos}
 
 \paragraph{CROWS \cite{crows}}
 Az egyik legnagyobb darabszámban gyártott távirányított fegyverrendszer az amerikai \textsl{CROWS} rendszer, amely a NATO-országokban, köztük Magyarországon is rendszeresített. Ennek értelmében telepíthető sok NATO által használt páncélozott járműre, köztük a Humvee-ra, a Stryker-re, és a Buffalo MRAP-re. Több verziója létezik több kaliberrel, a \ref{fig:irod_crows}. ábrán egy M240B géppuskával látható.\\
@@ -249,7 +249,7 @@ Sok szakértő találgatja, hogy a rendszer lőhet-e emberi engedély nélkül, 
 
 \pagebreak
 
-\subsubsection{Tüzelési mechanizmus}
+\subsection{Tüzelési mechanizmus}
 
 A korábban említett rendszerek éles fegyverekkel vannak felszerelve, ami az én esetemben sajnos nem megvalósítható. Így valamilyen más megoldást kellett találni, ami legális, és megfelelően be lehet vele mutatni a célfelismerés és célzás működését. 
 
@@ -280,8 +280,20 @@ Az airsoft fegyverek hasonló módon működnek, mint a Nerf puskák, de egy kis
 
 Az airsoft fegyverek legnagyobb előnye a többi lehetőséggel szemben, hogy van egy kompakt egység, a "gearbox", ami felelős az elsütésért. Ezt ki lehet szedni egy fegyverből, vagy akár külön is meg lehet venni. Ez okkal nagyobb szabadságot ad a beépítéshez, és a végeredmény is sokkal kompaktabb lesz. Az elsütés is csak az áramkör zárását jelenti a gearboxban, ami egyszerűen vezérelhető a mikrokontrollerrel.
 \section{Rendszertervezés és követelmények}
-\subsection{Rendszerterv}
+\subsection{Rendszeráttekintés}
+Az autonóm fegyverrendszer fejlesztése során egy komplex mechatronikai rendszert kellett megvalósítani, amely több különálló modul együttműködését biztosítja. A rendszer fő komponensei közé tartozik a mechanikai szerkezet, az elektronikai hardver, az érzékelők, a vezérlő egység, valamint a szoftveres háttér. Ezek együttesen biztosítják a rendszer autonóm és manuális működését. Az alábbiakban részletes áttekintést adok a rendszer főbb elemeiről és azok feladatáról.
 
+\subsubsection*{Mechanikai konstrukció}
+
+A váz gyanánt tulajdonképpen egy kéttengelyes pan-tilt mechanizmust kellett megvalósítanom, ami felelős a fegyver stabilan tartásáért és precíz mozgásáért. A váz építőelemei zömében 3D nyomtatási technológiával készültek, ami lehetővé tette a problémák gyors kiküszöbölését, illetve a nagyfokú szabadságot a tervezés során. Ahol tudtam, kereskedelemből beszerezhető alkatrészeket használtam, például a csapágyakat és a kötőelemeket.
+
+\subsubsection*{Elektronikai rendszer}
+
+Az elektronikai rendszer két fő eleme a Raspberry PI, illetve a gearbox volt. Mivel a gearbox igen nagy áramot képes felvenni, külön tápegységgel kellett ellátnom a mikrovezérlőt illetve a golyó kilövéséért felelős elektronikát. A motorok vezérléséért egy kereskedelemben kapható, Raspberryvel kompatibilis shieldet használtam, amely jelentősen megkönnyítette a NEMA-17 típusú léptetőmotorok csatlakoztatását. A lézer diódát és szükséges szenzorokat a Raspberry PI GPIO lábairól vezéreltem, ahogy a gearbox aktiválásáért felelős relét is. A kamera modul egy Raspberry PI Camera V2 volt, amit a mikrovezérlőn található foglalaton keresztül tudtam elérni.
+
+\subsubsection*{Számítógépes vezérlés és szoftveres háttér}
+
+A szoftverfejlesztés során két fő területet kellett lefedni: a vezérlőszoftvert, amely a mikrokontrolleren fut, és az asztali alkalmazást, amely a felhasználói felületet és a magas szintű irányítást biztosítja. A beágyazott vezérlő szoftver felelős a léptetőmotorok mozgatásáért, valamint a szenzorokból érkező információ feldolgozásáért. A számítógépen futó szoftver feladata a felhasználó parancsainak feldolgozása és továbbküldése, valamint a kamera képének megjelenítése valós időben. Mivel a feladat összetett, mind a PC, mind a Raspberry Pi oldaláról történik küldés és fogadás is, ezért több szálon fut egyszerre a szoftver. A két egység közötti kommunikáció során kulcsfontosságú a megfelelő sebesség, ezért a vezetékes kapcsolat mellet döntöttem.
 
 \subsection{Követelmények}\label{sec:kov}
 
@@ -298,92 +310,188 @@ Szeretném a rendszert úgy megvalósítani, hogy a célfelismerés és tüzelé
 
 A hatásos távolságot én 10m-ben határoztam meg. Ezen a távolságon fel kell ismernie és el kell találnia egy 30x30 cm-es célpontot. Ezentúl szeretném, ha le tudná követni a 10 km/h-val futó ember mozgását. Ezek a határértékek a konstrukció tervezésénél fontos szempontok lesznek, tehát a későbbi fejezetekben számolok velük.\\
 
+\pagebreak
+
+Az autonóm fegyverrendszer fejlesztése során számos követelményt kellett figyelembe venni annak érdekében, hogy a rendszer megbízhatóan, hatékonyan és biztonságosan működjön. Ezek a követelmények a rendszer mechanikai, elektronikai és szoftveres elemeire egyaránt kiterjedtek. A következő szakaszokban részletezem a legfontosabb műszaki és funkcionális követelményeket.
+
+\subsubsection*{Mechanikai követelmények} 
+
+A mechanikai komponensek tervezése során az alábbi követelményeknek kellett megfelelni:
+\begin{description}
+	\item[Stabilitás és pontosság:]  A fegyverrendszer mechanikai szerkezetének stabilnak és tartósnak kell lennie annak érdekében, hogy a lövések közben ne mozduljon el, és ne veszítse el a célpontot. Ugyanakkor elegendő pontosságot kell biztosítania a célpont precíz követéséhez.
+	\item[Fürgeség:]A rendszernek képesnek kell lennie a fegyver gyors és pontos mozgatására a pan-tilt mechanizmus segítségével. Ennek megfelelően a szervomotoroknak kellően gyorsnak és erősnek kell lenniük ahhoz, hogy valós időben tudják követni a mozgó célpontokat.
+	\item[Strapabíró konstrukció:] Habár nagy terhelés nem fogja érni, a gearboxból jöhetnek rezgések, rángások, amik esetleg problémát jelenthetnek egy alulméretezett alkatrész esetében.
+\end{description}
+
+\subsubsection*{Elektronikai követelmények}
+
+Az elektronikai rendszer megbízható működése érdekében az alábbi követelményeknek kellett eleget tenni:
+
+\begin{description}
+	\item[Megfelelő teljesítmény:]  A szervomotoroknak és szenzoroknak megfelelő tápegységre van szükségük, amely stabil energiaellátást biztosít. A rendszer energiaigényét előzetesen fel kellett mérni, hogy a tápegység terhelés alatt is megfelelően működjön.
+	\item[Szenzorok pontossága:] A kamerának és egyéb szenzoroknak elegendő felbontással és érzékenységgel kell rendelkezniük ahhoz, hogy képesek legyenek a célpontokat megfelelően azonosítani. A valós idejű képfeldolgozás nagy adatsebességet és megbízható szenzorjeleket igényel.
+	\item[Vezérlés:] A mikrokontrollernek kellően gyorsnak kell lennie, hogy a valós idejű adatokat folyamatosan feldolgozza és a vezérlési parancsokat késlekedés nélkül végrehajtsa.
+\end{description}
 
 
-\section{Megvalósítás}
+\subsubsection*{Szoftveres követelmények}
 
-A \ref{sec:valos}. bekezdésben vizsgált rendszerek alapján körvonalazódott, milyen megoldást szeretnék én is alkalmazni. Nagyon leegyszerűsítve egy 360 fokban forgó toronyról lenne szó, aminek a tetején helyezkedik el a billenthető fegyverzet. Szemléltetésképpen készítettem a \ref{fig:megval_mockup}. ábrát. 
+A rendszer működéséhez szükséges szoftverfejlesztés során a következő követelményeknek kellett megfelelni:
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.6\linewidth]{mockup}
-	\caption{A rendszerelrendezés}
-	\label{fig:megval_mockup}
-\end{figure}
-
-Ki kellett számolnom bizonyos geometriai megkötéseket, amelyek szükségesek a tervezéshez, illetve az alkatrészek kiválasztásához. \\
-
-A torony szükséges fordulatszámát a következőképpen lehet kiszámolni:
-
-
-\begin{equation}
-	rpm_{min} = \frac{v_t}{2 \cdot \pi \cdot r} = \frac{2.778 \w{m/s}}{2 \cdot \pi \cdot \w{m}} = 0.442 \w{1/s} = 26.526 \w{1/min}
-\end{equation}
-
-ahol:
-
-\begin{tabular}{cl}
-	$v\_t$ & A célpont sebessége a fegyvercsőre merőlegesen, \\
-	$r$ & A távolság a célpont és a rendszer között\\
-\end{tabular}
-
-Meg lehet állapítani a torony mozgásának felbontását is, tehát hogy hány fokonként lehet állítani a mozgását.
-
-\begin{equation}
-	\alpha_{min} = \arcsin\left(\frac{a}{2 \cdot r}\right) \cdot 2 = \arcsin\left(\frac{0.3 \w{m}}{2 \cdot 10 \w{m}}\right) \cdot 2 = 1.719 {^\circ}
-\end{equation}
-
-ahol:
-
-\begin{tabular}{cl}
-	$a$ & A célpont mérete  \\
-	$r$ & A távolság a célpont és a rendszer között\\
-\end{tabular}
+\begin{description}
+	\item[Valós idejű feldolgozás:]  A számítógépes látás szoftverének valós időben kell elemeznie a kamerák által közvetített adatokat, felismerve a célpontokat és kiszámítva a mozgás irányát. A célzási és lövési döntések gyors és hatékony adatfeldolgozást igényelnek.
+	\item[Biztonságos működés:] A rendszernek rendelkeznie kell olyan szoftveres biztonsági funkciókkal, amelyek megakadályozzák a véletlen tüzelést. Ez magában foglalja a lövési engedélykérés mechanizmusát és a manuális vészleállítás lehetőségét.
+	\item[Felhasználói interfész:] Az felhasználónak egyszerű és intuitív felhasználói felületet kellett biztosítani, amelyen keresztül könnyedén vezérelheti a rendszert, illetve áttekintheti a célpontok adatait és a kamera képét. A felületnek támogatnia kell a kézi irányítást és a lövési parancsok kiadását.
+\end{description}
 
 
 
+ 
+\subsubsection*{Funkcionális követelmények}
+
+A rendszer teljes funkcionalitásának biztosítása érdekében a következő kritériumoknak kellett megfelelni:
+
+\begin{description}
+	\item[Autonóm működés:] A rendszernek képesnek kell lennie arra, hogy teljesen önállóan felismerje és kövesse a célpontokat, valamint meghozza a tüzelési döntéseket az előre meghatározott paraméterek alapján.
+	\item[Manuális vezérlés:] Az autonóm működés mellett manuális vezérlési lehetőséget is kellett biztosítani az operátor számára. Ezen keresztül a felhasználó közvetlenül irányíthatja a fegyvert és manuálisan adhat lövési parancsot.
+\end{description}
+
+\subsubsection*{Biztonsági követelmények}
+
+Az autonóm fegyverrendszerek használatával kapcsolatban különösen fontos a biztonsági követelmények teljesítése:
+
+\begin{description}
+	\item[Vészleállítás:]A rendszernek rendelkeznie kell egy vészleállító gombbal, amely azonnal megszakítja a fegyver működését, ha bármilyen hiba vagy vészhelyzet lép fel.
+	\item[Engedélyezési mechanizmus:] A tüzelési parancs kiadása előtt a rendszernek engedélyt kell kérnie az operátortól, ezzel minimalizálva a véletlen tüzelés kockázatát.
+	\item[Adatbiztonság:] A vezérlő szoftver és az operátor közötti kommunikáció titkosítva kell, hogy legyen, hogy megakadályozza a külső hozzáférést és a rendszer kompromittálását.
+\end{description}
+
+\subsubsection*{Környezeti követelmények}
+
+A rendszernek különféle környezeti feltételek között is megbízhatóan kell működnie:
+
+\begin{description}
+	\item[Hőmérsékleti tűréshatár:]A rendszernek képesnek kell lennie normál működésre különböző hőmérsékleti körülmények között, amelyek tipikusan a beltéri használat során fordulnak elő.
+	\item[Nedvesség és porállóság:] A rendszert úgy kell megtervezni, hogy ellenálljon a kisebb por- és nedvességterhelésnek, különösen, ha kültéri használatra is szükség van.
+\end{description}
+
+\section{Mechanikai tervezés}
+a
+\subsection{Kinematika}
+a
+\subsection{Mechanikai alkatrészek}
+a
+\subsection{3D tervezés, modellezés}
+a
+\subsection{Gyártás és összeszerelés}
+a
+\section{Hardvertervezés}
+a
+\subsection{Áramköri tervezés}
+a
+\subsection{Elektronikai alkatrészek}
+a
+\subsection{Hardverintegráció}
+a
+\subsection{Gyártás, forrasztás}
+a
+\section{Szoftverfejlesztés}
+a
+\subsection{Szoftverarchitektúra}
+a
+\subsection{Adatáramlás, kommunikáció}
+a
+\subsection{Szinkronizáció?}
+a
+\subsection{Vezérlő algoritmus}
+a
+\subsection{Gépi látás}
+a
+\subsection{Programozási nyelvek és eszközök:}
+a
+\section{Tesztelés}
+a
+\subsection{Tesztelési környezet}
+a
+\subsection{Teljesítménymutatók}
+a
+\subsection{Kísérleti eredmények}
+a
+\subsection{Eredmények elemzése}
+a
+\section{Hibák, észrevételek}
+a
+\section{Továbbfejlesztési lehetőségek}
+a
+\section{Költségek}
+a
+\section{Konklúziók}
+a
+\section{Köszönetnyilvánítás}
+a
 
 
 
-%\subsection{Motorok}
+%CTRL+T CTRL+U
+%\section{Megvalósítás}
 %
-%A motorok kiválasztáshoz először a 
+%A \ref{sec:valos}. bekezdésben vizsgált rendszerek alapján körvonalazódott, milyen megoldást szeretnék én is alkalmazni. Nagyon leegyszerűsítve egy 360 fokban forgó toronyról lenne szó, aminek a tetején helyezkedik el a billenthető fegyverzet. Szemléltetésképpen készítettem a \ref{fig:megval_mockup}. ábrát. 
+%
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.6\linewidth]{mockup}
+%	\caption{A rendszerelrendezés}
+%	\label{fig:megval_mockup}
+%\end{figure}
+%
+%Ki kellett számolnom bizonyos geometriai megkötéseket, amelyek szükségesek a tervezéshez, illetve az alkatrészek kiválasztásához. \\
+%
+%A torony szükséges fordulatszámát a következőképpen lehet kiszámolni:
 %
 %
-%\subsection{Hardver}
+%\begin{equation}
+%	rpm_{min} = \frac{v_t}{2 \cdot \pi \cdot r} = \frac{2.778 \w{m/s}}{2 \cdot \pi \cdot \w{m}} = 0.442 \w{1/s} = 26.526 \w{1/min}
+%\end{equation}
 %
-%A hardver tervezését először egy 
+%ahol:
 %
-
-\subsubsection{Mikrovezérlő}
-
-A mikrokontroller kiválasztásánál több opciót vizsgálta, többek között az {Arduino}, az \textsl{STM-32} és a \textsl{Raspberry PI} modelleket. Azonban ahogy összehasonlítottam a különböző opciókat, körvonalazódott, hogy a \textsl{Raspberry PI} lesz a megfelelő megoldás. A kamera illesztése különösen fontos a végtermék működése szempontjából, és ezen a területen magasan kiemelkedik a Raspberry a többi mikrovezérlő közül, mivel magán a gyártó a termékcsaládon belül ajánl több kamera modult, amik illesztése már kiforrott az összes Raspberry-hez.\\
-
-Ezentúl a \textsl{Raspberry PI} erősebb, mint a fentebb említett mikrokontrollerek. Linux rendszert futtat, és lehet rajta Python nyelven programozni, ami gépi látás, automatizálás projekteknél hatalmas előny. Számos ki-és bemenete van, ráadásul támogatja a \textsl{Bluetooth}, \textsl{Wi-Fi}, és \textsl{Ethernet} kapcsolatokat is, nem beszélve a rengeteg bővítő "kabátról", amiket lehet kapni hozzá. Ezek a termék továbbfejlesztését nagyban könnyítik, ráadásul kevesebb munkát kell a nyomtatott áramkör tervezésébe tenni.
-
-
-\subsubsection{Elsütő mechanizmus}
-Az elsütő mechanizmusnak egy \textsl{Specna Arms M4}-ből kiszerelt gearbox-ot, illetve csövet használtam. A gearbox-on belül kellett alakítanom a működésen, hogy megfelelően bele lehessen illeszteni a rendszerbe. Az elsütőbillentyűt, a tűzkapcsolót és minden ehhez tartozó mechanikai elemet kiszereltem, illetve áthuzaloztam. Erre azért volt szükség, mert különben csak a ravasz meghúzásával lehetett volna tüzelni, ami bonyolít a rendszer megvalósításán. A gearbox belső kialakítása a \ref{fig:gearboxbele}. ábrán látható.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.6\linewidth]{gearboxbele}
-	\caption{A gearbox belseje}
-	\label{fig:gearboxbele}
-\end{figure}
-
-A fegyver gearbox-ot körülvevő alkatrészeiről le tudtam venni méreteket, ez alapján alakítottam ki később a 3D nyomtatott alkatrészeket. Így végeredményben egy magába zárt alkatrészem lett, amin habár mechanikus nem lehet állítani a tüzelés módját, de csupán két vezetékkel csatlakozik az elektronikához. 
-
-
-
-%\subsubsection{Motorok}
+%\begin{tabular}{cl}
+%	$v\_t$ & A célpont sebessége a fegyvercsőre merőlegesen, \\
+%	$r$ & A távolság a célpont és a rendszer között\\
+%\end{tabular}
 %
-%\subsubsection{Vezérlő áramkör}
+%Meg lehet állapítani a torony mozgásának felbontását is, tehát hogy hány fokonként lehet állítani a mozgását.
+%
+%\begin{equation}
+%	\alpha_{min} = \arcsin\left(\frac{a}{2 \cdot r}\right) \cdot 2 = \arcsin\left(\frac{0.3 \w{m}}{2 \cdot 10 \w{m}}\right) \cdot 2 = 1.719 {^\circ}
+%\end{equation}
+%
+%ahol:
+%
+%\begin{tabular}{cl}
+%	$a$ & A célpont mérete  \\
+%	$r$ & A távolság a célpont és a rendszer között\\
+%\end{tabular}
 %
 %
-%\subsection{Gépészeti tervezés}
+%\subsubsection{Mikrovezérlő}
 %
-%\subsection{Szoftver}
+%A mikrokontroller kiválasztásánál több opciót vizsgálta, többek között az {Arduino}, az \textsl{STM-32} és a \textsl{Raspberry PI} modelleket. Azonban ahogy összehasonlítottam a különböző opciókat, körvonalazódott, hogy a \textsl{Raspberry PI} lesz a megfelelő megoldás. A kamera illesztése különösen fontos a végtermék működése szempontjából, és ezen a területen magasan kiemelkedik a Raspberry a többi mikrovezérlő közül, mivel magán a gyártó a termékcsaládon belül ajánl több kamera modult, amik illesztése már kiforrott az összes Raspberry-hez.\\
+%
+%Ezentúl a \textsl{Raspberry PI} erősebb, mint a fentebb említett mikrokontrollerek. Linux rendszert futtat, és lehet rajta Python nyelven programozni, ami gépi látás, automatizálás projekteknél hatalmas előny. Számos ki-és bemenete van, ráadásul támogatja a \textsl{Bluetooth}, \textsl{Wi-Fi}, és \textsl{Ethernet} kapcsolatokat is, nem beszélve a rengeteg bővítő "kabátról", amiket lehet kapni hozzá. Ezek a termék továbbfejlesztését nagyban könnyítik, ráadásul kevesebb munkát kell a nyomtatott áramkör tervezésébe tenni.
+%
+%
+%\subsubsection{Elsütő mechanizmus}
+%Az elsütő mechanizmusnak egy \textsl{Specna Arms M4}-ből kiszerelt gearbox-ot, illetve csövet használtam. A gearbox-on belül kellett alakítanom a működésen, hogy megfelelően bele lehessen illeszteni a rendszerbe. Az elsütőbillentyűt, a tűzkapcsolót és minden ehhez tartozó mechanikai elemet kiszereltem, illetve áthuzaloztam. Erre azért volt szükség, mert különben csak a ravasz meghúzásával lehetett volna tüzelni, ami bonyolít a rendszer megvalósításán. A gearbox belső kialakítása a \ref{fig:gearboxbele}. ábrán látható.
+%
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.6\linewidth]{gearboxbele}
+%	\caption{A gearbox belseje}
+%	\label{fig:gearboxbele}
+%\end{figure}
+%
+%A fegyver gearbox-ot körülvevő alkatrészeiről le tudtam venni méreteket, ez alapján alakítottam ki később a 3D nyomtatott alkatrészeket. Így végeredményben egy magába zárt alkatrészem lett, amin habár mechanikus nem lehet állítani a tüzelés módját, de csupán két vezetékkel csatlakozik az elektronikához. 
 
 
 
