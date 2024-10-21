@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.26)  21 OCT 2024 19:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.26)  21 OCT 2024 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1596,11 +1596,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1611,47 +1606,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-<./images/portalsentry.png, id=372, 803.0pt x 1740.5025pt>
-File: ./images/portalsentry.png Graphic file (type png)
-<use ./images/portalsentry.png>
-Package pdftex.def Info: ./images/portalsentry.png  used on input line 304.
-(pdftex.def)             Requested size: 140.39958pt x 304.30037pt.
-
-Underfull \hbox (badness 1817) in paragraph at lines 309--310
-\T1/jkp/m/n/12 mus-sal. Au-to-ma-ta m¶-kö-dés so-rán
- []
-
-
-Underfull \hbox (badness 2469) in paragraph at lines 309--310
-\T1/jkp/m/n/12 is ta-lán az len-ne a leg-élet-sze-r¶bb,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
-
- []
-
-
-Underfull \hbox (badness 1675) in paragraph at lines 311--312
-\T1/jkp/m/n/12 val fu-tó em-ber moz-gá-sát. Ezek a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18 <./images/portalsentry.png>]
 Overfull \hbox (3.64174pt too wide) in paragraph at lines 321--322
 []\T1/jkp/m/n/12 A fegy-ver-rend-szer me-cha-ni-kai szer-ke-ze-té-nek sta-
  []
@@ -1671,10 +1625,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19]
+[18]
 Overfull \hbox (3.0356pt too wide) in paragraph at lines 361--362
 \T1/jkp/m/n/12 Az au-to-nóm fegy-ver-rend-sze-rek hasz-ná-la-tá-val kap-cso-lat
 -ban kü-lö-nö-sen fon-
+ []
+
+
+Overfull \hbox (1.40974pt too wide) in paragraph at lines 365--366
+[]\T1/jkp/m/n/12 A tü-ze-lé-si pa-rancs ki-adá-sa el®tt a rend-szer-
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
+Overfull \hbox (6.19777pt too wide) in paragraph at lines 374--375
+[]\T1/jkp/m/n/12 A rend-szer-nek ké-pes-nek kell len-nie nor-mál m¶-
  []
 
 
@@ -1688,16 +1662,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [20]
-Overfull \hbox (1.40974pt too wide) in paragraph at lines 365--366
-[]\T1/jkp/m/n/12 A tü-ze-lé-si pa-rancs ki-adá-sa el®tt a rend-szer-
- []
-
-
-Overfull \hbox (6.19777pt too wide) in paragraph at lines 374--375
-[]\T1/jkp/m/n/12 A rend-szer-nek ké-pes-nek kell len-nie nor-mál m¶-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1728,16 +1692,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24]
 LaTeX Font Info:    Trying to load font information for T1+jkptt on input line 
 525.
  (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\t1jkptt.fd
@@ -1752,7 +1706,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.01804pt}.
 
-[25] (Thesis.aux)
+[24] (Thesis.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
@@ -1761,10 +1715,10 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: FA0D8D2C09C59B03C7015608F74CAFDD;5927.
  ) 
 Here is how much of TeX's memory you used:
- 25149 strings out of 473899
- 460674 string characters out of 5726500
- 824375 words of memory out of 5000000
- 47478 multiletter control sequences out of 15000+600000
+ 25134 strings out of 473899
+ 460314 string characters out of 5726500
+ 824339 words of memory out of 5000000
+ 47465 multiletter control sequences out of 15000+600000
  651860 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,17n,107p,1326b,674s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1779,9 +1733,9 @@ X/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Users/Sanya/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/kpfonts/jkpmsce.pfb><C:/Users/Sanya/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/Sanya/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on Thesis.pdf (27 pages, 10065910 bytes).
+Output written on Thesis.pdf (26 pages, 9220806 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 377 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 480 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
+ 372 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,29 +10,13 @@ RPI_IP = "192.168.100.2"
 RPI_PORT_CONTROL = 9000  # Port for sending control commands
 RPI_PORT_VIDEO = 2000     # Port for receiving video frames
 
-# Socket for sending control commands
-sock_control = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
-# Socket for receiving video feed
-sock_video = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock_video.bind(('0.0.0.0', RPI_PORT_VIDEO))  # Listen on all interfaces for video
 CHUNK_SIZE =  65535   # Maximum size for UDP packets
-
-# Initialize pygame
-pygame.init()
-screen = pygame.display.set_mode((640, 480))
-pygame.event.set_grab(True)
-pygame.mouse.set_visible(False)
-
-# Control constants
-MOVE = 1
-SHOOT_START = 2
-SHOOT_STOP = 3 
-LASERTOGGLE = 4
-
 
 
 def video_receiver():
+    # Socket for receiving video feed
+    sock_video = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock_video.bind(('0.0.0.0', RPI_PORT_VIDEO))  # Listen on all interfaces for video
     try:
         while True:
             try:
@@ -87,13 +71,27 @@ def video_receiver():
     except Exception as e:
         print(f"Unexpected error: {e}")
 
-    finally:
-        sock_video.close()
-        cv2.destroyAllWindows()
+    cv2.destroyAllWindows()
+    sock_video.close()
 
 
 
 def control_sender():
+    # Initialize pygame
+    pygame.init()
+    screen = pygame.display.set_mode((640, 480))
+    pygame.event.set_grab(True)
+    pygame.mouse.set_visible(False)
+
+    # Control constants
+    MOVE = 1
+    SHOOT_START = 2
+    SHOOT_STOP = 3 
+    LASERTOGGLE = 4
+
+    # Socket for sending control commands
+    sock_control = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
     running = True
     while running:
         for event in pygame.event.get():
@@ -119,6 +117,8 @@ def control_sender():
 
                 elif event.key == pygame.K_ESCAPE:  # Quit with 'Escape' key
                     running = False
+    pygame.quit()
+    sock_control.close()
 # Clean up
 
 
@@ -133,8 +133,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-    # Clean up
-    pygame.quit()
-    cv2.destroyAllWindows()
-    sock_control.close()

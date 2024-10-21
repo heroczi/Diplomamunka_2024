@@ -6,7 +6,7 @@ import gpiozero as GPIO
 from DRV8825 import DRV8825
 import multiprocessing
 from picamera2 import Picamera2
-import time
+
 
 # Constants for event types
 MOVE = 1
@@ -28,17 +28,7 @@ Motor2 = DRV8825(dir_pin=24, step_pin=18, enable_pin=4)
 weapon = GPIO.LED(3)
 laser = GPIO.LED(21)
 
-# Socket for control commands
-sock_control = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock_control.bind((RPI_IP, RPI_PORT_CONTROL))
 
-# Socket for sending video feed
-sock_video = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
-# Initialize the PiCamera2
-picam2 = Picamera2()
-picam2.configure(picam2.create_video_configuration(main={"size": (640, 480)}))
-picam2.start()
 
 # Motor control functions
 def move_motor(motor, direction, steps=1, delay=0):
@@ -66,6 +56,11 @@ def handle_laser_toggle():
 
 # Control command listener
 def control_listener():
+
+    # Socket for control commands
+    sock_control = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock_control.bind((RPI_IP, RPI_PORT_CONTROL))
+
     while True:
         try:
             data, addr = sock_control.recvfrom(1024)
@@ -84,7 +79,17 @@ def control_listener():
 
 # Video frame sender
 def video_sender():
+
+    # Initialize the PiCamera2
+    picam2 = Picamera2()
+    picam2.configure(picam2.create_video_configuration(main={"size": (640, 480)}))
+    picam2.start()
+
+    # Socket for sending video feed
+    sock_video = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
     CHUNK_SIZE =  65535 # Maximum size for UDP packets
+
     while True:
 
         # Capture a frame from the camera
