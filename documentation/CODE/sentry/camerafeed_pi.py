@@ -1,6 +1,7 @@
 import socket
 import cv2
 import struct
+import time
 from picamera2 import Picamera2
 
 # Initialize the UDP socket
@@ -31,8 +32,9 @@ while True:
     sock.sendto(struct.pack(">I", frame_size), server_address)
 
     # Send the actual frame data in chunks (UDP has a limit, so split if necessary)
-    CHUNK_SIZE = 65507  # Maximum size for UDP packets
+    CHUNK_SIZE = 65535  # Maximum size for UDP packets
     for i in range(0, frame_size, CHUNK_SIZE):
         sock.sendto(frame_data[i:i + CHUNK_SIZE], server_address)
+        
 
 sock.close()
