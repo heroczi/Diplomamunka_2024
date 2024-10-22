@@ -32,7 +32,7 @@
 \newcommand{\TITLE}{Mikrovezérlő alapú autonóm fegyverrendszer tervezése és fejlesztése}
 \newcommand{\YEAR}{2024}
 \newcommand{\LOCATION}{Budapest}
-
+\newcommand{\ABRAKELL}{\textcolor{red}{IDE KELL MÉG ÁBRA}}
 %-------------------Colours-------------------%
 \definecolor{BMEbordo}{HTML}{862633}
 
@@ -190,7 +190,9 @@ Nem áll rendelkezésemre korlátlanul se CNC gép, se fém 3D nyomtató, így a
 \pagebreak
 
 \subsection{Erkölcsi nyilatkozat}
-Fegyver rossz
+Az automata fegyverrendszer morális megítélése vitatott téma, ezért szeretném kijelenteni, hogy diplomamunkám, melynek címe \textsl{„Mikrovezérlő alapú autonóm fegyverrendszer tervezése és fejlesztése”}, kizárólag tanulányni és mérnöki célokat szolgál. A dolgozatom keretében fejlesztett prototípus semmilyen formában nem szándékozik vagy ösztönzi az erőszakos, káros vagy törvénysértő tevékenységeket. Fejlesztésem célja a technológiai kutatás, a mechatronikai és automatizálási rendszerek megismerése, illetve a gépi látás alkalmazásainak tanulmányozása. \\
+
+Határozottan elhatárolódom bármilyen rosszindulatú felhasználástól, és hangsúlyozom, hogy a projekt eredményei nem használhatók fel ártalmas vagy illegális célokra. A munka során mindvégig tiszteletben tartottam az etikai irányelveket, és felelős mérnöki magatartást tanúsítottam. Az általam fejlesztett rendszer kizárólag oktatási, kutatási és technológiai demonstráció célját szolgálja.
 
 \pagebreak
 
@@ -279,6 +281,8 @@ Ezek a fegyverek modelltől függően 10000 Ft. - 40000 Ft. között mozognak, d
 Az airsoft fegyverek hasonló módon működnek, mint a Nerf puskák, de egy kisebb, műanyag golyót lőnek. Az elektromos airsoft fegyverek torkolati sebessége általában 300 fps és 400 fps között van, ami befolyásol a golyók tömege, a rugó minősége és rengeteg egyéb alkatrész. A hatótávjuk az átlagos fegyvereknek kb. 50 m, de fejlesztésekkel elérheti a 90 m-t is. A lövedék itt is golyó és a cső sincs huzagolva, mint a paintballnál, azonban az airsoft esetében használnak ún. hop-up kamrákat, amelyek perdületet adnak a golyónak.\\
 
 Az airsoft fegyverek legnagyobb előnye a többi lehetőséggel szemben, hogy van egy kompakt egység, a "gearbox", ami felelős az elsütésért. Ezt ki lehet szedni egy fegyverből, vagy akár külön is meg lehet venni. Ez okkal nagyobb szabadságot ad a beépítéshez, és a végeredmény is sokkal kompaktabb lesz. Az elsütés is csak az áramkör zárását jelenti a gearboxban, ami egyszerűen vezérelhető a mikrokontrollerrel.
+\pagebreak
+
 \section{Rendszertervezés és követelmények}
 \subsection{Rendszeráttekintés}
 Az autonóm fegyverrendszer fejlesztése során egy komplex mechatronikai rendszert kellett megvalósítani, amely több különálló modul együttműködését biztosítja. A rendszer fő komponensei közé tartozik a mechanikai szerkezet, az elektronikai hardver, az érzékelők, a vezérlő egység, valamint a szoftveres háttér. Ezek együttesen biztosítják a rendszer autonóm és manuális működését. Az alábbiakban részletes áttekintést adok a rendszer főbb elemeiről és azok feladatáról.
@@ -311,8 +315,8 @@ A szoftverfejlesztés során két fő területet kellett lefedni: a vezérlőszo
 %A hatásos távolságot én 10m-ben határoztam meg. Ezen a távolságon fel kell ismernie és el kell találnia egy 30x30 cm-es célpontot. Ezentúl szeretném, ha le tudná követni a 10 km/h-val futó ember mozgását. Ezek a határértékek a konstrukció tervezésénél fontos szempontok lesznek, tehát a későbbi fejezetekben számolok velük.\\
 %
 %\pagebreak
-%
-%Az autonóm fegyverrendszer fejlesztése során számos követelményt kellett figyelembe venni annak érdekében, hogy a rendszer megbízhatóan, hatékonyan és biztonságosan működjön. Ezek a követelmények a rendszer mechanikai, elektronikai és szoftveres elemeire egyaránt kiterjedtek. A következő szakaszokban részletezem a legfontosabb műszaki és funkcionális követelményeket.
+
+Az autonóm fegyverrendszer fejlesztése során számos követelményt kellett figyelembe venni annak érdekében, hogy a rendszer megbízhatóan, hatékonyan és biztonságosan működjön. Ezek a követelmények a rendszer mechanikai, elektronikai és szoftveres elemeire egyaránt kiterjedtek. A következő szakaszokban részletezem a legfontosabb műszaki és funkcionális követelményeket.
 
 \subsubsection*{Mechanikai követelmények} 
 
@@ -375,12 +379,90 @@ A rendszernek különféle környezeti feltételek között is megbízhatóan ke
 	\item[Nedvesség és porállóság:] A rendszert úgy kell megtervezni, hogy ellenálljon a kisebb por- és nedvességterhelésnek, különösen, ha kültéri használatra is szükség van.
 \end{description}
 
+\pagebreak
 \section{Mechanikai tervezés}
-a
+A mechanikai tervezést egy kinematikai modell kidolgozásával kezdtem, majd a meglévő, kereskedelemben kapható alkatrészek méreteihez igazítva megterveztem a 3D CAD modellt. Ezután finomhangoltam a 3D nyomtatási technológiához megfelelően.
 \subsection{Kinematika}
-a
+A \ref{sec:valos}. bekezdésben vizsgált rendszerek alapján körvonalazódott, milyen megoldást szeretnék én is alkalmazni. Nagyon leegyszerűsítve egy 360 fokban forgó toronyról lenne szó, aminek a tetején helyezkedik el a billenthető fegyverzet. Szemléltetésképpen készítettem a \ref{fig:megval_mockup}. ábrát. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{mockup}
+	\caption{A rendszerelrendezés}
+	\label{fig:megval_mockup}
+\end{figure}
+
+Ki kellett számolnom bizonyos geometriai megkötéseket, amelyek szükségesek a tervezéshez, illetve az alkatrészek kiválasztásához. \\
+
+A torony szükséges fordulatszámát a következőképpen lehet kiszámolni:
+
+
+\begin{equation}
+	rpm_{min} = \frac{v_t}{2 \cdot \pi \cdot r} = \frac{2.778 \w{m/s}}{2 \cdot \pi \cdot \w{m}} = 0.442 \w{1/s} = 26.526 \w{1/min}
+\end{equation}
+
+ahol:
+
+\begin{tabular}{cl}
+	$v\_t$ & A célpont sebessége a fegyvercsőre merőlegesen, \\
+	$r$ & A távolság a célpont és a rendszer között\\
+\end{tabular}
+
+Meg lehet állapítani a torony mozgásának felbontását is, tehát hogy hány fokonként lehet állítani a mozgását.
+
+\begin{equation}
+	\alpha_{min} = \arcsin\left(\frac{a}{2 \cdot r}\right) \cdot 2 = \arcsin\left(\frac{0.3 \w{m}}{2 \cdot 10 \w{m}}\right) \cdot 2 = 1.719 {^\circ}
+\end{equation}
+
+ahol:
+
+\begin{tabular}{cl}
+	$a$ & A célpont mérete  \\
+	$r$ & A távolság a célpont és a rendszer között\\
+\end{tabular}
+\pagebreak
 \subsection{Mechanikai alkatrészek}
-a
+\subsubsection*{Elsütő mechanizmus}
+Az elsütő mechanizmusnak egy \textsl{Specna Arms M4}-ből kiszerelt gearbox-ot, illetve annak csövét és hop-up kamráját használtam. A gearbox működése során egy villanymotor több áttételen keresztül hátrahúz egy dugattyút, és azzal együtt a mögötte lévő rugót. Mindeközben a hop-up kamrában betöltődik egy golyó, és megáll a csőben. Ahogy a részlegesen fogazott fogaskerék elengedi a dugattyút, azt a rugó előrelöki, ezáltal a dugattyúkamrában nagy légnyomás keletkezik, ami a fegyver csövén keresztül tud kiegyenlítődni. Folyamatos működés során a motor egymás után húzza fel és engedi el a dugattyút, így amíg van golyó a tárban képes tüzelni. A gearbox belső alkatrészei a \ref{fig:mech_gearboxdiagram}. ábrán láthatóak. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{mech_gearboxdiagram}
+	\caption{V2 gearbox alkatrészei}
+	\label{fig:mech_gearboxdiagram}
+\end{figure}
+
+A hop-up kamrán belül még található egy gumi csúszófelület, amivel a kilőtt golyó perdületét lehet állítani, ezáltal pedig a fegyver effektív távolságát növelni.
+
+\ABRAKELL
+
+A gearbox-on belül kellett alakítanom a működésen, hogy az előbb leírt folyamatos működést biztosítani tudjam.  Az elsütőbillentyűt, a tűzkapcsolót és minden ehhez tartozó mechanikai elemet kiszereltem, illetve áthuzaloztam. Erre azért volt szükség, mert különben csak a ravasz meghúzásával lehetett volna tüzelni, ami bonyolít a rendszer megvalósításán. A gearbox belső kialakítása a \ref{fig:gearboxbele}. ábrán látható.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{gearboxbele}
+	\caption{A gearbox belseje}
+	\label{fig:gearboxbele}
+\end{figure}
+
+A fegyver gearbox-ot körülvevő alkatrészeiről le tudtam venni méreteket, ez alapján alakítottam ki később a 3D nyomtatott alkatrészeket. Így végeredményben egy magába zárt alkatrészem lett, amin habár mechanikus nem lehet állítani a tüzelés módját, de csupán két vezetékkel csatlakozik az elektronikához. \\
+
+A gearbox áramfogyasztását illetően találtam méréseket az internet, ahol kifejezetten az én modellemet tesztelték. Az Itteni mérések alapján arra következtettem, hogy 15 A-re méretezni az áramkört megfelelő lehet. \cite{aisroftteszt}
+
+\subsubsection*{Motorok}
+
+A projekthez kettő NEMA-17 léptetőmotort használok\cite{nema17}. Ezek a léptetőmotorok egy széles körben alkalmazott típusa, amelyet főként precíziós mozgatási feladatokhoz használnak, például CNC gépekben, 3D nyomtatókban, robotikai alkalmazásokban és automatizálási rendszerekben. A NEMA-17 esetében a szám a motor elülső oldalának névleges méretét jelenti, amely 1.7 hüvelyk, azaz körülbelül 42,3 mm. A motorok a használt vezérlővel a \ref{fig:mech_stepper}. ábrán láthatóak.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{mech_stepper}
+	\caption{NEMA-17 léptetőmotorok a használt konfigurációban}
+	\label{fig:mech_stepper}
+\end{figure}
+
+A léptetőmotorok általánosan használt típusai közé tartoznak a szervomotorok és az aszinkron motorok. A léptetőmotorok azonban a mozgásukat apró, egyenlő lépésekre osztják, így lehetővé téve a precíz pozícionálást és sebességszabályozást. A NEMA-17 léptetőmotor tipikusan kétfázisú bipoláris motor, amely négy vezetékes tekercseléssel rendelkezik. Minden lépés során a motor egy adott szöggel fordul el, ami az adott motor típusától és felépítésétől függően tipikusan 1.8 fok, így teljes fordulat esetén 200 lépésre van szükség.\\
+
+Az én esetemben használt léptetőmotorok lépésszöge 1.8 fok, bár ezt a motorvezérlőn lehet tovább osztani. A tartónyomatéka 0.4 Nm. Ezek a paraméterek 10-es áttételű fogaskerék-kapcsolattal megfelelőnek kell lenniük egy ilyen kis teljesítményű alkalmazásnál. 
 \subsection{3D tervezés, modellezés}
 a
 \subsection{Gyártás és összeszerelés}
@@ -390,7 +472,76 @@ a
 \subsection{Áramköri tervezés}
 a
 \subsection{Elektronikai alkatrészek}
-a
+\subsubsection*{Mikrovezérlő}
+A mikrokontroller kiválasztásánál több opciót vizsgáltam, többek között az {Arduino}, az \textsl{STM-32} és a \textsl{Raspberry PI} modelleket. A követelmények a következőek voltak:
+
+\begin{list}{-}{}
+	\item Legyen könnyen beszerezhető, mind anyagilag, mind elérhetőség szerint
+	\item Megfelelő teljesítmény gépi látás algoritmusokhoz
+	\item Elegendő számú GPIO kimenet
+	\item Python programozási nyelve támogatása
+	\item Ethernet port
+\end{list}
+
+Azonban ahogy összehasonlítottam a különböző opciókat, körvonalazódott, hogy a \textsl{Raspberry PI} lesz a megfelelő megoldás. az eszköz a \ref{fig:elek_raspberry4b}. ábrán látható Először is egy gyakorlati szempont szerint, mégpedig hogy egy Raspberry PI 4B modell eredetileg is volt a tulajdonomban 4GB rammal. A gyártó hivatalos fórumán több felhasználó szerint ez már elegendő összetettebb gépi látás algoritmusok futtatására is. \cite{4gbforum} \\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{elek_raspberry4b}
+	\caption{Raspberry 4 model B}
+	\label{fig:elek_raspberry4b}
+\end{figure}
+
+A kamera illesztése szintén különösen fontos a végtermék működése szempontjából, és ezen a területen magasan kiemelkedik a Raspberry a többi mikrovezérlő közül, mivel magán a gyártó a termékcsaládon belül ajánl több jó minőségű, könnyen beszerezhető kamera modult, amik illesztése már kiforrott az összes Raspberry-hez.\\
+
+Ezentúl a \textsl{Raspberry PI} erősebb, mint a fentebb említett mikrokontrollerek. Linux rendszert futtat, és lehet rajta Python nyelven programozni, ami gépi látás, automatizálás projekteknél hatalmas előny. Számos ki-és bemenete van, ráadásul támogatja a \textsl{Bluetooth}, \textsl{Wi-Fi}, és gigabites \textsl{Ethernet} kapcsolatokat is, nem beszélve a rengeteg bővítő "kabátról", amiket lehet kapni hozzá. Ezek a termék továbbfejlesztését nagyban könnyítik, ráadásul kevesebb munkát kell a nyomtatott áramkör tervezésébe tenni. \cite{raspberry4}
+
+\subsubsection*{Stepper Motor HAT}
+A NEMA-17 léptetőmotorok vezérlésére több megoldás is létezik, elterjedtek a \textsl{A4988}, \textsl{TMC5160T} és \textsl{DRV8825} típusú vezérlők. Ezeket azonban vagy külön modulként lehet megvásárolni, vagy pedig SMD alkatrészként, ami mellé mindenképpen kell tervezni kiegészítő áramkört. \\
+
+Azonban a \textsl{Waveshare} cég gyárt egy Raspberry Pi-kompatibilis modult, ami számomra rengeteg segítséget nyújtott. Ez egy külön áramkör, amit a Raspberry GPIO tüskesorára lehet illeszteni. Képes két \textsl{DRV8825} vezérlővel egyszerre kettő léptetőmotort vezérelni. A kártyán lévő kapcsolókkal könnyen lehet állítani külön motoronként a microsteppelést is, amennyiben szükség van rá egészen 1/32-ig. A potméterekkel motoronként tudjuk állítani a maximális felvehető áramot, maximum 2.5 A-ig. A kártyán helyet kapott egy standard 5.5 mm-es csatlakozó is, amivel 8.2 V és 28 V közötti feszültséggel lehet táplálni az áramkört. Egy belső regulator chip segítségével a Raspberry PI-t is el lehet látni árammal, így egy tápegységgel tudom működtetni a teljes áramkört. A modulon több lehetőség is van csatlakoztatni a motorokat, akár sorkapoccsal, akár a léptetőmotorok szabvány csatlakozójával. Ezentúl lehetővé teszi a Raspberry PI GPIO lábainak elérését, csupán arra kell odafigyelni, melyikeket használja. Az eszközről a \ref{fig:elek_stepperhat}. ábrán látható illusztráció. \cite{stepperhat}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{elek_stepperhat}
+	\caption{Waveshare Stepper HAT}
+	\label{fig:elek_stepperhat}
+\end{figure}
+
+Az eszköz el lett látva különböző biztonsági funkciókkal, pl. túláram védelemmel, magas hőmérséklet elleni védelemmel, illetve alulfeszültség lockout-tal.\\
+
+A gyártó szintén elérhetővé tett illesztőszoftvereket több eszközre, több motortípusra, amit a későbbiekben én is tudtam használni.
+
+\subsubsection*{Táp}
+
+A prototípust két tápegységről működtetem. Az egyik a Raspberry PI, a léptetőmotorok és a szenzorok áramellátásáért, ez egy standard 5.5 mm-es csatlakozóval ellátott laptop töltő. 14.5 V tápfeszültséget és maximum 5 A áramot képes biztosítani, amely bőven elegendő a vezérlőelektronika ellátására.
+
+\ABRAKELL
+
+A másik táp egy \textsl{HP ps-3701-1} 12 V-os redundáns szervertáp 725 W teljesítménnyel. 
+
+\subsubsection*{Kamera}
+A rendszer által használt kamera egy \textsl{Raspberry Pi Camera Module 2} volt.\cite{raspberrycam} Ez a modul 8 MP-es \textsl{Sony IMX219} szenzorral rendelkezik, amivel 3266 x 2450 felbontású állóképet tud készíteni. Képes Full HD videót felvenni 30 fps-el, HD-t 60 fps-el, vagy 640x480 felbontást 90 fps-el. A modul a \ref{fig:elek_raspberrycam}. ábrán látható.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{elek_raspberrycam}
+	\caption{Raspberry Pi Camera Module 2}
+	\label{fig:elek_raspberrycam}
+\end{figure}
+
+A kamera befoglaló mérete szerelési furatai és CSI portja megegyezik a többi Raspberry kamerával, így a továbbfejlesztés esetén könnyedén lehet őket cserélni.
+
+\subsubsection*{Végálláskapcsoló}
+A prototípus bekapcsolásánál fontos, hogy beálljon egy kezdőpozícióba, és ahhoz képest tudjuk viszonyítani a mozgását. Ezt én a két tengelyen 1-1 végálláskapcsolóval oldottam meg. Ezek a modulok könnyen szerelhetőek a 3D nyomtatott vázra, és az alapján adnak jelet, valami van-e az optokapu között. A Raspberry GPIO lábaira könnyedén lehet őket bekötni jumper kábelek segítségével. A szenzorok a \ref{fig:elek_vegallaskapcsolo}. ábrán láthatóak.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{elek_vegallaskapcsolo}
+	\caption{Végálláskapcsoló}
+	\label{fig:elek_vegallaskapcsolo}
+\end{figure}
+
 \subsection{Hardverintegráció}
 a
 \subsection{Gyártás, forrasztás}
@@ -431,108 +582,47 @@ a
 a
 
 
-
-%CTRL+T CTRL+U
-%\section{Megvalósítás}
-%
-%A \ref{sec:valos}. bekezdésben vizsgált rendszerek alapján körvonalazódott, milyen megoldást szeretnék én is alkalmazni. Nagyon leegyszerűsítve egy 360 fokban forgó toronyról lenne szó, aminek a tetején helyezkedik el a billenthető fegyverzet. Szemléltetésképpen készítettem a \ref{fig:megval_mockup}. ábrát. 
-%
-%\begin{figure}[h!]
-%	\centering
-%	\includegraphics[width=0.6\linewidth]{mockup}
-%	\caption{A rendszerelrendezés}
-%	\label{fig:megval_mockup}
-%\end{figure}
-%
-%Ki kellett számolnom bizonyos geometriai megkötéseket, amelyek szükségesek a tervezéshez, illetve az alkatrészek kiválasztásához. \\
-%
-%A torony szükséges fordulatszámát a következőképpen lehet kiszámolni:
-%
-%
-%\begin{equation}
-%	rpm_{min} = \frac{v_t}{2 \cdot \pi \cdot r} = \frac{2.778 \w{m/s}}{2 \cdot \pi \cdot \w{m}} = 0.442 \w{1/s} = 26.526 \w{1/min}
-%\end{equation}
-%
-%ahol:
-%
-%\begin{tabular}{cl}
-%	$v\_t$ & A célpont sebessége a fegyvercsőre merőlegesen, \\
-%	$r$ & A távolság a célpont és a rendszer között\\
-%\end{tabular}
-%
-%Meg lehet állapítani a torony mozgásának felbontását is, tehát hogy hány fokonként lehet állítani a mozgását.
-%
-%\begin{equation}
-%	\alpha_{min} = \arcsin\left(\frac{a}{2 \cdot r}\right) \cdot 2 = \arcsin\left(\frac{0.3 \w{m}}{2 \cdot 10 \w{m}}\right) \cdot 2 = 1.719 {^\circ}
-%\end{equation}
-%
-%ahol:
-%
-%\begin{tabular}{cl}
-%	$a$ & A célpont mérete  \\
-%	$r$ & A távolság a célpont és a rendszer között\\
-%\end{tabular}
-%
-%
-%\subsubsection{Mikrovezérlő}
-%
-%A mikrokontroller kiválasztásánál több opciót vizsgálta, többek között az {Arduino}, az \textsl{STM-32} és a \textsl{Raspberry PI} modelleket. Azonban ahogy összehasonlítottam a különböző opciókat, körvonalazódott, hogy a \textsl{Raspberry PI} lesz a megfelelő megoldás. A kamera illesztése különösen fontos a végtermék működése szempontjából, és ezen a területen magasan kiemelkedik a Raspberry a többi mikrovezérlő közül, mivel magán a gyártó a termékcsaládon belül ajánl több kamera modult, amik illesztése már kiforrott az összes Raspberry-hez.\\
-%
-%Ezentúl a \textsl{Raspberry PI} erősebb, mint a fentebb említett mikrokontrollerek. Linux rendszert futtat, és lehet rajta Python nyelven programozni, ami gépi látás, automatizálás projekteknél hatalmas előny. Számos ki-és bemenete van, ráadásul támogatja a \textsl{Bluetooth}, \textsl{Wi-Fi}, és \textsl{Ethernet} kapcsolatokat is, nem beszélve a rengeteg bővítő "kabátról", amiket lehet kapni hozzá. Ezek a termék továbbfejlesztését nagyban könnyítik, ráadásul kevesebb munkát kell a nyomtatott áramkör tervezésébe tenni.
-%
-%
-%\subsubsection{Elsütő mechanizmus}
-%Az elsütő mechanizmusnak egy \textsl{Specna Arms M4}-ből kiszerelt gearbox-ot, illetve csövet használtam. A gearbox-on belül kellett alakítanom a működésen, hogy megfelelően bele lehessen illeszteni a rendszerbe. Az elsütőbillentyűt, a tűzkapcsolót és minden ehhez tartozó mechanikai elemet kiszereltem, illetve áthuzaloztam. Erre azért volt szükség, mert különben csak a ravasz meghúzásával lehetett volna tüzelni, ami bonyolít a rendszer megvalósításán. A gearbox belső kialakítása a \ref{fig:gearboxbele}. ábrán látható.
-%
-%\begin{figure}[h!]
-%	\centering
-%	\includegraphics[width=0.6\linewidth]{gearboxbele}
-%	\caption{A gearbox belseje}
-%	\label{fig:gearboxbele}
-%\end{figure}
-%
-%A fegyver gearbox-ot körülvevő alkatrészeiről le tudtam venni méreteket, ez alapján alakítottam ki később a 3D nyomtatott alkatrészeket. Így végeredményben egy magába zárt alkatrészem lett, amin habár mechanikus nem lehet állítani a tüzelés módját, de csupán két vezetékkel csatlakozik az elektronikához. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \pagebreak
 	\begin{thebibliography}{}
 	\bibitem{crows}
 	Leírás a CROWS rendszerről \hfill (Hozzáférés: 2024.01.22.) \\
 	{\footnotesize \url{https://www.globalsecurity.org/military/systems/ground/m101-crows.htm}},
+	
 	\bibitem{arbalet}
 	Leírás az Arbalet-DM rendszerről \hfill (Hozzáférés: 2024.01.22.) \\
 	{\footnotesize \url{http://roe.ru/eng/catalog/land-forces/RWS/arbalet-dm/}},
+	
 	\bibitem{defnder}
 	Leírás az deFNder Medium rendszerről \hfill (Hozzáférés: 2024.01.22.) \\
 	{\footnotesize \url{https://fnamerica.com/products/weapon-systems/defnder-medium/}},
+	
 	\bibitem{samsung}
 	Leírás a Samsung SGR-A1 rendszerről \hfill (Hozzáférés: 2024.02.10.) \\
 	{\footnotesize \url{https://www.globalsecurity.org/military/world/rok/sgr-a1.htm}},
+	
+	\bibitem{aisroftteszt}
+	Teszt az airsoft gearbox áramfogayasztásáról\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{http://www.airsoftlab.eu/docs/experiments/motor_current/}},
+	
+	\bibitem{nema17}
+	A NEMA szabvány\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://www.cncitalia.net/file/pdf/nemastandard.pdf}},
+	
+	\bibitem{4gbforum}
+	Felhasználói diskurzus a Raspberry PI gépi látás kapacitásáról\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://forums.raspberrypi.com/viewtopic.php?t=366431}},
+	
+	\bibitem{raspberry4}
+	Raspberry 4B specifikációk\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/}},
+	
+	\bibitem{stepperhat}
+	Waveshare stepper motor hat spevifikációk\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://www.waveshare.com/wiki/Stepper_Motor_HAT}},
 
+	\bibitem{raspberrycam}
+	Raspberry 2 kamera specifikációk\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://www.raspberrypi.com/products/camera-module-v2/}},
 
 \end{thebibliography}
 
