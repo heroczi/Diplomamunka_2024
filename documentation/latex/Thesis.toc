@@ -13,33 +13,33 @@
 \select@language {magyar} \contentsline {paragraph}{Paintball}{15}{section*.9}%
 \select@language {magyar} \contentsline {paragraph}{Nerf}{16}{section*.10}%
 \select@language {magyar} \contentsline {paragraph}{Airsoft}{16}{section*.11}%
-\select@language {magyar} \contentsline {section}{\numberline {3}Rendszertervezés és követelmények}{16}{section.3}%
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1}Rendszeráttekintés}{16}{subsection.3.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2}Követelmények}{17}{subsection.3.2}%
+\select@language {magyar} \contentsline {section}{\numberline {3}Rendszertervezés és követelmények}{17}{section.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1}Rendszeráttekintés}{17}{subsection.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2}Követelmények}{18}{subsection.3.2}%
 \select@language {magyar} \contentsline {section}{\numberline {4}Mechanikai tervezés}{21}{section.4}%
 \select@language {magyar} \contentsline {subsection}{\numberline {4.1}Kinematika}{21}{subsection.4.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {4.2}Mechanikai alkatrészek}{21}{subsection.4.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {4.3}3D tervezés, modellezés}{21}{subsection.4.3}%
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4}Gyártás és összeszerelés}{22}{subsection.4.4}%
-\select@language {magyar} \contentsline {section}{\numberline {5}Hardvertervezés}{22}{section.5}%
-\select@language {magyar} \contentsline {subsection}{\numberline {5.1}Áramköri tervezés}{22}{subsection.5.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {5.2}Elektronikai alkatrészek}{22}{subsection.5.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {5.3}Hardverintegráció}{22}{subsection.5.3}%
-\select@language {magyar} \contentsline {subsection}{\numberline {5.4}Gyártás, forrasztás}{22}{subsection.5.4}%
-\select@language {magyar} \contentsline {section}{\numberline {6}Szoftverfejlesztés}{22}{section.6}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1}Szoftverarchitektúra}{22}{subsection.6.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2}Adatáramlás, kommunikáció}{22}{subsection.6.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.3}Szinkronizáció?}{22}{subsection.6.3}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.4}Vezérlő algoritmus}{23}{subsection.6.4}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.5}Gépi látás}{23}{subsection.6.5}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.6}Programozási nyelvek és eszközök:}{23}{subsection.6.6}%
-\select@language {magyar} \contentsline {section}{\numberline {7}Tesztelés}{23}{section.7}%
-\select@language {magyar} \contentsline {subsection}{\numberline {7.1}Tesztelési környezet}{23}{subsection.7.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {7.2}Teljesítménymutatók}{23}{subsection.7.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {7.3}Kísérleti eredmények}{23}{subsection.7.3}%
-\select@language {magyar} \contentsline {subsection}{\numberline {7.4}Eredmények elemzése}{23}{subsection.7.4}%
-\select@language {magyar} \contentsline {section}{\numberline {8}Hibák, észrevételek}{23}{section.8}%
-\select@language {magyar} \contentsline {section}{\numberline {9}Továbbfejlesztési lehetőségek}{23}{section.9}%
-\select@language {magyar} \contentsline {section}{\numberline {10}Költségek}{24}{section.10}%
-\select@language {magyar} \contentsline {section}{\numberline {11}Konklúziók}{24}{section.11}%
-\select@language {magyar} \contentsline {section}{\numberline {12}Köszönetnyilvánítás}{24}{section.12}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2}Mechanikai alkatrészek}{23}{subsection.4.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3}3D tervezés, modellezés}{26}{subsection.4.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4}Gyártás és összeszerelés}{26}{subsection.4.4}%
+\select@language {magyar} \contentsline {section}{\numberline {5}Hardvertervezés}{26}{section.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.1}Áramköri tervezés}{26}{subsection.5.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.2}Elektronikai alkatrészek}{26}{subsection.5.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.3}Hardverintegráció}{31}{subsection.5.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.4}Gyártás, forrasztás}{31}{subsection.5.4}%
+\select@language {magyar} \contentsline {section}{\numberline {6}Szoftverfejlesztés}{31}{section.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1}Szoftverarchitektúra}{31}{subsection.6.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2}Adatáramlás, kommunikáció}{31}{subsection.6.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.3}Szinkronizáció?}{31}{subsection.6.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.4}Vezérlő algoritmus}{31}{subsection.6.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.5}Gépi látás}{31}{subsection.6.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.6}Programozási nyelvek és eszközök:}{31}{subsection.6.6}%
+\select@language {magyar} \contentsline {section}{\numberline {7}Tesztelés}{31}{section.7}%
+\select@language {magyar} \contentsline {subsection}{\numberline {7.1}Tesztelési környezet}{32}{subsection.7.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {7.2}Teljesítménymutatók}{32}{subsection.7.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {7.3}Kísérleti eredmények}{32}{subsection.7.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {7.4}Eredmények elemzése}{32}{subsection.7.4}%
+\select@language {magyar} \contentsline {section}{\numberline {8}Hibák, észrevételek}{32}{section.8}%
+\select@language {magyar} \contentsline {section}{\numberline {9}Továbbfejlesztési lehetőségek}{32}{section.9}%
+\select@language {magyar} \contentsline {section}{\numberline {10}Költségek}{32}{section.10}%
+\select@language {magyar} \contentsline {section}{\numberline {11}Konklúziók}{32}{section.11}%
+\select@language {magyar} \contentsline {section}{\numberline {12}Köszönetnyilvánítás}{32}{section.12}%
