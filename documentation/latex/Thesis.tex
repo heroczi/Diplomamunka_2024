@@ -383,12 +383,21 @@ A rendszernek különféle környezeti feltételek között is megbízhatóan ke
 \section{Mechanikai tervezés}
 A mechanikai tervezést egy kinematikai modell kidolgozásával kezdtem, majd a meglévő, kereskedelemben kapható alkatrészek méreteihez igazítva megterveztem a 3D CAD modellt. Ezután finomhangoltam a 3D nyomtatási technológiához megfelelően.
 \subsection{Kinematika}
-A \ref{sec:valos}. bekezdésben vizsgált rendszerek alapján körvonalazódott, milyen megoldást szeretnék én is alkalmazni. Nagyon leegyszerűsítve egy 360 fokban forgó toronyról lenne szó, aminek a tetején helyezkedik el a billenthető fegyverzet. Szemléltetésképpen készítettem a \ref{fig:megval_mockup}. ábrát. 
+A rendszer kinematikai modellje hasonlatos a biztonsági kamerákhoz, aminek elnevezése Pan-Tilt-Zoom, röviden PTZ. Ennek lényege a 360 fokban elforgatható függőleges tengely, és egy általában korlátoltabb vízszintes tengely. Előnyük, hogy nagy sebességgel tudnak irányt változtatni, és nagy területet képesek belátni. A zoom aspektus az én esetemben nem fontos, hiszen nem a kamera a fő funkció. A \ref{fig:mech_pantilt}. ábrán erről látható illusztráció.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{mech_pantilt}
+	\caption{PTZ kamera}
+	\label{fig:mech_pantilt}
+\end{figure}
+
+A \ref{sec:valos}. bekezdésben vizsgált rendszerek is hasonlóképpen mozognak. Ezek közelebbi vizsgálata után elkezdtem kidolgozni a saját koncepciómat. Szemléltetésképpen készítettem a \ref{fig:megval_mockup}. ábrát. Az egyszerűség kedvéért a fegyver csövét egy síkba terveztem a pan és tilt tengelyekkel, ez megkönnyíti a későbbi számításokat.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.6\linewidth]{mockup}
-	\caption{A rendszerelrendezés}
+	\caption{Egyszerűsített kinematikai ábra}
 	\label{fig:megval_mockup}
 \end{figure}
 
@@ -404,7 +413,7 @@ A torony szükséges fordulatszámát a következőképpen lehet kiszámolni:
 ahol:
 
 \begin{tabular}{cl}
-	$v\_t$ & A célpont sebessége a fegyvercsőre merőlegesen, \\
+	$v_t$ & A célpont sebessége a fegyvercsőre merőlegesen, \\
 	$r$ & A távolság a célpont és a rendszer között\\
 \end{tabular}
 
@@ -462,9 +471,69 @@ A projekthez kettő NEMA-17 léptetőmotort használok\cite{nema17}. Ezek a lép
 
 A léptetőmotorok általánosan használt típusai közé tartoznak a szervomotorok és az aszinkron motorok. A léptetőmotorok azonban a mozgásukat apró, egyenlő lépésekre osztják, így lehetővé téve a precíz pozícionálást és sebességszabályozást. A NEMA-17 léptetőmotor tipikusan kétfázisú bipoláris motor, amely négy vezetékes tekercseléssel rendelkezik. Minden lépés során a motor egy adott szöggel fordul el, ami az adott motor típusától és felépítésétől függően tipikusan 1.8 fok, így teljes fordulat esetén 200 lépésre van szükség.\\
 
-Az én esetemben használt léptetőmotorok lépésszöge 1.8 fok, bár ezt a motorvezérlőn lehet tovább osztani. A tartónyomatéka 0.4 Nm. Ezek a paraméterek 10-es áttételű fogaskerék-kapcsolattal megfelelőnek kell lenniük egy ilyen kis teljesítményű alkalmazásnál. 
+Az én esetemben használt léptetőmotorok lépésszöge 1.8 fok, bár ezt a motorvezérlőn lehet tovább osztani. A tartónyomatéka 0.4 Nm. Ezek a paraméterek 10-es áttételű fogaskerék-kapcsolattal megfelelőnek kell lenniük egy ilyen kis teljesítményű alkalmazásnál.
 \subsection{3D tervezés, modellezés}
-a
+A 3D tervezést Top-Down módszerrel végeztem, ez azt jelenti, hogy először az összeállítás szintjéről kezdem a tervezést, és egy úgynevezett skeleton modellbe veszem fel az egyes alkatrészek méreteit. Ezáltal tudom garantálni az egymáshoz való illeszkedést, valamint a változtatások könnyű implementálását.\\
+\subsubsection*{Skeleton modell}
+A modellezést a skeleton modellek megalkotásával kezdtem. A fő összeállításon belül két skeleton modellt hoztam létre, mivel maga a modell két alösszeállítása jól elkülöníthető egymástól. Az egyik (\ref{fig:mech_skeleton1}.ábra) alkatrészei rendszerint a függőleges tengely körül szimmetrikusak, a másiké (\ref{fig:mech_skeleton2}.ábra) pedig a fegyver csöve körül. Az ábrákon láthatóak a vázlatok és tengelyek, amelyek alapján kialakítottam az egyes alkatrészeket. Sok méretet először csak hozzávetőlegesen vettem fel, pl. a torony magasságát. A Top-Down módszer előnye, hogy később ezeket könnyedén módosíthatom, és az alkatrészek frissítés után ugyanúgy fognak egymáshoz illeszkedni.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{mech_skeleton1}
+	\caption{DT-9999 skeleton modell}
+	\label{fig:mech_skeleton1}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{mech_skeleton2}
+	\caption{DT-4999 skeleton modell}
+	\label{fig:mech_skeleton2}
+\end{figure}
+
+\subsubsection{Torony}
+
+Elsőként a \textbf{gearbox tartó elemet} kezdtem el tervezni, mert maga a gearbox volt a tervezés elején az egyetlen elem, amiből tudtam következtetni a szükséges méretekre. Erről kép a \ref{fig:mech_dt4000}. ábrán látható. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{mech_dt4000}
+	\caption{Gearbox tartó ház}
+	\label{fig:mech_dt4000}
+\end{figure}
+
+A gearbox ház 3 alkatrészből áll, egy központi elemből, valamint két fedélből a végein. A kialakítást a teljes airsoft fegyver alapján terveztem, hogy ugyanúgy álljon a gearbox mint az eredeti felhasználása során. A kritikusabb rész ebben az elemben a hop-up kamra körüli kialakítás volt, itt elég komplex volt a geometria, de a 3D nyomtatás lehetővé tette a megvalósítást. Ezt a \ref{fig:mech_dt4200}. ábrán lehet látni.
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{mech_dt4200}
+	\caption{Hop-Up kamra körüli elem}
+	\label{fig:mech_dt4200}
+\end{figure}
+
+
+A következő alösszeállítás a \textbf{tár} volt, amely a gearbox ház bal oldali tengelyére csatlakozik. Ennek kialakítása a \ref{fig:mech_tar}. ábrán látható. A 6 mm-es golyók a zöld kupak nyílásán keresztül tölthetőek a lila tárba. Alul és felül 1-1 gumigyűrű feszíti előre a zöld dugattyút, ami a tár kúpos végén keresztül nyomja ki a golyókat. Így mechanikailag, plusz elektronika nélkül biztosítható a fegyver lövedékkel való ellátása, és szemmel is látható a tár töltöttségi szintje.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{mech_tar}
+	\caption{Tár}
+	\label{fig:mech_tar}
+\end{figure}
+
+Végül a toronyra kerültek az elektronikai alkatrészek is, ezek a \ref{fig:mech_dt4000kamera}. ábrán láthatóak. A lila elem a lézer modul, a piros pedig a kamera konzol. Mind a kettő ragasztással kerül rögzítésre. Fontosnak tartottam, hogy ezek az elemek közvetlenül ahhoz az elemhez legyenek rögzítve, ami a fegyver csövét is pozicionálja, azonban a kamera esetén a 3D nyomtathatóság miatt egy konzolt szükségesnek éreztem.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{mech_dt4000kamera}
+	\caption{Kamera és lézer modul beépítés}
+	\label{fig:mech_dt4000kamera}
+\end{figure}
+
+
+
+
 \subsection{Gyártás és összeszerelés}
 a
 \section{Hardvertervezés}
