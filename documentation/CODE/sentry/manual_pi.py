@@ -34,6 +34,7 @@ def control_listener(stop_event):
     sock_control = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock_control.bind((RPI_IP, RPI_PORT_CONTROL))
 
+    print("Control process started.")
     while not stop_event.is_set():
         try:
             data, addr = sock_control.recvfrom(1024)
@@ -75,6 +76,7 @@ def video_sender(stop_event):
     MAX_DGRAM = 65000  # Max datagram size, less than 65507 to allow for headers
     packet_id = 0
 
+    print("Video process started")
     while not stop_event.is_set():
         ret, frame = camera.read()
         if not ret:
@@ -114,6 +116,7 @@ def main():
     # Wait for both processes to finish
     video_process.join()
     control_process.join()
+    print("All processes terminated.")
 
 if __name__ == "__main__":
 

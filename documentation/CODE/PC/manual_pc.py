@@ -42,14 +42,12 @@ def video_receiver(stop_event):
             frame = pickle.loads(data)
             frame = cv2.imdecode(frame, cv2.IMREAD_COLOR)
             if frame is not None:
-                cv2.imshow("Camera Feed", frame)
+                cv2.imshow("DESTROY", frame)
 
             # Clear buffer for the next frame
             buffer = {}
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            stop_event.set()
-            break
+        cv2.waitKey(1)
         
     video_socket.close()
     cv2.destroyAllWindows()
