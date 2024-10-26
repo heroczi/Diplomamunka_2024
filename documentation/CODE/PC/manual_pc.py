@@ -47,6 +47,10 @@ def video_receiver(stop_event):
             # Clear buffer for the next frame
             buffer = {}
 
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            stop_event.set()
+            break
+        
     video_socket.close()
     cv2.destroyAllWindows()
     print("Video process terminated.")
