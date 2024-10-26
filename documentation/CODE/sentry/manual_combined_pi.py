@@ -1,18 +1,20 @@
 import socket
+import pickle
 import struct
 import numpy as np
 import cv2
 import gpiozero as GPIO
 from DRV8825 import DRV8825
-import threading
+import multiprocessing
 from picamera2 import Picamera2
-import time
+import struct
 
 # Constants for event types
 MOVE = 1
 SHOOT_START = 2
 SHOOT_STOP = 3
 LASERTOGGLE = 4
+STOP = 9
 
 # Raspberry Pi IP and ports
 PC_IP = "192.168.100.1"  # PC's IP address
@@ -20,109 +22,98 @@ RPI_IP = "192.168.100.2"
 RPI_PORT_CONTROL = 9000  # Port for receiving control commands
 RPI_PORT_VIDEO = 2000     # Port for sending video frames
 
-# Motor setup
-Motor1 = DRV8825(dir_pin=13, step_pin=19, enable_pin=12)
-Motor2 = DRV8825(dir_pin=24, step_pin=18, enable_pin=4)
-
-# Weapon and laser setup
-weapon = GPIO.LED(3)
-laser = GPIO.LED(21)
-
-# Motor control functions
-def move_motor(motor, direction, steps=1, delay=0):
-    motor.TurnStep(direction, steps, stepdelay=delay)
-
-def handle_move(x_movement, y_movement):
-    if x_movement != 0:
-        dirx = 1 if x_movement > 0 else -1
-        move_motor(Motor1, dirx)
-
-    if y_movement != 0:
-        diry = 1 if y_movement > 0 else -1
-        move_motor(Motor2, diry)
-
-# Event handler functions
-def handle_shoot_start():
-    weapon.on()
-
-def handle_shoot_stop():
-    weapon.off()
-
-def handle_laser_toggle():
-    laser.toggle()
-    print("Laser toggled")
-
 # Control command listener
-def control_listener():
+def control_listener(stop_event):
 
-    # Socket for control commands
+    Motor1 = DRV8825(dir_pin=13, step_pin=19, enable_pin=12)
+    Motor2 = DRV8825(dir_pin=24, step_pin=18, enable_pin=4)
+
+    weapon = GPIO.LED(3)
+    laser = GPIO.LED(21)
+
     sock_control = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock_control.bind((RPI_IP, RPI_PORT_CONTROL))
 
-    while True:
+    while not stop_event.is_set():
         try:
             data, addr = sock_control.recvfrom(1024)
             eventtype, x_movement, y_movement = map(int, data.decode().split(","))
             
-            if eventtype == MOVE:
-                handle_move(x_movement, y_movement)
+            if eventtype == STOP:
+                stop_event.set()
+
+            elif eventtype == MOVE:
+                if x_movement != 0:
+                    dirx = 1 if x_movement > 0 else -1
+                    Motor1.TurnStep(dirx, 1, 0)
+
+                if y_movement != 0:
+                    diry = 1 if y_movement > 0 else -1
+                    Motor2.TurnStep(diry, 1, 0)
+
             elif eventtype == SHOOT_START:
-                handle_shoot_start()
+                weapon.on()
             elif eventtype == SHOOT_STOP:
-                handle_shoot_stop()
+                weapon.off()
             elif eventtype == LASERTOGGLE:
-                handle_laser_toggle()
+                laser.toggle()
         except Exception as e:
             print(f"Control error: {e}")
 
-# Video frame sender
-def video_sender():
+    sock_control.close()
+    print("Control process terminated.")
 
-    # Initialize the PiCamera2
-    picam2 = Picamera2()
-    picam2.configure(picam2.create_video_configuration(main={"size": (640, 480)}))
-    picam2.start()
-    
-    # Socket for sending video feed
-    sock_video = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    CHUNK_SIZE =  65535 # Maximum size for UDP packets
-    while True:
+def video_sender(stop_event):
+    camera = cv2.VideoCapture(0, cv2.CAP_V4L2)
+    camera.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+    camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
-        # Capture a frame from the camera
-        frame = picam2.capture_array()
+    # Set up UDP socket
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 65536)
 
-        # Encode the frame using JPEG to compress and reduce size
-        ret, encoded_frame = cv2.imencode('.jpg', frame)
+    MAX_DGRAM = 65000  # Max datagram size, less than 65507 to allow for headers
+    packet_id = 0
+
+    while not stop_event.is_set():
+        ret, frame = camera.read()
         if not ret:
-            continue  # Skip if encoding fails
+            break
 
-        # Prepare data: send frame size followed by the frame data
-        frame_data = encoded_frame.tobytes()
-        frame_size = len(frame_data)
-        if frame_size < CHUNK_SIZE:
-            # Send frame size as a 4-byte unsigned integer (big-endian)
-            sock_video.sendto(struct.pack(">I", frame_size), (PC_IP, RPI_PORT_VIDEO))
+        # Encode the frame as JPEG
+        encoded, buffer = cv2.imencode('.jpg', frame)
+        data = pickle.dumps(buffer)
+        
+        # Split data into chunks
+        chunks = [data[i:i + MAX_DGRAM] for i in range(0, len(data), MAX_DGRAM)]
 
-            # Send the actual frame data in chunks
-            
-            for i in range(0, frame_size, CHUNK_SIZE):
-                sock_video.sendto(frame_data[i:i + CHUNK_SIZE], (PC_IP, RPI_PORT_VIDEO))
+        for i, chunk in enumerate(chunks):
+            # Create a header with packet_id, chunk index, and total number of chunks
+            header = struct.pack("!HHH", packet_id, i, len(chunks))
+            packet = header + chunk
+            server_socket.sendto(packet, (PC_IP, RPI_PORT_VIDEO))
 
+        # Increment packet ID to help the receiver with reassembly
+        packet_id = (packet_id + 1) % 65535
 
+    camera.release()
+    server_socket.close()
+    print("Video process terminated.")
 
 
 # Main function to start both threads
 def main():
-    # # Start the control listener in a separate thread
-    # control_thread = threading.Thread(target=control_listener)
-    # control_thread.daemon = True
-    # control_thread.start()
-    # Start the video sender in a separate thread
-    video_thread = threading.Thread(target=video_sender)
-    video_thread.daemon = True
-    video_thread.start()
-    # Start sending video frames to the PC
-    control_listener()
+    stop_event = multiprocessing.Event()
+    video_process = multiprocessing.Process(target=video_sender, args=(stop_event,))
+    control_process = multiprocessing.Process(target=control_listener, args=(stop_event,))
+
+    # Start the processes
+    video_process.start()
+    control_process.start()
+
+    # Wait for both processes to finish
+    video_process.join()
+    control_process.join()
 
 if __name__ == "__main__":
 

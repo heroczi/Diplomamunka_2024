@@ -531,15 +531,87 @@ Végül a toronyra kerültek az elektronikai alkatrészek is, ezek a \ref{fig:me
 	\label{fig:mech_dt4000kamera}
 \end{figure}
 
+\subsubsection{Keret}
+Az úgynevezett \textbf{keret} volt a konstrukció legösszetettebb eleme, és egyben a legnagyobb térfogatú is. Fő funkciója a torony stabil tartása a csapágyakkal együtt. Ezentúl erre az elemre van rögzítve a vezérlőelektronika nagy része, a végálláskapcsolók és a vízszintes tengelyhez tartozó motor is. Ez az elem az alatta lévő alkatrészhez ragasztással lett rögzítve, hogy a szerelést egyszerűsítsem. A csapágyak támasztása X elrendezésű, és az osztott "csapágyház" miatt könnyen szerelhetőek. A csapágy elrendezése  a
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{mech_felsotengely}
+	\caption{Vízszintes tengely csapágyainak elrendezése}
+	\label{fig:mech_felsotengely}
+\end{figure}
 
 
+Kétséges rész volt a \textbf{motor} rögzítése, ugyanis nagy szükség van a pontos illeszkedésre. A nyomtatás irányára azonban a motor központosítására szánt furat pont merőleges, de szerencsére a nyomtató így is elég nagy pontosságot tudott elérni. A motor beépítése a 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{mech_motorbeepites}
+	\caption{Vízszintes tengely motor beépítése}
+	\label{fig:mech_motorbeepites}
+\end{figure}
+
+A kereten kaptak helyet a végálláskapcsolók is, amivel a rendszer indításkor kalibrálható. A egyik a vízszintes tengely nagy fogaskerekét, a másik pedig a függőleges tengely központi eleméhez viszonyít.
+
+
+\begin{figure}
+	\centering
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=.7\linewidth]{mech_vegallas1}
+		\caption{Pan végálláskapcsoló}
+		\label{fig:mech_vegallas1}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=.7\linewidth]{mech_vegallas2}
+		\caption{Tilt végálláskapcsoló}
+		\label{fig:mech_vegallas2}
+	\end{minipage}
+\end{figure}
+
+\subsubsection{Függőleges tengely elemei}
+
+Utolsó lépésként megterveztem a függőleges tengely mozgatásáért felelős elemeket. ezek kialakítása a \ref{fig:mech_alsoreszek}. ábrán látható. A narancssárga alakrész a központi elem, amelynek feladata a csapágy támasztása és a motor rögzítése. A motor vezetékei, valamint az elektronikából kilógó többi kábel ennek a közepén fut keresztül. A csapágy egyik fele ehhez az elemhez van rögzítve, a másik pedig  az ábrán kékkel ábrázolt alkatrészhez. Erre a kék elemere került rögzítésre a belsőfogazású fogaskerék is. \\ 
+
+A sárga alkatrész a talapzat része. Ez a legnagyobb kiterjedésű elem az egész modellben. Hogy elkerüljem a támaszanyag használatát, a csavarok fejeinek felfekvő felületeti egy külön alkatrész ragasztásával oldottam meg. Ez a talp 45 fokos belső felületére illeszkedik, és ragasztással kerül rögzítésre. A 4 oldalán kialakításra kerültek csatlakozó felületek, ahol különböző lábak helyezhetők az eszközre.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{mech_alsoreszek}
+	\caption{Függőleges tengely elrendezése}
+	\label{fig:mech_alsoreszek}
+\end{figure}
+
+\subsubsection{Fogaskerekek}
+A prototípusban két fogaskerék kapcsolat kapott helyet. A függőleges tengely nagy fogaskereke belső fogazású, ezáltal el tudtam rejteni a motort a váz belsejében és kompaktabb lett a kialakítás, valamint valamivel stabilabb is. A kapcsolat áttétele 10, és ferde fogazású, ezáltal a futás csendesebb és egyenletesebb lett. A kapcsolat illusztrációja a \ref{fig:mech_fogpar1}. ábrán látható.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{mech_fogpar1}
+	\caption{Függőleges tengely fogaskerekek}
+	\label{fig:mech_fogpar1}
+\end{figure}
+
+A vízszintes tengely nagy fogaskereke a gearbox ház tengelyére lett erősítve, és csak részlegesen lett kinyomtatva. Ennek egyszerű oka, hogy más geometria is blokkolja a mozgást ezekben a tartományokban, illetve a Pan-Tilt kinematika mozgása redundáns lenne, ha teljesen körbe tudna forogni. A kapcsolat a \ref{fig:mech_fogpar1}. ábrán látható.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{mech_fogpar2}
+	\caption{Vízszintes tengely fogaskerekek}
+	\label{fig:mech_fogpar2}
+\end{figure}
+
+Mind a két fogaskerékpár kisebb közvetlenül a motor tengelyére lett rögzítve, egy acél rögzítőgyűrűvel. Ennek kialakítása a \ref{fig:mech_alsoreszek}. ábra bal oldalán látható.
 
 \subsection{Gyártás és összeszerelés}
 a
+
+\pagebreak
 \section{Hardvertervezés}
-a
+
 \subsection{Áramköri tervezés}
-a
+A prototípus áramkörét próbáltam minél egyszerűbben megvalósítani. Alapvetően két részből áll, a Raspberry PI központú vezérlőáramkörből, ami felelős a szenzorokért és a Raspberry PI-ért, illetve egy nagyobb teljesítményű áramkör egy külön tápról, ami a gearbox működtetéséért felelős. 
 \subsection{Elektronikai alkatrészek}
 \subsubsection*{Mikrovezérlő}
 A mikrokontroller kiválasztásánál több opciót vizsgáltam, többek között az {Arduino}, az \textsl{STM-32} és a \textsl{Raspberry PI} modelleket. A követelmények a következőek voltak:
@@ -611,44 +683,44 @@ A prototípus bekapcsolásánál fontos, hogy beálljon egy kezdőpozícióba, �
 	\label{fig:elek_vegallaskapcsolo}
 \end{figure}
 
-\subsection{Hardverintegráció}
-a
-\subsection{Gyártás, forrasztás}
-a
+%\subsection{Hardverintegráció}
+%a
+%\subsection{Gyártás, forrasztás}
+%a
 \section{Szoftverfejlesztés}
 a
-\subsection{Szoftverarchitektúra}
-a
-\subsection{Adatáramlás, kommunikáció}
-a
-\subsection{Szinkronizáció?}
-a
-\subsection{Vezérlő algoritmus}
-a
-\subsection{Gépi látás}
-a
-\subsection{Programozási nyelvek és eszközök:}
+%\subsection{Szoftverarchitektúra}
+%a
+%\subsection{Adatáramlás, kommunikáció}
+%a
+%\subsection{Szinkronizáció?}
+%a
+%\subsection{Vezérlő algoritmus}
+%a
+%\subsection{Gépi látás}
+%a
+%\subsection{Programozási nyelvek és eszközök:}
 a
 \section{Tesztelés}
 a
-\subsection{Tesztelési környezet}
-a
-\subsection{Teljesítménymutatók}
-a
-\subsection{Kísérleti eredmények}
-a
-\subsection{Eredmények elemzése}
-a
-\section{Hibák, észrevételek}
-a
-\section{Továbbfejlesztési lehetőségek}
-a
-\section{Költségek}
-a
-\section{Konklúziók}
-a
-\section{Köszönetnyilvánítás}
-a
+%\subsection{Tesztelési környezet}
+%a
+%\subsection{Teljesítménymutatók}
+%a
+%\subsection{Kísérleti eredmények}
+%a
+%\subsection{Eredmények elemzése}
+%a
+%\section{Hibák, észrevételek}
+%a
+%\section{Továbbfejlesztési lehetőségek}
+%a
+%\section{Költségek}
+%a
+%\section{Konklúziók}
+%a
+%\section{Köszönetnyilvánítás}
+%a
 
 
 \pagebreak

@@ -11,8 +11,8 @@ M4x20 süllyesztett x5
 M4x25 BKNY x10
 M3x6 süllyesztett x5
 M3x8 BKNY x5
-M4 anya 20
-M3 anya 20
+
+
 M3 alátét 20
 M4 alátét 20
 M3 rugós alátét 20
