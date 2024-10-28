@@ -14,6 +14,8 @@
 \pagestyle{fancy}
 \usepackage{anyfontsize,lettrine}
 \usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{tcolorbox}
 
 %-------------------Settings-------------------%
 \graphicspath{{./images/}}
@@ -25,7 +27,7 @@
 \lhead{\rightmark}
 \rhead{\thepage}
 \setcounter{DefaultLines}{3}
-\renewcommand{\LettrineFontHook}{\usefont{U}{Acorn}{xl}{n}}
+
 %-------------------Commands-------------------%
 \newcommand{\AUTHOR}{Herőczi Sándor}
 \newcommand{\NEPTUN}{WH0AMC}
@@ -35,10 +37,16 @@
 \newcommand{\ABRAKELL}{\textcolor{red}{IDE KELL MÉG ÁBRA}}
 %-------------------Colours-------------------%
 \definecolor{BMEbordo}{HTML}{862633}
+\definecolor{light-gray}{gray}{0.95}
 
-
+\newcommand{\code}[1]{\tcbox{\texttt{#1}}}
 \newcommand{\w}[1]{\; \mathrm{#1}}
 \newcommand{\q}[1]{\; \left[\mathrm{#1}\right]}
+
+\tcbset{on line, 
+	boxsep=4pt, left=0pt,right=0pt,top=0pt,bottom=0pt,
+	colframe=white,colback=light-gray
+}
 
 \begin{document}
 
@@ -321,32 +329,32 @@ Az autonóm fegyverrendszer fejlesztése során számos követelményt kellett f
 \subsubsection*{Mechanikai követelmények} 
 
 A mechanikai komponensek tervezése során az alábbi követelményeknek kellett megfelelni:
-\begin{description}
-	\item[Stabilitás és pontosság:]  A fegyverrendszer mechanikai szerkezetének stabilnak és tartósnak kell lennie annak érdekében, hogy a lövések közben ne mozduljon el, és ne veszítse el a célpontot. Ugyanakkor elegendő pontosságot kell biztosítania a célpont precíz követéséhez.
-	\item[Fürgeség:]A rendszernek képesnek kell lennie a fegyver gyors és pontos mozgatására a pan-tilt mechanizmus segítségével. Ennek megfelelően a szervomotoroknak kellően gyorsnak és erősnek kell lenniük ahhoz, hogy valós időben tudják követni a mozgó célpontokat.
-	\item[Strapabíró konstrukció:] Habár nagy terhelés nem fogja érni, a gearboxból jöhetnek rezgések, rángások, amik esetleg problémát jelenthetnek egy alulméretezett alkatrész esetében.
-\end{description}
+\begin{list}{}{}
+	\item \textbf{Stabilitás és pontosság:}  A fegyverrendszer mechanikai szerkezetének stabilnak és tartósnak kell lennie annak érdekében, hogy a lövések közben ne mozduljon el, és ne veszítse el a célpontot. Ugyanakkor elegendő pontosságot kell biztosítania a célpont precíz követéséhez.
+	\item \textbf{Fürgeség:} A rendszernek képesnek kell lennie a fegyver gyors és pontos mozgatására a pan-tilt mechanizmus segítségével. Ennek megfelelően a szervomotoroknak kellően gyorsnak és erősnek kell lenniük ahhoz, hogy valós időben tudják követni a mozgó célpontokat.
+	\item \textbf{Strapabíró konstrukció:} Habár nagy terhelés nem fogja érni, a gearboxból jöhetnek rezgések, rángások, amik esetleg problémát jelenthetnek egy alulméretezett alkatrész esetében.
+\end{list}
 
 \subsubsection*{Elektronikai követelmények}
 
 Az elektronikai rendszer megbízható működése érdekében az alábbi követelményeknek kellett eleget tenni:
 
-\begin{description}
-	\item[Megfelelő teljesítmény:]  A szervomotoroknak és szenzoroknak megfelelő tápegységre van szükségük, amely stabil energiaellátást biztosít. A rendszer energiaigényét előzetesen fel kellett mérni, hogy a tápegység terhelés alatt is megfelelően működjön.
-	\item[Szenzorok pontossága:] A kamerának és egyéb szenzoroknak elegendő felbontással és érzékenységgel kell rendelkezniük ahhoz, hogy képesek legyenek a célpontokat megfelelően azonosítani. A valós idejű képfeldolgozás nagy adatsebességet és megbízható szenzorjeleket igényel.
-	\item[Vezérlés:] A mikrokontrollernek kellően gyorsnak kell lennie, hogy a valós idejű adatokat folyamatosan feldolgozza és a vezérlési parancsokat késlekedés nélkül végrehajtsa.
-\end{description}
+\begin{list}{}{}
+	\item \textbf{Megfelelő teljesítmény:}  A szervomotoroknak és szenzoroknak megfelelő tápegységre van szükségük, amely stabil energiaellátást biztosít. A rendszer energiaigényét előzetesen fel kellett mérni, hogy a tápegység terhelés alatt is megfelelően működjön.
+	\item \textbf{Szenzorok pontossága:} A kamerának és egyéb szenzoroknak elegendő felbontással és érzékenységgel kell rendelkezniük ahhoz, hogy képesek legyenek a célpontokat megfelelően azonosítani. A valós idejű képfeldolgozás nagy adatsebességet és megbízható szenzorjeleket igényel.
+	\item\textbf{ Vezérlés:} A mikrokontrollernek kellően gyorsnak kell lennie, hogy a valós idejű adatokat folyamatosan feldolgozza és a vezérlési parancsokat késlekedés nélkül végrehajtsa.
+\end{list}
 
 
 \subsubsection*{Szoftveres követelmények}
 
 A rendszer működéséhez szükséges szoftverfejlesztés során a következő követelményeknek kellett megfelelni:
 
-\begin{description}
-	\item[Valós idejű feldolgozás:]  A számítógépes látás szoftverének valós időben kell elemeznie a kamerák által közvetített adatokat, felismerve a célpontokat és kiszámítva a mozgás irányát. A célzási és lövési döntések gyors és hatékony adatfeldolgozást igényelnek.
-	\item[Biztonságos működés:] A rendszernek rendelkeznie kell olyan szoftveres biztonsági funkciókkal, amelyek megakadályozzák a véletlen tüzelést. Ez magában foglalja a lövési engedélykérés mechanizmusát és a manuális vészleállítás lehetőségét.
-	\item[Felhasználói interfész:] Az felhasználónak egyszerű és intuitív felhasználói felületet kellett biztosítani, amelyen keresztül könnyedén vezérelheti a rendszert, illetve áttekintheti a célpontok adatait és a kamera képét. A felületnek támogatnia kell a kézi irányítást és a lövési parancsok kiadását.
-\end{description}
+\begin{list}{}{}
+	\item \textbf{Valós idejű feldolgozás:}  A számítógépes látás szoftverének valós időben kell elemeznie a kamerák által közvetített adatokat, felismerve a célpontokat és kiszámítva a mozgás irányát. A célzási és lövési döntések gyors és hatékony adatfeldolgozást igényelnek.
+	\item \textbf{Biztonságos működés:} A rendszernek rendelkeznie kell olyan szoftveres biztonsági funkciókkal, amelyek megakadályozzák a véletlen tüzelést. Ez magában foglalja a lövési engedélykérés mechanizmusát és a manuális vészleállítás lehetőségét.
+	\item \textbf{Felhasználói interfész:} Az felhasználónak egyszerű és intuitív felhasználói felületet kellett biztosítani, amelyen keresztül könnyedén vezérelheti a rendszert, illetve áttekintheti a célpontok adatait és a kamera képét. A felületnek támogatnia kell a kézi irányítást és a lövési parancsok kiadását.
+\end{list}
 
 
 
@@ -355,29 +363,29 @@ A rendszer működéséhez szükséges szoftverfejlesztés során a következő 
 
 A rendszer teljes funkcionalitásának biztosítása érdekében a következő kritériumoknak kellett megfelelni:
 
-\begin{description}
-	\item[Autonóm működés:] A rendszernek képesnek kell lennie arra, hogy teljesen önállóan felismerje és kövesse a célpontokat, valamint meghozza a tüzelési döntéseket az előre meghatározott paraméterek alapján.
-	\item[Manuális vezérlés:] Az autonóm működés mellett manuális vezérlési lehetőséget is kellett biztosítani az operátor számára. Ezen keresztül a felhasználó közvetlenül irányíthatja a fegyvert és manuálisan adhat lövési parancsot.
-\end{description}
+\begin{list}{}{}
+	\item \textbf{Autonóm működés:} A rendszernek képesnek kell lennie arra, hogy teljesen önállóan felismerje és kövesse a célpontokat, valamint meghozza a tüzelési döntéseket az előre meghatározott paraméterek alapján.
+	\item \textbf{Manuális vezérlés:} Az autonóm működés mellett manuális vezérlési lehetőséget is kellett biztosítani az operátor számára. Ezen keresztül a felhasználó közvetlenül irányíthatja a fegyvert és manuálisan adhat lövési parancsot.
+\end{list}
 
 \subsubsection*{Biztonsági követelmények}
 
 Az autonóm fegyverrendszerek használatával kapcsolatban különösen fontos a biztonsági követelmények teljesítése:
 
-\begin{description}
-	\item[Vészleállítás:]A rendszernek rendelkeznie kell egy vészleállító gombbal, amely azonnal megszakítja a fegyver működését, ha bármilyen hiba vagy vészhelyzet lép fel.
-	\item[Engedélyezési mechanizmus:] A tüzelési parancs kiadása előtt a rendszernek engedélyt kell kérnie az operátortól, ezzel minimalizálva a véletlen tüzelés kockázatát.
-	\item[Adatbiztonság:] A vezérlő szoftver és az operátor közötti kommunikáció titkosítva kell, hogy legyen, hogy megakadályozza a külső hozzáférést és a rendszer kompromittálását.
-\end{description}
+\begin{list}{}{}
+	\item \textbf{Vészleállítás:} A rendszernek rendelkeznie kell egy vészleállító gombbal, amely azonnal megszakítja a fegyver működését, ha bármilyen hiba vagy vészhelyzet lép fel.
+	\item \textbf{Engedélyezési mechanizmus:} A tüzelési parancs kiadása előtt a rendszernek engedélyt kell kérnie az operátortól, ezzel minimalizálva a véletlen tüzelés kockázatát.
+	\item\textbf{ Adatbiztonság:} A vezérlő szoftver és az operátor közötti kommunikáció titkosítva kell, hogy legyen, hogy megakadályozza a külső hozzáférést és a rendszer kompromittálását.
+\end{list}
 
 \subsubsection*{Környezeti követelmények}
 
 A rendszernek különféle környezeti feltételek között is megbízhatóan kell működnie:
 
-\begin{description}
-	\item[Hőmérsékleti tűréshatár:]A rendszernek képesnek kell lennie normál működésre különböző hőmérsékleti körülmények között, amelyek tipikusan a beltéri használat során fordulnak elő.
-	\item[Nedvesség és porállóság:] A rendszert úgy kell megtervezni, hogy ellenálljon a kisebb por- és nedvességterhelésnek, különösen, ha kültéri használatra is szükség van.
-\end{description}
+\begin{list}{}{}
+	\item \textbf{Hőmérsékleti tűréshatár:}A rendszernek képesnek kell lennie normál működésre különböző hőmérsékleti körülmények között, amelyek tipikusan a beltéri használat során fordulnak elő.
+	\item \textbf{Nedvesség és porállóság:} A rendszert úgy kell megtervezni, hogy ellenálljon a kisebb por- és nedvességterhelésnek, különösen, ha kültéri használatra is szükség van.
+\end{list}
 
 \pagebreak
 \section{Mechanikai tervezés}
@@ -460,11 +468,11 @@ A gearbox áramfogyasztását illetően találtam méréseket az internet, ahol 
 
 \subsubsection*{Motorok}
 
-A projekthez kettő NEMA-17 léptetőmotort használok\cite{nema17}. Ezek a léptetőmotorok egy széles körben alkalmazott típusa, amelyet főként precíziós mozgatási feladatokhoz használnak, például CNC gépekben, 3D nyomtatókban, robotikai alkalmazásokban és automatizálási rendszerekben. A NEMA-17 esetében a szám a motor elülső oldalának névleges méretét jelenti, amely 1.7 hüvelyk, azaz körülbelül 42,3 mm. A motorok a használt vezérlővel a \ref{fig:mech_stepper}. ábrán láthatóak.\\
+A projekthez kettő \textbf{NEMA-17} léptetőmotort használok\cite{nema17}. Ezek a léptetőmotorok egy széles körben alkalmazott típusa, amelyet főként precíziós mozgatási feladatokhoz használnak, például CNC gépekben, 3D nyomtatókban, robotikai alkalmazásokban és automatizálási rendszerekben. A NEMA-17 esetében a szám a motor elülső oldalának névleges méretét jelenti, amely 1.7 hüvelyk, azaz körülbelül 42,3 mm. A motorok a használt vezérlővel a \ref{fig:mech_stepper}. ábrán láthatóak.\\
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{mech_stepper}
+	\includegraphics[width=0.8\linewidth]{mech_stepper}
 	\caption{NEMA-17 léptetőmotorok a használt konfigurációban}
 	\label{fig:mech_stepper}
 \end{figure}
@@ -472,10 +480,14 @@ A projekthez kettő NEMA-17 léptetőmotort használok\cite{nema17}. Ezek a lép
 A léptetőmotorok általánosan használt típusai közé tartoznak a szervomotorok és az aszinkron motorok. A léptetőmotorok azonban a mozgásukat apró, egyenlő lépésekre osztják, így lehetővé téve a precíz pozícionálást és sebességszabályozást. A NEMA-17 léptetőmotor tipikusan kétfázisú bipoláris motor, amely négy vezetékes tekercseléssel rendelkezik. Minden lépés során a motor egy adott szöggel fordul el, ami az adott motor típusától és felépítésétől függően tipikusan 1.8 fok, így teljes fordulat esetén 200 lépésre van szükség.\\
 
 Az én esetemben használt léptetőmotorok lépésszöge 1.8 fok, bár ezt a motorvezérlőn lehet tovább osztani. A tartónyomatéka 0.4 Nm. Ezek a paraméterek 10-es áttételű fogaskerék-kapcsolattal megfelelőnek kell lenniük egy ilyen kis teljesítményű alkalmazásnál.
+
+\pagebreak
+
 \subsection{3D tervezés, modellezés}
 A 3D tervezést Top-Down módszerrel végeztem, ez azt jelenti, hogy először az összeállítás szintjéről kezdem a tervezést, és egy úgynevezett skeleton modellbe veszem fel az egyes alkatrészek méreteit. Ezáltal tudom garantálni az egymáshoz való illeszkedést, valamint a változtatások könnyű implementálását.\\
+
 \subsubsection*{Skeleton modell}
-A modellezést a skeleton modellek megalkotásával kezdtem. A fő összeállításon belül két skeleton modellt hoztam létre, mivel maga a modell két alösszeállítása jól elkülöníthető egymástól. Az egyik (\ref{fig:mech_skeleton1}.ábra) alkatrészei rendszerint a függőleges tengely körül szimmetrikusak, a másiké (\ref{fig:mech_skeleton2}.ábra) pedig a fegyver csöve körül. Az ábrákon láthatóak a vázlatok és tengelyek, amelyek alapján kialakítottam az egyes alkatrészeket. Sok méretet először csak hozzávetőlegesen vettem fel, pl. a torony magasságát. A Top-Down módszer előnye, hogy később ezeket könnyedén módosíthatom, és az alkatrészek frissítés után ugyanúgy fognak egymáshoz illeszkedni.
+A modellezést a skeleton modellek megalkotásával kezdtem. A fő összeállításon belül két skeleton modellt hoztam létre, mivel maga a modell két alösszeállítása jól elkülöníthető egymástól.
 
 \begin{figure}[h!]
 	\centering
@@ -484,12 +496,20 @@ A modellezést a skeleton modellek megalkotásával kezdtem. A fő összeállít
 	\label{fig:mech_skeleton1}
 \end{figure}
 
+Az egyik (\ref{fig:mech_skeleton1}.ábra) alkatrészei rendszerint a függőleges tengely körül szimmetrikusak, a másiké (\ref{fig:mech_skeleton2}.ábra) pedig a fegyver csöve körül.
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth]{mech_skeleton2}
+	\includegraphics[width=1\linewidth]{mech_skeleton2}
 	\caption{DT-4999 skeleton modell}
 	\label{fig:mech_skeleton2}
 \end{figure}
+
+Az ábrákon láthatóak a vázlatok és tengelyek, amelyek alapján kialakítottam az egyes alkatrészeket. Sok méretet először csak hozzávetőlegesen vettem fel, pl. a torony magasságát. A Top-Down módszer előnye, hogy később ezeket könnyedén módosíthatom, és az alkatrészek frissítés után ugyanúgy fognak egymáshoz illeszkedni.
+
+
+
+\pagebreak
 
 \subsubsection{Torony}
 
@@ -497,7 +517,7 @@ Elsőként a \textbf{gearbox tartó elemet} kezdtem el tervezni, mert maga a gea
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth]{mech_dt4000}
+	\includegraphics[width=0.8\linewidth]{mech_dt4000}
 	\caption{Gearbox tartó ház}
 	\label{fig:mech_dt4000}
 \end{figure}
@@ -507,7 +527,7 @@ A gearbox ház 3 alkatrészből áll, egy központi elemből, valamint két fed�
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth]{mech_dt4200}
+	\includegraphics[width=0.4\linewidth]{mech_dt4200}
 	\caption{Hop-Up kamra körüli elem}
 	\label{fig:mech_dt4200}
 \end{figure}
@@ -517,7 +537,7 @@ A következő alösszeállítás a \textbf{tár} volt, amely a gearbox ház bal 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth]{mech_tar}
+	\includegraphics[width=1\linewidth]{mech_tar}
 	\caption{Tár}
 	\label{fig:mech_tar}
 \end{figure}
@@ -526,7 +546,7 @@ Végül a toronyra kerültek az elektronikai alkatrészek is, ezek a \ref{fig:me
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth]{mech_dt4000kamera}
+	\includegraphics[width=1\linewidth]{mech_dt4000kamera}
 	\caption{Kamera és lézer modul beépítés}
 	\label{fig:mech_dt4000kamera}
 \end{figure}
@@ -536,7 +556,7 @@ Az úgynevezett \textbf{keret} volt a konstrukció legösszetettebb eleme, és e
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth]{mech_felsotengely}
+	\includegraphics[width=1\linewidth]{mech_felsotengely}
 	\caption{Vízszintes tengely csapágyainak elrendezése}
 	\label{fig:mech_felsotengely}
 \end{figure}
@@ -546,7 +566,7 @@ Kétséges rész volt a \textbf{motor} rögzítése, ugyanis nagy szükség van 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth]{mech_motorbeepites}
+	\includegraphics[width=1 \linewidth]{mech_motorbeepites}
 	\caption{Vízszintes tengely motor beépítése}
 	\label{fig:mech_motorbeepites}
 \end{figure}
@@ -597,7 +617,7 @@ A vízszintes tengely nagy fogaskereke a gearbox ház tengelyére lett erősítv
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{mech_fogpar2}
+	\includegraphics[width=0.7\linewidth]{mech_fogpar2}
 	\caption{Vízszintes tengely fogaskerekek}
 	\label{fig:mech_fogpar2}
 \end{figure}
@@ -611,7 +631,16 @@ a
 \section{Hardvertervezés}
 
 \subsection{Áramköri tervezés}
-A prototípus áramkörét próbáltam minél egyszerűbben megvalósítani. Alapvetően két részből áll, a Raspberry PI központú vezérlőáramkörből, ami felelős a szenzorokért és a Raspberry PI-ért, illetve egy nagyobb teljesítményű áramkör egy külön tápról, ami a gearbox működtetéséért felelős. 
+A prototípus áramkörét próbáltam minél egyszerűbben megvalósítani. Alapvetően két részből áll, a Raspberry PI központú vezérlőáramkörből, ami felelős a szenzorokért és a Raspberry PI-ért, illetve egy nagyobb teljesítményű áramkör egy külön tápról, ami a gearbox működtetéséért felelős.
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{elek_pinout}
+	\caption{A Raspberry PI lábkiosztása}
+	\label{fig:elek_pinout}
+\end{figure}
+
 \subsection{Elektronikai alkatrészek}
 \subsubsection*{Mikrovezérlő}
 A mikrokontroller kiválasztásánál több opciót vizsgáltam, többek között az {Arduino}, az \textsl{STM-32} és a \textsl{Raspberry PI} modelleket. A követelmények a következőek voltak:
@@ -687,20 +716,101 @@ A prototípus bekapcsolásánál fontos, hogy beálljon egy kezdőpozícióba, �
 %a
 %\subsection{Gyártás, forrasztás}
 %a
+
+\pagebreak
+
 \section{Szoftverfejlesztés}
-a
-%\subsection{Szoftverarchitektúra}
-%a
-%\subsection{Adatáramlás, kommunikáció}
-%a
-%\subsection{Szinkronizáció?}
-%a
-%\subsection{Vezérlő algoritmus}
-%a
-%\subsection{Gépi látás}
-%a
-%\subsection{Programozási nyelvek és eszközök:}
-a
+A prototípus szoftverét kettéválasztottam a két működési mód szerint, az egyik a manuális vezérlést valósítja meg, a másik az automatikust. A kettő között lényeges különbségek vannak a prioritásokban. A kézi vezérlésnél a legfontosabb a valós idejű megjelenítés, és a minél gyorsabb reagálás a felhasználói parancsokra. Az automata működésnél a megjelenítés kevésbé fontos, viszont a képfelismerés és ez által a célpont követése kiemelkedő fontosságú.
+
+\subsection{Kézi vezérlés}
+A rendszer két alapvető részből áll: egy számítógépből (PC), amely felhasználói interfészként szolgál az operátor számára, és egy Raspberry Pi-ből, amely a fegyverrendszer vezérlését és képátvitelét végzi. A két eszköz között két folyamat kommunikál, két különböző porton: egy UDP protokoll alapú adatátvitel a videó küldéséhez, illetve egy TCP alapú a vezérlőparancsok fogadásához. \\
+
+\subsubsection{A PC-n futó program működése}
+A PC-s kód két külön folyamatot indít: egy videó-fogadó folyamatot és egy vezérlő-küldő folyamatot, melyek egy multiprocessing-eseményjelző (\code{stop\textunderscore event}) segítségével állnak meg szükség esetén.
+
+\subsubsection*{Videó-fogadó folyamat}
+
+A videó-fogadó folyamat (\code{video\textunderscore receiver}) UDP-n keresztül kapja a képkockákat, amelyek a Raspberry Pi-ről érkeznek csomagokra bontva. A folyamat összegyűjti ezeket a csomagokat, majd a kép adatokat újraegyesíti és megjeleníti a felhasználó számára. Az UDP protokoll nagy sebességet tud elérni, de nem garantált a célba érés. A videó esetében azonban ez nem probléma, ha elveszik egy képkocka attól még értelmezhető marad a videó. A folyamat a következőképpen működik:
+
+\begin{list}{-}{}
+	\item A folyamat egy UDP socketet (\code{video\textunderscore socket}) hoz létre a megadott porton.
+	\item Egy ciklusban fogadja a képkockák csomagjait, minden egyes csomag egy fejlécet és a kép adatrészét tartalmazza.
+	\item A fejléc alapján a folyamat azonosítja a csomagokhoz tartozó képkockát és azok sorrendjét. A bufferben gyűjtött csomagokat az összes részlet megérkezése után egyesíti.
+	\item Az egyesített képkockát visszafejti (unpickling és JPEG dekódolás), majd a \code{cv2.imshow()} segítségével megjeleníti.
+\end{list}
+
+
+\subsubsection*{Vezérlés-küldő folyamat}
+
+A vezérlés-küldő folyamat (\code{control\textunderscore sender}) a felhasználó irányítási parancsait továbbítja a Raspberry Pi felé. A folyamat a Pygame könyvtár segítségével észleli az egér- és billentyűeseményeket, majd a megfelelő parancsokat TCP csomag formájában küldi a Raspberry Pi irányába.
+
+\begin{list}{-}{}
+	\item Az egér mozgása esetén \code{MOVE} parancsot küld az X és Y elmozdulási adatokkal, így irányítva a fegyver mechanikai elmozdulását.
+	\item Az egérgombokkal tűzparancsokat lehet kiadni (\code{SHOOT\textunderscore START} és \code{SHOOT\textunderscore STOP}), illetve a billentyűzetről lézerkapcsolást (\code{LASERTOGGLE}) és leállítást (\code{STOP}) lehet kezdeményezni.
+	\item Amikor a felhasználó az ESCAPE gombot megnyomja, a folyamat küld egy leállítási parancsot (\code{STOP}), majd befejezi működését.
+\end{list}
+
+A felhasználó a szoftver futtatásakor két ablakot lát, az egyik a kamera képe, a másik pedig a Pygame által létrehozott ablak, amelyben látható az eszköz irányításához szükséges leírás.
+
+\subsubsection{A Raspberry Pi-n futó program működése}
+A Raspberry Pi-n szintén két folyamat fut: egy vezérlés-fogadó folyamat és egy videó-küldő folyamat. Ezek a folyamatok közvetlenül kommunikálnak a PC-n futó kód megfelelő folyamataival.
+
+\paragraph{Vezérlés-fogadó folyamat}
+
+A vezérlő-fogadó folyamat (\code{control\textunderscore listener}) TCP-n keresztül fogadja a PC-ről érkező irányítási parancsokat, és a megfelelő fizikai komponenseket működteti.
+
+\begin{list}{-}{}
+	\item A parancs típusa alapján (\code{MOVE}, \code{SHOOT\textunderscore START}, \code{SHOOT\textunderscore STOP},  \code{LASERTOGGLE}, \code{ STOP}) különböző műveleteket hajt végre.
+	\item \code{MOVE} parancs esetén az X és Y elmozdulási értékek alapján irányítja a két DRV8825 motorvezérlő áramkört, így mozgatva a fegyvert az elvárt irányba.
+	\item A lövésvezérlés (\code{SHOOT\textunderscore START} és \code{SHOOT\textunderscore STOP}) esetén aktiválja vagy deaktiválja a fegyver LED-jét.
+	\item A lézerkapcsolás (\code{LASERTOGGLE}) a lézerdiódát ki- vagy bekapcsolja.
+	\item Amennyiben \code{STOP} parancs érkezik, a folyamat leállítja a működését.
+\end{list}
+
+\paragraph{Videó-küldő folyamat}
+A videó-küldő folyamat (\code{video\textunderscore sender}) a Raspberry Pi kamerájából érkező képet szerzi meg és osztja meg a PC-vel UDP kapcsolaton keresztül.
+
+\begin{list}{-}{}
+	\item A kamerakép feldolgozása során a kód rögzíti az egyes képkockákat, amelyeket JPEG formátumba kódol és pickle segítségével tömörít.
+	\item Az adatok nagy mennyiségét figyelembe véve a képkockákat kisebb csomagokra bontja, amelyekhez fejlécek tartoznak.
+	\item A fejlécekben megtalálható a csomag azonosítója, amely segít a PC-n futó videó-fogadó folyamatnak a csomagok megfelelő sorrendbe állításában és összerakásában.
+	\item A csomagokat a megadott IP-címre és portra küldi, és minden új képkockához új azonosítót rendel.
+\end{list}
+
+KELL MÉG IDE: végálláskapcsolók, rendszer init, deinit, legyenek a kódrészletek kódrészletek, részletesebb leírni az UDP és TCP kapcsolatokat, pickle, biztonsági featureok, kamera miért ilyen felbontású, modulok dokumentációjáról hivatkozás bár ez lehet az esközöknél kell, leírni mi minek hatására történik, hivatkozás a függelékhez
+\subsection{Automata működés}
+
+\pagebreak
+\subsection{Használt Python modulok, eszközök:}
+\subsubsection*{Socket modul}
+
+Python \code{socket} modulja alacsony szintű hozzáférést biztosít a hálózati kommunikációhoz, lehetővé téve különböző típusú hálózati kapcsolatok létrehozását, beleértve az általam használt TCP-t és az UDP-t.\\
+
+A \textbf{TCP} kapcsolat-orientált protokoll, amely biztosítja az adatok érkezési sorrendjét és helyességét. A \code{socket.SOCK\textunderscore STREAM} típust használjuk, ha TCP kapcsolatot szeretnénk létrehozni. A TCP kapcsolatok esetében a \code{connect()} függvény a kapcsolat kezdeti lépése, és a kliens-szerver kommunikáció folyamatosan fennmarad.\\
+
+Az \textbf{UDP} kapcsolatnélküli protokoll, amely nem garantálja az adatok sorrendjét és integritását, viszont gyorsabb, mivel nincs szükség kapcsolatra. Az UDP kapcsolathoz a  \code{socket.SOCK\textunderscore DGRAM} típust használjuk, így a kliens és a szerver bármikor küldhet és fogadhat adatokat. Ideális valós idejű alkalmazásokhoz, ahol nem kritikus minden csomag megérkezése (pl. video streaming).\\
+ 
+Mindkét típusnál a \code{send()}, \code{sendto()}, \code{recv()}, és \code{recvfrom()} függvények használhatók az adatok küldésére és fogadására.
+
+\subsubsection*{Multiprocessing modul}
+
+A \textbf{multiprocessing} modul lehetővé teszi a Python számára, hogy párhuzamosan több folyamatot indítson el, ami segít a CPU-erőforrások jobb kihasználásában. A modul az operációs rendszer által kezelt különálló folyamatokat hoz létre, így azok külön memóriaterülettel rendelkeznek, és jobban teljesítenek többmagos processzorokon, mint a \textsl{threading} modul.\\ 
+
+A \code{Process} osztály segítségével indíthatunk el új folyamatokat, amelyek egymástól függetlenül végrehajtanak egy adott funkciót. A modul támogatja az eseménykezelést, kommunikációs csatornákat (pl. \code{Queue}, \code{Pipe}) és szinkronizálást (pl. \code{Event}, \code{Lock}), amelyek segítségével a folyamatok egymással adatokat cserélhetnek és szinkronizálhatják működésüket.
+
+\subsubsection*{Pygame modul}
+
+A \textbf{pygame} egy multimédiás modul, amely elsősorban 2D játékok fejlesztésére alkalmas, de egyéb alkalmazásokkor is lehetőséget ad bemenetek kezeléséhez.\\
+
+A \code{pygame.event.get()} függvény segítségével olvashatjuk le az egér- és billentyűzet-eseményeket, így például kattintások, gombnyomások és egérmozgások lekérdezése egyszerű. Az interaktív elemek kirajzolása és mozgatása egyszerű a \code{pygame.display.update()} és \code{pygame.draw} függvényekkel, amelyek lehetővé teszik grafikus objektumok megjelenítését a képernyőn. Magában foglalja a számítógépes grafikákat, a hang- és programkönyvtárakat, amiket a Python programozási nyelvre fejlesztettek ki. 
+
+\subsubsection*{Pickle modul}
+A \textbf{pickle} modul sorosítást és deszerializációt tesz lehetővé, azaz a Python-objektumok bináris formátumba alakítását és visszaalakítását.\\
+
+A \code{pickle.dumps()} segítségével a Python-objektumokat bináris formátumba alakíthatjuk, amely lehetővé teszi azok egyszerű tárolását vagy átvitelét, például hálózaton keresztül. A \code{pickle.loads()} a bináris formátumú adatokat visszaalakítja eredeti Python-objektummá. A pickle használata előnyös lehet akkor, ha komplex adatszerkezeteket szeretnénk fájlban tárolni vagy hálózaton keresztül továbbítani.
+
+\pagebreak
+
 \section{Tesztelés}
 a
 %\subsection{Tesztelési környezet}
@@ -721,6 +831,10 @@ a
 %a
 %\section{Köszönetnyilvánítás}
 %a
+\pagebreak
+
+\section*{Függelék}
+\subsection*{Kódrészletek}
 
 
 \pagebreak
@@ -742,7 +856,7 @@ a
 	{\footnotesize \url{https://www.globalsecurity.org/military/world/rok/sgr-a1.htm}},
 	
 	\bibitem{aisroftteszt}
-	Teszt az airsoft gearbox áramfogayasztásáról\hfill (Hozzáférés: 2024.10.22.) \\
+	Teszt az airsoft gearbox áramfogyasztásáról \hfill (Hozzáférés: 2024.10.22.) \\
 	{\footnotesize \url{http://www.airsoftlab.eu/docs/experiments/motor_current/}},
 	
 	\bibitem{nema17}
