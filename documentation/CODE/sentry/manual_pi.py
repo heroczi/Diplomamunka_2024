@@ -28,13 +28,34 @@ def control_listener(stop_event):
     Motor1 = DRV8825(dir_pin=13, step_pin=19, enable_pin=12)
     Motor2 = DRV8825(dir_pin=24, step_pin=18, enable_pin=4)
 
-    weapon = GPIO.LED(3)
+    weapon = GPIO.LED(20)
+    weapon.off()
     laser = GPIO.LED(21)
+    laser.off()
+
+    #vegallas1_VCC = PIN17
+    vegallas1_GND = GPIO.LED(22)
+    vegallas1_GND.off()
+    vegallas1_SIG = GPIO.Button(27, pull_up = False)
+
+    vegallas2_VCC = GPIO.LED(11)
+    vegallas2_VCC.on()
+    #vegallas2_GND = PIN25
+    vegallas2_SIG = GPIO.Button(0, pull_up = False)
 
     sock_control = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock_control.bind((RPI_IP, RPI_PORT_CONTROL))
 
-    print("Control process started.")
+    print("Control process started. ")
+
+    # while not vegallas1_SIG.is_pressed:
+    #     Motor1.TurnStep(1, 1, 0.0005)
+    # while not vegallas2_SIG.is_pressed:
+    #     Motor2.TurnStep(1, 1, 0.0005)
+
+    POSX = 0
+    POSY = 0
+
     while not stop_event.is_set():
         try:
             data, addr = sock_control.recvfrom(1024)
@@ -47,10 +68,14 @@ def control_listener(stop_event):
                 if x_movement != 0:
                     dirx = 1 if x_movement > 0 else -1
                     Motor1.TurnStep(dirx, 1, 0)
+                    POSX = POSX + 18*dirx
 
                 if y_movement != 0:
                     diry = 1 if y_movement > 0 else -1
                     Motor2.TurnStep(diry, 1, 0)
+                    POSY = POSY + 18*diry
+
+                print(POSX/100,POSY/100)
 
             elif eventtype == SHOOT_START:
                 weapon.on()

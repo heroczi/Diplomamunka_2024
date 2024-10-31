@@ -20,18 +20,12 @@ def main():
     #vegallas2_GND = PIN25
     vegallas2_SIG = GPIO.Button(0, pull_up = False)
 
-    while True:
-        if vegallas1_SIG.is_pressed:
-            laser.on()
-        else:
-            laser.off()
+    while not vegallas1_SIG.is_pressed:
+        Motor1.TurnStep(1, 1, 0.0005)
 
-        if vegallas2_SIG.is_pressed:
-            weapon.on()
-        else:
-            weapon.off()
+    while not vegallas2_SIG.is_pressed:
+        Motor2.TurnStep(1, 1, 0.0005)
 
 
 if __name__ == "__main__":
-
     main()
