@@ -24,9 +24,9 @@ RPI_PORT_VIDEO = 2000     # Port for sending video frames
 
 # Control command listener
 def control_listener(stop_event):
-
-    Motor1 = DRV8825(dir_pin=13, step_pin=19, enable_pin=12)
-    Motor2 = DRV8825(dir_pin=24, step_pin=18, enable_pin=4)
+   
+    Motor1 = DRV8825(dir_pin=24, step_pin=18, enable_pin=4)
+    Motor2 = DRV8825(dir_pin=13, step_pin=19, enable_pin=12)
 
     weapon = GPIO.LED(20)
     weapon.off()
