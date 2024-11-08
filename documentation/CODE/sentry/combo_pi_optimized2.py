@@ -127,9 +127,11 @@ def control_listener(stop_event, automode_event):
                     weapon.off()
                 elif eventtype == LASERTOGGLE:
                     laser.toggle()
-        except Exception as e:
-            print(f"Control error: {e}")
-    print("Control process terminated.")
+        finally:
+            print("Control process terminated.")
+            weapon.off()
+            laser.off()
+    
 
 def motor_motion(stop_event, automode_event, pos_queue):
     """Move motors to align with the target position."""
