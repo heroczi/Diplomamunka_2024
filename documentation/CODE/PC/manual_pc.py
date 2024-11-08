@@ -12,8 +12,6 @@ RPI_IP = "192.168.100.2"
 RPI_PORT_CONTROL = 9000  # Port for sending control commands
 RPI_PORT_VIDEO = 2000     # Port for receiving video frames
 
-
-
 def video_receiver(stop_event):
     print("Video process started.")
     video_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

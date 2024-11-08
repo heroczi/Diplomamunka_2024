@@ -6,7 +6,6 @@ import cv2
 import gpiozero as GPIO
 from DRV8825 import DRV8825
 import multiprocessing
-from picamera2 import Picamera2
 import struct
 
 # Constants for event types
@@ -14,6 +13,10 @@ MOVE = 1
 SHOOT_START = 2
 SHOOT_STOP = 3
 LASERTOGGLE = 4
+SAFETY = 5
+MANUALMODE = 6
+AUTOMODE = 7
+APPROVE = 8
 STOP = 9
 
 # Raspberry Pi IP and ports
