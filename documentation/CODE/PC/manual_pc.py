@@ -39,6 +39,13 @@ def video_receiver(stop_event):
             data = b"".join([buffer[i] for i in range(total_chunks)])
             frame = pickle.loads(data)
             frame = cv2.imdecode(frame, cv2.IMREAD_COLOR)
+
+            centerx = 326
+            centery = 216
+
+            frame = cv2.line(frame, (centerx-20, centery), (centerx+20, centery), (0, 255, 0), 1)
+            frame = cv2.line(frame, (centerx, centery-20), (centerx, centery+20), (0, 255, 0), 1)
+
             if frame is not None:
                 cv2.imshow("DESTROY", frame)
 
@@ -53,8 +60,14 @@ def video_receiver(stop_event):
 
 def control_sender(stop_event):
     print("Control sender process started.")
+
+    # Initial states
+    laser_on = False
+    safety_on = True
+    mode = "Manual"
     
     sock_control = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    
     
     pygame.init()
     screen = pygame.display.set_mode((640, 480))
@@ -65,7 +78,9 @@ def control_sender(stop_event):
     SHOOT_START = 2
     SHOOT_STOP = 3
     LASERTOGGLE = 4
-
+    SAFETY = 5
+    MANUALMODE = 6
+    AUTOMODE = 7
     STOP = 9
 
     while not stop_event.is_set():
@@ -86,13 +101,32 @@ def control_sender(stop_event):
                     sock_control.sendto(data.encode(), (RPI_IP, RPI_PORT_CONTROL))
 
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_e:
-                    data = f'{LASERTOGGLE},0,0'
-                    sock_control.sendto(data.encode(), (RPI_IP, RPI_PORT_CONTROL))
-                elif event.key == pygame.K_ESCAPE:
+
+                if event.key == pygame.K_ESCAPE:
                     data = f'{STOP},0,0'
                     sock_control.sendto(data.encode(), (RPI_IP, RPI_PORT_CONTROL))
                     stop_event.set()
+                    pygame.time.delay(100)
+
+                elif event.key == pygame.K_1:
+                    mode = "Manual"
+                    data = f'{MANUALMODE},0,0'
+                    sock_control.sendto(data.encode(), (RPI_IP, RPI_PORT_CONTROL))
+                
+                elif event.key == pygame.K_2:
+                    mode = "Auto"
+                    data = f'{AUTOMODE},0,0'
+                    sock_control.sendto(data.encode(), (RPI_IP, RPI_PORT_CONTROL))
+
+                elif event.key == pygame.K_l:
+                    laser_on = not laser_on
+                    data = f'{LASERTOGGLE},0,0'
+                    sock_control.sendto(data.encode(), (RPI_IP, RPI_PORT_CONTROL))
+
+                elif event.key == pygame.K_s:
+                    safety_on = not safety_on
+                    data = f'{SAFETY},0,0'
+                    sock_control.sendto(data.encode(), (RPI_IP, RPI_PORT_CONTROL))
 
     pygame.quit()
     sock_control.close()
