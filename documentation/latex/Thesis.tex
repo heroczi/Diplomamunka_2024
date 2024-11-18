@@ -639,6 +639,14 @@ A prototípus áramkörét próbáltam minél egyszerűbben megvalósítani. Ala
 	\label{fig:elek_pinout}
 \end{figure}
 
+A prototípus áramköre a \ref{valami} ábrán látható. A kereskedelemben kapható stepper motor HAT nagyban leegyszerűsítette a tervezés folyamatát, a segítségével nem kellett megterveznem a motorvezérlők áramkörét, illetve ezeknek az áramellátását. A \ref{fig:elek_pinout}.ábrán látható, motorokra vonatkozó jelölések szerinti GPIO lábakat a stepper motor HAT ugyan lefoglalja, de a kártya tetején lévő tüskesor ugyanúgy elérhető marad, így oda kell figyelnem, hogy ezeket a lábakat ne használjam. \\
+
+Ahogy az ábrán látható, a végálláskapcsolók is a GPIO tüskesorra lett csatlakoztatva. Az egyiknél a földet helyettesíti GPIO22 láb, a másiknál a 3.3 V-t helyettesíti a GPIO11. Azért kellett ezt a megoldást alkalmaznom, mert a kábel csatlakozója egyben van, nem különálló jumper tüskék.\\
+
+A lézer közvetlenül a GPIO21 lábról működik. Eleinte aggódtam, hogy nem tud elegendő áramot szolgáltatni a dióda működtetéséhez, de szerencsére mégis. Ellenkező esetben ki kellett volna egészítenem az áramkört egy tranzisztorral. \\
+
+A relé kapcsolásához viszont nem volt elegendő a GPIO láb által szolgáltatott áram, így azt egy tranzisztorral vezérlem. Amennyiben logikai magas jelet kap, a relé zárja a gearbox áramkörét, és az elkezd lőni.
+
 \subsection{Elektronikai alkatrészek}
 \subsubsection*{Mikrovezérlő}
 A mikrokontroller kiválasztásánál több opciót vizsgáltam, többek között az {Arduino}, az \textsl{STM-32} és a \textsl{Raspberry PI} modelleket. A követelmények a következőek voltak:
@@ -710,10 +718,10 @@ A prototípus bekapcsolásánál fontos, hogy beálljon egy kezdőpozícióba, �
 	\label{fig:elek_vegallaskapcsolo}
 \end{figure}
 
-%\subsection{Hardverintegráció}
-%a
-%\subsection{Gyártás, forrasztás}
-%a
+\subsection{Gyártás, forrasztás}
+A projekthez egyedi nyomtatott áramkört nem kellett gyártatni, azonban egy kis forrasztást igényelt. A gearbox táp folyamatos működéséhez az alább látható módon kellet egy huzallal összeforrasztanom a padokat. Látható a 12V és GND-hez csatlakozó kábelek is, amiket szintén beforrasztottam a megfelelő helyre. Ezen a területen van lehetőség a továbbfejlesztésre, például egy 3D nyomtatott elemmel.\\
+
+Ezentúl a kábeleket kellett forrasztanom, illetve a relé és a hozzá tartozó tranzisztor áramkörét. Ezek az alábbi képen láthatóak. Azokat a kábeleket, ahol nagyobb áram folyhat, és szerettem volna, hogy szerelhetőek legyenek, ott WAGO 221 összekötőkkel oldottam meg a csatlakozást.
 
 \pagebreak
 
@@ -880,8 +888,12 @@ A prototípus tesztelése több lépcsőben zajlott: először a hardvert teszte
 \subsection{Elektronikai alkatrészek tesztje}
 Először csak csatlakoztattam a kamerát a Raspberry Pi megfelelő csatlakozójához, a szalagkábellel, a kamerákat pedig a stepper motor HAT csatlakozóihoz. Ezután a GPIO tüskesorhoz csatlakoztattam a lézer diódát, a relé megfelelő lábait, és a végálláskapcsolókat. 
 
-%\subsection{Tesztelési környezet}
-%a
+\subsection{Tesztelési környezet}
+A tesztet egy jól megvilágított tanteremben végeztem. Az eszköz egy stabil padon állt, a célpont pedig 5 méterrel előtte, és kb. fél méterrel fölötte. A célpont az alábbi ábrán látható:
+
+A teszt során a manuális működési móddal kezdtem, tulajdonképpen belőttem a fegyvert. Először azt tapasztaltam, hogy a kamera képének a közepe nem ott van, ahova a fegyver csöve mutat. Ezért a célkeresztet addig kellett mozgatnom a képen, amíg oda nem mutatott, ahova a fegyver ténylegesen lőtt. Ezután azt tapasztaltam, hogy nagy pontossággal képes lőni, igen kis területen belül. A lézer irányzékot azonban nem tudtam pontosan beállítani, 5 méteren nagyjából 10-15 cm-t téved. A következő ábrákon látható a teszt eredménye. 5-ös sorozatokban tüzeltem, mindig a cél közepére irányítva a kamera célkeresztjét. \\
+
+A következő teszt az arcfelismerés, és a követés funkció tesztje volt. A körülmények ugyanazok maradtak, és szintén 5 m-re volt a célpont. A teszt során egy kolléga tartotta a kinyomtatott arcképet, és mozgatta, változtatva a sebességet és irányt. Természetesen a gearbox nem volt áram alatt, és a kolléga is viselt védőszemüveget. Azt tapasztaltam, hogy a fegyver körülbelül a sétáló ember sebességét tudja követni 5 m távolságban, és igen pontosan be tudja célozni. A teszt az alábbi ábrán látható:
 %\subsection{Teljesítménymutatók}
 %a
 %\subsection{Kísérleti eredmények}
