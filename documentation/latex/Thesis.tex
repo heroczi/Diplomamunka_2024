@@ -137,25 +137,45 @@ As a result of my thesis, I will produce a working prototype, which I will prese
 
 \subsection{Motiváció és háttér}
 
-\lettrine{E}zt a projektet nem a tanszéki diplomamunkatémák listáján találtam, hanem én kerestem hozzá konzulest. Szeretném ezért először megemlíteni a személyes motivációmat, és érdekeltségeimet vele kapcsolatban. Mint a legtöbb reál beállítottságú fiú, engem is fiatal korom óta érdekel a technológia, a járművek, a gépek, vagy a fegyverek. Ezek közös metszéspontja a haditechnológia, ami általában jóval fejlettebb, mint amivel a civil életben találkozhatunk. Ez az érdeklődés megmaradt kamaszkoromra is, amikor a videojátékok által új ingerként értek a \textsl{Team Fortress 2}-ben és a \textsl{Portal}-ban lévő ún. \textbf{Sentry Gun}-ok. Ezek olyan lövegek , amelyek a lábukon állva képesek voltak forogni, és ha az ellenség a látóterükbe jutott, akkor arra tüzet nyitottak. Nyilván játékokról van szó, tehát mindig azt hittem hogy ez csak a jövő technológiája, de nem sokkal később rá kellett jönnöm, hogy nagyon is valódiak. Ezután, mikor már egyetemre jártunk, egy barátommal egyre komolyabban kezdtünk beszélgetni arról, hogy esetleg mi is tudnánk egyet építeni. Végül az egyetemi éveim végére érve el is jött a tökéletes alkalom, hogy megvalósítsam régi álmomat. \\
+\lettrine{E}zt a projektet nem a tanszéki diplomamunkatémák listáján találtam, hanem én kerestem hozzá konzulest. Szeretném ezért először megemlíteni a személyes motivációmat, és érdekeltségeimet vele kapcsolatban. Mint a legtöbb reál beállítottságú fiú, engem is fiatal korom óta érdekel a technológia, a járművek, a gépek, vagy a fegyverek. Ezek közös metszéspontja a haditechnológia, ami általában jóval fejlettebb, mint amivel a civil életben találkozhatunk. Ez az érdeklődés megmaradt kamaszkoromra is, amikor a videojátékok által új ingerként értek a \textsl{Team Fortress 2}-ben és a \textsl{Portal}-ban lévő ún. \textbf{Sentry Gun}-ok. \\[5mm]
+
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{irod_tf2} 
+		\caption{TF2 Sentry Gun \cite{tf2}}
+		\label{fig:irod_tf2}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\linewidth]{irod_portal} 
+		\caption{Portal Sentry Gun \cite{portal}}
+		\label{fig:irod_portal}
+	\end{minipage}
+\end{figure}
+
+Ezek olyan lövegek , amelyek a lábukon állva képesek voltak forogni, és ha az ellenség a látóterükbe jutott, akkor arra tüzet nyitottak. Nyilván játékokról van szó, tehát mindig azt hittem hogy ez csak a jövő technológiája, de nem sokkal később rá kellett jönnöm, hogy nagyon is valódiak. Ezután, mikor már egyetemre jártunk, egy barátommal egyre komolyabban kezdtünk beszélgetni arról, hogy esetleg mi is tudnánk egyet építeni. Végül az egyetemi éveim végére érve el is jött a tökéletes alkalom, hogy megvalósítsam régi álmomat. \\
 
 A szentimentalitást félretéve, természetesen nem választottam volna ezt a témát, ha nem lenne a tanulmányaim szempontjából is releváns. Úgy gondolom, ez a projekt a mechatronika oktatás sok fontos elemét magában hordozza. A feladat a mechanikai konstrukcióval kezdődik és a CAD modellezéssel, amely a gépészeti oldalát hasznosítja a képzésünknek. Foglakozni kell a hardverrel, amihez elektronikai ismeretek szükségesek. Végül pedig a szoftvert kell lefejleszteni, ami informatikai szempontból érdekes. Ráadásul az egész beágyazott környezetben történik, ami miatt még relevánsabb az \textsl{intelligens beágyazott rendszerek} specializációmhoz. Véleményem szerint a projekt nehézsége és kihívása nem az egyes alfeladatokban rejlik, hanem az egész rendszer integrálásában, egymáshoz illesztésében. \\
 
-Szintén fontosnak tartom megemlíteni, hogy a feladat lehetőséget ad megismerni és használni pár igen modern technológiát. A közelmúltban elérhetővé (és megfizethetővé) váltak civil felhasználásra a 3D nyomtatók, valamint a fejlődés a \textsl{Deep Learning} algoritmusok terén nagyban befolyásolta a gépi látás szakterületét is. Többek között a célom, hogy jobban megismerkedjek ezekkel a módszerekkel, és alkalmazzam őket.
+Szintén fontosnak tartom megemlíteni, hogy a feladat lehetőséget ad megismerni és használni pár igen modern technológiát. A közelmúltban elérhetővé (és megfizethetővé) váltak civil felhasználásra a 3D nyomtatók, valamint a fejlődés a \textsl{Deep Learning} algoritmusok terén nagyban befolyásolta a gépi látás szakterületét is. Többek között a célom, hogy jobban megismerkedjek ezekkel a módszerekkel, és alkalmazzam őket.\\
 
-\pagebreak
+\begin{wrapfigure}[18]{r}{0.5\textwidth}
+	\centering
+	\includegraphics[width=.95\linewidth]{irod_phalanx} 
+	\caption{Phalanx CIWS rendszer \cite{CIWS}}
+	\label{fig:irod_phalanx}
+\end{wrapfigure}
 
 Mint manapság az ipar minden területén, így a fegyveriparban is egyre nagyobb mértékű a digitalizáció és az automatizáció. Ennek ékes példája a távolról irányítható lőállások térnyerése, amelyeknek nagy előnye a fegyver és a tüzér egymástól való elkülönítése, aminek több előnye is van. Természetesen a legfontosabb és leginkább szembetűnő, hogy ezzel a módszerrel minimalizálható, vagy akár megszüntethető a saját embereink életének kockáztatása. Ezentúl olyan helyen is tudjuk használni ezeket az eszközöket, ahova egy tradicionális géppuskafészek telepítése nehézkes lenne, például mostoha természeti körülmények közé, egy torony tetejére, vagy akár egy hadihajó oldalára. Szintén egy nagy előny, hogy ezek az eszközök felszerelhetők több kezeléssegítő alegységgel, például hőkamerával vagy éjjellátóval. Majdnem minden, számottevő hadsereggel rendelkező országnak van saját fejlesztésű távirányított fegyverrendszere.\\
 
 
-\begin{wrapfigure}{r}{0.45\textwidth}
-	\centering
-	\includegraphics[width=0.95\linewidth]{irod_phalanx} 
-	\caption{Phalanx CIWS rendszer}
-	\label{fig:irod_phalanx}
-\end{wrapfigure}
 
-A következő lépés az automatizálás. Hiszen egyre erősebb hardverekkel rendelkezünk, egyre jobb algoritmusokat tudunk implementálni, és elértük az a szintet, hogy bizonyos helyzetekben a "gép" jobb munkát tud végezni, mint egy ember. Az első automatikus célzórendszerrel rendelkező légvédelmi gépágyú az amerikai \textsl{Phalanx CIWS} az 1970-es években került kifejlesztésre, ezzel megszületett a "Lethal autonomous weapon (LAW)" kifejezés.\\
+
+A következő lépés az automatizálás. Hiszen egyre erősebb hardverekkel rendelkezünk, egyre jobb algoritmusokat tudunk implementálni, és elértük az a szintet, hogy bizonyos helyzetekben a "gép" jobb munkát tud végezni, mint egy ember. Az első automatikus célzórendszerrel rendelkező légvédelmi gépágyú az amerikai \textsl{Phalanx CIWS} \cite{CIWS} az 1970-es években került kifejlesztésre, ezzel megszületett a "Lethal autonomous weapon (LAW)" kifejezés.\\
 
 A technológiát érthető módon leggyakrabban védelmi célokra használják, sokszor légvédelemre. A gyakorlatban nagy szerepe van Dél-Korea és Izrael védelmében, ahol a rakétatámadások mindennapos veszélyt jelentenek. Offenzív célokra a gyakorlatban még csak rakéták célzására használnak automatikát, a "terminátor" jellegű gyilkos robotok még csak fejlesztési fázisban vannak.
 \pagebreak 
@@ -164,14 +184,13 @@ A technológiát érthető módon leggyakrabban védelmi célokra használják, 
 
 A hagyományos, ember által irányított biztonsági rendszerek, illetve manuálisan vezérelt fegyverek hatékonysága korlátozott. Az ember reakcióideje lassú lehet krízishelyzetben, különösen ha nagy sebességű, gyors reagálású, esetleg automatizált a célpont. További gyengesége az embernek, hogy hajlamos hibázni. A fáradtság, stressz, éhség, és rengeteg egyéb tényező kényszerítheti hibára. Ez szükségessé teszi egy olyan automata rendszer kifejlesztését, amely képes azonnal reagálni, felismerni a fenyegetéseket és pontosan célozni.\\
 
-Az automatikus gépágyúk fejlesztése során számos technikai kihívás merül fel:
+Az automatikus gépágyúk fejlesztése során számos technikai kihívás merül fel:\\
 
-\begin{list}{}{}
-	\item \textbf{Célpontok felismerése és követése:} A gépágyúnak gyorsan és pontosan kell érzékelnie és nyomon követnie mozgó célpontokat. Ez kihívást jelenthet változó fényviszonyok, mozgássebességek és környezeti zavaró tényezők mellett. A gépágyúnak gyorsan és pontosan kell érzékelnie és nyomon követnie mozgó célpontokat. Ez kihívást jelenthet változó fényviszonyok, mozgássebességek és környezeti zavaró tényezők mellett. \\
-	\item \textbf{Pontosság és reakcióidő:} A rendszernek gyorsan kell döntéseket hoznia, ugyanakkor elengedhetetlen a pontos célzás. A mechanikai mozgásvezérlés, a számítógépes látás és az elektronikai rendszerek szinkronizációja mind kritikus tényező a rendszer hatékonysága szempontjából. \\
-	\item \textbf{Környezetérzékenység:} Külső környezeti tényezők (pl. időjárás, akadályok, fényviszonyok) befolyásolhatják a rendszer működését, ezért a szoftvernek és a hardvernek rugalmasnak és robusztusnak kell lennie. 
-\end{list}
-A dolgozatom célja egy innovatív megoldás kidolgozása, amely eleget tesz a megszabott követelményeknek és megoldást nyújt a fenti problémákra. \\
+\textbf{Célpontok felismerése és követése:} A gépágyúnak gyorsan és pontosan kell érzékelnie és nyomon követnie mozgó célpontokat. Ez kihívást jelenthet változó fényviszonyok, mozgássebességek és környezeti zavaró tényezők mellett. A gépágyúnak gyorsan és pontosan kell érzékelnie és nyomon követnie mozgó célpontokat. Ez kihívást jelenthet változó fényviszonyok, mozgássebességek és környezeti zavaró tényezők mellett. \\
+
+\textbf{Pontosság és reakcióidő:} A rendszernek gyorsan kell döntéseket hoznia, ugyanakkor elengedhetetlen a pontos célzás. A mechanikai mozgásvezérlés, a számítógépes látás és az elektronikai rendszerek szinkronizációja mind kritikus tényező a rendszer hatékonysága szempontjából. \\
+
+\textbf{Környezetérzékenység:} Külső környezeti tényezők (pl. időjárás, akadályok, fényviszonyok) befolyásolhatják a rendszer működését, ezért a szoftvernek és a hardvernek rugalmasnak és robusztusnak kell lennie. A dolgozatom célja egy innovatív megoldás kidolgozása, amely eleget tesz a megszabott követelményeknek és megoldást nyújt a fenti problémákra. \\
 
 \pagebreak
 
@@ -182,7 +201,9 @@ Kiemelt célok:
 	\item Egy olyan valós idejű szoftvervezérlési rendszer megalkotása, amely gyorsan reagál a célpontok mozgására és változására.
 \end{list}
 
-Összegezve \textbf{Egy olyan automata gépágyú fejlesztése és megépítése, amely magabiztosan képes felismerni egy célpontot, követni azt, célozni, és tüzelni.}
+Összegezve tehát: \\
+
+ \textbf{Egy olyan automata gépágyú fejlesztése és megépítése, amely magabiztosan képes felismerni egy célpontot, követni azt, célozni, és tüzelni.}
 
 \subsection{Korlátozások}
 
@@ -216,7 +237,7 @@ Az egyik legnagyobb darabszámban gyártott távirányított fegyverrendszer az 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth]{irod_crows}
-	\caption{Az amerikai CROWS rendszer}
+	\caption{Az amerikai CROWS rendszer \cite{crows}}
 	\label{fig:irod_crows}
 \end{figure}
 
@@ -228,7 +249,7 @@ A \textsl{CROWS} rendszer orosz megfelelője a hasonló kialakítású \textsl{A
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth]{irod_arbalet}
-	\caption{Az orosz Arbalet-DM rendszer}
+	\caption{Az orosz Arbalet-DM rendszer \cite{arbalet}}
 	\label{fig:irod_arbalet}
 \end{figure}
 
@@ -239,23 +260,23 @@ A következő megoldás a belga \textsl{DeFNder} termékcsalád, amelynek két t
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth]{irod_defnder}
-	\caption{A belga DeFNder rendszer}
+	\caption{A belga DeFNder rendszer \cite{defnder}}
 	\label{fig:irod_defnder}
 \end{figure}
 
 Elég sok közös vonást találtam a fentebb említett rendszerekben. Az elrendezésük nagyon hasonló, van egy függőleges forgástengely nagyjából a teljes rendszer súlypontján keresztül, valamint egy vízszintes forgástengely, nagyjából a fegyver csövével egy síkban. Erre valószínűleg azért van szükség, hogy a tüzelés során keletkező erők ne ébresszenek csavarónyomatékot a mozgató mechanizmuson. Az én esetemben nagy erők nem fognak ébredni, de a tervezési elvet érdemes követni.
 
-\paragraph{Samsung SGR-A1}
+\paragraph{Samsung SGR-A1 \cite{samsung}}
 Az egyetlen, valós harci helyzetben használt, teljesen autonóm gépágyú a koreai fejlesztésű \textsl{Samsung SGR-A1}. A két Korea között húzódó demilitarizált övezet (DMZ) egy 250 km hosszú, 4 km széles sáv, amelyet mind a két oldalon szigorúan ellenőriznek. A határ folyamatos felügyelete rengeteg ember munkájába kerül, ami egy demográfiai válságban lévő ország csökkenő hadseregében egyre értékesebb. Főleg annak tekintetében, hogy csupán járőrözni és figyelni a határt nem feltétlenül igényli egy ember jelenlétét. Ennek tudatában fejlesztették ki a Samsung és a Korea Egyetem mérnökei az SGR-A1 fegyverrendszert. Hőkamerával és éjjellátóval felszerelve napközben 4 km-ről, éjszaka 2 km-ről képes azonosítani potenciális célpontokat, tehát tulajdonképpen a DMZ teljes szélességében. Képes felismerni az embereket, követni őket, és megkülönböztetni az állatoktól. Hangfelismeréssel képes azonosítani a közeledő személyeket: amennyiben valaki 10 m-nél közelebb kerül és nem azonosítja magát, a rendszer riaszthat, gumilövedéket lőhet, vagy használhatja a K-3 gépfegyverét.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\linewidth]{irod_samsung}
-	\caption{Samsung SGR-A1}
+	\caption{Samsung SGR-A1 \cite{samsung}}
 	\label{fig:irod_samsung}
 \end{figure}
 
-Sok szakértő találgatja, hogy a rendszer lőhet-e emberi engedély nélkül, és a hivatalos koreai álláspont az, hogy nem. Azonban ha már bemérte és ellenségként azonosította a célpontot, akkor nehéz elképzelni, hogy pont a ravaszt ne tudná meghúzni.
+Civil szakértők számára nem egyértelmű, hogy a rendszer lőhet-e emberi engedély nélkül, és a hivatalos koreai álláspont az, hogy nem. Azonban ha már bemérte és ellenségként azonosította a célpontot, akkor nehéz elképzelni, hogy pont a ravaszt ne tudná meghúzni.
 
 \pagebreak
 
@@ -264,27 +285,27 @@ Sok szakértő találgatja, hogy a rendszer lőhet-e emberi engedély nélkül, 
 A korábban említett rendszerek éles fegyverekkel vannak felszerelve, ami az én esetemben sajnos nem megvalósítható. Így valamilyen más megoldást kellett találni, ami legális, és megfelelően be lehet vele mutatni a célfelismerés és célzás működését. 
 
 
-\paragraph{Paintball}
+\paragraph{Paintball \cite{paintball}}
 
 Több, a diplomamunkámhoz hasonló projektet is találtam, amelyek paintball puskákat használnak. Ezek a puskák sűrített levegőt alkalmaznak, hogy egy festékkel töltött golyót lőjenek ki. A torkolati sebességük nagyjából 280 fps, maximális hatékony távolságuk kb 25-30 m. Mivel a lövedék alakja gömb, és a cső sincs huzagolva, ezért nem túl pontos, főleg hosszú távon.\\
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.6\linewidth]{irod_paintball}
-	\caption{Paintball puska alapú rendszer}
+	\caption{Paintball puska alapú rendszer \cite{paintballrobot}}
 	\label{fig:irod_paintball}
 \end{figure}
 
 További problémák, hogy a legolcsóbb paintball puska is 70000 Ft. fölött van, valamint a lövedék is viszonylag drága, és nem lehet újrahasznosítani. Ezentúl a fegyverek nagyok, nehezek, és ezért nehéz a beépítésük. 
 
 
-\paragraph{Nerf}
+\paragraph{Nerf \cite{nerf}}
 
 A Nerf fegyverek a legelterjedtebb játékfegyverek. Sűrített levegővel lőnek ki egy hosszúkás szivacs lövedéket. A sűrített levegőt egy megfeszített rugó elengedésével érik el, amelyet vagy kézzel, vagy valamilyen áttételes villanymotorral húznak fel. A legjobb modellek torkolati sebessége 70 fps körül van, és kb. 15 m a hatótávolságuk. Ezen a távon viszonylag pontosak a lövedék kialakításából adódóan, de jelentős az esés, így a ballisztikai pályát komolyan kell venni. \\
 
 Ezek a fegyverek modelltől függően 10000 Ft. - 40000 Ft. között mozognak, de a lövedékeket újra lehet használni. Az a probléma itt is fennáll, hogy nagy a fegyver teste, így nehezebb beépíteni. 
 
-\paragraph{Airsoft}
+\paragraph{Airsoft \cite{airsoft}}
 
 Az airsoft fegyverek hasonló módon működnek, mint a Nerf puskák, de egy kisebb, műanyag golyót lőnek. Az elektromos airsoft fegyverek torkolati sebessége általában 300 fps és 400 fps között van, ami befolyásol a golyók tömege, a rugó minősége és rengeteg egyéb alkatrész. A hatótávjuk az átlagos fegyvereknek kb. 50 m, de fejlesztésekkel elérheti a 90 m-t is. A lövedék itt is golyó és a cső sincs huzagolva, mint a paintballnál, azonban az airsoft esetében használnak ún. hop-up kamrákat, amelyek perdületet adnak a golyónak.\\
 
@@ -309,20 +330,6 @@ A szoftverfejlesztés során két fő területet kellett lefedni: a vezérlőszo
 
 \subsection{Követelmények}\label{sec:kov}
 
-%A követelményeket egyrészt a később említett irodalomkutatás, másrészt pedig a saját ötleteim és a konzulensemmel való egyeztetés alapján alakítottam ki. Az "autonóm fegyverrendszer" alatt én egy olyan eszközt értek, ami egy pontban elhelyezve képes a környezetében felismerni a betanított célpontot, és arra tüzelni. Erre jó fikciós példa a \textsl{Portal} című játékban található \textsl{Sentry turret}, amely a \ref{portalsentry}. ábrán látható. Természetesen a konstrukciós tervezéshez nem ezt vettem alapul, de a működési elvhez adhat jó ötleteket akkor is, ha csak fikció. \\
-%
-%\begin{wrapfigure}{r}{0.45\textwidth}
-%	\centering
-%	\includegraphics[width=0.8\linewidth]{portalsentry}
-%	\caption{Sentry Turret}
-%	\label{portalsentry}
-%\end{wrapfigure}
-%
-%Szeretném a rendszert úgy megvalósítani, hogy a célfelismerés és tüzelést lehessen vezérelni "kézi vezérléssel", ahogy a valós katonai rendszerek többsége működik, illetve egy teljesen automatikus gépi látás algoritmussal. Automata működés során is talán az lenne a legéletszerűbb, hogy a célpont megtalálása és becélzása lenne automatikus, a tüzelés pedig emberi engedélyezést igényel, ezzel egy fokkal morálisabbá téve a projektet.\\
-%
-%A hatásos távolságot én 10m-ben határoztam meg. Ezen a távolságon fel kell ismernie és el kell találnia egy 30x30 cm-es célpontot. Ezentúl szeretném, ha le tudná követni a 10 km/h-val futó ember mozgását. Ezek a határértékek a konstrukció tervezésénél fontos szempontok lesznek, tehát a későbbi fejezetekben számolok velük.\\
-%
-%\pagebreak
 
 Az autonóm fegyverrendszer fejlesztése során számos követelményt kellett figyelembe venni annak érdekében, hogy a rendszer megbízhatóan, hatékonyan és biztonságosan működjön. Ezek a követelmények a rendszer mechanikai, elektronikai és szoftveres elemeire egyaránt kiterjedtek. A következő szakaszokban részletezem a legfontosabb műszaki és funkcionális követelményeket.
 
@@ -449,9 +456,8 @@ Az elsütő mechanizmusnak egy \textsl{Specna Arms M4}-ből kiszerelt gearbox-ot
 	\label{fig:mech_gearboxdiagram}
 \end{figure}
 
-A hop-up kamrán belül még található egy gumi csúszófelület, amivel a kilőtt golyó perdületét lehet állítani, ezáltal pedig a fegyver effektív távolságát növelni.
+A hop-up kamrán belül még található egy gumi csúszófelület, amivel a kilőtt golyó perdületét lehet állítani, ezáltal pedig a fegyver effektív távolságát növelni.\\
 
-\ABRAKELL
 
 A gearbox-on belül kellett alakítanom a működésen, hogy az előbb leírt folyamatos működést biztosítani tudjam.  Az elsütőbillentyűt, a tűzkapcsolót és minden ehhez tartozó mechanikai elemet kiszereltem, illetve áthuzaloztam. Erre azért volt szükség, mert különben csak a ravasz meghúzásával lehetett volna tüzelni, ami bonyolít a rendszer megvalósításán. A gearbox belső kialakítása a \ref{fig:gearboxbele}. ábrán látható.
 
@@ -625,7 +631,38 @@ A vízszintes tengely nagy fogaskereke a gearbox ház tengelyére lett erősítv
 Mind a két fogaskerékpár kisebb közvetlenül a motor tengelyére lett rögzítve, egy acél rögzítőgyűrűvel. Ennek kialakítása a \ref{fig:mech_alsoreszek}. ábra bal oldalán látható.
 
 \subsection{Gyártás és összeszerelés}
-a
+\subsubsection{Gyártás}
+
+Minden egyedi alkatrészt, amit a projekthez kellett gyártanom, 3D nyomtatással készítettem el. Ehhez egy \textbf{Creality Ender 3 Pro} típusú hobbinyomtatót használtam. Mint a legtöbb ilyen árkategóriában lévő gép, ez is \textsl{FDM} technológiát használ. Az \textsl{FDM} lényege, hogy a nyomtató egy előre megadott terv alapján vékony műanyagszálat (filamentet) olvaszt meg egy forró extruderfejben (hotend), amelyet pontosan irányítanak a nyomtató XYZ tengelyei mentén. A műanyag szál olvasztott állapotban kerül a nyomtatóágyra, ahol gyorsan megszilárdul, így rétegenként építi fel az adott objektumot.\\
+
+A használt nyomtató bizonyos tulajdonságai meghatározták a tervezett alkatrészek tulajdonságait:
+
+\begin{itemize}
+	\item \textbf{Nyomtatási térfogat:} 220 × 220 × 250 mm, amely elég nagy volt a legtöbb általam tervezett elem számára.
+	\item \textbf{Nyomtatási pontosság:} Az nyomtató rétegvastagsága 0,1–0,4 mm között állítható. Főleg a nyomtatott fogaskerekeknél volt fontos a megfelelő pontosság, de kielégítő eredmény született.
+	\item \textbf{Használható filamentek:} A nyomtató különféle anyagokkal kompatibilis, beleértve a PLA-t, ABS-t, PETG-t és TPU-t. Én a PLA mellett döntöttem, ugyanis nem szükséges a pl. ABS által nyújtott minőség, ellenben a költséghatékonyság igen.
+\end{itemize}
+
+A modelleket \textbf{PTC Creo} szoftverben készítettem. Ez egy magas szintű CAD tervező program, amely képes a modelleket exportálni STEP és STL fájlként is. Az STL fájlokat ezután egy slicer programba betöltve tudtam a nyomtató által követhető G-kódra konvertálni. Ezután már csak meg kellett várni, amíg a gép elkészíti az adott alkatrészt, ami a legnagyobb elem esetén kb. 10 óra volt, a teljes prototípus kb. 50 óra volt.
+
+\pagebreak
+\subsubsection{Összeszerelés}
+
+Ebben a fejezetben leírom az összeszerelés menetét. Először az elektronikát tartó konzollal kezdtem.
+
+\begin{enumerate}
+	\item Ráhúztam a motorok tengelyére a kisfogaskerekeket. 
+	\item Rácsavaroztam a távtartókat a Raspberry Pi-ra, a Stepper Motor HAT-ra és a DCDC konverterre, majd mind a hármat rácsavaroztam a 3D nyomtatott konzolra. Félretettem az összeállítást.
+	\item Összeraktam a torony elemeit, a gearboxot, a tartó elemét és a két végén lévő elemeket. Összecsavaroztam a tervezett furatokon, majd ezt az összeállítást is félretettem. 
+	\item Összeállítottam a prototípus 4 lábát és az ezeket tartó hengert. A lábak talpára gumi elemeket ragasztottam, hogy minél stabilabban legyen a rendszer. Félretettem száradni.
+	\item Ezután összecsavaroztam a nagy csapágyhoz csatlakozó alkatrészeket, illetve a DT-1000 elemhez rögzítettem az egyik motort. A DT-2000 elemhez ragasztottam a hozzá tartozó fogaskereket.
+	\item A prototípus talpát összecsavaroztam az előző pontban lévő elemmel úgy, hogy a keretet is tartsák a csavarok.
+	\item A kerethez rögzítettem a megfelelő motort, beragasztottam a relét és a végálláskapcsolókat is. Kábelkötözővel rögzítettem az elektronikai elemek konzolját a kerethez.
+	\item A korábban összerakott gearbox összeállítás tengelyeire illesztettem az oda tartozó fogaskereket és a csapágyakat. Így ráhelyeztem a keretre, és a csapágyházak felső felét hozzácsavaroztam a keretre. 
+	\item Összeillesztettem a kamera konzolt, és felragasztottam a helyére. Ugyanígy tettem a tárral is. Beillesztettem a lézer modult a helyére.
+	\item Összekötöttem a kábeleket, csatlakozókat.
+	\item Csatlakoztattam a tápokat és az ethernet-kábelt.
+\end{enumerate}
 
 \pagebreak
 \section{Hardvertervezés}
@@ -641,7 +678,7 @@ A prototípus áramkörét próbáltam minél egyszerűbben megvalósítani. Ala
 	\label{fig:elek_pinout}
 \end{figure}
 
-<<<<<<< Updated upstream
+
 A prototípus áramköre a \ref{valami} ábrán látható. A kereskedelemben kapható stepper motor HAT nagyban leegyszerűsítette a tervezés folyamatát, a segítségével nem kellett megterveznem a motorvezérlők áramkörét, illetve ezeknek az áramellátását. A \ref{fig:elek_pinout}.ábrán látható, motorokra vonatkozó jelölések szerinti GPIO lábakat a stepper motor HAT ugyan lefoglalja, de a kártya tetején lévő tüskesor ugyanúgy elérhető marad, így oda kell figyelnem, hogy ezeket a lábakat ne használjam. \\
 
 Ahogy az ábrán látható, a végálláskapcsolók is a GPIO tüskesorra lett csatlakoztatva. Az egyiknél a földet helyettesíti GPIO22 láb, a másiknál a 3.3 V-t helyettesíti a GPIO11. Azért kellett ezt a megoldást alkalmaznom, mert a kábel csatlakozója egyben van, nem különálló jumper tüskék.\\
@@ -649,7 +686,7 @@ Ahogy az ábrán látható, a végálláskapcsolók is a GPIO tüskesorra lett c
 A lézer közvetlenül a GPIO21 lábról működik. Eleinte aggódtam, hogy nem tud elegendő áramot szolgáltatni a dióda működtetéséhez, de szerencsére mégis. Ellenkező esetben ki kellett volna egészítenem az áramkört egy tranzisztorral. \\
 
 A relé kapcsolásához viszont nem volt elegendő a GPIO láb által szolgáltatott áram, így azt egy tranzisztorral vezérlem. Amennyiben logikai magas jelet kap, a relé zárja a gearbox áramkörét, és az elkezd lőni.
-=======
+
 Az eszköz sémarajza az alábbi ábrán látható:
 
 \begin{figure}[h!]
@@ -658,7 +695,7 @@ Az eszköz sémarajza az alábbi ábrán látható:
 	\caption{A prototípus sémarajza}
 	\label{fig:schematic}
 \end{figure}
->>>>>>> Stashed changes
+
 
 \subsection{Elektronikai alkatrészek}
 \subsubsection*{Mikrovezérlő}
@@ -974,33 +1011,30 @@ Először két olyan módszert vizsgáltam, ahol a célpont nem általános, han
 Erről a módszerről korábban a \ref{sec:soft_template}. bekezdésben írtam. A \code{cv2.matchTemplate()} függvény létrehozza megkeresi a képen sablont, a \code{cv2.minMaxLoc()} pedig visszaadja a helyzetét, valamint az eredmény pontosságát. Az eredmény pontosságának megszabtam egy alsó határt, és azt változtattam a teszt során. Azt tapasztaltam, hogy ez  a módszer nagyon érzékeny a célpont dőlésére és elfordulására, valamint a távolságára is. Semmiképpen nem optimális a feladat elvégzésére.
 
 \subsubsection*{Feature Matching és Target Tracking}
-A feature matching elviekben jól kezeli a célpont torzulását, ezért ezzel kísérleteztem a későbbiekben. 
+A feature matching elviekben jól kezeli a célpont torzulását, ezért ezzel kísérleteztem a későbbiekben. Az elképzelés az volt, hogy a feature matching megtalálja megbízhatóan a célpontot, majd a target tracking képes lesz gyorsan követni. Amennyiben egyszer megtalálta az algoritmus a célpontot, onnan tényleg pontosan tudta követni, azonban magával a felismeréssel voltak itt is a problémák. Nagyon megbízhatatlan volt, ha az érzékenységet lentebb állítottam, akkor fals pozitívot is mutatott, ha fentebb, akkor pedig nem találta meg a célpontot. A target tracking is csak akkor működött, ha a kamera egy helyben maradt. Ha már a motorok is mozogtak, akkor könnyedén elvesztette a célpontot.
 
-\subsubsection*{}
+\subsubsection{Haar Cascade}
+Az utolsó módszer, amit teszteltem, az a Haar Cascade és tanított neurális hálók használata volt. Ez az előzőekhez képest meglepően megbízható volt, a célpontot felismerte viszonylag távolról is, akár rossz fényviszonyok között is. A célpont kb 15 fokos dőlése esetén szintén felismerte azt, amit én megfelelőnek találtam. Ezzel a módszerrel folytattam a munkát.
 
-\subsection{Tesztelési környezet}
+
+
+\subsection{Éles teszt}
 A tesztet egy jól megvilágított tanteremben végeztem. Az eszköz egy stabil padon állt, a célpont pedig 5 méterrel előtte, és kb. fél méterrel fölötte. A célpont az alábbi ábrán látható:
 
 A teszt során a manuális működési móddal kezdtem, tulajdonképpen belőttem a fegyvert. Először azt tapasztaltam, hogy a kamera képének a közepe nem ott van, ahova a fegyver csöve mutat. Ezért a célkeresztet addig kellett mozgatnom a képen, amíg oda nem mutatott, ahova a fegyver ténylegesen lőtt. Ezután azt tapasztaltam, hogy nagy pontossággal képes lőni, igen kis területen belül. A lézer irányzékot azonban nem tudtam pontosan beállítani, 5 méteren nagyjából 10-15 cm-t téved. A következő ábrákon látható a teszt eredménye. 5-ös sorozatokban tüzeltem, mindig a cél közepére irányítva a kamera célkeresztjét. \\
 
-A következő teszt az arcfelismerés, és a követés funkció tesztje volt. A körülmények ugyanazok maradtak, és szintén 5 m-re volt a célpont. A teszt során egy kolléga tartotta a kinyomtatott arcképet, és mozgatta, változtatva a sebességet és irányt. Természetesen a gearbox nem volt áram alatt, és a kolléga is viselt védőszemüveget. Azt tapasztaltam, hogy a fegyver körülbelül a sétáló ember sebességét tudja követni 5 m távolságban, és igen pontosan be tudja célozni. A teszt az alábbi ábrán látható:
-%\subsection{Teljesítménymutatók}
-%a
-%\subsection{Kísérleti eredmények}
-%a
-%\subsection{Eredmények elemzése}
-%a
+A következő teszt az arcfelismerés, és a követés funkció tesztje volt. A körülmények ugyanazok maradtak, és szintén 5 m-re volt a célpont. A teszt során egy kolléga tartotta a kinyomtatott arcképet, és mozgatta, változtatva a sebességet és irányt. Természetesen a gearbox nem volt áram alatt, és a kolléga is viselt védőszemüveget. Azt tapasztaltam, hogy a fegyver körülbelül a sétáló ember sebességét tudja követni 5 m távolságban, és igen pontosan be tudja célozni. A teszt eredményei az alábbi ábrán látható:
+
 \section{Hibák, észrevételek}
-\subsubsection{Mechanikai megvalósítás}
 A
-%\section{Továbbfejlesztési lehetőségek}
-%a
-%\section{Költségek}
-%a
-%\section{Konklúziók}
-%a
-%\section{Köszönetnyilvánítás}
-%a
+\section{Továbbfejlesztési lehetőségek}
+a
+\section{Költségek}
+a
+\section{Konklúziók}
+a
+\section{Köszönetnyilvánítás}
+a
 \pagebreak
 
 \section*{Függelék}
@@ -1009,6 +1043,19 @@ A
 
 \pagebreak
 	\begin{thebibliography}{}
+	
+	\bibitem{tf2}
+	Leírás a Team Fortress 2 játékban lévő Sentry Gun-ról \hfill (Hozzáférés: 2024.11.19.) \\
+	{\footnotesize \url{https://wiki.teamfortress.com/wiki/Sentry_Gun}},
+	
+	\bibitem{portal}
+	Leírás a Portal játékban lévő Sentry Gun-ról \hfill (Hozzáférés: 2024.11.19.) \\
+	{\footnotesize \url{https://theportalwiki.com/wiki/Sentry_Turret}},
+	
+	\bibitem{CIWS}
+	Leírás a Phalanx CIWS rendszerről \hfill (Hozzáférés: 2024.11.19.) \\
+	{\footnotesize \url{http://www.navweaps.com/Weapons/WNUS_Phalanx.php}},
+	
 	\bibitem{crows}
 	Leírás a CROWS rendszerről \hfill (Hozzáférés: 2024.01.22.) \\
 	{\footnotesize \url{https://www.globalsecurity.org/military/systems/ground/m101-crows.htm}},
@@ -1025,9 +1072,28 @@ A
 	Leírás a Samsung SGR-A1 rendszerről \hfill (Hozzáférés: 2024.02.10.) \\
 	{\footnotesize \url{https://www.globalsecurity.org/military/world/rok/sgr-a1.htm}},
 	
-	\bibitem{aisroftteszt}
+	\bibitem{paintball}
+	Információ a paintball fegyverekről \hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://steeltownpaintball.com/what-you-should-know-about-paintball-buying-upgrades-and-more/}},
+	
+	\bibitem{paintballrobot}
+	Információ a paintball robotról \hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://community.robotshop.com/robots/show/robotic-paintball-sentry}},
+
+	\bibitem{nerf}
+	Információ a Nerf fegyverekről \hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://shop.hasbro.com/en-us/nerf}},
+	
+	
+	\bibitem{airsoft}
+	Információ az airsoft fegyverekről \hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://highspeedbbs.com/all-about-airsoft-guns-types-styles-facts-science/}},
+
+	
+	\bibitem{airsoftteszt}
 	Teszt az airsoft gearbox áramfogyasztásáról \hfill (Hozzáférés: 2024.10.22.) \\
 	{\footnotesize \url{http://www.airsoftlab.eu/docs/experiments/motor_current/}},
+	
 	
 	\bibitem{nema17}
 	A NEMA szabvány\hfill (Hozzáférés: 2024.10.22.) \\
