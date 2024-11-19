@@ -39,6 +39,15 @@ def video_receiver(stop_event, frame_queue):
             data = b"".join([buffer[i] for i in range(total_chunks)])
             frame = pickle.loads(data)
             frame = cv2.imdecode(frame, cv2.IMREAD_COLOR)
+
+
+            centerx = 326
+            centery = 216
+            crosshairsize = 20
+
+            frame = cv2.line(frame, (centerx-crosshairsize, centery), (centerx+crosshairsize, centery), (0, 255, 0), 1)
+            frame = cv2.line(frame, (centerx, centery-crosshairsize), (centerx, centery+crosshairsize), (0, 255, 0), 1)
+
             if frame is not None:
                 frame_queue.put(frame)
             # Clear buffer for the next frame
@@ -187,7 +196,6 @@ def control_sender(stop_event,frame_queue):
 
 def main():
     stop_event = multiprocessing.Event()
-
     frame_queue = multiprocessing.Queue()
     
     video_process = multiprocessing.Process(target=video_receiver, args=(stop_event,frame_queue,))

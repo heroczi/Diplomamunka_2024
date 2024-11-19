@@ -112,14 +112,14 @@ def control_listener(stop_event, automode_event):
     while not angle1.is_pressed:
         Motor1.TurnStep(1, 1, 0.0005)
     
-    Motor1.TurnStep(1, 200, 0.0005)
+    Motor1.TurnStep(-1, 78, 0.0005) # 35°
 
     POSX = 0
 
     while not angle2.is_pressed:
         Motor2.TurnStep(1, 1, 0.0005)
 
-    Motor2.TurnStep(1, 200, 0.0005)
+    Motor2.TurnStep(-1, 55, 0.0005) # 25°
 
     POSY = 0
 
@@ -142,14 +142,28 @@ def control_listener(stop_event, automode_event):
                     safety_on = not safety_on
                     print("Safety", "ON" if safety_on else "OFF")
                 elif eventtype == MOVE and not automode_event.is_set():
-                    if x_movement != 0 and abs(POSX) < 300:
-                        dirx = 1 if x_movement > 0 else -1
+
+
+                    if x_movement > 0 and POSX < 300: # 150
+                        dirx = 1
                         Motor1.TurnStep(dirx, 1, 0)
                         POSX = POSX + dirx
-                    if y_movement != 0 and -50 < POSY < 150:
-                        diry = 1 if y_movement > 0 else -1
+                    
+                    if x_movement < 0 and POSX > -300: # -150
+                        dirx = -1
+                        Motor1.TurnStep(dirx, 1, 0)
+                        POSX = POSX + dirx
+
+                    if y_movement > 0 and POSY < 155: # 70
+                        diry = 1
                         Motor2.TurnStep(diry, 1, 0)
                         POSY = POSY + diry
+                    
+                    if y_movement < 0 and POSY > -45: # -20
+                        diry = -1
+                        Motor2.TurnStep(diry, 1, 0)
+                        POSY = POSY + diry
+
                 elif eventtype == SHOOT_START and not safety_on:
                     weapon.on()
                 elif eventtype == SHOOT_STOP:
@@ -157,6 +171,8 @@ def control_listener(stop_event, automode_event):
                 elif eventtype == LASERTOGGLE:
                     laser.toggle()
         finally:
+            Motor1.TurnStep(POSX/abs(POSX), abs(POSX), 0.0005) # X centering before shutdown
+            Motor2.TurnStep(POSY/abs(POSY), abs(POSY), 0.0005) # Y centering before shutdown
             print("Control process terminated.")
             weapon.off()
             laser.off()
@@ -164,7 +180,7 @@ def control_listener(stop_event, automode_event):
 
 def motor_motion(stop_event, automode_event, pos_queue):
     """Move motors to align with the target position."""
-    center_x, center_y = 320, 240
+    center_x, center_y = 326, 216
     print("Motor process started.")
 
     try:
@@ -177,6 +193,29 @@ def motor_motion(stop_event, automode_event, pos_queue):
                     Motor1.TurnStep(1 if error_x > 0 else -1, abs(error_x) - 1, 0.0005)
                 if abs(error_y) > 10 and -50 < POSY < 150:
                     Motor2.TurnStep(1 if error_y > 0 else -1, abs(error_y) - 1, 0.0005)
+
+                if error_x > 10 and POSX < 300: # X axis limit to the left 150°
+                    dirx = 1
+                    Motor1.TurnStep(1, abs(error_x) - 1, 0.0005)
+                    POSX = POSX + dirx
+                    
+                if error_x < -10 and POSX > -300: # X axis limit to the right -150°
+                    dirx = -1
+                    Motor1.TurnStep(-1, abs(error_x) - 1, 0.0005)
+                    POSX = POSX + dirx
+
+                if error_y > 10 and POSY < 155: # Y axis limit to the top 70°
+                    diry = 1
+                    Motor2.TurnStep(1, abs(error_y) - 1, 0.0005)
+                    POSY = POSY + diry
+                    
+                if error_y < 10 and POSY > -45: # Y axis limit to the bottom -20
+                    diry = -1
+                    Motor2.TurnStep(-1, abs(error_y) - 1, 0.0005)
+                    POSY = POSY + diry
+
+
+    
     finally:
         print("Motors process terminated.")
 

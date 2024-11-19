@@ -540,6 +540,8 @@ A következő alösszeállítás a \textbf{tár} volt, amely a gearbox ház bal 
 	\label{fig:mech_tar}
 \end{figure}
 
+Ez a kialakítás végül nem volt sikeres, ugyanis a golyók nagyon könnyedén elakadtak, gyakorlatilag egyszer sem sikerült lőni vele. Újragondolás után egy hasonló megoldást használtam, ám a golyók egyesével sorakoznak a tárban.
+
 Végül a toronyra kerültek az elektronikai alkatrészek is, ezek a \ref{fig:mech_dt4000kamera}. ábrán láthatóak. A lila elem a lézer modul, a piros pedig a kamera konzol. Mind a kettő ragasztással kerül rögzítésre. Fontosnak tartottam, hogy ezek az elemek közvetlenül ahhoz az elemhez legyenek rögzítve, ami a fegyver csövét is pozicionálja, azonban a kamera esetén a 3D nyomtathatóság miatt egy konzolt szükségesnek éreztem.
 
 \begin{figure}[h!]
@@ -639,6 +641,7 @@ A prototípus áramkörét próbáltam minél egyszerűbben megvalósítani. Ala
 	\label{fig:elek_pinout}
 \end{figure}
 
+<<<<<<< Updated upstream
 A prototípus áramköre a \ref{valami} ábrán látható. A kereskedelemben kapható stepper motor HAT nagyban leegyszerűsítette a tervezés folyamatát, a segítségével nem kellett megterveznem a motorvezérlők áramkörét, illetve ezeknek az áramellátását. A \ref{fig:elek_pinout}.ábrán látható, motorokra vonatkozó jelölések szerinti GPIO lábakat a stepper motor HAT ugyan lefoglalja, de a kártya tetején lévő tüskesor ugyanúgy elérhető marad, így oda kell figyelnem, hogy ezeket a lábakat ne használjam. \\
 
 Ahogy az ábrán látható, a végálláskapcsolók is a GPIO tüskesorra lett csatlakoztatva. Az egyiknél a földet helyettesíti GPIO22 láb, a másiknál a 3.3 V-t helyettesíti a GPIO11. Azért kellett ezt a megoldást alkalmaznom, mert a kábel csatlakozója egyben van, nem különálló jumper tüskék.\\
@@ -646,6 +649,16 @@ Ahogy az ábrán látható, a végálláskapcsolók is a GPIO tüskesorra lett c
 A lézer közvetlenül a GPIO21 lábról működik. Eleinte aggódtam, hogy nem tud elegendő áramot szolgáltatni a dióda működtetéséhez, de szerencsére mégis. Ellenkező esetben ki kellett volna egészítenem az áramkört egy tranzisztorral. \\
 
 A relé kapcsolásához viszont nem volt elegendő a GPIO láb által szolgáltatott áram, így azt egy tranzisztorral vezérlem. Amennyiben logikai magas jelet kap, a relé zárja a gearbox áramkörét, és az elkezd lőni.
+=======
+Az eszköz sémarajza az alábbi ábrán látható:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{schematic}
+	\caption{A prototípus sémarajza}
+	\label{fig:schematic}
+\end{figure}
+>>>>>>> Stashed changes
 
 \subsection{Elektronikai alkatrészek}
 \subsubsection*{Mikrovezérlő}
@@ -771,7 +784,7 @@ A \code{pickle.dumps()} segítségével a Python-objektumokat bináris formátum
 \subsection{Gépi látás}
 A célpontfelismerés módszere volt az automata működés legfontosabb eleme. Elsősorban az OpenCV könyvtár különböző lehetőségeit vizsgáltam, ugyanis ez a legjobban kiforrott modul, amely könnyedén használható python programokban.
 
-\subsubsection{Sablonillesztés}
+\subsubsection{Template matching} \label{sec:soft_template}
 
 A \textbf{Template Matching} (sablonillesztés) egy egyszerű, de hatékony módszer, amelyet statikus képekben keresett minták (sablonok) azonosítására használnak. Ez a módszer összehasonlít egy kisebb, előre meghatározott képrészletet (a sablont) a nagyobb képen található területekkel, és megkeresi a legjobban illeszkedő pozíciót.\\
 
@@ -781,7 +794,7 @@ A \textbf{Template Matching} (sablonillesztés) egy egyszerű, de hatékony mód
 
 \textbf{Korlátozások:} Gyengén teljesít forgatott, méretarányosan eltérő vagy eltorzult objektumoknál, valamint változó fényviszonyok mellett.
 
-\subsubsection{Feature Matching}
+\subsubsection{Feature Matching} \label{sec:soft_feature}
 
 A \textsl{Feature Matching} (jellemzőpont-illesztés) egy kifinomultabb módszer a képjellemzők összehasonlítására és egyeztetésére. A módszer a két képben található pontokat (feature-ket) párosítja, ezáltal lehetővé teszi forgatásokkal, elforgatásokkal és méretarányokkal szembeni robusztus egyeztetést.
 
@@ -791,7 +804,7 @@ A \textsl{Feature Matching} (jellemzőpont-illesztés) egy kifinomultabb módsze
 
 \textbf{Korlátozások:} A nagy számítási igényű algoritmusok miatt lassabb lehet, különösen nagy méretű képeken.
 
-\subsubsection{Célkövetés}
+\subsubsection{Target Tracking} \label{sec:soft_target}
 
 A \textsl{Target Tracking} (célkövetés) feladata egy mozgó objektum követése egy videófolyamon vagy valós idejű képforráson keresztül. Az OpenCV több nyomon követési algoritmust is biztosít, amelyek segítenek abban, hogy a kiválasztott objektumot stabilan követni tudjuk, még akkor is, ha változik a pozíciója vagy a környezeti fény.
 
@@ -805,7 +818,7 @@ Algoritmusok:
 \textbf{Előnyei:} Alkalmas valós idejű alkalmazásokhoz, mint például a videó megfigyelés vagy az autonóm rendszerek, ahol a cél folyamatosan mozgásban van.
 
 \textbf{Korlátozások:} Bizonyos algoritmusok hajlamosak elveszteni a célpontot gyors mozgásoknál vagy hirtelen pozícióváltásoknál.
-\subsubsection{Haar cascade}
+\subsubsection{Haar cascade} \label{sec:soft_haar}
 
 A \textsl{Haar Cascade} módszer az egyik legelterjedtebb technika az objektumfelismerésre, különösen az arcfelismerésben. A gépi tanuláson alapuló módszer képes egy képben vagy videófolyamon objektumokat megtalálni azáltal, hogy mintákat ismer fel az előképzett adatok alapján.\\
 
@@ -819,8 +832,8 @@ A \textsl{Haar Cascade} módszer az egyik legelterjedtebb technika az objektumfe
 
 
 
-\subsection{Kézi vezérlés}
-A rendszer két alapvető részből áll: egy számítógépből (PC), amely felhasználói interfészként szolgál az operátor számára, és egy Raspberry Pi-ből, amely a fegyverrendszer vezérlését és képátvitelét végzi. A két eszköz között két folyamat kommunikál, két különböző porton: egy UDP protokoll alapú adatátvitel a videó küldéséhez, illetve egy TCP alapú a vezérlőparancsok fogadásához. \\
+\subsection{A szoftver működése}
+A rendszer két alapvető részből áll: egy számítógépből (PC), amely felhasználói interfészként szolgál az operátor számára, és egy Raspberry Pi-ből, amely a fegyverrendszer vezérlését és képátvitelét végzi. A két eszközön futó program között két folyamat kommunikál, két különböző porton: egy UDP protokoll alapú adatátvitel a videó küldéséhez, illetve egy TCP alapú a vezérlőparancsok fogadásához. \\
 
 \subsubsection{A PC-n futó program működése}
 A PC-s kód két külön folyamatot indít: egy videó-fogadó folyamatot és egy vezérlő-küldő folyamatot, melyek egy multiprocessing-eseményjelző (\code{stop\textunderscore event}) segítségével állnak meg szükség esetén.
@@ -831,30 +844,60 @@ A videó-fogadó folyamat (\code{video\textunderscore receiver}) UDP-n keresztü
 
 \begin{list}{-}{}
 	\item A folyamat egy UDP socketet (\code{video\textunderscore socket}) hoz létre a megadott porton.
-	\item Egy ciklusban fogadja a képkockák csomagjait, minden egyes csomag egy fejlécet és a kép adatrészét tartalmazza.
+	\item Egy ciklusban fogadja a képkockák csomagjait, minden egyes csomag egy fejlécet és a kép adatrészleteit tartalmazza.
 	\item A fejléc alapján a folyamat azonosítja a csomagokhoz tartozó képkockát és azok sorrendjét. A bufferben gyűjtött csomagokat az összes részlet megérkezése után egyesíti.
-	\item Az egyesített képkockát visszafejti (unpickling és JPEG dekódolás), majd a \code{cv2.imshow()} függvény segítségével megjeleníti.
+	\item Az egyesített képkockát visszafejti (unpickling és JPEG dekódolás), majd a képre helyez egy célkeresztet a \code{cv2.line()} függvény alkalmazásával.
+	\item A teljes képkockát behelyezi a \code{frame\textunderscore queue} sorba, a \code{.put()} metódussal.
 \end{list}
+
 
 
 \subsubsection*{Vezérlés-küldő folyamat}
 
-A vezérlés-küldő folyamat (\code{control\textunderscore sender}) a felhasználó irányítási parancsait továbbítja a Raspberry Pi felé. A folyamat a Pygame könyvtár segítségével észleli az egér- és billentyűeseményeket, majd a megfelelő parancsokat TCP csomag formájában küldi a Raspberry Pi irányába.
+A vezérlés-küldő folyamat (\code{control\textunderscore sender}) a felhasználó irányítási parancsait továbbítja a Raspberry Pi felé. A folyamat a Pygame könyvtár segítségével észleli az egér- és billentyűeseményeket, majd a megfelelő parancsokat TCP csomag formájában küldi a Raspberry Pi irányába. Ezentúl felelős a HUD megjelenítéséért, amiről a felhazsnáló le tudja olvasni a prototípus állapotát.\\
+
+\textbf{HUD}:\\
+
+A felhazsnáló számára fontos, hogy minden információt le tudjon egyből olvasni a fegyver működéséről, így ezeket a PyGame ablakon megjelenítettem. Itt látható:
 
 \begin{list}{-}{}
-	\item Az egér mozgása esetén \code{MOVE} parancsot küld az X és Y elmozdulási adatokkal, így irányítva a fegyver mechanikai elmozdulását.
-	\item Az egérgombokkal tűzparancsokat lehet kiadni (\code{SHOOT\textunderscore START} és \code{SHOOT\textunderscore STOP}), illetve a billentyűzetről lézerkapcsolást (\code{LASERTOGGLE}) és leállítást (\code{STOP}) lehet kezdeményezni.
+	\item Használható parancsok és a hozzájuk rendelt gombok
+	\item Milyen módban működik a rendszer
+	\item Biztosítva van-e a rendszer
+	\item Működik-e a lézer
+\end{list}
+
+A PyGame ablak háttere pedig az éppen utolsó képkocka, amit a videó-fogadó folyamat a \code{frame\textunderscore queue}-ba tett. A vizuális megjelenítés mellett a folyamat feladata a parancsok küldése, ezek a következőek lehetnek:
+
+\begin{list}{-}{}
+	\item Az egér mozgása esetén \code{MOVE} parancs az X és Y elmozdulási adatokkal, így irányítva a fegyver mechanikai elmozdulását.
+	\item Az bal egérgomb lenyomásakor (\code{SHOOT\textunderscore START}, a felengedésekor \code{SHOOT\textunderscore STOP}) parancsot adhatunk ki, értelemszerűen a tüzelés megkezdésére és befejezésére.
+	\item A billentyűzet gombjaival a lézert, (\code{LASERTOGGLE}) a biztosítást (\code{SAFETY}), illetve a működési módokat lehet állítani(\code{MANUALMODE} és \code{AUTOMODE}).
 	\item Amikor a felhasználó az ESCAPE gombot megnyomja, a folyamat küld egy leállítási parancsot (\code{STOP}), majd befejezi működését.
 \end{list}
 
-A felhasználó a szoftver futtatásakor két ablakot lát, az egyik a kamera képe, a másik pedig a Pygame által létrehozott ablak, amelyben látható az eszköz irányításához szükséges leírás.
+A program a működési módtól függetlenül működik, mindig ugyanazokat az üzeneteket küldi el. A kliens programtól függ, hogyan értelmezi azokat.
 
 \subsubsection{A Raspberry Pi-n futó program működése}
-A Raspberry Pi-n szintén két folyamat fut: egy vezérlés-fogadó folyamat és egy videó-küldő folyamat. Ezek a folyamatok közvetlenül kommunikálnak a PC-n futó kód megfelelő folyamataival.
+A Raspberry Pi-n több folyamat is fut: Egy videó-küldő, egy vezérlés-fogadó, egy célpontfelismerő, illetve egy motormozgató.
 
+
+\paragraph{Célfelismerő folyamat}
+
+A \code{target\textunderscore detection()} folyamat felelős az arcok felismeréséért, és a helyzetük meghatározásához.
+
+\begin{list}{-}{}
+	\item A \code{cv2.CascadeClassifier()} függvénnyel betölti az előre betanított \textsl{haarcascade\textunderscore frontalface\textunderscore default.xml} modellt
+	\item A \code{frame\textunderscore queue.get()} metódussal kiveszi az utolsó képkockát a sorból
+	\item A \code{cv2.detectMultiScale()} megtalálja az arcokat a képkockán
+	\item Méret szerint sorba rendezi az arcokat, és kiszámolja a legnagyobb pozícióját
+	\item Betölti a pozíciót a sorba a \code{pos\textunderscore queue.put} metódussal
+\end{list}
+
+Ez a folyamat csak akkor fut, hogyha az \code{automode\textunderscore event()} flag be van állítva, tehát az eszköz automatikusan működik.
 \paragraph{Vezérlés-fogadó folyamat}
 
-A vezérlő-fogadó folyamat (\code{control\textunderscore listener}) TCP-n keresztül fogadja a PC-ről érkező irányítási parancsokat, és a megfelelő fizikai komponenseket működteti.
+A \code{control\textunderscore listener} folyamat először , a rendszer indításakor elvégzi a fegyver pozíciójának beállítását. A motorokat addig forgatja, amíg a végálláskapcsolók nem adnak jelet. Ezután pedig, miután tudjuk a pontos pozíció, visszaforgatja a fegyvert középre, és nullázza a \code{POSX} és \code{POSY} globális változókat. Ezután pedig TCP-n keresztül fogadja a PC-ről érkező irányítási parancsokat, és a megfelelő fizikai komponenseket működteti, majd a rendszer leállításakor újra középre állítja a fegyvert. A következő parancsokat tudja fogadni, attól függően, hogy melyik módban működik a prototípus. 
 
 \begin{list}{-}{}
 	\item A parancs típusa alapján (\code{MOVE}, \code{SHOOT\textunderscore START}, \code{SHOOT\textunderscore STOP},  \code{LASERTOGGLE}, \code{ STOP}) különböző műveleteket hajt végre.
@@ -864,29 +907,76 @@ A vezérlő-fogadó folyamat (\code{control\textunderscore listener}) TCP-n kere
 	\item Amennyiben \code{STOP} parancs érkezik, a folyamat leállítja a működését.
 \end{list}
 
+\begin{list}{-}{}
+	\item \code{STOP} parancs esetén az \code{stop\textunderscore event}-et beállítja, ezzel leállítva az összes folyamatot
+	\item \code{AUTOMODE} parancs esetén az \code{automode\textunderscore event}-et igazra állítja
+	\item \code{MANUALMODE} parancs esetén az \code{automode\textunderscore event}-et hamisra állítja
+	\item \code{MOVE} parancs esetén az X és Y elmozdulási értékek alapján irányítja a két motorvezérlőt, így mozgatva a fegyvert a megfelelő irányba.
+	\item A (\code{SHOOT\textunderscore START} és \code{SHOOT\textunderscore STOP}) esetén aktiválja vagy deaktiválja a fegyvert. Aktiválni csak akkor lehet, ha a \code{safety\textunderscore on} hamis.
+	\item A (\code{LASERTOGGLE}) a lézerdiódát ki- vagy bekapcsolja.
+	\item Amennyiben \code{SAFETY} parancs érkezik, beállítja a \code{safety\textunderscore on} flag-et.
+\end{list}
+
+A végtelen ciklus ellenőrzi a \code{stop\textunderscore event} flag-et, és ha igaz lesz, akkor kilép belőle. Ekkor a \code{TurnStep()} fügvénnyel addig lép, amíg középen nem lesz a fegyver, valamint a lézert is lekapcsolja.
+ 
 \paragraph{Videó-küldő folyamat}
 A videó-küldő folyamat (\code{video\textunderscore sender}) a Raspberry Pi kamerájából érkező képet szerzi meg és osztja meg a PC-vel UDP kapcsolaton keresztül.
 
 \begin{list}{-}{}
 	\item A kamerakép feldolgozása során a kód rögzíti az egyes képkockákat, amelyeket JPEG formátumba kódol és pickle segítségével tömörít.
-	\item Az adatok nagy mennyiségét figyelembe véve a képkockákat kisebb csomagokra bontja, amelyekhez fejlécek tartoznak.
+	\item Amennyiben az \code{automode\textunderscore event} flag igaz, akkor beteszi a legutolsó képkockát a \code{frame\textunderscore queue}-ba, és a \code{pos\textunderscore queue} legutolsó elemei alapján húz egy téglalapot illeszt a képkockára, ezzel jelezve a talált arcot.
+	\item Az adatok nagy mennyiségét figyelembe véve a képkockákat kisebb csomagokra bontja, amelyekhez megfelelő fejlécek tartoznak.
 	\item A fejlécekben megtalálható a csomag azonosítója, amely segít a PC-n futó videó-fogadó folyamatnak a csomagok megfelelő sorrendbe állításában és összerakásában.
 	\item A csomagokat a megadott IP-címre és portra küldi, és minden új képkockához új azonosítót rendel.
 \end{list}
 
-KELL MÉG IDE: végálláskapcsolók, rendszer init, deinit, legyenek a kódrészletek kódrészletek, részletesebb leírni az UDP és TCP kapcsolatokat, pickle, biztonsági featureok, kamera miért ilyen felbontású, modulok dokumentációjáról hivatkozás bár ez lehet az esközöknél kell, leírni mi minek hatására történik, hivatkozás a függelékhez
-\subsection{Automata működés}
+\paragraph{Motormozgató folyamat}
+A \code{motor\textunderscore motion()} folyamat azért felelős, hogy automata működés során mozgassa a motorokat, a kamera képe alapján. Azért gondoltam, hogy jobb így külön kezelni, mert az automata és kézi vezérlés mozgásának nagyon különböző a logikája. A folyamat működése a következőképpen működik:
 
+\begin{list}{-}{}
+	\item Kiolvassa a legutolsó pozíciót a \code{pos\textunderscore queue}-ből, majd a pozícióból és a középpont különbségéből kiszámítja a távolságot.
+	\item Amennyiben a fegyver pozíciója a mozgásterületen belül van, a megfelelő irányba mozdul a távolsággal arányosan.
+\end{list}
 
+A motor csak akkor mozog, ha egy bizonyos értéknél nagyobb a távolság, így kerültem el, hogy folyamatosan rángatózzon az eszköz. Ez a folyamat is csak akkor fut, hogyha a \code{automode\textunderscore event} igaz.
 
 \pagebreak
 
 
 \section{Tesztelés}
-A prototípus tesztelése több lépcsőben zajlott: először a hardvert teszteltem, a motorok illesztését, a gearbox működését. Ezután a képfelismerő algoritmusokat hasonlítottam össze, először csak egy statikus kamerával. Mikor elkészültek a 3D nyomtatott alkatrészek, ki tudtam próbálni a kamera célfelismerést és a motorok mozgásának összehangolt működését. Végül "élesbe" próbáltam ki a prototípust, célpontra lőve.
+A prototípus tesztelése több lépcsőben zajlott: először a hardvert teszteltem, a motorok illesztését, a gearbox működését. Ezután a képfelismerő algoritmusokat hasonlítottam össze, először csak egy statikus kamerával. Mikor elkészültek a 3D nyomtatott alkatrészek, ki tudtam próbálni a kamera célfelismerést és a motorok mozgásának összehangolt működését. Ezzel együtt ki tudtam próbálni, mennyire lett stabil a mechanikai konstrukció, illetve megbízható-e a tüzelés folyamata.
 
 \subsection{Elektronikai alkatrészek tesztje}
-Először csak csatlakoztattam a kamerát a Raspberry Pi megfelelő csatlakozójához, a szalagkábellel, a kamerákat pedig a stepper motor HAT csatlakozóihoz. Ezután a GPIO tüskesorhoz csatlakoztattam a lézer diódát, a relé megfelelő lábait, és a végálláskapcsolókat. 
+Először csak csatlakoztattam a kamerát a Raspberry Pi megfelelő csatlakozójához, a szalagkábellel, a kamerákat pedig a stepper motor HAT csatlakozóihoz. Ezután a GPIO tüskesorhoz csatlakoztattam a lézer diódát, a relé megfelelő lábait, és a végálláskapcsolókat. A teszt összeállítása a \ref{fig:teszt_1}. ábrán látható.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{teszt_1}
+	\caption{Elektronikai alkatrészek teszt összeállítása}
+	\label{fig:teszt_1}
+\end{figure}
+
+A teszt során azt próbáltam ki először, hogy tudom-e mozgatni a motort, működik-e a kamera, a lézer modul, tudok-e lőni a gearboxszal. Minden sikeres volt, így ezt a tesztet lezártam.
+
+\subsection{Képfelismerő algoritmusok tesztje tesztje}
+A teszt összeállítása itt is ugyanaz volt, mint az előző bekezdésben, annyi különbséggel, hogy a kamerát felerősítettem egy állványra, és egy kinyomtatott arcot mozgattam előtte. A célpont a \ref{fig:teszt_facetarget}. ábrán látható. A minta részletei nagyon kontrasztosak, elütnek egymástól, ezzel könnyítve az algoritmusok munkáját.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{facetarget1}
+	\caption{Az arcfelismeréshez használt kép}
+	\label{fig:teszt_facetarget}
+\end{figure}
+
+Először két olyan módszert vizsgáltam, ahol a célpont nem általános, hanem egy PNG képet vesz mintának, és ezt keresi a kamera által szolgáltatott képen.
+
+\subsubsection*{Template Matching}
+Erről a módszerről korábban a \ref{sec:soft_template}. bekezdésben írtam. A \code{cv2.matchTemplate()} függvény létrehozza megkeresi a képen sablont, a \code{cv2.minMaxLoc()} pedig visszaadja a helyzetét, valamint az eredmény pontosságát. Az eredmény pontosságának megszabtam egy alsó határt, és azt változtattam a teszt során. Azt tapasztaltam, hogy ez  a módszer nagyon érzékeny a célpont dőlésére és elfordulására, valamint a távolságára is. Semmiképpen nem optimális a feladat elvégzésére.
+
+\subsubsection*{Feature Matching és Target Tracking}
+A feature matching elviekben jól kezeli a célpont torzulását, ezért ezzel kísérleteztem a későbbiekben. 
+
+\subsubsection*{}
 
 \subsection{Tesztelési környezet}
 A tesztet egy jól megvilágított tanteremben végeztem. Az eszköz egy stabil padon állt, a célpont pedig 5 méterrel előtte, és kb. fél méterrel fölötte. A célpont az alábbi ábrán látható:
@@ -900,8 +990,9 @@ A következő teszt az arcfelismerés, és a követés funkció tesztje volt. A 
 %a
 %\subsection{Eredmények elemzése}
 %a
-%\section{Hibák, észrevételek}
-%a
+\section{Hibák, észrevételek}
+\subsubsection{Mechanikai megvalósítás}
+A
 %\section{Továbbfejlesztési lehetőségek}
 %a
 %\section{Költségek}
