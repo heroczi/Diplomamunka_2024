@@ -52,6 +52,6 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {7.3}Éles teszt}{57}{subsection.7.3}%
 \select@language {magyar} \contentsline {section}{\numberline {8}Hibák, észrevételek}{61}{section.8}%
 \select@language {magyar} \contentsline {section}{\numberline {9}Továbbfejlesztési lehetőségek}{62}{section.9}%
-\select@language {magyar} \contentsline {section}{\numberline {10}Költségek}{62}{section.10}%
-\select@language {magyar} \contentsline {section}{\numberline {11}Konklúziók}{63}{section.11}%
-\select@language {magyar} \contentsline {section}{\numberline {12}Köszönetnyilvánítás}{63}{section.12}%
+\select@language {magyar} \contentsline {section}{\numberline {10}Költségek}{63}{section.10}%
+\select@language {magyar} \contentsline {section}{\numberline {11}Konklúziók}{64}{section.11}%
+\select@language {magyar} \contentsline {section}{\numberline {12}Köszönetnyilvánítás}{64}{section.12}%
