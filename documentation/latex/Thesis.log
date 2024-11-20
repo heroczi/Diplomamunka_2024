@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.26)  20 NOV 2024 10:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.26)  20 NOV 2024 13:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2045,7 +2045,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ./images/mech_fogpar1.png Graphic file (type png)
 <use ./images/mech_fogpar1.png>
 Package pdftex.def Info: ./images/mech_fogpar1.png  used on input line 615.
-(pdftex.def)             Requested size: 390.0pt x 184.72105pt.
+(pdftex.def)             Requested size: 39.00238pt x 18.4728pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2053,15 +2053,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ./images/mech_fogpar2.png Graphic file (type png)
 <use ./images/mech_fogpar2.png>
 Package pdftex.def Info: ./images/mech_fogpar2.png  used on input line 624.
-(pdftex.def)             Requested size: 272.99881pt x 245.02722pt.
+(pdftex.def)             Requested size: 39.00238pt x 35.00287pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./images/mech_ender.jpg, id=580, 563.10374pt x 602.25pt>
-File: ./images/mech_ender.jpg Graphic file (type jpg)
-<use ./images/mech_ender.jpg>
-Package pdftex.def Info: ./images/mech_ender.jpg  used on input line 636.
-(pdftex.def)             Requested size: 175.49881pt x 187.69724pt.
 
 
 
@@ -2073,26 +2068,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [32 <./images/mech_motorbeepites.png>]
-Underfull \hbox (badness 1033) in paragraph at lines 641--642
-\T1/jkp/m/n/12 v® gép, ez is \T1/jkp/m/sl/12 FDM \T1/jkp/m/n/12 tech-no-ló-gi-á
-t
- []
-
-
-Underfull \hbox (badness 2469) in paragraph at lines 641--642
-\T1/jkp/m/n/12 a nyom-ta-tó egy el®-re meg-adott
- []
-
-
-Underfull \hbox (badness 1466) in paragraph at lines 641--642
-\T1/jkp/m/n/12 ext-ru-der-fej-ben (ho-tend), ame-lyet
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 641--642
-
- []
-
+<./images/mech_ender.jpg, id=587, 563.10374pt x 602.25pt>
+File: ./images/mech_ender.jpg Graphic file (type jpg)
+<use ./images/mech_ender.jpg>
+Package pdftex.def Info: ./images/mech_ender.jpg  used on input line 638.
+(pdftex.def)             Requested size: 175.49881pt x 187.69724pt.
 
 
 
@@ -2104,20 +2084,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [33 <./images/mech_vegallas1.png> <./images/mech_vegallas2.png> <./images/mech_
-alsoreszek.png> <./images/mech_ender.jpg>]
+alsoreszek.png> <./images/mech_fogpar1.png> <./images/mech_fogpar2.png>]
+Underfull \hbox (badness 1033) in paragraph at lines 643--644
+\T1/jkp/m/n/12 v® gép, ez is \T1/jkp/m/sl/12 FDM \T1/jkp/m/n/12 tech-no-ló-gi-á
+t
+ []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+Underfull \hbox (badness 2469) in paragraph at lines 643--644
+\T1/jkp/m/n/12 a nyom-ta-tó egy el®-re meg-adott
+ []
 
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[34 <./images/mech_fogpar1.png> <./images/mech_fogpar2.png>]
+Underfull \hbox (badness 1466) in paragraph at lines 643--644
+\T1/jkp/m/n/12 ext-ru-der-fej-ben (ho-tend), ame-lyet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--644
+
+ []
+
 LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 6
-46.
-
+48.
 (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ts1jkp.fd
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )
@@ -2130,8 +2119,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[35]
-Overfull \hbox (2.36479pt too wide) in paragraph at lines 660--661
+[34 <./images/mech_ender.jpg>]
+Overfull \hbox (2.36479pt too wide) in paragraph at lines 662--663
 []\T1/jkp/m/n/12 Rácsavaroztam a táv-tar-tó-kat a Rasp-ber-ry Pi-ra, a Step-per
  Mo-tor HAT-
  []
@@ -2146,19 +2135,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[36]
-Overfull \hbox (13.9029pt too wide) in paragraph at lines 676--677
+[35]
+<./images/sentry1.jpg, id=626, 3207.985pt x 2485.285pt>
+File: ./images/sentry1.jpg Graphic file (type jpg)
+<use ./images/sentry1.jpg>
+Package pdftex.def Info: ./images/sentry1.jpg  used on input line 678.
+(pdftex.def)             Requested size: 390.0pt x 302.12733pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36 <./images/sentry1.jpg>]
+Overfull \hbox (13.9029pt too wide) in paragraph at lines 693--694
 \T1/jkp/m/n/12 A pro-to-tí-pus áram-kö-rét pró-bál-tam mi-nél egy-sze-r¶b-ben m
 eg-va-ló-sí-ta-ni. Alap-
  []
 
-<./images/elek_pinout.png, id=628, 1576.38937pt x 892.08281pt>
+<./images/elek_pinout.png, id=631, 1576.38937pt x 892.08281pt>
 File: ./images/elek_pinout.png Graphic file (type png)
 <use ./images/elek_pinout.png>
-Package pdftex.def Info: ./images/elek_pinout.png  used on input line 681.
+Package pdftex.def Info: ./images/elek_pinout.png  used on input line 698.
 (pdftex.def)             Requested size: 390.0pt x 220.69249pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--688
+Underfull \hbox (badness 10000) in paragraph at lines 704--705
 
  []
 
@@ -2166,21 +2171,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 687--688
 
 pdfTeX warning: pdflatex.exe (file ./images/schematic2.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<./images/schematic2.pdf, id=632, 614.295pt x 397.485pt>
+<./images/schematic2.pdf, id=635, 614.295pt x 397.485pt>
 File: ./images/schematic2.pdf Graphic file (type pdf)
 <use ./images/schematic2.pdf>
-Package pdftex.def Info: ./images/schematic2.pdf  used on input line 691.
+Package pdftex.def Info: ./images/schematic2.pdf  used on input line 708.
 (pdftex.def)             Requested size: 390.0pt x 252.35771pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 696--697
+Underfull \hbox (badness 10000) in paragraph at lines 713--714
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 698--699
+Underfull \hbox (badness 10000) in paragraph at lines 715--716
 
  []
 
@@ -2205,30 +2210,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.01804pt}.
 
 [38 <./images/schematic2.pdf>]
-Overfull \hbox (3.57912pt too wide) in paragraph at lines 712--713
+Overfull \hbox (3.57912pt too wide) in paragraph at lines 729--730
 []\T1/jkp/m/n/12 Legyen könnyen be-sze-rez-he-t®, mind anya-gi-lag, mind el-ér-
 he-t®-ség sze-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 719--720
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
 
  []
 
-<./images/elek_raspberry4b.png, id=648, 573.14125pt x 341.275pt>
+<./images/elek_raspberry4b.png, id=651, 573.14125pt x 341.275pt>
 File: ./images/elek_raspberry4b.png Graphic file (type png)
 <use ./images/elek_raspberry4b.png>
-Package pdftex.def Info: ./images/elek_raspberry4b.png  used on input line 723.
+Package pdftex.def Info: ./images/elek_raspberry4b.png  used on input line 740.
 
 (pdftex.def)             Requested size: 272.99881pt x 162.56035pt.
 
-Overfull \hbox (1.54681pt too wide) in paragraph at lines 728--729
+Overfull \hbox (1.54681pt too wide) in paragraph at lines 745--746
 []\T1/jkp/m/n/12 A ka-me-ra il-lesz-té-se szin-tén kü-lö-nö-sen fon-tos a vég-t
 er-mék m¶-kö-dé-se szem-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 728--729
+Underfull \hbox (badness 10000) in paragraph at lines 745--746
 
  []
 
@@ -2243,17 +2248,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [39 <./images/elek_raspberry4b.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 733--734
+Underfull \hbox (badness 10000) in paragraph at lines 750--751
 
  []
 
-<./images/elek_stepperhat.png, id=660, 450.9347pt x 392.21532pt>
+<./images/elek_stepperhat.png, id=663, 450.9347pt x 392.21532pt>
 File: ./images/elek_stepperhat.png Graphic file (type png)
 <use ./images/elek_stepperhat.png>
-Package pdftex.def Info: ./images/elek_stepperhat.png  used on input line 737.
+Package pdftex.def Info: ./images/elek_stepperhat.png  used on input line 754.
 (pdftex.def)             Requested size: 234.00238pt x 203.53421pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 742--743
+Underfull \hbox (badness 10000) in paragraph at lines 759--760
 
  []
 
@@ -2268,13 +2273,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [40 <./images/elek_stepperhat.png>]
-<./images/elek_hptap.jpg, id=669, 611.28375pt x 448.67625pt>
+<./images/elek_hptap.jpg, id=672, 611.28375pt x 448.67625pt>
 File: ./images/elek_hptap.jpg Graphic file (type jpg)
 <use ./images/elek_hptap.jpg>
-Package pdftex.def Info: ./images/elek_hptap.jpg  used on input line 752.
+Package pdftex.def Info: ./images/elek_hptap.jpg  used on input line 769.
 (pdftex.def)             Requested size: 234.00238pt x 171.7516pt.
 
-Overfull \hbox (16.61888pt too wide) in paragraph at lines 760--761
+Overfull \hbox (16.61888pt too wide) in paragraph at lines 777--778
 \T1/jkp/m/n/12 A rend-szer ál-tal hasz-nált ka-me-ra egy \T1/jkp/m/sl/12 Rasp-b
 er-ry Pi Ca-me-ra Mo-dule 2 \T1/jkp/m/n/12 volt.[[]]
  []
@@ -2290,24 +2295,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [41 <./images/elek_hptap.jpg>]
-<./images/elek_raspberrycam.png, id=679, 1023.825pt x 572.1375pt>
+<./images/elek_raspberrycam.png, id=682, 1023.825pt x 572.1375pt>
 File: ./images/elek_raspberrycam.png Graphic file (type png)
 <use ./images/elek_raspberrycam.png>
-Package pdftex.def Info: ./images/elek_raspberrycam.png  used on input line 764
+Package pdftex.def Info: ./images/elek_raspberrycam.png  used on input line 781
 .
 (pdftex.def)             Requested size: 390.0pt x 217.93831pt.
-<./images/elek_vegallaskapcsolo.png, id=681, 602.25pt x 602.25pt>
+<./images/elek_vegallaskapcsolo.png, id=684, 602.25pt x 602.25pt>
 File: ./images/elek_vegallaskapcsolo.png Graphic file (type png)
 <use ./images/elek_vegallaskapcsolo.png>
 Package pdftex.def Info: ./images/elek_vegallaskapcsolo.png  used on input line
- 776.
+ 793.
 (pdftex.def)             Requested size: 195.0pt x 195.00294pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 782--783
+Underfull \hbox (badness 10000) in paragraph at lines 799--800
 
  []
 
@@ -2332,21 +2337,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [43 <./images/elek_vegallaskapcsolo.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 794--795
+Underfull \hbox (badness 10000) in paragraph at lines 811--812
 
  []
 
 LaTeX Font Info:    Trying to load font information for T1+jkptt on input line 
-796.
+813.
 (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\t1jkptt.fd
 File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 796--797
+Underfull \hbox (badness 10000) in paragraph at lines 813--814
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 798--799
+Underfull \hbox (badness 10000) in paragraph at lines 815--816
 
  []
 
@@ -2361,27 +2366,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 804--805
+Underfull \hbox (badness 10000) in paragraph at lines 821--822
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 806--807
+Underfull \hbox (badness 10000) in paragraph at lines 823--824
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 808--809
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
 
  []
 
 
-Overfull \hbox (7.14764pt too wide) in paragraph at lines 810--811
+Overfull \hbox (7.14764pt too wide) in paragraph at lines 827--828
 []\T1/jkp/m/n/12 Mindkét tí-pus-nál a [], [], [], és [] függ-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--815
+Underfull \hbox (badness 10000) in paragraph at lines 831--832
 
  []
 
@@ -2396,17 +2401,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 820--821
+Underfull \hbox (badness 10000) in paragraph at lines 837--838
 
  []
 
 
-Overfull \hbox (9.52185pt too wide) in paragraph at lines 822--823
+Overfull \hbox (9.52185pt too wide) in paragraph at lines 839--840
 \T1/jkp/m/n/12 moz-ga-tá-sa egy-sze-r¶ a [] és [] függ-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 825--826
+Underfull \hbox (badness 10000) in paragraph at lines 842--843
 
  []
 
@@ -2421,47 +2426,47 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [46]
-Overfull \hbox (0.28683pt too wide) in paragraph at lines 832--833
+Overfull \hbox (0.28683pt too wide) in paragraph at lines 849--850
 \T1/jkp/m/n/12 A cél-pont-fel-is-me-rés mód-sze-re volt az au-to-ma-ta m¶-kö-dé
 s leg-fon-to-sabb ele-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 834.
+(hyperref)                removing `\@ifnextchar' on input line 851.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--837
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 838--839
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 840--841
+Underfull \hbox (badness 10000) in paragraph at lines 855--856
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 857--858
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 844.
+(hyperref)                removing `\@ifnextchar' on input line 861.
 
 
-Overfull \hbox (19.3713pt too wide) in paragraph at lines 848--849
+Overfull \hbox (19.3713pt too wide) in paragraph at lines 865--866
 \T1/jkp/m/n/12 SURF vagy ORB) se-gít-sé-gé-vel ta-lál-ha-tunk meg. Ez-után az [
 ]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--849
+Underfull \hbox (badness 10000) in paragraph at lines 865--866
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 850--851
+Underfull \hbox (badness 10000) in paragraph at lines 867--868
 
  []
 
@@ -2478,30 +2483,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [47]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 854.
+(hyperref)                removing `\@ifnextchar' on input line 871.
 
 
-Overfull \hbox (2.1135pt too wide) in paragraph at lines 861--862
+Overfull \hbox (2.1135pt too wide) in paragraph at lines 878--879
 []\T1/jkp/m/n/12 CamShift (Con-ti-nu-o-usly Adap-tive Me-an Shift): []
  []
 
 
-Overfull \hbox (6.36003pt too wide) in paragraph at lines 862--863
+Overfull \hbox (6.36003pt too wide) in paragraph at lines 879--880
 \T1/jkp/m/n/12 ver-zi-ói le-he-t®-vé te-szik al-go-rit-mu-sok hasz-ná-la-tát, m
 int a KLT (Kanade-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 868.
+(hyperref)                removing `\@ifnextchar' on input line 885.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--871
+Underfull \hbox (badness 10000) in paragraph at lines 887--888
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 872--873
+Underfull \hbox (badness 10000) in paragraph at lines 889--890
 
  []
 
@@ -2516,12 +2521,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 874--875
+Underfull \hbox (badness 10000) in paragraph at lines 891--892
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 876--877
+Underfull \hbox (badness 10000) in paragraph at lines 893--894
 
  []
 
@@ -2536,18 +2541,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [49]
-Underfull \hbox (badness 10000) in paragraph at lines 883--884
+Underfull \hbox (badness 10000) in paragraph at lines 900--901
 
  []
 
 
-Overfull \hbox (1.41203pt too wide) in paragraph at lines 904--905
+Overfull \hbox (1.41203pt too wide) in paragraph at lines 921--922
 \T1/jkp/m/n/12 A vezérlés-küld® fo-lya-mat ([]) a fel-hasz-ná-ló irá-nyí-tá-si 
 pa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 904--905
+Underfull \hbox (badness 10000) in paragraph at lines 921--922
 
  []
 
@@ -2562,24 +2567,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [50]
-Underfull \hbox (badness 10000) in paragraph at lines 906--907
+Underfull \hbox (badness 10000) in paragraph at lines 923--924
 
  []
 
 
-Overfull \hbox (2.56592pt too wide) in paragraph at lines 921--922
+Overfull \hbox (2.56592pt too wide) in paragraph at lines 938--939
 []\T1/jkp/m/n/12 ) pa-ran-csot ad-ha-tunk ki, ér-te-lem-sze-r¶-en a tü-ze-lés m
 eg-
  []
 
 
-Overfull \hbox (37.73439pt too wide) in paragraph at lines 922--923
+Overfull \hbox (37.73439pt too wide) in paragraph at lines 939--940
 []\T1/jkp/m/n/12 A bil-len-ty¶-zet gomb-ja-i-val a lé-zert, ([]) a biz-to-sí-tá
 st ([]),
  []
 
 
-Overfull \hbox (16.14471pt too wide) in paragraph at lines 922--923
+Overfull \hbox (16.14471pt too wide) in paragraph at lines 939--940
 \T1/jkp/m/n/12 il-let-ve a m¶-kö-dé-si mó-do-kat le-het állítani([] és []). 
  []
 
@@ -2604,7 +2609,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [52]
-Overfull \hbox (6.56009pt too wide) in paragraph at lines 970--971
+Overfull \hbox (6.56009pt too wide) in paragraph at lines 987--988
  []\T1/jkp/b/n/12 Videó-küld® fo-lya-mat[] \T1/jkp/m/n/12 A videó-küld® fo-lya-
 mat ([]) a Rasp-
  []
@@ -2620,7 +2625,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [53]
-Overfull \hbox (10.84645pt too wide) in paragraph at lines 981--982
+Overfull \hbox (10.84645pt too wide) in paragraph at lines 998--999
  []\T1/jkp/b/n/12 Motormozgató fo-lya-mat[] \T1/jkp/m/n/12 A [] fo-lya-mat azér
 t fe-le-l®s, hogy
  []
@@ -2636,25 +2641,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [54]
-<./images/teszt_1.jpg, id=769, 980.66376pt x 1740.5025pt>
+<./images/teszt_1.jpg, id=772, 735.49782pt x 846.16125pt>
 File: ./images/teszt_1.jpg Graphic file (type jpg)
 <use ./images/teszt_1.jpg>
-Package pdftex.def Info: ./images/teszt_1.jpg  used on input line 1001.
-(pdftex.def)             Requested size: 234.00238pt x 415.31236pt.
+Package pdftex.def Info: ./images/teszt_1.jpg  used on input line 1018.
+(pdftex.def)             Requested size: 234.00238pt x 269.20195pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./images/facetarget1.png, id=771, 774.64406pt x 1063.72406pt>
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[55 <./images/teszt_1.jpg>]
+<./images/facetarget1.png, id=779, 774.64406pt x 1063.72406pt>
 File: ./images/facetarget1.png Graphic file (type png)
 <use ./images/facetarget1.png>
-Package pdftex.def Info: ./images/facetarget1.png  used on input line 1013.
+Package pdftex.def Info: ./images/facetarget1.png  used on input line 1030.
 (pdftex.def)             Requested size: 234.00238pt x 321.3271pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (52.17596pt too wide) in paragraph at lines 1021--1022
+Overfull \hbox (52.17596pt too wide) in paragraph at lines 1038--1039
 \T1/jkp/m/n/12 Err®l a mód-szer-r®l ko-ráb-ban a []6.2.1[]. be-kez-dés-ben ír-t
 am. A []
  []
@@ -2669,43 +2678,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[55]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[56 <./images/teszt_1.jpg>]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[57 <./images/facetarget1.png>]
-<./images/lolap.pdf, id=790, 597.432pt x 845.07718pt>
+[56 <./images/facetarget1.png>]
+<./images/lolap.pdf, id=788, 597.432pt x 845.07718pt>
 File: ./images/lolap.pdf Graphic file (type pdf)
 <use ./images/lolap.pdf>
-Package pdftex.def Info: ./images/lolap.pdf  used on input line 1036.
+Package pdftex.def Info: ./images/lolap.pdf  used on input line 1053.
 (pdftex.def)             Requested size: 234.00238pt x 330.99721pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1042
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1044
-
- []
 
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.01804pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.01804pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.01804pt}.
+
+[57]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2716,17 +2714,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.01804pt}.
 
 [58 <./images/lolap.pdf>]
-<./images/teszt_eredmenyek.png, id=857, 1566.60281pt x 1543.26563pt>
-File: ./images/teszt_eredmenyek.png Graphic file (type png)
-<use ./images/teszt_eredmenyek.png>
-Package pdftex.def Info: ./images/teszt_eredmenyek.png  used on input line 1049
-.
-(pdftex.def)             Requested size: 390.0pt x 384.19063pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1056--1057
-
- []
-
+<./images/teszt_setup2.jpg, id=863, 4234.82124pt x 2613.765pt>
+File: ./images/teszt_setup2.jpg Graphic file (type jpg)
+<use ./images/teszt_setup2.jpg>
+Package pdftex.def Info: ./images/teszt_setup2.jpg  used on input line 1069.
+(pdftex.def)             Requested size: 350.99762pt x 216.60344pt.
+<./images/teszt_setup1.jpg, id=864, 4234.82124pt x 2613.765pt>
+File: ./images/teszt_setup1.jpg Graphic file (type jpg)
+<use ./images/teszt_setup1.jpg>
+Package pdftex.def Info: ./images/teszt_setup1.jpg  used on input line 1076.
+(pdftex.def)             Requested size: 350.99762pt x 216.60344pt.
 
 
 
@@ -2737,44 +2734,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.01804pt}.
 
-[59 <./images/teszt_eredmenyek.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1058--1059
-
- []
-
+[59 <./images/teszt_setup2.jpg> <./images/teszt_setup1.jpg>]
+<./images/teszt_eredmenyek.png, id=872, 1566.60281pt x 1543.26563pt>
+File: ./images/teszt_eredmenyek.png Graphic file (type png)
+<use ./images/teszt_eredmenyek.png>
+Package pdftex.def Info: ./images/teszt_eredmenyek.png  used on input line 1085
+.
+(pdftex.def)             Requested size: 390.0pt x 384.19063pt.
 
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                Make it at least 15.01804pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.01804pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+(fancyhdr)                \addtolength{\topmargin}{-3.01804pt}.
 
-[60]
-Underfull \hbox (badness 10000) in paragraph at lines 1064--1065
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1067
+[60 <./images/teszt_eredmenyek.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
 
  []
 
 
-Overfull \hbox (4.85287pt too wide) in paragraph at lines 1068--1069
-[]\T1/jkp/b/n/12 Vezeték nél-kü-li m¶-kö-dés: \T1/jkp/m/n/12 A táp-el-lá-tás és
- a kom-mu-ni-ká-ció ve-ze-ték néküli-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1071
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1096
 
  []
 
@@ -2789,6 +2772,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [61]
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1103--1104
+
+ []
+
+
+Overfull \hbox (4.85287pt too wide) in paragraph at lines 1105--1106
+[]\T1/jkp/b/n/12 Vezeték nél-kü-li m¶-kö-dés: \T1/jkp/m/n/12 A táp-el-lá-tás és
+ a kom-mu-ni-ká-ció ve-ze-ték néküli-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1107--1108
+
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2809,14 +2818,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [63]
-Overfull \hbox (124.2178pt too wide) in paragraph at lines 1117--1119
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[64]
+Overfull \hbox (124.2178pt too wide) in paragraph at lines 1154--1156
 []$\T1/jkptt/m/n/10 https : / / steeltownpaintball . com / what-[]you-[]should-
 []know-[]about-[]paintball-[]buying-[]upgrades-[]and-[]more/$[]\T1/jkp/m/n/12 ,
  
  []
 
 
-Overfull \hbox (27.81802pt too wide) in paragraph at lines 1129--1131
+Overfull \hbox (27.81802pt too wide) in paragraph at lines 1166--1168
 []$\T1/jkptt/m/n/10 https : / / highspeedbbs . com / all-[]about-[]airsoft-[]gu
 ns-[]types-[]styles-[]facts-[]science/$[]\T1/jkp/m/n/12 , 
  []
@@ -2831,14 +2850,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.01804pt}.
 
-[64]
-Underfull \hbox (badness 10000) in paragraph at lines 1152--1154
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1191
 []$\T1/jkptt/m/n/10 https : / / www . raspberrypi . com / products / raspberry-
 []pi-[]4-[]model-[]b /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1193--1195
+Underfull \hbox (badness 10000) in paragraph at lines 1230--1232
 []$\T1/jkptt/m/n/10 https : / / docs . opencv . org / 4 . x / d2 / d0a / tutori
 al _ introduction _ to _ tracker .
  []
@@ -2853,7 +2872,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.01804pt}.
 
-[65] (Thesis.aux)
+[66] (Thesis.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
@@ -2862,10 +2881,10 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 1FA2625445181275B203D22CB3050DD0;7562.
  ) 
 Here is how much of TeX's memory you used:
- 29304 strings out of 473899
- 550622 string characters out of 5726500
- 905047 words of memory out of 5000000
- 51460 multiletter control sequences out of 15000+600000
+ 29353 strings out of 473899
+ 551772 string characters out of 5726500
+ 905257 words of memory out of 5000000
+ 51505 multiletter control sequences out of 15000+600000
  663741 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,17n,107p,1387b,674s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2882,9 +2901,9 @@ ms/MiKTeX/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Users/Sanya/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmsce.pfb><C:/Users/Sanya/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/Sanya/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on Thesis.pdf (67 pages, 26109310 bytes).
+Output written on Thesis.pdf (68 pages, 34844892 bytes).
 PDF statistics:
- 1028 PDF objects out of 1200 (max. 8388607)
- 234 named destinations out of 1000 (max. 500000)
- 596 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1043 PDF objects out of 1200 (max. 8388607)
+ 238 named destinations out of 1000 (max. 500000)
+ 611 words of extra memory for PDF output out of 10000 (max. 10000000)
 

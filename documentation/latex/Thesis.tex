@@ -612,7 +612,7 @@ A prototípusban két fogaskerék kapcsolat kapott helyet. A függőleges tengel
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{mech_fogpar1}
+	\includegraphics[width=0.1\linewidth]{mech_fogpar1}
 	\caption{Függőleges tengely fogaskerekek}
 	\label{fig:mech_fogpar1}
 \end{figure}
@@ -621,12 +621,14 @@ A vízszintes tengely nagy fogaskereke a gearbox ház tengelyére lett erősítv
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{mech_fogpar2}
+	\includegraphics[width=0.1\linewidth]{mech_fogpar2}
 	\caption{Vízszintes tengely fogaskerekek}
 	\label{fig:mech_fogpar2}
 \end{figure}
 
 Mind a két fogaskerékpár kisebb közvetlenül a motor tengelyére lett rögzítve, egy acél rögzítőgyűrűvel. Ennek kialakítása a \ref{fig:mech_alsoreszek}. ábra bal oldalán látható.
+
+\pagebreak
 
 \subsection{Gyártás és összeszerelés}
 \subsubsection{Gyártás}
@@ -668,7 +670,22 @@ Ebben a fejezetben leírom az összeszerelés menetét. Először az elektronik�
 	\item Összekötöttem a kábeleket, csatlakozókat.
 	\item Csatlakoztattam a tápokat és az ethernet-kábelt.
 \end{enumerate}
+Az elkészült eszközt a \ref{fig:sentry1}. ábrán lehet látni.
+\pagebreak
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{sentry1}
+	\caption{Összeállított prototípus}
+	\label{fig:sentry1}
+\end{figure}
+
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.4\linewidth]{sentry2}
+%	\caption{Összeállított prototípus}
+%	\label{fig:sentry2}
+%\end{figure}
 \pagebreak
 \section{Hardvertervezés}
 
@@ -1029,7 +1046,7 @@ Az utolsó módszer, amit teszteltem, az a Haar Cascade és tanított neurális 
 
 
 \subsection{Éles teszt}
-A tesztet egy jól megvilágított tanteremben végeztem. Az eszköz egy stabil padon állt, a célpont pedig 5 méterrel előtte, és kb. fél méterrel fölötte. A célpont az alábbi ábrán látható:
+A tesztet egy jól megvilágított tanteremben végeztem. Az eszköz egy stabil padon állt, a célpont pedig 5 méterrel előtte, és kb. fél méterrel fölötte. A célpont a \ref{fig:teszt_lolap}. ábrán látható.
 
 \begin{figure}[h!]
 	\centering
@@ -1038,10 +1055,29 @@ A tesztet egy jól megvilágított tanteremben végeztem. Az eszköz egy stabil 
 	\label{fig:teszt_lolap}
 \end{figure}
 
+
 A teszt során a manuális működési móddal kezdtem, tulajdonképpen belőttem a fegyvert. Először azt tapasztaltam, hogy a kamera képének a közepe nem ott van, ahova a fegyver csöve mutat. Ezért a célkeresztet addig kellett mozgatnom a képen, amíg oda nem mutatott, ahova a fegyver ténylegesen lőtt. Ezután azt tapasztaltam, hogy nagy pontossággal képes lőni, igen kis területen belül. A lézer irányzékot azonban nem tudtam pontosan beállítani, 5 méteren nagyjából 10-15 cm-t téved. A következő ábrákon látható a teszt eredménye. 5-ös sorozatokban tüzeltem, mindig a cél közepére irányítva a kamera célkeresztjét. \\
 
-A következő teszt az arcfelismerés, és a követés funkció tesztje volt. A körülmények ugyanazok maradtak, és szintén 5 m-re volt a célpont. A teszt során egy kolléga tartotta a kinyomtatott arcképet, és mozgatta, változtatva a sebességet és irányt. Természetesen a gearbox nem volt áram alatt, és a kolléga is viselt védőszemüveget. Azt tapasztaltam, hogy a fegyver körülbelül a sétáló ember sebességét tudja követni 5 m távolságban, és igen pontosan be tudja célozni.\\
+A következő teszt az arcfelismerés, és a követés funkció tesztje volt. A körülmények ugyanazok maradtak, és szintén 5 m-re volt a célpont. A teszt során egy kolléga tartotta a kinyomtatott arcképet, és mozgatta, változtatva a sebességet és irányt. Természetesen a gearbox nem volt áram alatt, és a kolléga is viselt védőszemüveget. Azt tapasztaltam, hogy a fegyver körülbelül a sétáló ember sebességét tudja követni 5 m távolságban, és igen pontosan be tudja célozni.
 
+\pagebreak
+
+A tesztkörnyezet a \ref{fig:teszt_teszt_setup1}. és \ref{fig:teszt_teszt_setup2}. ábrákon látható.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{teszt_setup2}
+	\caption{Az éles teszt környezete}
+	\label{fig:teszt_teszt_setup1}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{teszt_setup1}
+	\caption{Az éles teszt környezete}
+	\label{fig:teszt_teszt_setup2}
+\end{figure}
+\pagebreak
 Összességében elmondható, hogy a beállított célkereszttel, 5 méterről igen pontos eredmények születtek. 4 leadott sorozat során 5-5 golyót lőttem ki, az eredmények az alábbi ábrán láthatóak:
 
 \begin{figure}[h!]
@@ -1051,6 +1087,7 @@ A következő teszt az arcfelismerés, és a követés funkció tesztje volt. A 
 	\label{fig:teszt_eredmenyek}
 \end{figure}
 
+\pagebreak
 
 \section{Hibák, észrevételek}
 A prototípus fejlesztés során számos helyen vétettem kisebb-nagyobb hibákat, amiket súlyosságuktól függően vagy javítani kellett, vagy valahogy kikerülni. Az első, amit meg szeretnék említeni, az a \textbf{tár kialakítása} volt. Nem voltam elég körültekintő, és anélkül terveztem meg a tárat, hogy megnéztem volna, az eredeti fegyverekben hogyan működik. Ennek eredménye lett a nagy kapacitású tár, ami aminek elméletben folyamatosan kéne adagolni a golyókat, de a gyakorlatban a szűkítésnél minden esetben elakad. Ezzel a kialakítással egyet sem sikerült tüzelni, így újra kellett tervezni a teljes tárat. Miután jobban megvizsgáltam az eredeti fegyvert, láttam, hogy a golyók egyesével sorakoznak minden esetben, ezzel gátolva az elakadást. Miután hasonlóan megterveztem az új tárat, már megbízhatóan működött, habár kisebb kapacitással, így ezt a hibát sikerült kijavítani.\\
