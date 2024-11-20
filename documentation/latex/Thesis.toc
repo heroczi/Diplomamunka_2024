@@ -20,24 +20,24 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {4.1}Kinematika}{22}{subsection.4.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {4.2}Mechanikai alkatrészek}{24}{subsection.4.2}%
 \select@language {magyar} \contentsline {subsection}{\numberline {4.3}3D tervezés, modellezés}{27}{subsection.4.3}%
-\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.1}Torony}{29}{subsubsection.4.3.1}%
-\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.2}Keret}{30}{subsubsection.4.3.2}%
-\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.3}Függőleges tengely elemei}{32}{subsubsection.4.3.3}%
-\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.4}Fogaskerekek}{33}{subsubsection.4.3.4}%
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4}Gyártás és összeszerelés}{35}{subsection.4.4}%
-\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.1}Gyártás}{35}{subsubsection.4.4.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.1}Torony}{28}{subsubsection.4.3.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.2}Keret}{31}{subsubsection.4.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.3}Függőleges tengely elemei}{31}{subsubsection.4.3.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.4}Fogaskerekek}{32}{subsubsection.4.3.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4}Gyártás és összeszerelés}{33}{subsection.4.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.1}Gyártás}{33}{subsubsection.4.4.1}%
 \select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2}Összeszerelés}{36}{subsubsection.4.4.2}%
 \select@language {magyar} \contentsline {section}{\numberline {5}Hardvertervezés}{37}{section.5}%
 \select@language {magyar} \contentsline {subsection}{\numberline {5.1}Áramköri tervezés}{37}{subsection.5.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {5.2}Elektronikai alkatrészek}{38}{subsection.5.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {5.2}Elektronikai alkatrészek}{39}{subsection.5.2}%
 \select@language {magyar} \contentsline {subsection}{\numberline {5.3}Gyártás, forrasztás}{43}{subsection.5.3}%
 \select@language {magyar} \contentsline {section}{\numberline {6}Szoftverfejlesztés}{44}{section.6}%
 \select@language {magyar} \contentsline {subsection}{\numberline {6.1}Használt Python modulok, eszközök}{44}{subsection.6.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {6.2}Gépi látás}{47}{subsection.6.2}%
-\select@language {magyar} \contentsline {subsubsection}{\numberline {6.2.1}Template matching}{47}{subsubsection.6.2.1}%
-\select@language {magyar} \contentsline {subsubsection}{\numberline {6.2.2}Feature Matching}{47}{subsubsection.6.2.2}%
-\select@language {magyar} \contentsline {subsubsection}{\numberline {6.2.3}Target Tracking}{48}{subsubsection.6.2.3}%
-\select@language {magyar} \contentsline {subsubsection}{\numberline {6.2.4}Haar cascade}{48}{subsubsection.6.2.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {6.2.1}Template matching \cite {templatematching}}{47}{subsubsection.6.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {6.2.2}Feature Matching \cite {featurematching}}{47}{subsubsection.6.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {6.2.3}Target Tracking \cite {targettracking}}{48}{subsubsection.6.2.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {6.2.4}Haar cascade \cite {haarcascade}}{48}{subsubsection.6.2.4}%
 \select@language {magyar} \contentsline {subsection}{\numberline {6.3}A szoftver működése}{50}{subsection.6.3}%
 \select@language {magyar} \contentsline {subsubsection}{\numberline {6.3.1}A PC-n futó program működése}{50}{subsubsection.6.3.1}%
 \select@language {magyar} \contentsline {subsubsection}{\numberline {6.3.2}A Raspberry Pi-n futó program működése}{52}{subsubsection.6.3.2}%
@@ -50,8 +50,8 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {7.2}Képfelismerő algoritmusok tesztje tesztje}{55}{subsection.7.2}%
 \select@language {magyar} \contentsline {subsubsection}{\numberline {7.2.1}Haar Cascade}{57}{subsubsection.7.2.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {7.3}Éles teszt}{58}{subsection.7.3}%
-\select@language {magyar} \contentsline {section}{\numberline {8}Hibák, észrevételek}{58}{section.8}%
-\select@language {magyar} \contentsline {section}{\numberline {9}Továbbfejlesztési lehetőségek}{58}{section.9}%
-\select@language {magyar} \contentsline {section}{\numberline {10}Költségek}{58}{section.10}%
-\select@language {magyar} \contentsline {section}{\numberline {11}Konklúziók}{58}{section.11}%
-\select@language {magyar} \contentsline {section}{\numberline {12}Köszönetnyilvánítás}{59}{section.12}%
+\select@language {magyar} \contentsline {section}{\numberline {8}Hibák, észrevételek}{60}{section.8}%
+\select@language {magyar} \contentsline {section}{\numberline {9}Továbbfejlesztési lehetőségek}{61}{section.9}%
+\select@language {magyar} \contentsline {section}{\numberline {10}Költségek}{61}{section.10}%
+\select@language {magyar} \contentsline {section}{\numberline {11}Konklúziók}{62}{section.11}%
+\select@language {magyar} \contentsline {section}{\numberline {12}Köszönetnyilvánítás}{62}{section.12}%

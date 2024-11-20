@@ -452,25 +452,24 @@ Az elsütő mechanizmusnak egy \textsl{Specna Arms M4}-ből kiszerelt gearbox-ot
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth]{mech_gearboxdiagram}
-	\caption{V2 gearbox alkatrészei}
+	\caption{V2 gearbox alkatrészei \cite{airsoft}}
 	\label{fig:mech_gearboxdiagram}
 \end{figure}
 
 A hop-up kamrán belül még található egy gumi csúszófelület, amivel a kilőtt golyó perdületét lehet állítani, ezáltal pedig a fegyver effektív távolságát növelni.\\
-
 
 A gearbox-on belül kellett alakítanom a működésen, hogy az előbb leírt folyamatos működést biztosítani tudjam.  Az elsütőbillentyűt, a tűzkapcsolót és minden ehhez tartozó mechanikai elemet kiszereltem, illetve áthuzaloztam. Erre azért volt szükség, mert különben csak a ravasz meghúzásával lehetett volna tüzelni, ami bonyolít a rendszer megvalósításán. A gearbox belső kialakítása a \ref{fig:gearboxbele}. ábrán látható.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.6\linewidth]{gearboxbele}
-	\caption{A gearbox belseje}
+	\caption{A gearbox belseje\cite{airsoft}}
 	\label{fig:gearboxbele}
 \end{figure}
 
 A fegyver gearbox-ot körülvevő alkatrészeiről le tudtam venni méreteket, ez alapján alakítottam ki később a 3D nyomtatott alkatrészeket. Így végeredményben egy magába zárt alkatrészem lett, amin habár mechanikus nem lehet állítani a tüzelés módját, de csupán két vezetékkel csatlakozik az elektronikához. \\
 
-A gearbox áramfogyasztását illetően találtam méréseket az internet, ahol kifejezetten az én modellemet tesztelték. Az Itteni mérések alapján arra következtettem, hogy 15 A-re méretezni az áramkört megfelelő lehet. \cite{aisroftteszt}
+A gearbox áramfogyasztását illetően találtam méréseket az internet, ahol kifejezetten az én modellemet tesztelték. Az Itteni mérések alapján arra következtettem, hogy 15 A-re méretezni az áramkört megfelelő lehet. \cite{airsoftteszt}
 
 \subsubsection*{Motorok}
 
@@ -479,7 +478,7 @@ A projekthez kettő \textbf{NEMA-17} léptetőmotort használok\cite{nema17}. Ez
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{mech_stepper}
-	\caption{NEMA-17 léptetőmotorok a használt konfigurációban}
+	\caption{NEMA-17 léptetőmotorok a használt konfigurációban \cite{stepperhat}}
 	\label{fig:mech_stepper}
 \end{figure}
 
@@ -513,7 +512,6 @@ Az egyik (\ref{fig:mech_skeleton1}.ábra) alkatrészei rendszerint a függőlege
 
 Az ábrákon láthatóak a vázlatok és tengelyek, amelyek alapján kialakítottam az egyes alkatrészeket. Sok méretet először csak hozzávetőlegesen vettem fel, pl. a torony magasságát. A Top-Down módszer előnye, hogy később ezeket könnyedén módosíthatom, és az alkatrészek frissítés után ugyanúgy fognak egymáshoz illeszkedni.
 
-\pagebreak
 
 \subsubsection{Torony}
 
@@ -633,7 +631,14 @@ Mind a két fogaskerékpár kisebb közvetlenül a motor tengelyére lett rögz�
 \subsection{Gyártás és összeszerelés}
 \subsubsection{Gyártás}
 
-Minden egyedi alkatrészt, amit a projekthez kellett gyártanom, 3D nyomtatással készítettem el. Ehhez egy \textbf{Creality Ender 3 Pro} típusú hobbinyomtatót használtam. Mint a legtöbb ilyen árkategóriában lévő gép, ez is \textsl{FDM} technológiát használ. Az \textsl{FDM} lényege, hogy a nyomtató egy előre megadott terv alapján vékony műanyagszálat (filamentet) olvaszt meg egy forró extruderfejben (hotend), amelyet pontosan irányítanak a nyomtató XYZ tengelyei mentén. A műanyag szál olvasztott állapotban kerül a nyomtatóágyra, ahol gyorsan megszilárdul, így rétegenként építi fel az adott objektumot.\\
+\begin{wrapfigure}{r}{.5\textwidth}
+	\centering
+	\includegraphics[width=.9\linewidth]{mech_ender} 
+	\caption{Creality Ender 3 Pro \cite{ender}}
+	\label{fig:mech_ender}
+\end{wrapfigure}
+
+Minden egyedi alkatrészt, amit a projekthez kellett gyártanom, 3D nyomtatással készítettem el. Ehhez egy \textbf{Creality Ender 3 Pro} típusú hobbinyomtatót használtam, amely a \ref{fig:mech_ender}. ábrán látható. Mint a legtöbb ilyen árkategóriában lévő gép, ez is \textsl{FDM} technológiát használ. Az \textsl{FDM} lényege, hogy a nyomtató egy előre megadott terv alapján vékony műanyagszálat (filamentet) olvaszt meg egy forró extruderfejben (hotend), amelyet pontosan irányítanak a nyomtató XYZ tengelyei mentén. A műanyag szál olvasztott állapotban kerül a nyomtatóágyra, ahol gyorsan megszilárdul, így rétegenként építi fel az adott objektumot.\\
 
 A használt nyomtató bizonyos tulajdonságai meghatározták a tervezett alkatrészek tulajdonságait:
 
@@ -674,12 +679,19 @@ A prototípus áramkörét próbáltam minél egyszerűbben megvalósítani. Ala
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth]{elek_pinout}
-	\caption{A Raspberry PI lábkiosztása}
+	\caption{A Raspberry PI lábkiosztása \cite{raspberry4}}
 	\label{fig:elek_pinout}
 \end{figure}
 
 
-A prototípus áramköre a \ref{valami} ábrán látható. A kereskedelemben kapható stepper motor HAT nagyban leegyszerűsítette a tervezés folyamatát, a segítségével nem kellett megterveznem a motorvezérlők áramkörét, illetve ezeknek az áramellátását. A \ref{fig:elek_pinout}.ábrán látható, motorokra vonatkozó jelölések szerinti GPIO lábakat a stepper motor HAT ugyan lefoglalja, de a kártya tetején lévő tüskesor ugyanúgy elérhető marad, így oda kell figyelnem, hogy ezeket a lábakat ne használjam. \\
+A prototípus áramköre a \ref{fig:schematic} ábrán látható. A kereskedelemben kapható stepper motor HAT nagyban leegyszerűsítette a tervezés folyamatát, a segítségével nem kellett megterveznem a motorvezérlők áramkörét, illetve ezeknek az áramellátását. A \ref{fig:elek_pinout}.ábrán látható, motorokra vonatkozó jelölések szerinti GPIO lábakat a stepper motor HAT ugyan lefoglalja, de a kártya tetején lévő tüskesor ugyanúgy elérhető marad, így oda kell figyelnem, hogy ezeket a lábakat ne használjam. \\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{schematic2}
+	\caption{A prototípus sémarajza}
+	\label{fig:schematic}
+\end{figure}
 
 Ahogy az ábrán látható, a végálláskapcsolók is a GPIO tüskesorra lett csatlakoztatva. Az egyiknél a földet helyettesíti GPIO22 láb, a másiknál a 3.3 V-t helyettesíti a GPIO11. Azért kellett ezt a megoldást alkalmaznom, mert a kábel csatlakozója egyben van, nem különálló jumper tüskék.\\
 
@@ -689,13 +701,8 @@ A relé kapcsolásához viszont nem volt elegendő a GPIO láb által szolgálta
 
 Az eszköz sémarajza az alábbi ábrán látható:
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=1\linewidth]{schematic}
-	\caption{A prototípus sémarajza}
-	\label{fig:schematic}
-\end{figure}
 
+\pagebreak
 
 \subsection{Elektronikai alkatrészek}
 \subsubsection*{Mikrovezérlő}
@@ -709,12 +716,12 @@ A mikrokontroller kiválasztásánál több opciót vizsgáltam, többek közöt
 	\item Ethernet port
 \end{list}
 
-Azonban ahogy összehasonlítottam a különböző opciókat, körvonalazódott, hogy a \textsl{Raspberry PI} lesz a megfelelő megoldás. az eszköz a \ref{fig:elek_raspberry4b}. ábrán látható Először is egy gyakorlati szempont szerint, mégpedig hogy egy Raspberry PI 4B modell eredetileg is volt a tulajdonomban 4GB rammal. A gyártó hivatalos fórumán több felhasználó szerint ez már elegendő összetettebb gépi látás algoritmusok futtatására is. \cite{4gbforum} \\
+Azonban ahogy összehasonlítottam a különböző opciókat, körvonalazódott, hogy a \textsl{Raspberry PI} lesz a megfelelő megoldás. Az eszköz a \ref{fig:elek_raspberry4b}. ábrán látható. Először is egy gyakorlati szempont szerint, mégpedig hogy egy Raspberry PI 4B modell eredetileg is volt a tulajdonomban 4GB rammal. A gyártó hivatalos fórumán több felhasználó szerint ez már elegendő összetettebb gépi látás algoritmusok futtatására is. \cite{4gbforum} \\
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{elek_raspberry4b}
-	\caption{Raspberry 4 model B}
+	\includegraphics[width=0.7\linewidth]{elek_raspberry4b}
+	\caption{Raspberry 4 model B \cite{raspberry4}}
 	\label{fig:elek_raspberry4b}
 \end{figure}
 
@@ -722,19 +729,17 @@ A kamera illesztése szintén különösen fontos a végtermék működése szem
 
 Ezentúl a \textsl{Raspberry PI} erősebb, mint a fentebb említett mikrokontrollerek. Linux rendszert futtat, és lehet rajta Python nyelven programozni, ami gépi látás, automatizálás projekteknél hatalmas előny. Számos ki-és bemenete van, ráadásul támogatja a \textsl{Bluetooth}, \textsl{Wi-Fi}, és gigabites \textsl{Ethernet} kapcsolatokat is, nem beszélve a rengeteg bővítő "kabátról", amiket lehet kapni hozzá. Ezek a termék továbbfejlesztését nagyban könnyítik, ráadásul kevesebb munkát kell a nyomtatott áramkör tervezésébe tenni. \cite{raspberry4}
 
-\subsubsection*{Stepper Motor HAT}
+\subsubsection*{Stepper Motor HAT \cite{stepperhat}}
 A NEMA-17 léptetőmotorok vezérlésére több megoldás is létezik, elterjedtek a \textsl{A4988}, \textsl{TMC5160T} és \textsl{DRV8825} típusú vezérlők. Ezeket azonban vagy külön modulként lehet megvásárolni, vagy pedig SMD alkatrészként, ami mellé mindenképpen kell tervezni kiegészítő áramkört. \\
-
-Azonban a \textsl{Waveshare} cég gyárt egy Raspberry Pi-kompatibilis modult, ami számomra rengeteg segítséget nyújtott. Ez egy külön áramkör, amit a Raspberry GPIO tüskesorára lehet illeszteni. Képes két \textsl{DRV8825} vezérlővel egyszerre kettő léptetőmotort vezérelni. A kártyán lévő kapcsolókkal könnyen lehet állítani külön motoronként a microsteppelést is, amennyiben szükség van rá egészen 1/32-ig. A potméterekkel motoronként tudjuk állítani a maximális felvehető áramot, maximum 2.5 A-ig. A kártyán helyet kapott egy standard 5.5 mm-es csatlakozó is, amivel 8.2 V és 28 V közötti feszültséggel lehet táplálni az áramkört. Egy belső regulator chip segítségével a Raspberry PI-t is el lehet látni árammal, így egy tápegységgel tudom működtetni a teljes áramkört. A modulon több lehetőség is van csatlakoztatni a motorokat, akár sorkapoccsal, akár a léptetőmotorok szabvány csatlakozójával. Ezentúl lehetővé teszi a Raspberry PI GPIO lábainak elérését, csupán arra kell odafigyelni, melyikeket használja. Az eszközről a \ref{fig:elek_stepperhat}. ábrán látható illusztráció. \cite{stepperhat}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{elek_stepperhat}
-	\caption{Waveshare Stepper HAT}
+	\includegraphics[width=0.6\linewidth]{elek_stepperhat}
+	\caption{Waveshare Stepper HAT \cite{stepperhat}}
 	\label{fig:elek_stepperhat}
 \end{figure}
 
-Az eszköz el lett látva különböző biztonsági funkciókkal, pl. túláram védelemmel, magas hőmérséklet elleni védelemmel, illetve alulfeszültség lockout-tal.\\
+Azonban a \textsl{Waveshare} cég gyárt egy Raspberry Pi-kompatibilis modult, ami számomra rengeteg segítséget nyújtott. Ez egy külön áramkör, amit a Raspberry GPIO tüskesorára lehet illeszteni. Képes két \textsl{DRV8825} vezérlővel egyszerre kettő léptetőmotort vezérelni. A kártyán lévő kapcsolókkal könnyen lehet állítani külön motoronként a microsteppelést is, amennyiben szükség van rá egészen 1/32-ig. A potméterekkel motoronként tudjuk állítani a maximális felvehető áramot, maximum 2.5 A-ig. A kártyán helyet kapott egy standard 5.5 mm-es csatlakozó is, amivel 8.2 V és 28 V közötti feszültséggel lehet táplálni az áramkört. Egy belső regulator chip segítségével a Raspberry PI-t is el lehet látni árammal, így egy tápegységgel tudom működtetni a teljes áramkört. A modulon több lehetőség is van csatlakoztatni a motorokat, akár sorkapoccsal, akár a léptetőmotorok szabvány csatlakozójával. Ezentúl lehetővé teszi a Raspberry PI GPIO lábainak elérését, csupán arra kell odafigyelni, melyikeket használja. Az eszközről a \ref{fig:elek_stepperhat}. ábrán látható illusztráció. Az eszköz el lett látva különböző biztonsági funkciókkal, pl. túláram védelemmel, magas hőmérséklet elleni védelemmel, illetve alulfeszültség lockout-tal.\\
 
 A gyártó szintén elérhetővé tett illesztőszoftvereket több eszközre, több motortípusra, amit a későbbiekben én is tudtam használni.
 
@@ -742,7 +747,12 @@ A gyártó szintén elérhetővé tett illesztőszoftvereket több eszközre, t�
 
 A prototípust két tápegységről működtetem. Az egyik a Raspberry PI, a léptetőmotorok és a szenzorok áramellátásáért, ez egy standard 5.5 mm-es csatlakozóval ellátott laptop töltő. 14.5 V tápfeszültséget és maximum 5 A áramot képes biztosítani, amely bőven elegendő a vezérlőelektronika ellátására.
 
-\ABRAKELL
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{elek_hptap}
+	\caption{HP ps-3701-1}
+	\label{fig:elek_hptap}
+\end{figure}
 
 A másik táp egy \textsl{HP ps-3701-1} 12 V-os redundáns szervertáp 725 W teljesítménnyel. 
 
@@ -780,7 +790,7 @@ A prototípus szoftverét kettéválasztottam a két működési mód szerint, a
 
 
 \subsection{Használt Python modulok, eszközök}
-\subsubsection*{OpenCV könyvtár}
+\subsubsection*{OpenCV könyvtár \cite{opencv}}
 Az \textbf{OpenCV} (Open Source Computer Vision Library) egy nyílt forráskódú könyvtár, amelyet eredetileg az Intel fejlesztett ki, és amelyet széles körben használnak a számítógépes látás (computer vision) és képfeldolgozás területén. Az OpenCV rendkívül sokoldalú eszközkészletet biztosít a képekkel és videókkal kapcsolatos különféle feladatok megoldásához, amelyet elsősorban C++-ban fejlesztettek ki, de támogat Python, Java, és MATLAB interfészeket is. A Python interfész különösen népszerű, mivel egyszerűsíti az OpenCV használatát gépi tanulási és mesterséges intelligencia-alkalmazásokban. A fő funkciói közé tartozik a képfeldolgozás, tárgy- és arcérzékelés, mozgáskövetés, valamint a 3D-s modellezés és képanalízis.\\
 
 Az OpenCV architektúrája moduláris felépítésű, ami lehetővé teszi a különböző funkciók rugalmas használatát. A modulok között megtalálhatóak a képfeldolgozási, objektumfelismerési, gépi tanulási és 3D modellezési könyvtárak. A Pythonban a \code{cv2} könyvtárként importálható OpenCV API biztosítja a különböző funkciók egyszerű elérését, így akár néhány sor kóddal is gyors eredmény érhető el.\\
@@ -789,7 +799,7 @@ Többféle képformátumot támogat, például JPEG, PNG és BMP, és rendelkezi
 
 Az \textbf{OpenCV }használata igen elterjedt az iparban és a kutatásban is, többek között autonóm járművek, biztonsági rendszerek, gyártósori ellenőrző rendszerek, orvosi képalkotás és mobilalkalmazások terén. A könyvtár rugalmassága és széleskörű támogatása lehetővé teszi, hogy számos programozási és mérnöki területen is alkalmazható legyen, ahol képfeldolgozásra és gépi látásra van szükség.
 
-\subsubsection*{Socket modul}
+\subsubsection*{Socket modul \cite{socket}}
 
 Python \code{socket} modulja alacsony szintű hozzáférést biztosít a hálózati kommunikációhoz, lehetővé téve különböző típusú hálózati kapcsolatok létrehozását, beleértve az általam használt TCP-t és az UDP-t.\\
 
@@ -799,19 +809,19 @@ Az \textbf{UDP} kapcsolatnélküli protokoll, amely nem garantálja az adatok so
 
 Mindkét típusnál a \code{send()}, \code{sendto()}, \code{recv()}, és \code{recvfrom()} függvények használhatók az adatok küldésére és fogadására.
 
-\subsubsection*{Multiprocessing modul}
+\subsubsection*{Multiprocessing modul \cite{multiprocessing}}
 
 A \textbf{multiprocessing} modul lehetővé teszi a Python számára, hogy párhuzamosan több folyamatot indítson el, ami segít a CPU-erőforrások jobb kihasználásában. A modul az operációs rendszer által kezelt különálló folyamatokat hoz létre, így azok külön memóriaterülettel rendelkeznek, és jobban teljesítenek többmagos processzorokon, mint a \textsl{threading} modul.\\ 
 
 A \code{Process} osztály segítségével indíthatunk el új folyamatokat, amelyek egymástól függetlenül végrehajtanak egy adott funkciót. A modul támogatja az eseménykezelést, kommunikációs csatornákat (pl. \code{Queue}, \code{Pipe}) és szinkronizálást (pl. \code{Event}, \code{Lock}), amelyek segítségével a folyamatok egymással adatokat cserélhetnek és szinkronizálhatják működésüket.
 
-\subsubsection*{Pygame modul}
+\subsubsection*{Pygame modul \cite{pygame}}
 
 A \textbf{pygame} egy multimédiás modul, amely elsősorban 2D játékok fejlesztésére alkalmas, de egyéb alkalmazásokkor is lehetőséget ad bemenetek kezeléséhez.\\
 
 A \code{pygame.event.get()} függvény segítségével olvashatjuk le az egér- és billentyűzet-eseményeket, így például kattintások, gombnyomások és egérmozgások lekérdezése egyszerű. Az interaktív elemek kirajzolása és mozgatása egyszerű a \code{pygame.display.update()} és \code{pygame.draw} függvényekkel, amelyek lehetővé teszik grafikus objektumok megjelenítését a képernyőn. Magában foglalja a számítógépes grafikákat, a hang- és programkönyvtárakat, amiket a Python programozási nyelvre fejlesztettek ki. 
 
-\subsubsection*{Pickle modul}
+\subsubsection*{Pickle modul \cite{pickle}}
 A \textbf{pickle} modul sorosítást és deszerializációt tesz lehetővé, azaz a Python-objektumok bináris formátumba alakítását és visszaalakítását.\\
 
 A \code{pickle.dumps()} segítségével a Python-objektumokat bináris formátumba alakíthatjuk, amely lehetővé teszi azok egyszerű tárolását vagy átvitelét, például hálózaton keresztül. A \code{pickle.loads()} a bináris formátumú adatokat visszaalakítja eredeti Python-objektummá. A pickle használata előnyös lehet akkor, ha komplex adatszerkezeteket szeretnénk fájlban tárolni vagy hálózaton keresztül továbbítani.
@@ -821,7 +831,7 @@ A \code{pickle.dumps()} segítségével a Python-objektumokat bináris formátum
 \subsection{Gépi látás}
 A célpontfelismerés módszere volt az automata működés legfontosabb eleme. Elsősorban az OpenCV könyvtár különböző lehetőségeit vizsgáltam, ugyanis ez a legjobban kiforrott modul, amely könnyedén használható python programokban.
 
-\subsubsection{Template matching} \label{sec:soft_template}
+\subsubsection{Template matching \cite{templatematching}} \label{sec:soft_template}
 
 A \textbf{Template Matching} (sablonillesztés) egy egyszerű, de hatékony módszer, amelyet statikus képekben keresett minták (sablonok) azonosítására használnak. Ez a módszer összehasonlít egy kisebb, előre meghatározott képrészletet (a sablont) a nagyobb képen található területekkel, és megkeresi a legjobban illeszkedő pozíciót.\\
 
@@ -831,7 +841,7 @@ A \textbf{Template Matching} (sablonillesztés) egy egyszerű, de hatékony mód
 
 \textbf{Korlátozások:} Gyengén teljesít forgatott, méretarányosan eltérő vagy eltorzult objektumoknál, valamint változó fényviszonyok mellett.
 
-\subsubsection{Feature Matching} \label{sec:soft_feature}
+\subsubsection{Feature Matching \cite{featurematching}} \label{sec:soft_feature}
 
 A \textsl{Feature Matching} (jellemzőpont-illesztés) egy kifinomultabb módszer a képjellemzők összehasonlítására és egyeztetésére. A módszer a két képben található pontokat (feature-ket) párosítja, ezáltal lehetővé teszi forgatásokkal, elforgatásokkal és méretarányokkal szembeni robusztus egyeztetést.
 
@@ -841,7 +851,7 @@ A \textsl{Feature Matching} (jellemzőpont-illesztés) egy kifinomultabb módsze
 
 \textbf{Korlátozások:} A nagy számítási igényű algoritmusok miatt lassabb lehet, különösen nagy méretű képeken.
 
-\subsubsection{Target Tracking} \label{sec:soft_target}
+\subsubsection{Target Tracking \cite{targettracking}} \label{sec:soft_target}
 
 A \textsl{Target Tracking} (célkövetés) feladata egy mozgó objektum követése egy videófolyamon vagy valós idejű képforráson keresztül. Az OpenCV több nyomon követési algoritmust is biztosít, amelyek segítenek abban, hogy a kiválasztott objektumot stabilan követni tudjuk, még akkor is, ha változik a pozíciója vagy a környezeti fény.
 
@@ -855,7 +865,7 @@ Algoritmusok:
 \textbf{Előnyei:} Alkalmas valós idejű alkalmazásokhoz, mint például a videó megfigyelés vagy az autonóm rendszerek, ahol a cél folyamatosan mozgásban van.
 
 \textbf{Korlátozások:} Bizonyos algoritmusok hajlamosak elveszteni a célpontot gyors mozgásoknál vagy hirtelen pozícióváltásoknál.
-\subsubsection{Haar cascade} \label{sec:soft_haar}
+\subsubsection{Haar cascade \cite{haarcascade}} \label{sec:soft_haar}
 
 A \textsl{Haar Cascade} módszer az egyik legelterjedtebb technika az objektumfelismerésre, különösen az arcfelismerésben. A gépi tanuláson alapuló módszer képes egy képben vagy videófolyamon objektumokat megtalálni azáltal, hogy mintákat ismer fel az előképzett adatok alapján.\\
 
@@ -1021,14 +1031,45 @@ Az utolsó módszer, amit teszteltem, az a Haar Cascade és tanított neurális 
 \subsection{Éles teszt}
 A tesztet egy jól megvilágított tanteremben végeztem. Az eszköz egy stabil padon állt, a célpont pedig 5 méterrel előtte, és kb. fél méterrel fölötte. A célpont az alábbi ábrán látható:
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{lolap}
+	\caption{Az éles teszthez használt lőlap}
+	\label{fig:teszt_lolap}
+\end{figure}
+
 A teszt során a manuális működési móddal kezdtem, tulajdonképpen belőttem a fegyvert. Először azt tapasztaltam, hogy a kamera képének a közepe nem ott van, ahova a fegyver csöve mutat. Ezért a célkeresztet addig kellett mozgatnom a képen, amíg oda nem mutatott, ahova a fegyver ténylegesen lőtt. Ezután azt tapasztaltam, hogy nagy pontossággal képes lőni, igen kis területen belül. A lézer irányzékot azonban nem tudtam pontosan beállítani, 5 méteren nagyjából 10-15 cm-t téved. A következő ábrákon látható a teszt eredménye. 5-ös sorozatokban tüzeltem, mindig a cél közepére irányítva a kamera célkeresztjét. \\
 
-A következő teszt az arcfelismerés, és a követés funkció tesztje volt. A körülmények ugyanazok maradtak, és szintén 5 m-re volt a célpont. A teszt során egy kolléga tartotta a kinyomtatott arcképet, és mozgatta, változtatva a sebességet és irányt. Természetesen a gearbox nem volt áram alatt, és a kolléga is viselt védőszemüveget. Azt tapasztaltam, hogy a fegyver körülbelül a sétáló ember sebességét tudja követni 5 m távolságban, és igen pontosan be tudja célozni. A teszt eredményei az alábbi ábrán látható:
+A következő teszt az arcfelismerés, és a követés funkció tesztje volt. A körülmények ugyanazok maradtak, és szintén 5 m-re volt a célpont. A teszt során egy kolléga tartotta a kinyomtatott arcképet, és mozgatta, változtatva a sebességet és irányt. Természetesen a gearbox nem volt áram alatt, és a kolléga is viselt védőszemüveget. Azt tapasztaltam, hogy a fegyver körülbelül a sétáló ember sebességét tudja követni 5 m távolságban, és igen pontosan be tudja célozni.\\
+
+Összességében elmondható, hogy a beállított célkereszttel, 5 méterről igen pontos eredmények születtek. 4 leadott sorozat során 5-5 golyót lőttem ki, az eredmények az alábbi ábrán láthatóak:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{teszt_eredmenyek}
+	\caption{Az éles teszt eredményei}
+	\label{fig:teszt_eredmenyek}
+\end{figure}
+
 
 \section{Hibák, észrevételek}
-A
+A prototípus fejlesztés során számos helyen vétettem kisebb-nagyobb hibákat, amiket súlyosságuktól függően vagy javítani kellett, vagy valahogy kikerülni. Az első, amit meg szeretnék említeni, az a \textbf{tár kialakítása} volt. Nem voltam elég körültekintő, és anélkül terveztem meg a tárat, hogy megnéztem volna, az eredeti fegyverekben hogyan működik. Ennek eredménye lett a nagy kapacitású tár, ami aminek elméletben folyamatosan kéne adagolni a golyókat, de a gyakorlatban a szűkítésnél minden esetben elakad. Ezzel a kialakítással egyet sem sikerült tüzelni, így újra kellett tervezni a teljes tárat. Miután jobban megvizsgáltam az eredeti fegyvert, láttam, hogy a golyók egyesével sorakoznak minden esetben, ezzel gátolva az elakadást. Miután hasonlóan megterveztem az új tárat, már megbízhatóan működött, habár kisebb kapacitással, így ezt a hibát sikerült kijavítani.\\
+
+A következő, egy szintén mechanikai természetű hiba, a \textbf{lézer modul és a kamera rögzítése}. Egyik sem állítható, és ha eredetileg nem egy pontra néznek a fegyver csövével, akkor tulajdonképpen a hiba maradandó lesz. Ez így is lett, de a kamera eltérését még a célkereszt állításával tudtam orvosolni. A lézer modul maradandóan pár fokkal félre áll, ezt sajnos el kellett fogadnom.\\
+
+A projekt elektronikai részénél is van, amit máshogy csinálnék, ha újrakezdeném. Az első koncepcióterveknél még nem néztem utána, mekkora áramot képes felvenni a gearbox. Úgy gondoltam, hogy egy átlagos 12V-os laptoptöltőről is tud majd működni a rendszer. Így igen meglepődtem, mikor utánanéztem, mekkora teljesítményre van szüksége. Az eredmény így az lett, hogy egy külön tápot kellet adnom csak a gearbox működtetésére, ami igen kényelmetlen. Valószínűleg az lenne helyette egy jó megoldás, ha tervezek egy külön nyomtatott áramkört, amely képes arra, hogy töltsön egy akkumulátort a fegyveren. Így a gearbox arról működne, akár csak egy módosítatlan fegyveren, működésen kívül pedig a Raspberry PI tápjáról töltődne. 
+
+\pagebreak
 \section{Továbbfejlesztési lehetőségek}
-a
+\textbf{Erősebb szerkezet:} Az egyik egyértelmű fejlesztési lehetőség a jobb minőségű alkatrészek használata. Elsősorban a fogaskerekekre gondolok, amelyeket ha nem 3D nyomtatással gyártottam volna, hanem valamilyen nagy pontosságú folyamattal, akkor a szerkezet nem csak csendesebb, de precízebb is lehetne.\\
+
+\textbf{Jobb kamera:} A Raspberry PI Camera 2 megfelelő minőséggel rendelkezik arra, hogy ezt a prototípust használni tudjam vele. Azonban ha távolabbi célpontokat kellene keresni, akkor egy optikai zoom mindenképpen szükséges lenne.\\
+
+\textbf{Vezeték nélküli működés:} A tápellátás és a kommunikáció vezeték nékülivé tétele magában hordozna új kihívásokat, például be kellene építeni egy nagyobb teljesítmény akkumulátort, illetve a vezeték nélküli kapcsolatok rendszerint lassabbak, mint a vezetékesek. Ellenben ha az eszköz célját tekintem, a távolsági operálás lenne a természetes fejlesztési irány, ahol a felhasználó akár egy másik épületből is képes lenne irányítani a fegyvert.\\
+
+\textbf{Mozgás:} És ha már vezetékek nélkül képes működni az eszköz, akkor a következő lépés az lenne, hogy mozogni tudjon, például lánctalpak segítségével. Ez is szintén új kihívásokat jelent, de az eszköz többi részéhez képest már nem lenne nagyon bonyolult megvalósítani.\\
+
+\textbf{Radar, távolságérzékelő:} Az eszköz következő verziójába kerülhetne akár radar is. A hasonló eszközök modern felhasználása leginkább légvédelmet jelent, azon belül drónok lelövését. Ezt vizuálisan nehézkes lehet érzékelni, hiszen igen távol is lehetnek, és kicsi a keresztmetszetük. Egy radar beépítése azonban megkönnyítené az észlelést. A távolságérzékelő pedig egyrészt több információt szolgáltat a célpontról, másrészt pedig nagy távolságoknál már számolni kell a lövedék ballisztikájával is, tehát hogy esik. 
 \section{Költségek}
 a
 \section{Konklúziók}
@@ -1084,7 +1125,6 @@ a
 	Információ a Nerf fegyverekről \hfill (Hozzáférés: 2024.10.22.) \\
 	{\footnotesize \url{https://shop.hasbro.com/en-us/nerf}},
 	
-	
 	\bibitem{airsoft}
 	Információ az airsoft fegyverekről \hfill (Hozzáférés: 2024.10.22.) \\
 	{\footnotesize \url{https://highspeedbbs.com/all-about-airsoft-guns-types-styles-facts-science/}},
@@ -1098,6 +1138,11 @@ a
 	\bibitem{nema17}
 	A NEMA szabvány\hfill (Hozzáférés: 2024.10.22.) \\
 	{\footnotesize \url{https://www.cncitalia.net/file/pdf/nemastandard.pdf}},
+	
+	\bibitem{ender}
+	Creality Ender 3 Pro\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://www.creality.com/products/ender-3-pro-3d-printer}},
+
 	
 	\bibitem{4gbforum}
 	Felhasználói diskurzus a Raspberry PI gépi látás kapacitásáról\hfill (Hozzáférés: 2024.10.22.) \\
@@ -1114,6 +1159,45 @@ a
 	\bibitem{raspberrycam}
 	Raspberry 2 kamera specifikációk\hfill (Hozzáférés: 2024.10.22.) \\
 	{\footnotesize \url{https://www.raspberrypi.com/products/camera-module-v2/}},
+	
+	\bibitem{opencv}
+	Dokumentáció az OpenCV modulról\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://www.raspberrypi.com/products/camera-module-v2/}},
+	
+	\bibitem{socket}
+	Dokumentáció a Socket modulról\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://docs.python.org/3/library/socket.html}},
+	
+	\bibitem{multiprocessing}
+	Dokumentáció a Multiprocessing modulról\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://docs.python.org/3/library/multiprocessing.html}},
+	
+	\bibitem{pygame}
+	Dokumentáció a Pygame modulról\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://www.pygame.org/docs/}},
+	
+	\bibitem{pickle}
+	Dokumentáció a Pickle modulról\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://docs.python.org/3/library/pickle.html}},
+
+
+	\bibitem{templatematching}
+	Dokumentáció a CV2 Template Matching-ről\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html}},
+	
+	\bibitem{featurematching}
+	Dokumentáció a CV2 Feature Matching-ről\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://docs.opencv.org/3.4/dc/dc3/tutorial_py_matcher.html}},
+	
+	\bibitem{targettracking}
+	Dokumentáció a CV2 Target Tracking-ről\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://docs.opencv.org/4.x/d2/d0a/tutorial_introduction_to_tracker.html}},
+	
+	\bibitem{haarcascade}
+	Dokumentáció a CV2 Haar Cascade-ról\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html}},
+	
+	
 
 \end{thebibliography}
 
