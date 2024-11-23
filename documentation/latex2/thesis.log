@@ -1,0 +1,2419 @@
+This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2024.11.22)  23 NOV 2024 18:03
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./thesis.tex
+(thesis.tex
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-08-30>
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2024/02/08 v1.4n Standard LaTeX document class
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count190
+\c@chapter=\count191
+\c@section=\count192
+\c@subsection=\count193
+\c@subsubsection=\count194
+\c@paragraph=\count195
+\c@subparagraph=\count196
+\c@figure=\count197
+\c@table=\count198
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(include/packages.tex
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-08-30 L3 programming layer (loader) 
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
+ex.def
+File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
+\g__graphics_track_int=\count199
+\l__pdf_internal_box=\box52
+\g__pdf_backend_annotation_int=\count266
+\g__pdf_backend_link_int=\count267
+))
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex
+.sty
+Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count268
+\l__fontspec_language_int=\count269
+\l__fontspec_strnum_int=\count270
+\l__fontspec_tmp_int=\count271
+\l__fontspec_tmpa_int=\count272
+\l__fontspec_tmpb_int=\count273
+\l__fontspec_tmpc_int=\count274
+\l__fontspec_em_int=\count275
+\l__fontspec_emdef_int=\count276
+\l__fontspec_strong_int=\count277
+\l__fontspec_strongdef_int=\count278
+\l__fontspec_tmpa_dim=\dimen142
+\l__fontspec_tmpb_dim=\dimen143
+\l__fontspec_tmpc_dim=\dimen144
+ (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))
+) (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2024/08/29 v24.9 The Babel package
+\babel@savecnt=\count279
+\U@D=\dimen145
+\l@unhyphenated=\language79
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/babel\xebabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count280
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
+df
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
+) (magyar.ldf
+Invalid UTF-8 byte or sequence at line 61 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 61 replaced by U+FFFD.
+Language: magyar 2015/11/24 v1.5c Magyar support from the babel v3.7 system
+Invalid UTF-8 byte or sequence at line 162 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1312 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1312 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1312 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1379 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1379 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1379 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1444 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1616 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1616 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1687 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1804 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1845 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1845 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1848 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1848 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1848 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1848 replaced by U+FFFD.
+Package babel Info: Making ` an active character on input line 2735.
+Invalid UTF-8 byte or sequence at line 2751 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2751 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2757 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2757 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2758 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2758 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2758 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2768 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2768 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2769 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2848 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2857 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2877 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2881 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2881 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2908 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2908 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2926 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2943 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2947 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2947 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2974 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 2974 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3065 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3461 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3463 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3464 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3465 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3465 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3467 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3468 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3473 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3474 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3475 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3476 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3477 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3477 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3690 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3690 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3700 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3700 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3706 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4045 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4052 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4052 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4052 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4052 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4052 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4052 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4053 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4054 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4057 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4057 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4058 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4059 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4059 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4059 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4059 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4059 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4059 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4059 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4059 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4059 replaced by U+FFFD.
+\c@footnote@add=\count281
+\c@footnote@ch=\count282
+Invalid UTF-8 byte or sequence at line 4278 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4278 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4278 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4278 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 4278 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5442 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5622 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5622 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5622 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5622 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5622 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5642 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5642 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5644 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5644 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5644 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5644 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5644 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5651 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5651 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5654 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5693 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5693 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5693 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5713 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5713 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5713 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5713 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5713 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5713 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5714 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5714 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5714 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5714 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5714 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5714 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5732 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5732 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5734 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5734 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5734 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5734 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5734 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5735 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5735 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5735 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5735 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5735 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5735 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5735 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5764 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5766 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5766 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5770 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5770 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5772 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5772 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5784 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5789 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5794 replaced by U+FFFD.
+))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/hu\babel
+-magyar.tex
+Package babel Info: Importing font and identification data for magyar
+(babel)             from babel-hu.ini. Reported on input line 11.
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
+-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2024/05/23 v2.17q AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen146
+))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen147
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count283
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count284
+\leftroot@=\count285
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count286
+\DOTSCASE@=\count287
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen148
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count288
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count289
+\dotsspace@=\muskip17
+\c@parentequation=\count290
+\dspbrk@lvl=\count291
+\tag@help=\toks19
+\row@=\count292
+\column@=\count293
+\maxfields@=\count294
+\andhelp@=\toks20
+\eqnshift@=\dimen149
+\alignsep@=\dimen150
+\tagshift@=\dimen151
+\tagwidth@=\dimen152
+\totwidth@=\dimen153
+\lineht@=\dimen154
+\@envbody=\toks21
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen155
+\lightrulewidth=\dimen156
+\cmidrulewidth=\dimen157
+\belowrulesep=\dimen158
+\belowbottomsep=\dimen159
+\aboverulesep=\dimen160
+\abovetopsep=\dimen161
+\cmidrulesep=\dimen162
+\cmidrulekern=\dimen163
+\defaultaddspace=\dimen164
+\@cmidla=\count295
+\@cmidlb=\count296
+\@aboverulesep=\dimen165
+\@belowrulesep=\dimen166
+\@thisruleclass=\count297
+\@lastruleclass=\count298
+\@thisrulewidth=\dimen167
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen168
+\Gin@req@width=\dimen169
+) (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/anysize\anysize.sty
+Package: anysize 1994/08/13 setting margin sizes
+
+document style option `anysize' loaded
+Michael Salzenberg, Thomas Esser, Dirk Hillbrecht
+Version 1.0, Aug 13, 1994
+\@Leftmargin=\dimen170
+\@Rightmargin=\dimen171
+\@Topmargin=\dimen172
+\@Bottommargin=\dimen173
+) (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2024-07-10 v7.01j Hypertext links for LaTeX
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count299
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count300
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen174
+\Hy@linkcounter=\count301
+\Hy@pagecounter=\count302
+ (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
+) (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count303
+ (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4040.
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count304
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen175
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count305
+\Field@Width=\dimen176
+\Fld@charsize=\dimen177
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count306
+\c@Item=\count307
+\c@Hfootnote=\count308
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
+File: hxetex.def 2024-07-10 v7.01j Hyperref driver for XeTeX
+\pdfm@box=\box55
+\c@Hy@AnnotLevel=\count309
+\HyField@AnnotCount=\count310
+\Fld@listcount=\count311
+\c@bookmark@seq@number=\count312
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip54
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
+Package: tcolorbox 2024/07/10 version 6.3.0 text color boxes
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen178
+\pgfutil@tempdimb=\dimen179
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box56
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks27
+))
+\pgf@x=\dimen180
+\pgf@y=\dimen181
+\pgf@xa=\dimen182
+\pgf@ya=\dimen183
+\pgf@xb=\dimen184
+\pgf@yb=\dimen185
+\pgf@xc=\dimen186
+\pgf@yc=\dimen187
+\pgf@xd=\dimen188
+\pgf@yd=\dimen189
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count313
+\c@pgf@countb=\count314
+\c@pgf@countc=\count315
+\c@pgf@countd=\count316
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+\pgf@sys@id@count=\count317
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-xetex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count318
+)))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count319
+\pgfsyssoftpath@bigbuffer@items=\count320
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen190
+\pgfmath@count=\count321
+\pgfmath@box=\box57
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count322
+))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen191
+\pgf@picmaxx=\dimen192
+\pgf@picminy=\dimen193
+\pgf@picmaxy=\dimen194
+\pgf@pathminx=\dimen195
+\pgf@pathmaxx=\dimen196
+\pgf@pathminy=\dimen197
+\pgf@pathmaxy=\dimen198
+\pgf@xx=\dimen199
+\pgf@xy=\dimen256
+\pgf@yx=\dimen257
+\pgf@yy=\dimen258
+\pgf@zx=\dimen259
+\pgf@zy=\dimen260
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen261
+\pgf@path@lasty=\dimen262
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen263
+\pgf@shorten@start@additional=\dimen264
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count323
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen265
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen266
+\pgf@pt@y=\dimen267
+\pgf@pt@temp=\dimen268
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen269
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen270
+\pgf@sys@shading@range@num=\count324
+\pgf@shadingcount=\count325
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box61
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box62
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen271
+\pgf@nodesepend=\dimen272
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen273
+\pgffor@skip=\dimen274
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
+))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count326
+\pgfplotmarksize=\dimen275
+)
+\tikz@lastx=\dimen276
+\tikz@lasty=\dimen277
+\tikz@lastxsaved=\dimen278
+\tikz@lastysaved=\dimen279
+\tikz@lastmovetox=\dimen280
+\tikz@lastmovetoy=\dimen281
+\tikzleveldistance=\dimen282
+\tikzsiblingdistance=\dimen283
+\tikz@figbox=\box63
+\tikz@figbox@bg=\box64
+\tikz@tempbox=\box65
+\tikz@tempbox@bg=\box66
+\tikztreelevel=\count327
+\tikznumberofchildren=\count328
+\tikznumberofcurrentchild=\count329
+\tikz@fig@count=\count330
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count331
+\pgfmatrixcurrentcolumn=\count332
+\pgf@matrix@numberofcolumns=\count333
+)
+\tikz@expandcount=\count334
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks36
+\verbatim@line=\toks37
+\verbatim@in@stream=\read4
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
+ty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box67
+\tcb@upperbox=\box68
+\tcb@lowerbox=\box69
+\tcb@phantombox=\box70
+\c@tcbbreakpart=\count335
+\c@tcblayer=\count336
+\c@tcolorbox@number=\count337
+\l__tcobox_tmpa_box=\box71
+\l__tcobox_tmpa_dim=\dimen284
+\tcb@temp=\box72
+\tcb@temp=\box73
+\tcb@temp=\box74
+\tcb@temp=\box75
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count338
+\lst@gtempboxa=\box76
+\lst@token=\toks38
+\lst@length=\count339
+\lst@currlwidth=\dimen285
+\lst@column=\count340
+\lst@pos=\count341
+\lst@lostspace=\dimen286
+\lst@width=\dimen287
+\lst@newlines=\count342
+\lst@lineno=\count343
+\lst@maxwidth=\dimen288
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2024/05/25 1.10b (Carsten Heinz)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
+\c@lstnumber=\count344
+\lst@skipnumbers=\count345
+\lst@framebox=\box77
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2024/05/25 1.10b listings configuration
+))
+Package: listings 2024/05/25 1.10b (Carsten Heinz)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/lettrine\lettrine.sty
+File: lettrine.sty 2024-06-26 v2.61 (Daniel Flipo)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xfp\xfp.sty
+Package: xfp 2024-08-16 L3 Floating point unit
+)
+\c@DefaultLines=\count346
+\c@DefaultDepth=\count347
+\DefaultFindent=\dimen289
+\DefaultNindent=\dimen290
+\DefaultSlope=\dimen291
+\DiscardVskip=\dimen292
+\L@lettrine=\box78
+\L@lbox=\box79
+\L@tbox=\box80
+\c@L@lines=\count348
+\c@L@depth=\count349
+\L@Pindent=\dimen293
+\L@Findent=\dimen294
+\L@Nindent=\dimen295
+\L@lraise=\dimen296
+\L@first=\dimen297
+\L@next=\dimen298
+\L@slope=\dimen299
+\L@height=\dimen300
+\L@novskip=\dimen301
+\L@ruleht=\dimen302
+\L@target@ht=\dimen303
+\L@target@dp=\dimen304
+\L@target@tht=\dimen305
+\LettrineWidth=\dimen306
+\LettrineHeight=\dimen307
+\LettrineDepth=\dimen308
+Loading lettrine.cfg
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/lettrine\lettrine.cfg)
+\Llist@everypar=\toks39
+) (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2024/08/20 v0.6b Insert pages of external PDF documents (AM)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count350
+\calc@Bcount=\count351
+\calc@Adimen=\dimen309
+\calc@Bdimen=\dimen310
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count352
+\calc@Cskip=\skip57
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen311
+\ESO@tempdimb=\dimen312
+)
+\AM@pagewidth=\dimen313
+\AM@pageheight=\dimen314
+\AM@fboxrule=\dimen315
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\ppxetex.def
+File: ppxetex.def 2024/08/20 v0.6b Pdfpages driver for XeTeX (AM)
+)
+\pdfpages@includegraphics@status=\count353
+\AM@pagebox=\box81
+\AM@global@opts=\toks40
+\AM@pagecnt=\count354
+\AM@toc@title=\toks41
+\AM@lof@heading=\toks42
+\c@AM@survey=\count355
+\AM@templatesizebox=\box82
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/ntheorem\ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+\theorem@style=\toks43
+\theorem@@style=\toks44
+\theorembodyfont=\toks45
+\theoremnumbering=\toks46
+\theorempreskipamount=\skip58
+\theorempostskipamount=\skip59
+\theoremframepreskipamount=\skip60
+\theoremframepostskipamount=\skip61
+\theoreminframepreskipamount=\skip62
+\theoreminframepostskipamount=\skip63
+\theorem@preskip=\toks47
+\theorem@postskip=\toks48
+\theorem@framepreskip=\toks49
+\theorem@framepostskip=\toks50
+\theorem@inframepreskip=\toks51
+\theorem@inframepostskip=\toks52
+\theoremindent=\dimen316
+\theorem@indent=\dimen317
+\theoremrightindent=\dimen318
+\theorem@rightindent=\dimen319
+\theoremheaderfont=\toks53
+\theoremseparator=\toks54
+\theoremprework=\toks55
+\theorempostwork=\toks56
+\theoremsymbol=\toks57
+\qedsymbol=\toks58
+\theoremkeyword=\toks59
+\qedsymbol=\toks60
+\thm@topsep=\skip64
+\thm@topsepadd=\skip65
+Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
+\c@endNonectr=\count356
+\c@currNonectr=\count357
+\mysavskip=\skip66
+Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
+ line 1175.
+\thm@amstmpdepth=\dimen320
+\tagwidth=\dimen321
+) (C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen322
+\captionmargin=\dimen323
+\caption@leftmargin=\dimen324
+\caption@rightmargin=\dimen325
+\caption@width=\dimen326
+\caption@indent=\dimen327
+\caption@parindent=\dimen328
+\caption@hangindent=\dimen329
+Package caption Info: Standard document class detected.
+Package caption Info: hungarian babel package is loaded.
+)
+\c@caption@flags=\count358
+\c@continuedfloat=\count359
+Package caption Info: hungarian babel package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip67
+\bibsep=\skip68
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count360
+))
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(include/tdk-variables.tex) (include/thesis-hu.tex) (include/preamble.tex
+Package hyperref Info: Option `unicode' set `true' on input line 40.
+Package hyperref Info: Option `pdfnewwindow' set `true' on input line 40.
+Package hyperref Info: Option `colorlinks' set `true' on input line 40.
+\c@currexamplectr=\count361
+\c@endexamplectr=\count362
+\c@example=\count363
+\c@currdefinitionctr=\count364
+\c@enddefinitionctr=\count365
+\c@definition=\count366
+\c@currtheoremctr=\count367
+\c@endtheoremctr=\count368
+\c@theorem=\count369
+)
+(thesis.aux (include/project.aux) (include/titlepage.aux)
+(include/declaration.aux) (content/abstract.aux) (content/introduction.aux)
+(content/research.aux) (content/system.aux) (content/mechanics.aux)
+(content/hardware.aux) (content/software.aux) (content/test.aux)
+(content/mistakes.aux) (content/furtherdevelopment.aux) (content/conclusion.aux
+) (content/acknowledgement.aux) (content/appendices.aux))
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
+6.
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 46.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 46.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 46.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 46.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 46.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 46.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 46.
+LaTeX Font Info:    Redeclaring math accent \check on input line 46.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 46.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 46.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 46.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 46.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 46.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 46.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 46.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 46.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 46.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 46.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 46.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 46.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 46.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 46.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 46.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 46.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 46.
+
+
+LaTeX Warning: Please use \usepackage{t1enc} with
+               \usepackage[magyar]{babel}, to get accented chars hyphenated.
+
+
+LaTeX Warning: Please use \usepackage[latin2]{inputenc}
+               or \usepackage[utf8]{inputenc}
+               with \usepackage[magyar]{babel}.
+
+Package hyperref Info: Link coloring ON on input line 46.
+(thesis.out) (thesis.out)
+\@outlinefile=\write4
+\openout4 = `thesis.out'.
+
+\c@lstlisting=\count370
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nom
+etadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+LaTeX Info: Redefining \cal on input line 577.
+LaTeX Info: Redefining \mit on input line 578.
+)
+\openout2 = `include/project.aux'.
+
+
+(include/project.tex
+File: feladatkiiras.pdf Graphic file (type pdf)
+<use feladatkiiras.pdf>
+File: feladatkiiras.pdf Graphic file (type pdf)
+<use feladatkiiras.pdf>
+File: feladatkiiras.pdf Graphic file (type pdf)
+<use feladatkiiras.pdf, page 1>
+File: feladatkiiras.pdf Graphic file (type pdf)
+<use feladatkiiras.pdf, page 1>
+File: feladatkiiras.pdf Graphic file (type pdf)
+<use feladatkiiras.pdf, page 1>
+File: feladatkiiras.pdf Graphic file (type pdf)
+<use feladatkiiras.pdf, page 1>
+
+
+File: feladatkiiras.pdf Graphic file (type pdf)
+<use feladatkiiras.pdf, page 1>
+[1
+
+
+
+
+
+])
+\openout2 = `include/titlepage.aux'.
+
+ (include/titlepage.tex
+Package hyperref Info: Option `pageanchor' set `false' on input line 1.
+File: figures/bme_logo.pdf Graphic file (type pdf)
+<use figures/bme_logo.pdf>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
+
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
+
+
+(C:\Users\Sanya\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+[1
+
+
+
+]
+Package hyperref Info: Option `pageanchor' set `false' on input line 32.
+) (thesis.toc
+
+[1
+
+
+
+])
+\tf@toc=\write5
+\openout5 = `thesis.toc'.
+
+
+
+[2]
+\openout2 = `include/declaration.aux'.
+
+ (include/declaration.tex
+
+[1
+
+])
+\openout2 = `content/abstract.aux'.
+
+ (content/abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+
+
+[1
+
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+\c@romanPage=\count371
+)
+
+[2
+
+]
+\openout2 = `content/introduction.aux'.
+
+ (content/introduction.tex
+1. fejezet.
+Package lettrine.sty Info: Targeted height = 20.668pt
+(lettrine.sty)             (for loversize=0, accent excluded),
+(lettrine.sty)             Lettrine height = 20.60744pt (E);
+(lettrine.sty)             reported on input line 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+File: ./figures/irod_tf2.png Graphic file (type bmp)
+<./figures/irod_tf2.png>
+
+Overfull \hbox (53.34892pt too wide) in paragraph at lines 16--16
+[] [] 
+ []
+
+File: ./figures/irod_portal.png Graphic file (type bmp)
+<./figures/irod_portal.png>
+
+Overfull \hbox (53.34892pt too wide) in paragraph at lines 22--22
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+
+[1
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+File: ./figures/irod_phalanx.jpg Graphic file (type bmp)
+<./figures/irod_phalanx.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+
+[3]
+Underfull \hbox (badness 1400) in paragraph at lines 58--59
+[]\TU/lmr/bx/n/12 Környezetérzékenység: \TU/lmr/m/n/12 Külső környezeti tényező
+k (pl. időjárás, akadályok,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+
+[4]
+Underfull \hbox (badness 1412) in paragraph at lines 86--87
+\TU/lmr/m/n/12 Fejlesztésem célja a technológiai kutatás, a mechatronikai és au
+tomatizálási
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+)
+
+[5]
+\openout2 = `content/research.aux'.
+
+ (content/research.tex
+2. fejezet.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+File: ./figures/irod_crows.jpg Graphic file (type bmp)
+<./figures/irod_crows.jpg>
+
+
+[6
+
+
+
+
+]
+File: ./figures/irod_arbalet.png Graphic file (type bmp)
+<./figures/irod_arbalet.png>
+File: ./figures/irod_defnder.png Graphic file (type bmp)
+<./figures/irod_defnder.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[7]
+File: ./figures/irod_samsung.jpg Graphic file (type bmp)
+<./figures/irod_samsung.jpg>
+
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+File: ./figures/irod_paintball.jpg Graphic file (type bmp)
+<./figures/irod_paintball.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+
+[9])
+
+[10]
+\openout2 = `content/system.aux'.
+
+ (content/system.tex
+3. fejezet.
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+
+[11
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+File: ./figures/blokkdiagram_vegleges.pdf Graphic file (type pdf)
+<use ./figures/blokkdiagram_vegleges.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 1226) in paragraph at lines 36--37
+\TU/lmr/m/n/12 parancsainak fogadásáért, a célpont felismeréséért, illetve a ka
+mera képének
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+
+[13]
+
+[14]
+
+[15])
+
+[16]
+\openout2 = `content/mechanics.aux'.
+
+ (content/mechanics.tex
+4. fejezet.
+File: ./figures/mech_pantilt.jpg Graphic file (type bmp)
+<./figures/mech_pantilt.jpg>
+
+
+[17
+
+
+
+
+]
+File: ./figures/mockup.png Graphic file (type bmp)
+<./figures/mockup.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+
+
+[18]
+File: ./figures/mech_gearboxdiagram.jpg Graphic file (type bmp)
+<./figures/mech_gearboxdiagram.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+File: ./figures/gearboxbele.jpg Graphic file (type bmp)
+<./figures/gearboxbele.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+File: ./figures/mech_stepper.jpg Graphic file (type bmp)
+<./figures/mech_stepper.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+File: ./figures/mech_skeleton1.png Graphic file (type bmp)
+<./figures/mech_skeleton1.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/mech_skeleton2.png Graphic file (type bmp)
+<./figures/mech_skeleton2.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/mech_dt4000.png Graphic file (type bmp)
+<./figures/mech_dt4000.png>
+
+
+[21]
+
+LaTeX Warning: Text page 22 contains only floats.
+
+
+
+[22]
+File: ./figures/mech_dt4200.png Graphic file (type bmp)
+<./figures/mech_dt4200.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/mech_tar.png Graphic file (type bmp)
+<./figures/mech_tar.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/mech_dt4000kamera.png Graphic file (type bmp)
+<./figures/mech_dt4000kamera.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[23]
+File: ./figures/mech_felsotengely.png Graphic file (type bmp)
+<./figures/mech_felsotengely.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/mech_motorbeepites.png Graphic file (type bmp)
+<./figures/mech_motorbeepites.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/mech_vegallas1.png Graphic file (type bmp)
+<./figures/mech_vegallas1.png>
+
+Overfull \hbox (53.34892pt too wide) in paragraph at lines 189--189
+[] [] 
+ []
+
+File: ./figures/mech_vegallas2.png Graphic file (type bmp)
+<./figures/mech_vegallas2.png>
+
+Overfull \hbox (53.34892pt too wide) in paragraph at lines 195--195
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+
+
+[24]
+File: ./figures/mech_alsoreszek.png Graphic file (type bmp)
+<./figures/mech_alsoreszek.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[25]
+File: ./figures/mech_fogpar1.png Graphic file (type bmp)
+<./figures/mech_fogpar1.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/mech_fogpar2.png Graphic file (type bmp)
+<./figures/mech_fogpar2.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
+
+ []
+
+File: ./figures/mech_bambu.png Graphic file (type bmp)
+<./figures/mech_bambu.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[27]
+
+LaTeX Warning: Reference `sec:slicerbeallitasok' on page 28 undefined on input 
+line 259.
+
+
+
+[28]
+File: ./figures/mech_bambustudio1.png Graphic file (type bmp)
+<./figures/mech_bambustudio1.png>
+
+
+[29]
+
+[30]
+File: ./figures/sentry1.jpg Graphic file (type bmp)
+<./figures/sentry1.jpg>
+)
+
+[31]
+\openout2 = `content/hardware.aux'.
+
+ (content/hardware.tex
+5. fejezet.
+File: ./figures/elek_pinout.png Graphic file (type bmp)
+<./figures/elek_pinout.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+File: ./figures/schematic2.pdf Graphic file (type pdf)
+<use ./figures/schematic2.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+
+[32
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+File: ./figures/elek_raspberry4b.png Graphic file (type bmp)
+<./figures/elek_raspberry4b.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+
+
+[34]
+File: ./figures/elek_stepperhat.png Graphic file (type bmp)
+<./figures/elek_stepperhat.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+
+[35]
+File: ./figures/elek_raspberrycam.png Graphic file (type bmp)
+<./figures/elek_raspberrycam.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+
+
+[36])
+
+[37]
+\openout2 = `content/software.aux'.
+
+ (content/software.tex
+6. fejezet.
+
+Underfull \hbox (badness 2261) in paragraph at lines 7--8
+\TU/lmr/m/n/12 különféle feladatok megoldásához, amelyet elsősorban C++-ban fej
+lesztettek
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+
+[38
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+
+Underfull \hbox (badness 2409) in paragraph at lines 19--20
+\TU/lmr/m/n/12 és helyességét. A [] típust használjuk, ha TCP kapcsola-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 1014) in paragraph at lines 27--28
+\TU/lmr/m/n/12 azok külön memóriaterülettel rendelkeznek, és jobban teljesítene
+k többmagos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 35--36
+\TU/lmr/m/n/12 eseményeket, így például kattintások, gombnyomások és egérmozgás
+ok lekér-
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 35--36
+\TU/lmr/m/n/12 dezése egyszerű. Az interaktív elemek kirajzolása és mozgatása e
+gyszerű a
+ []
+
+
+
+[39]
+Underfull \hbox (badness 1067) in paragraph at lines 38--39
+\TU/lmr/m/n/12 A \TU/lmr/bx/n/12 pickle \TU/lmr/m/n/12 modul sorosítást és desz
+erializációt tesz lehetővé, azaz a Python-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
+
+[40]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 47.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 57.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 67.
+
+
+
+[41]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 81.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+File: ./figures/PC_main.pdf Graphic file (type pdf)
+<use ./figures/PC_main.pdf>
+
+
+[43]
+File: ./figures/PC_videoreceiver.pdf Graphic file (type pdf)
+<use ./figures/PC_videoreceiver.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+File: ./figures/PC_controlsender.pdf Graphic file (type pdf)
+<use ./figures/PC_controlsender.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/teszt_manual2.png Graphic file (type bmp)
+<./figures/teszt_manual2.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[44]
+
+[45]
+
+[46]
+File: ./figures/RPI_main.pdf Graphic file (type pdf)
+<use ./figures/RPI_main.pdf>
+
+Overfull \hbox (6.82759pt too wide) in paragraph at lines 176--177
+ [][] 
+ []
+
+File: ./figures/RPI_targetdetection.pdf Graphic file (type pdf)
+<use ./figures/RPI_targetdetection.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[47]
+File: ./figures/RPI_controllistener.pdf Graphic file (type pdf)
+<use ./figures/RPI_controllistener.pdf>
+
+
+[48]
+
+[49]
+File: ./figures/RPI_videosender.pdf Graphic file (type pdf)
+<use ./figures/RPI_videosender.pdf>
+
+
+[50]
+File: ./figures/RPI_motormover.pdf Graphic file (type pdf)
+<use ./figures/RPI_motormover.pdf>
+
+
+[51])
+
+[52]
+\openout2 = `content/test.aux'.
+
+ (content/test.tex
+7. fejezet.
+File: ./figures/teszt_1.jpg Graphic file (type bmp)
+<./figures/teszt_1.jpg>
+File: ./figures/orctarget2.png Graphic file (type bmp)
+<./figures/orctarget2.png>
+
+
+[53
+
+
+
+
+]
+
+[54]
+File: ./figures/lolap.pdf Graphic file (type pdf)
+<use ./figures/lolap.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+
+[55]
+File: ./figures/teszt_setup2.jpg Graphic file (type bmp)
+<./figures/teszt_setup2.jpg>
+File: ./figures/teszt_setup1.jpg Graphic file (type bmp)
+<./figures/teszt_setup1.jpg>
+File: ./figures/teszt_eredmenyek.png Graphic file (type bmp)
+<./figures/teszt_eredmenyek.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+
+[56]
+
+[57]
+\openout2 = `content/mistakes.aux'.
+
+ (content/mistakes.tex
+8. fejezet.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+)
+
+[58
+
+
+
+
+]
+\openout2 = `content/furtherdevelopment.aux'.
+
+ (content/furtherdevelopment.tex
+9. fejezet.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+)
+
+[59
+
+
+
+
+]
+\openout2 = `content/conclusion.aux'.
+
+ (content/conclusion.tex
+10. fejezet.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+)
+
+[60
+
+
+
+
+]
+\openout2 = `content/acknowledgement.aux'.
+
+ (content/acknowledgement.tex)
+
+[61
+
+
+
+
+] (thesis.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
+\TU/lmr/m/n/12 záférés: 2024.10.22.). [][]$[][][][][] [] [] [] [][][][][][][][]
+[][][][] [] [][][] []
+ []
+
+
+
+[62
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 209--212
+\TU/lmr/m/n/12 záférés: 2024.10.22.). [][]$[][][][][] [] [] [] [][][][][][][][]
+[][][][][][][][][][] [] [][][] []
+ []
+
+)
+
+[63]
+\openout2 = `content/appendices.aux'.
+
+ (content/appendices.tex
+File: ./figures/fugg_slicer1.png Graphic file (type bmp)
+<./figures/fugg_slicer1.png>
+File: ./figures/fugg_slicer2.png Graphic file (type bmp)
+<./figures/fugg_slicer2.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/fugg_slicer3.png Graphic file (type bmp)
+<./figures/fugg_slicer3.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/fugg_slicer4.png Graphic file (type bmp)
+<./figures/fugg_slicer4.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/fugg_slicer5.png Graphic file (type bmp)
+<./figures/fugg_slicer5.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+
+[64
+
+
+]
+
+[65]
+
+[66]
+\tf@thm=\write6
+\openout6 = `thesis.thm'.
+
+ (thesis.aux (include/project.aux) (include/titlepage.aux)
+(include/declaration.aux) (content/abstract.aux) (content/introduction.aux)
+(content/research.aux) (content/system.aux) (content/mechanics.aux)
+(content/hardware.aux) (content/software.aux) (content/test.aux)
+(content/mistakes.aux) (content/furtherdevelopment.aux) (content/conclusion.aux
+) (content/acknowledgement.aux) (content/appendices.aux))
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-08-30>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: F2C40A96B6513E716E7C345817742654;8054.
+ ) 
+Here is how much of TeX's memory you used:
+ 32503 strings out of 409029
+ 662858 string characters out of 5756740
+ 1076502 words of memory out of 5000000
+ 54619 multiletter control sequences out of 15000+600000
+ 563218 words of font info for 73 fonts, out of 8000000 for 9000
+ 1352 hyphenation exceptions out of 8191
+ 103i,17n,104p,1462b,968s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on thesis.pdf (73 pages).

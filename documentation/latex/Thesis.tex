@@ -15,6 +15,7 @@
 \usepackage{anyfontsize,lettrine}
 \usepackage{pdfpages}
 \usepackage{listings}
+%\usepackage{pythonhighlight}
 \usepackage{tcolorbox}
 
 %-------------------Settings-------------------%
@@ -47,6 +48,43 @@
 	boxsep=4pt, left=0pt,right=0pt,top=0pt,bottom=0pt,
 	colframe=white,colback=light-gray
 }
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{backcolor}{RGB}{240,240,225}
+\definecolor{defaultcolor}{RGB}{20,20,20}
+\definecolor{commentcolor}{RGB}{98,98,98}
+\definecolor{stringcolor}{RGB}{23,140,100}
+\definecolor{builtincolor}{RGB}{221,40,103} % if, while
+\definecolor{functioncolor}{RGB}{80,150,33}
+\definecolor{numberscolor}{RGB}{20,20,20}
+
+\lstdefinestyle{pythonstyle}{
+	language=Python,                % Set language to Python
+	backgroundcolor=\color{backcolor}, % Background color
+	commentstyle=\color{commentcolor}, % Comment style
+	stringstyle=\color{stringcolor},   % String style
+	keywordstyle=\color{builtincolor}, % Keyword style (e.g., def, if)
+	basicstyle=\ttfamily\footnotesize\color{defaultcolor}, % Basic font style
+	showspaces=false,                 % Don't show spaces
+	showstringspaces=false,           % Don't underline spaces in strings
+	showtabs=false,                   % Don't show tab markers
+	tabsize=4,                        % Tab size set to 4 spaces
+	captionpos=b,                     % Caption position: bottom
+	breaklines=true,                  % Automatic line breaking
+	breakatwhitespace=true,           % Line breaking at whitespace
+	title=\lstname,                   % Show filename with \lstinputlisting
+	numbers=left,                     % Line numbers on the left
+	numberstyle=\tiny\color{commentcolor}, % Line number style
+	keywords={[2]print,input,open,close,read,write,append}, 
+	keywordstyle={[2]\color{functioncolor}},
+	keywords={[3]numpy,pandas,matplotlib,os,sys}, 
+	keywordstyle={[3]\color{defaultcolor}},
+}
+
+\lstset{style=pythonstyle, frame=single, frameround=tttt, columns=fullflexible}
+
 
 \begin{document}
 
@@ -633,24 +671,34 @@ Mind a két fogaskerékpár kisebb közvetlenül a motor tengelyére lett rögz�
 \subsection{Gyártás és összeszerelés}
 \subsubsection{Gyártás}
 
-\begin{wrapfigure}{r}{.5\textwidth}
-	\centering
-	\includegraphics[width=.9\linewidth]{mech_ender} 
-	\caption{Creality Ender 3 Pro \cite{ender}}
-	\label{fig:mech_ender}
-\end{wrapfigure}
 
-Minden egyedi alkatrészt, amit a projekthez kellett gyártanom, 3D nyomtatással készítettem el. Ehhez egy \textbf{Creality Ender 3 Pro} típusú hobbinyomtatót használtam, amely a \ref{fig:mech_ender}. ábrán látható. Mint a legtöbb ilyen árkategóriában lévő gép, ez is \textsl{FDM} technológiát használ. Az \textsl{FDM} lényege, hogy a nyomtató egy előre megadott terv alapján vékony műanyagszálat (filamentet) olvaszt meg egy forró extruderfejben (hotend), amelyet pontosan irányítanak a nyomtató XYZ tengelyei mentén. A műanyag szál olvasztott állapotban kerül a nyomtatóágyra, ahol gyorsan megszilárdul, így rétegenként építi fel az adott objektumot.\\
+
+Minden egyedi alkatrészt, amit a projekthez kellett gyártanom, 3D nyomtatással készítettem el. Ehhez egy \textbf{Bambu Lab A1} \cite{bambu} típusú hobbinyomtatót használtam, amely a \ref{fig:mech_bambu}. ábrán látható. Mint a legtöbb ilyen árkategóriában lévő gép, ez is \textsl{FDM} technológiát használ. Az \textsl{FDM} lényege, hogy a nyomtató egy előre megadott terv alapján vékony műanyagszálat (filamentet) olvaszt meg egy forró extruderfejben (hotend), amelyet pontosan irányítanak a nyomtató XYZ tengelyei mentén. A műanyag szál olvasztott állapotban kerül a nyomtatóágyra, ahol gyorsan megszilárdul, így rétegenként építi fel az adott objektumot.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.7\linewidth]{mech_bambu} 
+	\caption{Bambu Lab A1 \cite{bambu}}
+	\label{fig:mech_bambu}
+\end{figure}
+\pagebreak
 
 A használt nyomtató bizonyos tulajdonságai meghatározták a tervezett alkatrészek tulajdonságait:
 
 \begin{itemize}
-	\item \textbf{Nyomtatási térfogat:} 220 × 220 × 250 mm, amely elég nagy volt a legtöbb általam tervezett elem számára.
+	\item \textbf{Nyomtatási térfogat:} 256 × 256 × 256 mm, amely elég nagy volt a legtöbb általam tervezett elem számára.
 	\item \textbf{Nyomtatási pontosság:} Az nyomtató rétegvastagsága 0,1–0,4 mm között állítható. Főleg a nyomtatott fogaskerekeknél volt fontos a megfelelő pontosság, de kielégítő eredmény született.
 	\item \textbf{Használható filamentek:} A nyomtató különféle anyagokkal kompatibilis, beleértve a PLA-t, ABS-t, PETG-t és TPU-t. Én a PLA mellett döntöttem, ugyanis nem szükséges a pl. ABS által nyújtott minőség, ellenben a költséghatékonyság igen.
 \end{itemize}
 
-A modelleket \textbf{PTC Creo} szoftverben készítettem. Ez egy magas szintű CAD tervező program, amely képes a modelleket exportálni STEP és STL fájlként is. Az STL fájlokat ezután egy slicer programba betöltve tudtam a nyomtató által követhető G-kódra konvertálni. Ezután már csak meg kellett várni, amíg a gép elkészíti az adott alkatrészt, ami a legnagyobb elem esetén kb. 10 óra volt, a teljes prototípus kb. 50 óra volt.
+A modelleket \textbf{PTC Creo} szoftverben készítettem. Ez egy magas szintű CAD tervező program, amely képes a modelleket exportálni STEP és STL fájlként is. Az STL fájlokat ezután a Bambu Studio slicer programba betöltve tudtam a nyomtató által követhető G-kódra konvertálni. Itt kellett megtervezni a támasztást (\ref{fig:mech_bambustudio1}. ábra), illetve megadnia a nyomtatási paramétereket, amelyek a függelék \ref{sec:slicerbeallitasok}. fejezetében láthatóak. Ezután már csak meg kellett várni, amíg a gép elkészíti az adott alkatrészt, ami a legnagyobb elem esetén kb. 10 óra volt, a teljes prototípus kb. 50 óra volt.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.7\linewidth]{mech_bambustudio1} 
+	\caption{Bambu Studio Slicer}
+	\label{fig:mech_bambustudio1}
+\end{figure}
 
 \pagebreak
 \subsubsection{Összeszerelés}
@@ -1137,13 +1185,62 @@ A projekt költségei az alábbi táblázatban láthatók:
 \end{table}
 \pagebreak
 \section{Konklúziók}
-a
+Összességében véve magabiztosan jelentem ki, hogy a projekt sikerrel járt. A két félév alatt, amíg ezzel a feladattal foglalkoztam, amellett, hogy az elméleti ismereteimet a gyakorlatban is kipróbálhattam, rengeteg hasznos új tudást is szereztem. Közelebbről megismerkedtem a \textbf{3D nyomtatás} technológiájával, a \textbf{gépi látás} eszközeivel, illetve számos hasznos \textbf{Python} könyvtárral is. Most már van gyakorlatom a \textbf{Raspberry PI} alapú rendszerek fejlesztésében, ami a későbbi karrierem mellett a hobbi projektjeimben is előny lesz.\\
+
+Elkészítettem a prototípust, amire vállalkoztam: az eszköz magabiztosan és stabilan képes mozogni, fürgén követi a felhasználó által adott parancsokat, és önálló célfelismerésre is alkalmas. A tüzelés is zökkenőmentesen működik, a lövedék nem akad el a tárban. Mindemellett meglepően pontos. Az biztonsági funkció, amikkel elláttam az eszközt, biztosítják, hogy olyan célpont ne legyen lelőve, akit az operátor nem szándékozott eltalálni. \\
+
+A projekt teljes egészében bárki által elérhető a \textsl{GitHubon}, ugyanis szeretném, ha más is reprodukálni tudja, ha hasonló érdeklődéssel rendelkezik. Ezzel a gondolattal írtam a dokumentációt is, amiben próbáltam részletesen kitérni a megtett lépésekre, gondolatok hátterére.\\
+
+A projektet valamilyen formában mindenképpen szeretném folytatni, akár egyedül, akár többedmagammal. Számos fejlesztési lehetőség maradt a prototípusban, és úgy gondolom több munkával, a most megszerzett tapasztalatokat bevetve, egy egészen kiforrott terméket készíthetünk el, amire talán mások is felfigyelnek.\\
+
+Ha egy fontos konklúzió le szeretnék vonni így a feladatom végén, az az, hogy mindenképpen érdemes volt olyan feladatot választani amiben a technikai kihívás mellett van személyes motiváció is. Nem csak egy elvégzendő feladatként tekintettem a dolgozatra, hanem őszintén érdekelt a sorsa, és ezért a rengeteg tanulás mellett kijelenthetem, hogy élveztem is foglalkozni a projekttel. Úgy gondolom, a diplomamunkám egy méltó lezárása lesz az egyetemi tanulmányaimnak. 
+
+
+
+
+
 \section{Köszönetnyilvánítás}
 a
 \pagebreak
 
 \section*{Függelék}
-\subsection*{Kódrészletek}
+\subsection{Bambu Studio beállításai} \label{sec:slicerbeallitasok}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.4\linewidth]{fugg_slicer1}
+	\caption{A Bambu Studio által szolgáltatott adatok}
+
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{fugg_slicer2}
+	\caption{A Bambu Studio minőségi beállításai}
+
+\end{figure}
+
+\pagebreak
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{fugg_slicer3}
+	\caption{A Bambu Studio erősségi beállításai}
+
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{fugg_slicer4}
+	\caption{A Bambu Studio sebesség beállításai}
+
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{fugg_slicer5}
+	\caption{A Bambu Studio támasz beállításai}
+
+\end{figure}
 
 
 \pagebreak
@@ -1203,9 +1300,9 @@ a
 	A NEMA szabvány\hfill (Hozzáférés: 2024.10.22.) \\
 	{\footnotesize \url{https://www.cncitalia.net/file/pdf/nemastandard.pdf}},
 	
-	\bibitem{ender}
-	Creality Ender 3 Pro\hfill (Hozzáférés: 2024.10.22.) \\
-	{\footnotesize \url{https://www.creality.com/products/ender-3-pro-3d-printer}},
+	\bibitem{bambu}
+	Bambu Lab A1\hfill (Hozzáférés: 2024.10.22.) \\
+	{\footnotesize \url{https://bambulab.com/en/a1}},
 
 	
 	\bibitem{4gbforum}

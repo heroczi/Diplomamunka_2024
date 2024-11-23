@@ -1,0 +1,96 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: huplain.bst
+Reallocating 'name_of_file' (item size: 1) to 20 items.
+A level-1 auxiliary file: include/project.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: include/titlepage.aux
+Reallocating 'name_of_file' (item size: 1) to 24 items.
+A level-1 auxiliary file: include/declaration.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: content/abstract.aux
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+A level-1 auxiliary file: content/introduction.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: content/research.aux
+Reallocating 'name_of_file' (item size: 1) to 19 items.
+A level-1 auxiliary file: content/system.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: content/mechanics.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: content/hardware.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: content/software.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: content/test.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: content/mistakes.aux
+Reallocating 'name_of_file' (item size: 1) to 31 items.
+A level-1 auxiliary file: content/furtherdevelopment.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
+A level-1 auxiliary file: content/conclusion.aux
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+A level-1 auxiliary file: content/acknowledgement.aux
+Illegal, another \bibstyle command---line 33 of file thesis.aux
+ : \bibstyle
+ :          {unsrtnat}
+I'm skipping whatever remains of this command
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Reallocating 'name_of_file' (item size: 1) to 23 items.
+A level-1 auxiliary file: content/appendices.aux
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: bib/mybib.bib
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 27 entries,
+            4991 wiz_defined-function locations,
+            1235 strings with 15594 characters,
+and the built_in function-call counts, 53950 in all, are:
+= -- 10468
+> -- 27
+< -- 0
++ -- 4005
+- -- 27
+* -- 463
+:= -- 1262
+add.period$ -- 54
+call.type$ -- 27
+change.case$ -- 108
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 8386
+empty$ -- 1162
+format.name$ -- 0
+if$ -- 11684
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 0
+newline$ -- 204
+num.names$ -- 0
+pop$ -- 2271
+preamble$ -- 1
+purify$ -- 81
+quote$ -- 22
+skip$ -- 485
+stack$ -- 0
+substring$ -- 6411
+swap$ -- 6167
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 135
+warning$ -- 0
+while$ -- 135
+width$ -- 29
+write$ -- 282
+(There was 1 error message)

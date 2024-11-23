@@ -1,0 +1,58 @@
+\select@language {magyar} \contentsline {chapter}{Kivonat}{i}{chapter*.2}%
+\select@language {english} \contentsline {chapter}{Abstract}{ii}{chapter*.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Bevezetés}{1}{chapter.1}%
+\select@language {magyar} \contentsline {section}{\numberline {1.1}Motiváció és háttér}{1}{section.1.1}%
+\select@language {magyar} \contentsline {section}{\numberline {1.2}Kihívások és célkitűzések}{3}{section.1.2}%
+\select@language {magyar} \contentsline {section}{\numberline {1.3}Korlátozások}{4}{section.1.3}%
+\select@language {magyar} \contentsline {section}{\numberline {1.4}Erkölcsi nyilatkozat}{5}{section.1.4}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Irodalomkutatás}{6}{chapter.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Megvalósult rendszerek}{6}{section.2.1}%
+\select@language {magyar} \contentsline {paragraph}{CROWS \cite {crows}}{6}{section*.6}%
+\select@language {magyar} \contentsline {paragraph}{Arbalet-DM \cite {arbalet}}{7}{section*.8}%
+\select@language {magyar} \contentsline {paragraph}{DeFNder \cite {defnder}}{7}{section*.10}%
+\select@language {magyar} \contentsline {paragraph}{Samsung SGR-A1 \cite {samsung}}{7}{section*.12}%
+\select@language {magyar} \contentsline {section}{\numberline {2.2}Tüzelési mechanizmus}{9}{section.2.2}%
+\select@language {magyar} \contentsline {paragraph}{Paintball \cite {paintball}}{9}{section*.14}%
+\select@language {magyar} \contentsline {paragraph}{Nerf \cite {nerf}}{9}{section*.16}%
+\select@language {magyar} \contentsline {paragraph}{Airsoft \cite {airsoft}}{9}{section*.17}%
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Rendszertervezés és követelmények}{11}{chapter.3}%
+\select@language {magyar} \contentsline {section}{\numberline {3.1}Rendszeráttekintés}{11}{section.3.1}%
+\select@language {magyar} \contentsline {section}{\numberline {3.2}Követelmények}{14}{section.3.2}%
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Mechanikai tervezés}{17}{chapter.4}%
+\select@language {magyar} \contentsline {section}{\numberline {4.1}Kinematika}{17}{section.4.1}%
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Mechanikai alkatrészek}{19}{section.4.2}%
+\select@language {magyar} \contentsline {section}{\numberline {4.3}3D tervezés, modellezés}{21}{section.4.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}Skeleton modell}{21}{subsection.4.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}Torony}{23}{subsection.4.3.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.3}Keret}{24}{subsection.4.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.4}Függőleges tengely elemei}{24}{subsection.4.3.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.5}Fogaskerekek}{25}{subsection.4.3.5}%
+\select@language {magyar} \contentsline {section}{\numberline {4.4}Gyártás és összeszerelés}{27}{section.4.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.1}Gyártás}{27}{subsection.4.4.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.2}Összeszerelés}{30}{subsection.4.4.2}%
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Hardvertervezés}{32}{chapter.5}%
+\select@language {magyar} \contentsline {section}{\numberline {5.1}Áramköri tervezés}{32}{section.5.1}%
+\select@language {magyar} \contentsline {section}{\numberline {5.2}Elektronikai alkatrészek}{34}{section.5.2}%
+\select@language {magyar} \contentsline {section}{\numberline {5.3}Gyártás, forrasztás}{36}{section.5.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {6}Szoftverfejlesztés}{38}{chapter.6}%
+\select@language {magyar} \contentsline {section}{\numberline {6.1}Használt Python modulok, eszközök}{38}{section.6.1}%
+\select@language {magyar} \contentsline {section}{\numberline {6.2}Gépi látás}{41}{section.6.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}Template matching \cite {templatematching}}{41}{subsection.6.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.2}Feature Matching \cite {featurematching}}{41}{subsection.6.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.3}Target Tracking \cite {targettracking}}{41}{subsection.6.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.4}Haar cascade \cite {haarcascade}}{42}{subsection.6.2.4}%
+\select@language {magyar} \contentsline {section}{\numberline {6.3}A szoftver működése}{43}{section.6.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.3.1}A PC-n futó program működése}{43}{subsection.6.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.3.2}A Raspberry Pi-n futó program működése}{47}{subsection.6.3.2}%
+\select@language {magyar} \contentsline {chapter}{\numberline {7}Tesztelés}{53}{chapter.7}%
+\select@language {magyar} \contentsline {section}{\numberline {7.1}Elektronikai alkatrészek tesztje}{53}{section.7.1}%
+\select@language {magyar} \contentsline {section}{\numberline {7.2}Képfelismerő algoritmusok tesztje tesztje}{53}{section.7.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {7.2.1}Haar Cascade}{55}{subsection.7.2.1}%
+\select@language {magyar} \contentsline {section}{\numberline {7.3}Éles teszt}{55}{section.7.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {8}Hibák, észrevételek}{58}{chapter.8}%
+\select@language {magyar} \contentsline {chapter}{\numberline {9}Továbbfejlesztési lehetőségek}{59}{chapter.9}%
+\select@language {magyar} \contentsline {chapter}{\numberline {10}Konklúziók}{60}{chapter.10}%
+\select@language {magyar} \contentsline {chapter}{Köszönetnyilvánítás}{61}{chapter*.89}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{62}{chapter*.89}%
+\select@language {magyar} \contentsline {chapter}{Függelék}{64}{appendix*.91}%
+\select@language {magyar} \contentsline {section}{\numberline {F.1}A Bambu Slicer beállításai}{64}{section.F.1}%
