@@ -44,7 +44,7 @@ A mikrokontroller kiválasztásánál több opciót vizsgáltam, többek közöt
 	\item Ethernet port
 \end{list}
 
-Azonban ahogy összehasonlítottam a különböző opciókat, körvonalazódott, hogy a \textsl{Raspberry PI} lesz a megfelelő megoldás. Az eszköz a \ref{fig:elek_raspberry4b}. ábrán látható. Először is egy gyakorlati szempont szerint, mégpedig hogy egy Raspberry PI 4B modell eredetileg is volt a tulajdonomban 4GB rammal. A gyártó hivatalos fórumán több felhasználó szerint ez már elegendő összetettebb gépi látás algoritmusok futtatására is. \cite{4gbforum} \\
+Azonban ahogy összehasonlítottam a különböző opciókat, körvonalazódott, hogy a \textsl{Raspberry PI} \cite{raspberry4} lesz a megfelelő megoldás. Az eszköz a \ref{fig:elek_raspberry4b}. ábrán látható. Először is egy gyakorlati szempont szerint, mégpedig hogy egy Raspberry PI 4B modell eredetileg is volt a tulajdonomban 4GB rammal. A gyártó hivatalos fórumán több felhasználó szerint ez már elegendő összetettebb gépi látás algoritmusok futtatására is. \cite{4gbforum} \\
 
 \begin{figure}[h!]
 	\centering
@@ -55,7 +55,7 @@ Azonban ahogy összehasonlítottam a különböző opciókat, körvonalazódott,
 
 A kamera illesztése szintén különösen fontos a végtermék működése szempontjából, és ezen a területen magasan kiemelkedik a Raspberry a többi mikrovezérlő közül, mivel magán a gyártó a termékcsaládon belül ajánl több jó minőségű, könnyen beszerezhető kamera modult, amik illesztése már kiforrott az összes Raspberry-hez.\\
 
-Ezentúl a \textsl{Raspberry PI} erősebb, mint a fentebb említett mikrokontrollerek. Linux rendszert futtat, és lehet rajta Python nyelven programozni, ami gépi látás, automatizálás projekteknél hatalmas előny. Számos ki-és bemenete van, ráadásul támogatja a \textsl{Bluetooth}, \textsl{Wi-Fi}, és gigabites \textsl{Ethernet} kapcsolatokat is, nem beszélve a rengeteg bővítő "kabátról", amiket lehet kapni hozzá. Ezek a termék továbbfejlesztését nagyban könnyítik, ráadásul kevesebb munkát kell a nyomtatott áramkör tervezésébe tenni. \cite{raspberry4}
+Ezentúl a \textsl{Raspberry PI} erősebb, mint a fentebb említett mikrokontrollerek. Linux rendszert futtat, és lehet rajta Python nyelven programozni, ami gépi látás, automatizálás projekteknél hatalmas előny. Számos ki-és bemenete van, ráadásul támogatja a \textsl{Bluetooth}, \textsl{Wi-Fi}, és gigabites \textsl{Ethernet} kapcsolatokat is, nem beszélve a rengeteg bővítő "kabátról", amiket lehet kapni hozzá. Ezek a termék továbbfejlesztését nagyban könnyítik, ráadásul kevesebb munkát kell a nyomtatott áramkör tervezésébe tenni.\\
 
 \subsubsection*{Stepper Motor HAT \cite{stepperhat}}
 A NEMA-17 léptetőmotorok vezérlésére több megoldás is létezik, elterjedtek a \textsl{A4988}, \textsl{TMC5160T} és \textsl{DRV8825} típusú vezérlők. Ezeket azonban vagy külön modulként lehet megvásárolni, vagy pedig SMD alkatrészként, ami mellé mindenképpen kell tervezni kiegészítő áramkört. \\
@@ -84,7 +84,7 @@ A rendszer által használt kamera egy \textsl{Raspberry Pi Camera Module 2} vol
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth]{elek_raspberrycam}
-	\caption{Raspberry Pi Camera Module 2}
+	\caption{Raspberry Pi Camera Module 2 \cite{raspberrycam}}
 	\label{fig:elek_raspberrycam}
 \end{figure}
 
@@ -92,6 +92,8 @@ A kamera befoglaló mérete szerelési furatai és CSI portja megegyezik a több
 
 \subsubsection*{Végálláskapcsoló}
 A prototípus bekapcsolásánál fontos, hogy beálljon egy kezdőpozícióba, és ahhoz képest tudjuk viszonyítani a mozgását. Ezt én a két tengelyen 1-1 végálláskapcsolóval oldottam meg. Ezek a modulok könnyen szerelhetőek a 3D nyomtatott vázra, és az alapján adnak jelet, valami van-e az optokapu között. A Raspberry GPIO lábaira könnyedén lehet őket bekötni jumper kábelek segítségével.
+
+\pagebreak
 
 \section{Gyártás, forrasztás}
 A projekthez egyedi nyomtatott áramkört nem kellett gyártatni, azonban egy kis forrasztást igényelt. A gearbox táp folyamatos működéséhez az alább látható módon kellet egy huzallal összeforrasztanom a padokat. Látható a 12V és GND-hez csatlakozó kábelek is, amiket szintén beforrasztottam a megfelelő helyre. Ezen a területen van lehetőség a továbbfejlesztésre, például egy 3D nyomtatott elemmel.\\

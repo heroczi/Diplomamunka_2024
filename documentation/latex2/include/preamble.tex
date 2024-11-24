@@ -43,7 +43,7 @@
 %--------------------------------------------------------------------------------------
 % Set up listings
 %--------------------------------------------------------------------------------------
-\definecolor{lightgray}{rgb}{0.95,0.95,0.95}
+\definecolor{lightgray}{rgb}{0.90,0.90,0.90}
 \lstset{
 	basicstyle=\scriptsize\ttfamily, % print whole listing small
 	keywordstyle=\color{black}\bfseries, % bold black keywords
@@ -94,6 +94,11 @@
 %--------------------------------------------------------------------------------------
 % Some new commands and declarations
 %--------------------------------------------------------------------------------------
+\tcbset{on line, 
+	boxsep=1pt, left=0pt,right=0pt,top=0pt,bottom=0pt,
+	colframe=white,colback=lightgray
+}
+
 \newcommand{\code}[1]{{\tcbox{\upshape\ttfamily\footnotesize\indent #1}}}
 
 \newcommand{\doi}[1]{DOI: \href{http://dx.doi.org/\detokenize{#1}}{\raggedright{\texttt{\detokenize{#1}}}}} % A hivatkozások közt így könnyebb DOI-t megadni.
@@ -106,10 +111,7 @@
 \DeclareMathOperator{\sign}{sgn}
 \DeclareMathOperator{\rot}{rot}
 
-\tcbset{on line, 
-	boxsep=1pt, left=0pt,right=0pt,top=0pt,bottom=0pt,
-	colframe=white,colback=lightgray
-}
+
 
 %--------------------------------------------------------------------------------------
 % Setup captions

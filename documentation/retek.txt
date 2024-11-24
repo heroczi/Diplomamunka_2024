@@ -1,1 +1,0 @@
-scp -r sentry heroczi@192.168.100.2:/home/heroczi

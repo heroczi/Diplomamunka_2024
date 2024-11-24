@@ -39,14 +39,13 @@ A \textbf{pickle} modul sorosítást és deszerializációt tesz lehetővé, aza
 
 A \code{pickle.dumps()} segítségével a Python-objektumokat bináris formátumba alakíthatjuk, amely lehetővé teszi azok egyszerű tárolását vagy átvitelét, például hálózaton keresztül. A \code{pickle.loads()} a bináris formátumú adatokat visszaalakítja eredeti Python-objektummá. A pickle használata előnyös lehet akkor, ha komplex adatszerkezeteket szeretnénk fájlban tárolni vagy hálózaton keresztül továbbítani.
 
-\pagebreak
 
 \section{Gépi látás}
 A célpontfelismerés módszere volt az automata működés legfontosabb eleme. Elsősorban az OpenCV könyvtár különböző lehetőségeit vizsgáltam, ugyanis ez a legjobban kiforrott modul, amely könnyedén használható python programokban.
 
-\subsection{Template matching \cite{templatematching}} \label{sec:soft_template}
+\subsection{Template matching } \label{sec:soft_template}
 
-A \textbf{Template Matching} (sablonillesztés) egy egyszerű, de hatékony módszer, amelyet statikus képekben keresett minták (sablonok) azonosítására használnak. Ez a módszer összehasonlít egy kisebb, előre meghatározott képrészletet (a sablont) a nagyobb képen található területekkel, és megkeresi a legjobban illeszkedő pozíciót.\\
+A \textbf{Template Matching} \cite{templatematching} (sablonillesztés) egy egyszerű, de hatékony módszer, amelyet statikus képekben keresett minták (sablonok) azonosítására használnak. Ez a módszer összehasonlít egy kisebb, előre meghatározott képrészletet (a sablont) a nagyobb képen található területekkel, és megkeresi a legjobban illeszkedő pozíciót.\\
 
 \textbf{Működés:} Az OpenCV \code{cv2.matchTemplate()} függvényével kivitelezhető, amely végigfuttatja a sablont a célképen, és minden pixelpozíciónál egy hasonlósági pontszámot generál. A legmagasabb értékű pontszám mutatja az illeszkedés helyét.\\
 
@@ -54,9 +53,11 @@ A \textbf{Template Matching} (sablonillesztés) egy egyszerű, de hatékony mód
 
 \textbf{Korlátozások:} Gyengén teljesít forgatott, méretarányosan eltérő vagy eltorzult objektumoknál, valamint változó fényviszonyok mellett.
 
-\subsection{Feature Matching \cite{featurematching}} \label{sec:soft_feature}
+\pagebreak
 
-A \textsl{Feature Matching} (jellemzőpont-illesztés) egy kifinomultabb módszer a képjellemzők összehasonlítására és egyeztetésére. A módszer a két képben található pontokat (feature-ket) párosítja, ezáltal lehetővé teszi forgatásokkal, elforgatásokkal és méretarányokkal szembeni robusztus egyeztetést.
+\subsection{Feature Matching } \label{sec:soft_feature}
+
+A \textsl{Feature Matching} \cite{featurematching} (jellemzőpont-illesztés) egy kifinomultabb módszer a képjellemzők összehasonlítására és egyeztetésére. A módszer a két képben található pontokat (feature-ket) párosítja, ezáltal lehetővé teszi forgatásokkal, elforgatásokkal és méretarányokkal szembeni robusztus egyeztetést.\\
 
 \textbf{Működés:} Először meghatározzuk a képen lévő fontos jellemzőpontokat (például élek, sarkok), amelyeket különböző detektorok (például SIFT, SURF vagy ORB) segítségével találhatunk meg. Ezután az \code{cv2.BFMatcher()} (Brute Force Matcher) vagy a \code{cv2.FlannBasedMatcher()} függvénnyel azonosítjuk a jellemzőpontokat.\\
 
@@ -64,9 +65,9 @@ A \textsl{Feature Matching} (jellemzőpont-illesztés) egy kifinomultabb módsze
 
 \textbf{Korlátozások:} A nagy számítási igényű algoritmusok miatt lassabb lehet, különösen nagy méretű képeken.
 
-\subsection{Target Tracking \cite{targettracking}} \label{sec:soft_target}
+\subsection{Target Tracking } \label{sec:soft_target}
 
-A \textsl{Target Tracking} (célkövetés) feladata egy mozgó objektum követése egy videófolyamon vagy valós idejű képforráson keresztül. Az OpenCV több nyomon követési algoritmust is biztosít, amelyek segítenek abban, hogy a kiválasztott objektumot stabilan követni tudjuk, még akkor is, ha változik a pozíciója vagy a környezeti fény.
+A \textsl{Target Tracking} \cite{targettracking} (célkövetés) feladata egy mozgó objektum követése egy videófolyamon vagy valós idejű képforráson keresztül. Az OpenCV több nyomon követési algoritmust is biztosít, amelyek segítenek abban, hogy a kiválasztott objektumot stabilan követni tudjuk, még akkor is, ha változik a pozíciója vagy a környezeti fény.\\
 
 Algoritmusok:
 \begin{list}{-}{}
@@ -75,27 +76,30 @@ Algoritmusok:
 	\item Modern nyomkövetési algoritmusok: Az OpenCV 3.x-es és újabb verziói lehetővé teszik algoritmusok használatát, mint a KLT (Kanade-Lucas-Tomasi) nyomkövető, a CSRT és a MedianFlow, amelyek kifejezetten valós idejű és pontos követést biztosítanak.
 \end{list}
 
-\textbf{Előnyei:} Alkalmas valós idejű alkalmazásokhoz, mint például a videó megfigyelés vagy az autonóm rendszerek, ahol a cél folyamatosan mozgásban van.
+\textbf{Előnyei:} Alkalmas valós idejű alkalmazásokhoz, mint például a videó megfigyelés vagy az autonóm rendszerek, ahol a cél folyamatosan mozgásban van.\\
 
 \textbf{Korlátozások:} Bizonyos algoritmusok hajlamosak elveszteni a célpontot gyors mozgásoknál vagy hirtelen pozícióváltásoknál.
-\subsection{Haar cascade \cite{haarcascade}} \label{sec:soft_haar}
 
-A \textsl{Haar Cascade} módszer az egyik legelterjedtebb technika az objektumfelismerésre, különösen az arcfelismerésben. A gépi tanuláson alapuló módszer képes egy képben vagy videófolyamon objektumokat megtalálni azáltal, hogy mintákat ismer fel az előképzett adatok alapján.\\
+\pagebreak
 
-\textbf{Működés:} A Haar-cascade egy többlépcsős osztályozó, amelyet sok pozitív és negatív mintából tanítanak be. \code{A cv2.CascadeClassifier()} osztály segítségével előre tanított modelleket, például arcokat, szemeket vagy különböző objektumokat kereshetünk.\\
+\subsection{Haar cascade } \label{sec:soft_haar}
 
-\textbf{Gépi tanulás:} A módszer előnye, hogy nagyon hatékonyan képes felismerni az objektumokat. A gépi tanulás során a kimeneti modell jellemzőit úgy optimalizálják, hogy gyorsan tudja felismerni a keresett objektumokat még zajos vagy eltérő körülmények között is.\\
+A \textsl{Haar Cascade} \cite{haarcascade} módszer az egyik legelterjedtebb technika az objektumfelismerésre, különösen az arcfelismerésben. A gépi tanuláson alapuló módszer képes egy képben vagy videófolyamon objektumokat megtalálni azáltal, hogy mintákat ismer fel az előképzett adatok alapján.\\
+
+\textbf{Működés:} A Haar-cascade egy többlépcsős osztályozó, amelyet sok pozitív és negatív mintából tanítanak be. \code{A cv2.CascadeClassifier()} osztály segítségével előre tanított modelleket, például arcokat, szemeket vagy különböző objektumokat kereshetünk. módszer előnye, hogy nagyon hatékonyan képes felismerni az objektumokat. A gépi tanulás során a kimeneti modell jellemzőit úgy optimalizálják, hogy gyorsan tudja felismerni a keresett objektumokat még zajos vagy eltérő körülmények között is.\\
 
 \textbf{Előnyei:} A Haar-cascade módszer jól használható olyan alkalmazásokhoz, ahol előre meghatározott objektumokat (például arcokat) kell azonosítani. Nagy előnye, hogy valós időben is képes futni.\\
 
-\textbf{Korlátozások:} Hajlamos a pontatlan felismerésre, ha az objektumok perspektívája, megvilágítása vagy pozíciója jelentősen eltér az előképzett mintáktól. Alternatív megoldásként mélytanulási módszerek (például konvolúciós neurális hálózatok) használhatók az ilyen problémák javítására. \pagebreak
+\textbf{Korlátozások:} Hajlamos a pontatlan felismerésre, ha az objektumok perspektívája, megvilágítása vagy pozíciója jelentősen eltér az előképzett mintáktól. Alternatív megoldásként mélytanulási módszerek (például konvolúciós neurális hálózatok) használhatók az ilyen problémák javítására. 
 
-
+\pagebreak
 
 \section{A szoftver működése}
-A rendszer két alapvető részből áll: egy számítógépből (PC), amely felhasználói interfészként szolgál az operátor számára, és egy Raspberry Pi-ből, amely a fegyverrendszer vezérlését és képátvitelét végzi. A két eszközön futó program között két folyamat kommunikál, két különböző porton: egy UDP protokoll alapú adatátvitel a videó küldéséhez, illetve egy TCP alapú a vezérlőparancsok fogadásához. \\
+A rendszer két alapvető részből áll: egy számítógépből (PC), amely felhasználói interfészként szolgál az operátor számára, és egy Raspberry Pi-ből, amely a fegyverrendszer vezérlését és képátvitelét végzi. A két eszközön futó program között két folyamat kommunikál, két különböző porton: egy UDP protokoll alapú adatátvitel a videó küldéséhez, illetve egy TCP alapú a vezérlőparancsok fogadásához.\\
+
 
 \subsection{A PC-n futó program működése}
+
 A PC-s kód \code{main()} függvénye két külön folyamatot indít: egy videó-fogadó folyamatot és egy vezérlő-küldő folyamatot, melyek egy multiprocessing-eseményjelző (\code{stop\textunderscore event}) segítségével állnak meg szükség esetén. A két folyamat használ közös erőforrást, a \code{frame\textunderscore queue}-t, amelybe a videó-fogadó betölti a Raspberry-ből kapott képkockákat, a Pygame pedig felhasználja az a másik folyamatban. A felső szint folyamatábrája a \ref{fig:PC_main}. ábrán látható. 
 
 \begin{figure}[h!]
@@ -142,7 +146,7 @@ A felhasználó számára fontos, hogy minden információt le tudjon egyből ol
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth]{teszt_manual2}
+	\includegraphics[width=0.8\linewidth]{teszt_manual2}
 	\caption{Pygame HUD}
 	\label{fig:teszt_manual1}
 \end{figure}
@@ -234,16 +238,16 @@ A függvény folyamatábrája a \ref{fig:RPI_controllistener}. ábrán látható
 
 A végtelen ciklus ellenőrzi a \code{stop\textunderscore event} flag-et, és ha igaz lesz, akkor kilép belőle. Ekkor a \code{TurnStep()} fügvénnyel addig lép, amíg középen nem lesz a fegyver, valamint a lézert is lekapcsolja.
 
+
+\subsubsection*{Videó-küldő folyamat}
+A videó-küldő folyamat (\code{video\textunderscore sender}) a Raspberry Pi kamerájából érkező képet szerzi meg és osztja meg a PC-vel UDP kapcsolaton keresztül. A folyamat illusztrációja a \ref{fig:RPI_videosender}. ábrán látható.
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics{RPI_videosender}
 	\caption{A \code{video\textunderscore sender} függvény folyamatábrája}
 	\label{fig:RPI_videosender}
 \end{figure}
-
-\subsubsection*{Videó-küldő folyamat}
-A videó-küldő folyamat (\code{video\textunderscore sender}) a Raspberry Pi kamerájából érkező képet szerzi meg és osztja meg a PC-vel UDP kapcsolaton keresztül. A folyamat illusztrációja a \ref{fig:RPI_videosender}. ábrán látható.
-
 \begin{list}{-}{}
 	\item A kamerakép feldolgozása során a kód rögzíti az egyes képkockákat, amelyeket JPEG formátumba kódol és pickle segítségével tömörít.
 	\item Amennyiben az \code{automode\textunderscore event} flag igaz, akkor beteszi a legutolsó képkockát a \code{frame\textunderscore queue}-ba, és a \code{pos\textunderscore queue} legutolsó elemei alapján húz egy téglalapot illeszt a képkockára, ezzel jelezve a talált arcot.
@@ -252,13 +256,10 @@ A videó-küldő folyamat (\code{video\textunderscore sender}) a Raspberry Pi ka
 	\item A csomagokat a megadott IP-címre és portra küldi, és minden új képkockához új azonosítót rendel.
 \end{list}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics{RPI_motormover}
-	\caption{A \code{motor\textunderscore motion} függvény folyamatábrája}
-	\label{fig:RPI_motormover}
-\end{figure}
 
+
+
+\pagebreak
 
 \subsubsection*{Motormozgató folyamat}
 A \code{motor\textunderscore motion()} folyamat azért felelős, hogy automata működés során mozgassa a motorokat, a kamera képe alapján. Azért gondoltam, hogy jobb így külön kezelni, mert az automata és kézi vezérlés mozgásának nagyon különböző a logikája. A folyamat működése a következőképpen működik:
@@ -270,3 +271,10 @@ A \code{motor\textunderscore motion()} folyamat azért felelős, hogy automata m
 
 A motor csak akkor mozog, ha egy bizonyos értéknél nagyobb a távolság, így kerültem el, hogy folyamatosan rángatózzon az eszköz. Ez a folyamat is csak akkor fut, hogyha a \code{automode\textunderscore event} igaz. A folyamat illusztrációja a \ref{fig:RPI_motormover}. ábrán látható.
 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics{RPI_motormover}
+	\caption{A \code{motor\textunderscore motion} függvény folyamatábrája}
+	\label{fig:RPI_motormover}
+\end{figure}

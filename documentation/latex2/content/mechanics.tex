@@ -76,16 +76,9 @@ A gearbox áramfogyasztását illetően találtam méréseket az internet, ahol 
 
 \subsubsection*{Motorok}
 
-A projekthez kettő \textbf{NEMA-17} léptetőmotort használok\cite{nema17}. Ezek a léptetőmotorok egy széles körben alkalmazott típusa, amelyet főként precíziós mozgatási feladatokhoz használnak, például CNC gépekben, 3D nyomtatókban, robotikai alkalmazásokban és automatizálási rendszerekben. A NEMA-17 esetében a szám a motor elülső oldalának névleges méretét jelenti, amely 1.7 hüvelyk, azaz körülbelül 42,3 mm. A motorok a használt vezérlővel a \ref{fig:mech_stepper}. ábrán láthatóak.\\
+A projekthez kettő \textbf{NEMA-17} léptetőmotort használok\cite{nema17}. Ezek a léptetőmotorok egy széles körben alkalmazott típusa, amelyet főként precíziós mozgatási feladatokhoz használnak, például CNC gépekben, 3D nyomtatókban, robotikai alkalmazásokban és automatizálási rendszerekben. A NEMA-17 esetében a szám a motor elülső oldalának névleges méretét jelenti, amely 1.7 hüvelyk, azaz körülbelül 42,3 mm. \\
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.8\linewidth]{mech_stepper}
-	\caption{NEMA-17 léptetőmotorok a használt konfigurációban \cite{stepperhat}}
-	\label{fig:mech_stepper}
-\end{figure}
-
-A léptetőmotorok általánosan használt típusai közé tartoznak a szervomotorok és az aszinkron motorok. A léptetőmotorok azonban a mozgásukat apró, egyenlő lépésekre osztják, így lehetővé téve a precíz pozícionálást és sebességszabályozást. A NEMA-17 léptetőmotor tipikusan kétfázisú bipoláris motor, amely négy vezetékes tekercseléssel rendelkezik. Minden lépés során a motor egy adott szöggel fordul el, ami az adott motor típusától és felépítésétől függően tipikusan 1.8 fok, így teljes fordulat esetén 200 lépésre van szükség.\\
+ A léptetőmotorok a mozgásukat apró, egyenlő lépésekre osztják, így lehetővé téve a precíz pozícionálást és sebességszabályozást. A NEMA-17 léptetőmotor tipikusan kétfázisú bipoláris motor, amely négy vezetékes tekercseléssel rendelkezik. Minden lépés során a motor egy adott szöggel fordul el, ami az adott motor típusától és felépítésétől függően tipikusan 1.8 fok, így teljes fordulat esetén 200 lépésre van szükség.\\
 
 Az én esetemben használt léptetőmotorok lépésszöge 1.8 fok, bár ezt a motorvezérlőn lehet tovább osztani. A tartónyomatéka 0.4 Nm. Ezek a paraméterek 10-es áttételű fogaskerék-kapcsolattal megfelelőnek kell lenniük egy ilyen kis teljesítményű alkalmazásnál.
 
@@ -147,8 +140,16 @@ A következő alösszeállítás a \textbf{tár} volt, amely a gearbox ház bal 
 	\label{fig:mech_tar}
 \end{figure}
 
-Ez a kialakítás végül nem volt sikeres, ugyanis a golyók nagyon könnyedén elakadtak, gyakorlatilag egyszer sem sikerült lőni vele. Újragondolás után egy hasonló megoldást használtam, ám a golyók egyesével sorakoznak a tárban.
+Ez a kialakítás végül nem volt sikeres, ugyanis a golyók nagyon könnyedén elakadtak, gyakorlatilag egyszer sem sikerült lőni vele. Újragondolás után egy hasonló megoldást használtam, ám a golyók egyesével sorakoznak a tárban, ez láthat a \ref{fig:mech_tar2}. ábrán.
 
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{mech_tar2}
+	\caption{Új tár}
+	\label{fig:mech_tar2}
+\end{figure}
 Végül a toronyra kerültek az elektronikai alkatrészek is, ezek a \ref{fig:mech_dt4000kamera}. ábrán láthatóak. A lila elem a lézer modul, a piros pedig a kamera konzol. Mind a kettő ragasztással kerül rögzítésre. Fontosnak tartottam, hogy ezek az elemek közvetlenül ahhoz az elemhez legyenek rögzítve, ami a fegyver csövét is pozicionálja, azonban a kamera esetén a 3D nyomtathatóság miatt egy konzolt szükségesnek éreztem.
 
 \begin{figure}[h!]
@@ -159,7 +160,7 @@ Végül a toronyra kerültek az elektronikai alkatrészek is, ezek a \ref{fig:me
 \end{figure}
 
 \subsection{Keret}
-Az úgynevezett \textbf{keret} volt a konstrukció legösszetettebb eleme, és egyben a legnagyobb térfogatú is. Fő funkciója a torony stabil tartása a csapágyakkal együtt. Ezentúl erre az elemre van rögzítve a vezérlőelektronika nagy része, a végálláskapcsolók és a vízszintes tengelyhez tartozó motor is. Ez az elem az alatta lévő alkatrészhez ragasztással lett rögzítve, hogy a szerelést egyszerűsítsem. A csapágyak támasztása X elrendezésű, és az osztott "csapágyház" miatt könnyen szerelhetőek. A csapágy elrendezése  a
+Az úgynevezett \textbf{keret} volt a konstrukció legösszetettebb eleme, és egyben a legnagyobb térfogatú is. Fő funkciója a torony stabil tartása a csapágyakkal együtt. Ezentúl erre az elemre van rögzítve a vezérlőelektronika nagy része, a végálláskapcsolók és a vízszintes tengelyhez tartozó motor is. Ez az elem az alatta lévő alkatrészhez ragasztással lett rögzítve, hogy a szerelést egyszerűsítsem. A csapágyak támasztása X elrendezésű, és az osztott "csapágyház" miatt könnyen szerelhetőek. A csapágy elrendezése a \ref{fig:mech_felsotengely}. ábrán látható.
 
 \begin{figure}[h!]
 	\centering
@@ -215,7 +216,7 @@ A prototípusban két fogaskerék kapcsolat kapott helyet. A függőleges tengel
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.1\linewidth]{mech_fogpar1}
+	\includegraphics[width=1\linewidth]{mech_fogpar1}
 	\caption{Függőleges tengely fogaskerekek}
 	\label{fig:mech_fogpar1}
 \end{figure}
@@ -224,7 +225,7 @@ A vízszintes tengely nagy fogaskereke a gearbox ház tengelyére lett erősítv
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.1\linewidth]{mech_fogpar2}
+	\includegraphics[width=0.5\linewidth]{mech_fogpar2}
 	\caption{Vízszintes tengely fogaskerekek}
 	\label{fig:mech_fogpar2}
 \end{figure}
@@ -243,7 +244,7 @@ Minden egyedi alkatrészt, amit a projekthez kellett gyártanom, 3D nyomtatássa
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.7\linewidth]{mech_bambu} 
-	\caption{Bambu Lab A1 \cite{bambu}}
+	\caption{Bambu Lab A1}
 	\label{fig:mech_bambu}
 \end{figure}
 \pagebreak

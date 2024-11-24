@@ -1,8 +1,12 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
-Reallocating 'name_of_file' (item size: 1) to 8 items.
-The style file: huplain.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: unsrtnat.bst
+Illegal, another \bibstyle command---line 8 of file thesis.aux
+ : \bibstyle
+ :          {huplain}
+I'm skipping whatever remains of this command
 Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: include/project.aux
 Reallocating 'name_of_file' (item size: 1) to 22 items.
@@ -33,64 +37,76 @@ Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: content/conclusion.aux
 Reallocating 'name_of_file' (item size: 1) to 28 items.
 A level-1 auxiliary file: content/acknowledgement.aux
-Illegal, another \bibstyle command---line 33 of file thesis.aux
- : \bibstyle
- :          {unsrtnat}
-I'm skipping whatever remains of this command
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: content/appendices.aux
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'glb_str_end' (item size: 4) to 20 items.
-Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
-Reallocating 'global_strs' (item size: 1) to 4000000 items.
-Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: bib/mybib.bib
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
+Warning--empty year in tf2
+Warning--empty year in portal
+Warning--empty year in CIWS
+Warning--empty year in crows
+Warning--empty year in arbalet
+Warning--empty year in defnder
+Warning--empty year in samsung
+Warning--empty year in paintball
+Warning--empty year in paintballrobot
+Warning--empty year in nerf
+Warning--empty year in airsoft
+Warning--empty year in airsoftteszt
+Warning--empty year in nema17
+Warning--empty year in bambu
+Warning--empty year in raspberry4
+Warning--empty year in 4gbforum
+Warning--empty year in stepperhat
+Warning--empty year in raspberrycam
+Warning--empty year in opencv
+Warning--empty year in socket
+Warning--empty year in multiprocessing
+Warning--empty year in pygame
+Warning--empty year in pickle
+Warning--empty year in templatematching
+Warning--empty year in featurematching
+Warning--empty year in targettracking
+Warning--empty year in haarcascade
 You've used 27 entries,
-            4991 wiz_defined-function locations,
-            1235 strings with 15594 characters,
-and the built_in function-call counts, 53950 in all, are:
-= -- 10468
-> -- 27
+            2481 wiz_defined-function locations,
+            670 strings with 8452 characters,
+and the built_in function-call counts, 5920 in all, are:
+= -- 567
+> -- 0
 < -- 0
-+ -- 4005
-- -- 27
-* -- 463
-:= -- 1262
-add.period$ -- 54
++ -- 54
+- -- 0
+* -- 272
+:= -- 632
+add.period$ -- 81
 call.type$ -- 27
-change.case$ -- 108
-chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 8386
-empty$ -- 1162
+change.case$ -- 54
+chr.to.int$ -- 27
+cite$ -- 54
+duplicate$ -- 378
+empty$ -- 865
 format.name$ -- 0
-if$ -- 11684
-int.to.chr$ -- 0
-int.to.str$ -- 27
+if$ -- 1459
+int.to.chr$ -- 1
+int.to.str$ -- 28
 missing$ -- 0
-newline$ -- 204
+newline$ -- 143
 num.names$ -- 0
-pop$ -- 2271
+pop$ -- 297
 preamble$ -- 1
-purify$ -- 81
-quote$ -- 22
-skip$ -- 485
+purify$ -- 27
+quote$ -- 0
+skip$ -- 325
 stack$ -- 0
-substring$ -- 6411
-swap$ -- 6167
+substring$ -- 54
+swap$ -- 54
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 135
-warning$ -- 0
-while$ -- 135
-width$ -- 29
-write$ -- 282
+type$ -- 189
+warning$ -- 27
+while$ -- 0
+width$ -- 0
+write$ -- 304
 (There was 1 error message)

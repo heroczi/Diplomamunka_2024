@@ -189,11 +189,6 @@ def motor_motion(stop_event, automode_event, pos_queue):
                 target_x, target_y = pos_queue.get()
                 error_x, error_y = target_x - center_x, target_y - center_y
 
-                if abs(error_x) > 10 and abs(POSX) < 300:
-                    Motor1.TurnStep(1 if error_x > 0 else -1, abs(error_x) - 1, 0.0005)
-                if abs(error_y) > 10 and -50 < POSY < 150:
-                    Motor2.TurnStep(1 if error_y > 0 else -1, abs(error_y) - 1, 0.0005)
-
                 if error_x > 10 and POSX < 300: # X axis limit to the left 150°
                     dirx = 1
                     Motor1.TurnStep(1, abs(error_x) - 1, 0.0005)

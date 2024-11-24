@@ -1,0 +1,57 @@
+Rendszerterv:
+
+Valamilyen ábra, koncepcióterv, blokkdiagram kell a rendszertervhez
+koherens legyen a szöveggel, kamera, a szoftver is jelenjen meg a diagramban
+
+Követelmények: 
+
+numerikus értékek legyenek, pl. legyenek méretek, esetleg táblázat a végére ahol konkrét dolgok szerepelnek
+
+Mechanika: ne legyenek felesleges képek, pl alkatrészek de azt be lehet tenni hogy 
+
+Elektronika: inkább tegyem egymás mellé és menjen a függelékbe
+
+Szoftver: Flowchart kéne valamiről, kép a felületről
+
+HUDot tegyük be
+
+Tesztelés: valamire cseréljem le az emberi arcot, írjam le hogy mozgattam a képet de nem lőttem
+
+Lehetne keresni valami képletet
+
+egyértelműbben leírnia a szoftver működését, 
+
+
+x záróvizsgára jelentkezés
+x szoftver flowchart
+x szoftver működését leírni egyértelműen
+x blokkdiagram kiegészítése, doksiba tétel
+x felesleges képeket kivenni
+x hudról kép
+x emberi arcot le kell cserélni
+x mechanikai revamp
+x rendszertervet revampolni
+x Leírni a DCDC-t
+x legyen egy táblázat numerikus értékekkel a követelményekről
+x teszthez betenni a felismerős képet
+x teszt fejezet revamp
+x modell képeket ki kell cserélni Zalánéra
+x tárt bele kell írni hogy le lett cserélve
+modell nevekkel csinálni valamit
+x képekre hivatkozás
+x irodalomjegyzéket sorba rakni/formázni
+x \code{} szürke mennyire látszik?
+
+
+
+
+formázni mi legyen félkövér/dőlt, egységesíteni a raspberryt
+
+kpfonts?
+átnézni mindent
+Köszönetnyilvánítás
+
+Háttér FFFFFF
+Függvény: 795E26
+Változó: 001080
+Más: 3B3B3B

@@ -20,22 +20,22 @@ Az elektronikai rendszer blokkdiagrammja a \ref{fig:system_blokkdiagram}. ábrá
 	\label{fig:system_blokkdiagram}
 \end{figure}
 
-Az elektronikai rendszer két fő eleme a Raspberry PI, illetve a gearbox volt. Mivel a gearbox igen nagy áramot képes felvenni, külön tápegységgel kellett ellátnom a mikrovezérlőt illetve a golyó kilövéséért felelős elektronikát. A motorok vezérléséért egy kereskedelemben kapható, Raspberryvel kompatibilis shieldet használtam, amely jelentősen megkönnyítette a NEMA-17 típusú léptetőmotorok csatlakoztatását. A lézer diódát és szükséges szenzorokat a Raspberry PI GPIO lábairól vezéreltem, ahogy a gearbox aktiválásáért felelős relét is. A kamera modul egy Raspberry PI Camera V2 volt, amit a mikrovezérlőn található foglalaton keresztül tudtam elérni. 
+Az elektronikai rendszer két fő eleme a Raspberry Pi, illetve a gearbox volt. Mivel a gearbox igen nagy áramot képes felvenni, külön tápegységgel kellett ellátnom a mikrovezérlőt illetve a golyó kilövéséért felelős elektronikát. A motorok vezérléséért egy kereskedelemben kapható, Raspberryvel kompatibilis shieldet használtam, amely jelentősen megkönnyítette a NEMA-17 típusú léptetőmotorok csatlakoztatását. A lézer diódát és szükséges szenzorokat a Raspberry Pi GPIO lábairól vezéreltem, ahogy a gearbox aktiválásáért felelős relét is. A kamera modul egy Raspberry Pi Camera V2 volt, amit a mikrovezérlőn található foglalaton keresztül tudtam elérni. 
 
-Az elektronika központi egysége természetesen a \textsl{Raspberry PI} mikrokontroller volt, amely felelős volt a fő képfelismerő algoritmus futtatásáért, a szenzorok jeleinek feldolgozásáért, valamint a PC-vel való kommunikációért. A mikrokontroller kiegészült egy \textsl{Stepper Motor HAT}-el, amely egy kereskedelemben kapható áramkör. Megtalálható rajta két db. \textsl{DRV8825} motorvezérlő chip, illetve kiegészítő áramkörök, pl. microstep állító kapcsolók, valamint áramkorlátozó potméterek. Ezentúl helyet kapott egy 5V-os DCDC konverter, amin keresztül a Raspberry PI-t is elláthatjuk árammal. A léptetőmotorok \textsl{NEMA-17} típusúak, és 4 tüskés csatlakozóval rendelkeznek.\\
+Az elektronika központi egysége természetesen a \textsl{Raspberry Pi} mikrokontroller volt, amely felelős volt a fő képfelismerő algoritmus futtatásáért, a szenzorok jeleinek feldolgozásáért, valamint a PC-vel való kommunikációért. A mikrokontroller kiegészült egy \textsl{Stepper Motor HAT}-el, amely egy kereskedelemben kapható áramkör. Megtalálható rajta két db. \textsl{DRV8825} motorvezérlő chip, illetve kiegészítő áramkörök, pl. microstep állító kapcsolók, valamint áramkorlátozó potméterek. Ezentúl helyet kapott egy 5V-os DCDC konverter, amin keresztül a Raspberry Pi-t is elláthatjuk árammal. A léptetőmotorok \textsl{NEMA-17} típusúak, és 4 tüskés csatlakozóval rendelkeznek.\\
 
-Az elektronikai rendszerben szerepel még a \textsl{gearbox}, ami a tüzelésért felel. Mivel igen nagy áramot képes felvenni, ezért külön áramellátást terveztem a gearboxnak. Egy 12V-os szervertáp működteti, amiből egy \textsl{SPX-20A} típusú, nagy teljesítményű DCDC konverter csinál a gearbox számára optimális 7.4V-ot. Ez a kimeneti feszültség állítható, a gearbox egészen 11V-ig képes működni. A kimeneti feszültséggel tulajdonképpen a tüzelés sebességét tudjuk szabályozni. A gearbox áramellátását egy relével lehet vezérelni, amely a Raspberry PI GPIO lábára csatlakozik.
+Az elektronikai rendszerben szerepel még a \textsl{gearbox}, ami a tüzelésért felel. Mivel igen nagy áramot képes felvenni, ezért külön áramellátást terveztem a gearboxnak. Egy 12V-os szervertáp működteti, amiből egy \textsl{SPX-20A} típusú, nagy teljesítményű DCDC konverter csinál a gearbox számára optimális 7.4V-ot. Ez a kimeneti feszültség állítható, a gearbox egészen 11V-ig képes működni. A kimeneti feszültséggel tulajdonképpen a tüzelés sebességét tudjuk szabályozni. A gearbox áramellátását egy relével lehet vezérelni, amely a Raspberry Pi GPIO lábára csatlakozik.
 
 \pagebreak
 
-A rendszerben helyet kapott mindkét tengelyre 1-1 \textsl{végálláskapcsoló}, amelyek a fegyver kalibrálásáért felelősek. Ezek a GPIO tüskesoron csatlakoznak a mikrovezérlőhöz. Hasonlóképpen a \textsl{lézer dióda} is, amely a fegyver célzásával hivatott segíteni a felhasználót. A RAspberry PI kamera csatlakozóján keresztül pedig beépítésre került egy \textsl{Raspberry PI Camera 2} típusú kamera. A mikrovezérlő a rajta található \textsl{Ethernet} porton keresztül kommunikál a PC-vel.
+A rendszerben helyet kapott mindkét tengelyre 1-1 \textsl{végálláskapcsoló}, amelyek a fegyver kalibrálásáért felelősek. Ezek a GPIO tüskesoron csatlakoznak a mikrovezérlőhöz. Hasonlóképpen a \textsl{lézer dióda} is, amely a fegyver célzásával hivatott segíteni a felhasználót. A RAspberry Pi kamera csatlakozóján keresztül pedig beépítésre került egy \textsl{Raspberry Pi Camera 2} típusú kamera. A mikrovezérlő a rajta található \textsl{Ethernet} porton keresztül kommunikál a PC-vel.
 
 \subsubsection*{Számítógépes vezérlés és szoftveres háttér}
-A szoftver rendszere két alegységből áll, a Raspberry PI-n \textbf{beágyazott vezérlő szoftverből}, illetve a PC-n futó \textbf{felhasználói alkalmazásból}. Mivel magát a prototípust szeretném minél jobban közelíteni a valósidejű működéshez, ezért a két alegység közötti kommunikáció sebessége kiemelkedően fontos. Ezért döntöttem úgy, hogy a Raspberry PI az Ethernet portján keresztül csatlakozzon a PC-hez. Ez ugyan kissé megköti a fegyver mozgásterét, de nem annyira, hogy feláldozzam a kapcsolat gyorsaságát. \\
+A szoftver rendszere két alegységből áll, a Raspberry Pi-n \textbf{beágyazott vezérlő szoftverből}, illetve a PC-n futó \textbf{felhasználói alkalmazásból}. Mivel magát a prototípust szeretném minél jobban közelíteni a valósidejű működéshez, ezért a két alegység közötti kommunikáció sebessége kiemelkedően fontos. Ezért döntöttem úgy, hogy a Raspberry Pi az Ethernet portján keresztül csatlakozzon a PC-hez. Ez ugyan kissé megköti a fegyver mozgásterét, de nem annyira, hogy feláldozzam a kapcsolat gyorsaságát. \\
 
-A Raspberry PI-n futó szoftver felelős a léptetőmotorok mozgatásáért, a felhasználó parancsainak fogadásáért, a célpont felismeréséért, illetve a  kamera képének továbbításáért a PC felé. Ezeket a folyamatokat jól elkülönülő modulokra bontottam, amelyek egyszerre futnak külön szálakon. A különböző folyamatok közötti kommunikációra használtam megosztott erőforrásokat, állapotjelzőket és queue-kat. A kézi vezérlés és az automata működés között is tettem különbséget, a szoftver bizonyos részei között is megosztott változókkal lehet választani. \\
+A Raspberry Pi-n futó szoftver felelős a léptetőmotorok mozgatásáért, a felhasználó parancsainak fogadásáért, a célpont felismeréséért, illetve a  kamera képének továbbításáért a PC felé. Ezeket a folyamatokat jól elkülönülő modulokra bontottam, amelyek egyszerre futnak külön szálakon. A különböző folyamatok közötti kommunikációra használtam megosztott erőforrásokat, állapotjelzőket és queue-kat. A kézi vezérlés és az automata működés között is tettem különbséget, a szoftver bizonyos részei között is megosztott változókkal lehet választani. \\
 
-A PC-n futó szoftver felelős a Raspberry által küldött videó dekódolására, és megjelenítésére a \textsl{HUD}-on. A HUD-on szerepelnek még fontos állapotjelzők, pl. hogy éppen melyik működési módban van a rendszer, vagy hogy be van-e biztosítva a fegyver. Emellett A szoftvernek fel kell dolgozni a felhasználótól kapott parancsokat is, és tovább kel küldenie a Raspberry PI felé. Ez a program is két külön szálon futó alegységből áll, amelyek megosztott erőforrásokkal kommunikálnak egymással. 
+A PC-n futó szoftver felelős a Raspberry által küldött videó dekódolására, és megjelenítésére a \textsl{HUD}-on. A HUD-on szerepelnek még fontos állapotjelzők, pl. hogy éppen melyik működési módban van a rendszer, vagy hogy be van-e biztosítva a fegyver. Emellett A szoftvernek fel kell dolgozni a felhasználótól kapott parancsokat is, és tovább kel küldenie a Raspberry Pi felé. Ez a program is két külön szálon futó alegységből áll, amelyek megosztott erőforrásokkal kommunikálnak egymással. 
 
 \pagebreak
 
@@ -60,9 +60,9 @@ Az elektronikai rendszer megbízható működése érdekében az alábbi követe
 \begin{list}{}{}
 	\item \textbf{Megfelelő teljesítmény:}  A szervomotoroknak és szenzoroknak megfelelő tápegységre van szükségük, amely stabil energiaellátást biztosít. A rendszer energiaigényét előzetesen fel kellett mérni, hogy a tápegység terhelés alatt is megfelelően működjön.
 	\item \textbf{Szenzorok pontossága:} A kamerának és egyéb szenzoroknak elegendő felbontással és érzékenységgel kell rendelkezniük ahhoz, hogy képesek legyenek a célpontokat megfelelően azonosítani. A valós idejű képfeldolgozás nagy adatsebességet és megbízható szenzorjeleket igényel.
-	\item\textbf{ Vezérlés:} A mikrokontrollernek kellően gyorsnak kell lennie, hogy a valós idejű adatokat folyamatosan feldolgozza és a vezérlési parancsokat késlekedés nélkül végrehajtsa.
+	\item \textbf{Vezérlés:} A mikrokontrollernek kellően gyorsnak kell lennie, hogy a valós idejű adatokat folyamatosan feldolgozza és a vezérlési parancsokat késlekedés nélkül végrehajtsa.
 \end{list}
-
+\pagebreak
 
 \subsubsection*{Szoftveres követelmények}
 
@@ -93,8 +93,10 @@ Az autonóm fegyverrendszerek használatával kapcsolatban különösen fontos a
 \begin{list}{}{}
 	\item \textbf{Vészleállítás:} A rendszernek rendelkeznie kell egy vészleállító gombbal, amely azonnal megszakítja a fegyver működését, ha bármilyen hiba vagy vészhelyzet lép fel.
 	\item \textbf{Engedélyezési mechanizmus:} A tüzelési parancs kiadása előtt a rendszernek engedélyt kell kérnie az operátortól, ezzel minimalizálva a véletlen tüzelés kockázatát.
-	\item\textbf{ Adatbiztonság:} A vezérlő szoftver és az operátor közötti kommunikáció titkosítva kell, hogy legyen, hogy megakadályozza a külső hozzáférést és a rendszer kompromittálását.
+	\item \textbf{Adatbiztonság:} A vezérlő szoftver és az operátor közötti kommunikáció titkosítva kell, hogy legyen, hogy megakadályozza a külső hozzáférést és a rendszer kompromittálását.
 \end{list}
+
+\pagebreak
 
 \subsubsection*{Környezeti követelmények}
 
@@ -104,3 +106,26 @@ A rendszernek különféle környezeti feltételek között is megbízhatóan ke
 	\item \textbf{Hőmérsékleti tűréshatár:}A rendszernek képesnek kell lennie normál működésre különböző hőmérsékleti körülmények között, amelyek tipikusan a beltéri használat során fordulnak elő.
 	\item \textbf{Nedvesség és porállóság:} A rendszert úgy kell megtervezni, hogy ellenálljon a kisebb por- és nedvességterhelésnek, különösen, ha kültéri használatra is szükség van.
 \end{list}
+
+Azokhoz a követelményeket, amelyekhez tudok konkrét értéket rendelni, az alábbi táblázatban gyűjtöttem össze:
+
+\begin{table}[ht]
+	\footnotesize
+	\centering
+	\begin{tabular}{ c l c }
+		\toprule
+		\textbf{Nr.} & \textbf{Követelmény}                  & \textbf{Érték} \\
+		\midrule
+		1.           & Szögsebesség                          & 45°/ s \\
+		2.           & Valósidejűség kézi vezérlésen         & 10 ms \\
+		3.           & A célpont felismerése a képbe kerülés után    & 0.5 s \\
+		4.           & Vízszintes tengely mozgási tartomány  & -10°\textless{}x\textless{}75°  \\
+		5.           & Függőleges tengely mozgási tartomány  & -135°\textless{}y\textless{}135° \\
+		6.           & Tüzelés pontossága 5m-en, 20cm x 20cm & 80\%                             \\
+		7.           & Felhasználói felület felbontása       & 640x480                          \\
+		8.           & Hőállóság                             & -10°C\textless{}T\textless{}50°C \\
+		\bottomrule
+	\end{tabular}
+	\caption{Az órajel-generátor chip órajel-kimenetei.}
+	\label{tab:TabularExample}
+\end{table}
