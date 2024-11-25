@@ -12,7 +12,7 @@ A prototípus áramkörét próbáltam minél egyszerűbben megvalósítani. Ala
 \end{figure}
 
 
-A prototípus áramköre a \ref{fig:schematic} ábrán látható. A kereskedelemben kapható stepper motor HAT nagyban leegyszerűsítette a tervezés folyamatát, a segítségével nem kellett megterveznem a motorvezérlők áramkörét, illetve ezeknek az áramellátását. A \ref{fig:elek_pinout}.ábrán látható, motorokra vonatkozó jelölések szerinti GPIO lábakat a stepper motor HAT ugyan lefoglalja, de a kártya tetején lévő tüskesor ugyanúgy elérhető marad, így oda kell figyelnem, hogy ezeket a lábakat ne használjam. \\
+A prototípus áramköre a \ref{fig:schematic} ábrán látható. A kereskedelemben kapható \textsl{Stepper Motor HAT} nagyban leegyszerűsítette a tervezés folyamatát, a segítségével nem kellett megterveznem a motorvezérlők áramkörét, illetve ezeknek az áramellátását. A \ref{fig:elek_pinout}.ábrán látható, motorokra vonatkozó jelölések szerinti GPIO lábakat a \textsl{Stepper Motor HAT} ugyan lefoglalja, de a kártya tetején lévő tüskesor ugyanúgy elérhető marad, így oda kell figyelnem, hogy ezeket a lábakat ne használjam. \\
 
 \begin{figure}[h!]
 	\centering
@@ -36,7 +36,7 @@ Az eszköz sémarajza az alábbi ábrán látható:
 \subsubsection*{Mikrovezérlő}
 A mikrokontroller kiválasztásánál több opciót vizsgáltam, többek között az {Arduino}, az \textsl{STM-32} és a \textsl{Raspberry PI} modelleket. A követelmények a következőek voltak:
 
-\begin{list}{-}{}
+\begin{list}{$\bullet$}{}
 	\item Legyen könnyen beszerezhető, mind anyagilag, mind elérhetőség szerint
 	\item Megfelelő teljesítmény gépi látás algoritmusokhoz
 	\item Elegendő számú GPIO kimenet

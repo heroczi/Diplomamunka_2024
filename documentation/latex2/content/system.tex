@@ -1,11 +1,11 @@
 \chapter{Rendszertervezés és követelmények}
 
 \section{Rendszeráttekintés}
-Az autonóm fegyverrendszer fejlesztése során egy komplex mechatronikai rendszert kellett megvalósítani, amely több különálló modul együttműködését biztosítja. A rendszer fő komponensei közé tartozik a mechanikai szerkezet, az elektronikai hardver, az érzékelők, a vezérlő egység, valamint a szoftveres háttér. Ezek együttesen biztosítják a rendszer autonóm és manuális működését. Az alábbiakban részletes áttekintést adok a rendszer főbb elemeiről és azok feladatáról.
+Az autonóm fegyverrendszer fejlesztése során egy komplex mechatronikai rendszert kellett megvalósítani, amely több különálló modul együttműködését biztosítja. A rendszer fő komponensei közé tartozik a \textsl{mechanikai szerkezet}, az \textsl{elektronikai hardver}, az \textsl{érzékelők}, a \textsl{vezérlő egység}, valamint a \textsl{szoftveres háttér}. Ezek együttesen biztosítják a rendszer autonóm és manuális működését. Az alábbiakban részletes áttekintést adok a rendszer főbb elemeiről és azok feladatáról.
 
 \subsubsection*{Mechanikai konstrukció}
 
-A váz gyanánt tulajdonképpen egy kéttengelyes pan-tilt mechanizmust kellett megvalósítanom, ami felelős a fegyver stabilan tartásáért és precíz mozgásáért. A váz építőelemei zömében 3D nyomtatási technológiával készültek, ami lehetővé tette a problémák gyors kiküszöbölését, illetve a nagyfokú szabadságot a tervezés során. Ahol tudtam, kereskedelemből beszerezhető alkatrészeket használtam, például a csapágyakat és a kötőelemeket.\\
+A váz gyanánt tulajdonképpen egy kéttengelyes \textsl{pan-tilt} mechanizmust kellett megvalósítanom, ami felelős a fegyver stabilan tartásáért és precíz mozgásáért. A váz építőelemei zömében 3D nyomtatási technológiával készültek, ami lehetővé tette a problémák gyors kiküszöbölését, illetve a nagyfokú szabadságot a tervezés során. Ahol tudtam, kereskedelemből beszerezhető alkatrészeket használtam, például a csapágyakat és a kötőelemeket.\\
 
 A modellt több alegységre lehet bontani a funkciójuk szerint. Van a \textsl{torony} nevezetű alösszeállítás, amely feladata a gearbox stabil befogása, illetve erre épül rá a kamera konzolja, a tár összeállítása, a fogaskerék és a lézer is. A következő a \textsl{keret}, amelybe kerülnek a torony csapágyai, illetve az elektonika egy része. Erre az elemre van erősítve a Raspberry Pi konzolja, a relé, illetve az egyik motor is. A torony alatt található a \textsl{nagy csapágyhoz }tartozó elemek, amelyeknek feladata a stabil összeköttetés biztosítása a keret és a talp között. Legalul helyet kapott a \textsl{talp}, amely magába foglalja a lábakat, illetve az azokat összefogó elem is. Ezt úgy terveztem, hogy a lábak szükség esetén cserélhetőek legyenek.
 
@@ -20,7 +20,7 @@ Az elektronikai rendszer blokkdiagrammja a \ref{fig:system_blokkdiagram}. ábrá
 	\label{fig:system_blokkdiagram}
 \end{figure}
 
-Az elektronikai rendszer két fő eleme a Raspberry Pi, illetve a gearbox volt. Mivel a gearbox igen nagy áramot képes felvenni, külön tápegységgel kellett ellátnom a mikrovezérlőt illetve a golyó kilövéséért felelős elektronikát. A motorok vezérléséért egy kereskedelemben kapható, Raspberryvel kompatibilis shieldet használtam, amely jelentősen megkönnyítette a NEMA-17 típusú léptetőmotorok csatlakoztatását. A lézer diódát és szükséges szenzorokat a Raspberry Pi GPIO lábairól vezéreltem, ahogy a gearbox aktiválásáért felelős relét is. A kamera modul egy Raspberry Pi Camera V2 volt, amit a mikrovezérlőn található foglalaton keresztül tudtam elérni. 
+Az elektronikai rendszer két fő eleme a \textsl{Raspberry Pi}, illetve a \textsl{gearbox} volt. Mivel a gearbox igen nagy áramot képes felvenni, külön tápegységgel kellett ellátnom a mikrovezérlőt illetve a golyó kilövéséért felelős elektronikát. A motorok vezérléséért egy kereskedelemben kapható, Raspberryvel kompatibilis shieldet használtam, amely jelentősen megkönnyítette a NEMA-17 típusú léptetőmotorok csatlakoztatását. A lézer diódát és szükséges szenzorokat a Raspberry Pi GPIO lábairól vezéreltem, ahogy a gearbox aktiválásáért felelős relét is. A kamera modul egy Raspberry Pi Camera V2 volt, amit a mikrovezérlőn található foglalaton keresztül tudtam elérni.\\ 
 
 Az elektronika központi egysége természetesen a \textsl{Raspberry Pi} mikrokontroller volt, amely felelős volt a fő képfelismerő algoritmus futtatásáért, a szenzorok jeleinek feldolgozásáért, valamint a PC-vel való kommunikációért. A mikrokontroller kiegészült egy \textsl{Stepper Motor HAT}-el, amely egy kereskedelemben kapható áramkör. Megtalálható rajta két db. \textsl{DRV8825} motorvezérlő chip, illetve kiegészítő áramkörök, pl. microstep állító kapcsolók, valamint áramkorlátozó potméterek. Ezentúl helyet kapott egy 5V-os DCDC konverter, amin keresztül a Raspberry Pi-t is elláthatjuk árammal. A léptetőmotorok \textsl{NEMA-17} típusúak, és 4 tüskés csatlakozóval rendelkeznek.\\
 
@@ -47,7 +47,7 @@ Az autonóm fegyverrendszer fejlesztése során számos követelményt kellett f
 \subsubsection*{Mechanikai követelmények} 
 
 A mechanikai komponensek tervezése során az alábbi követelményeknek kellett megfelelni:
-\begin{list}{}{}
+\begin{list}{$\bullet$}{}
 	\item \textbf{Stabilitás és pontosság:}  A fegyverrendszer mechanikai szerkezetének stabilnak és tartósnak kell lennie annak érdekében, hogy a lövések közben ne mozduljon el, és ne veszítse el a célpontot. Ugyanakkor elegendő pontosságot kell biztosítania a célpont precíz követéséhez.
 	\item \textbf{Fürgeség:} A rendszernek képesnek kell lennie a fegyver gyors és pontos mozgatására a pan-tilt mechanizmus segítségével. Ennek megfelelően a szervomotoroknak kellően gyorsnak és erősnek kell lenniük ahhoz, hogy valós időben tudják követni a mozgó célpontokat.
 	\item \textbf{Strapabíró konstrukció:} Habár nagy terhelés nem fogja érni, a gearboxból jöhetnek rezgések, rángások, amik esetleg problémát jelenthetnek egy alulméretezett alkatrész esetében.
@@ -57,7 +57,7 @@ A mechanikai komponensek tervezése során az alábbi követelményeknek kellett
 
 Az elektronikai rendszer megbízható működése érdekében az alábbi követelményeknek kellett eleget tenni:
 
-\begin{list}{}{}
+\begin{list}{$\bullet$}{}
 	\item \textbf{Megfelelő teljesítmény:}  A szervomotoroknak és szenzoroknak megfelelő tápegységre van szükségük, amely stabil energiaellátást biztosít. A rendszer energiaigényét előzetesen fel kellett mérni, hogy a tápegység terhelés alatt is megfelelően működjön.
 	\item \textbf{Szenzorok pontossága:} A kamerának és egyéb szenzoroknak elegendő felbontással és érzékenységgel kell rendelkezniük ahhoz, hogy képesek legyenek a célpontokat megfelelően azonosítani. A valós idejű képfeldolgozás nagy adatsebességet és megbízható szenzorjeleket igényel.
 	\item \textbf{Vezérlés:} A mikrokontrollernek kellően gyorsnak kell lennie, hogy a valós idejű adatokat folyamatosan feldolgozza és a vezérlési parancsokat késlekedés nélkül végrehajtsa.
@@ -68,7 +68,7 @@ Az elektronikai rendszer megbízható működése érdekében az alábbi követe
 
 A rendszer működéséhez szükséges szoftverfejlesztés során a következő követelményeknek kellett megfelelni:
 
-\begin{list}{}{}
+\begin{list}{$\bullet$}{}
 	\item \textbf{Valós idejű feldolgozás:}  A számítógépes látás szoftverének valós időben kell elemeznie a kamerák által közvetített adatokat, felismerve a célpontokat és kiszámítva a mozgás irányát. A célzási és lövési döntések gyors és hatékony adatfeldolgozást igényelnek.
 	\item \textbf{Biztonságos működés:} A rendszernek rendelkeznie kell olyan szoftveres biztonsági funkciókkal, amelyek megakadályozzák a véletlen tüzelést. Ez magában foglalja a lövési engedélykérés mechanizmusát és a manuális vészleállítás lehetőségét.
 	\item \textbf{Felhasználói interfész:} Az felhasználónak egyszerű és intuitív felhasználói felületet kellett biztosítani, amelyen keresztül könnyedén vezérelheti a rendszert, illetve áttekintheti a célpontok adatait és a kamera képét. A felületnek támogatnia kell a kézi irányítást és a lövési parancsok kiadását.
@@ -81,7 +81,7 @@ A rendszer működéséhez szükséges szoftverfejlesztés során a következő 
 
 A rendszer teljes funkcionalitásának biztosítása érdekében a következő kritériumoknak kellett megfelelni:
 
-\begin{list}{}{}
+\begin{list}{$\bullet$}{}
 	\item \textbf{Autonóm működés:} A rendszernek képesnek kell lennie arra, hogy teljesen önállóan felismerje és kövesse a célpontokat, valamint meghozza a tüzelési döntéseket az előre meghatározott paraméterek alapján.
 	\item \textbf{Manuális vezérlés:} Az autonóm működés mellett manuális vezérlési lehetőséget is kellett biztosítani az operátor számára. Ezen keresztül a felhasználó közvetlenül irányíthatja a fegyvert és manuálisan adhat lövési parancsot.
 \end{list}
@@ -90,7 +90,7 @@ A rendszer teljes funkcionalitásának biztosítása érdekében a következő k
 
 Az autonóm fegyverrendszerek használatával kapcsolatban különösen fontos a biztonsági követelmények teljesítése:
 
-\begin{list}{}{}
+\begin{list}{$\bullet$}{}
 	\item \textbf{Vészleállítás:} A rendszernek rendelkeznie kell egy vészleállító gombbal, amely azonnal megszakítja a fegyver működését, ha bármilyen hiba vagy vészhelyzet lép fel.
 	\item \textbf{Engedélyezési mechanizmus:} A tüzelési parancs kiadása előtt a rendszernek engedélyt kell kérnie az operátortól, ezzel minimalizálva a véletlen tüzelés kockázatát.
 	\item \textbf{Adatbiztonság:} A vezérlő szoftver és az operátor közötti kommunikáció titkosítva kell, hogy legyen, hogy megakadályozza a külső hozzáférést és a rendszer kompromittálását.
@@ -102,7 +102,7 @@ Az autonóm fegyverrendszerek használatával kapcsolatban különösen fontos a
 
 A rendszernek különféle környezeti feltételek között is megbízhatóan kell működnie:
 
-\begin{list}{}{}
+\begin{list}{$\bullet$}{}
 	\item \textbf{Hőmérsékleti tűréshatár:}A rendszernek képesnek kell lennie normál működésre különböző hőmérsékleti körülmények között, amelyek tipikusan a beltéri használat során fordulnak elő.
 	\item \textbf{Nedvesség és porállóság:} A rendszert úgy kell megtervezni, hogy ellenálljon a kisebb por- és nedvességterhelésnek, különösen, ha kültéri használatra is szükség van.
 \end{list}

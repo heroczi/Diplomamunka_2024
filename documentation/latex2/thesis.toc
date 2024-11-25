@@ -7,14 +7,7 @@
 \select@language {magyar} \contentsline {section}{\numberline {1.4}Erkölcsi nyilatkozat}{5}{section.1.4}%
 \select@language {magyar} \contentsline {chapter}{\numberline {2}Irodalomkutatás}{6}{chapter.2}%
 \select@language {magyar} \contentsline {section}{\numberline {2.1}Megvalósult rendszerek}{6}{section.2.1}%
-\select@language {magyar} \contentsline {paragraph}{CROWS \cite {crows}}{6}{section*.6}%
-\select@language {magyar} \contentsline {paragraph}{Arbalet-DM \cite {arbalet}}{7}{section*.8}%
-\select@language {magyar} \contentsline {paragraph}{DeFNder \cite {defnder}}{7}{section*.10}%
-\select@language {magyar} \contentsline {paragraph}{Samsung SGR-A1 \cite {samsung}}{7}{section*.12}%
 \select@language {magyar} \contentsline {section}{\numberline {2.2}Tüzelési mechanizmus}{9}{section.2.2}%
-\select@language {magyar} \contentsline {paragraph}{Paintball \cite {paintball}}{9}{section*.14}%
-\select@language {magyar} \contentsline {paragraph}{Nerf \cite {nerf}}{9}{section*.16}%
-\select@language {magyar} \contentsline {paragraph}{Airsoft \cite {airsoft}}{9}{section*.17}%
 \select@language {magyar} \contentsline {chapter}{\numberline {3}Rendszertervezés és követelmények}{11}{chapter.3}%
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Rendszeráttekintés}{11}{section.3.1}%
 \select@language {magyar} \contentsline {section}{\numberline {3.2}Követelmények}{14}{section.3.2}%
@@ -24,7 +17,7 @@
 \select@language {magyar} \contentsline {section}{\numberline {4.3}3D tervezés, modellezés}{21}{section.4.3}%
 \select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}Skeleton modell}{21}{subsection.4.3.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}Torony}{22}{subsection.4.3.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {4.3.3}Keret}{24}{subsection.4.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.3}Keret}{23}{subsection.4.3.3}%
 \select@language {magyar} \contentsline {subsection}{\numberline {4.3.4}Függőleges tengely elemei}{25}{subsection.4.3.4}%
 \select@language {magyar} \contentsline {subsection}{\numberline {4.3.5}Fogaskerekek}{26}{subsection.4.3.5}%
 \select@language {magyar} \contentsline {section}{\numberline {4.4}Gyártás és összeszerelés}{28}{section.4.4}%
@@ -46,7 +39,7 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {6.3.2}A Raspberry Pi-n futó program működése}{47}{subsection.6.3.2}%
 \select@language {magyar} \contentsline {chapter}{\numberline {7}Tesztelés}{53}{chapter.7}%
 \select@language {magyar} \contentsline {section}{\numberline {7.1}Elektronikai alkatrészek tesztje}{53}{section.7.1}%
-\select@language {magyar} \contentsline {section}{\numberline {7.2}Képfelismerő algoritmusok tesztje tesztje}{54}{section.7.2}%
+\select@language {magyar} \contentsline {section}{\numberline {7.2}Képfelismerő algoritmusok tesztje}{54}{section.7.2}%
 \select@language {magyar} \contentsline {section}{\numberline {7.3}Éles teszt}{57}{section.7.3}%
 \select@language {magyar} \contentsline {chapter}{\numberline {8}Hibák, észrevételek}{58}{chapter.8}%
 \select@language {magyar} \contentsline {chapter}{\numberline {9}Továbbfejlesztési lehetőségek}{59}{chapter.9}%
