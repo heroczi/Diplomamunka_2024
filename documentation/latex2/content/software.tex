@@ -1,5 +1,5 @@
 \chapter{Szoftverfejlesztés}
-A prototípus szoftverét kettéválasztottam a két működési mód szerint, az egyik a manuális vezérlést valósítja meg, a másik az automatikust. A kettő között lényeges különbségek vannak a prioritásokban. A kézi vezérlésnél a legfontosabb a valós idejű megjelenítés, és a minél gyorsabb reagálás a felhasználói parancsokra. Az automata működésnél a megjelenítés kevésbé fontos, viszont a képfelismerés és ez által a célpont követése kiemelkedő fontosságú.
+A prototípus szoftverét kettéválasztottam a két működési mód szerint, az egyik a manuális vezérlést valósítja meg, a másik az automatikusat. A kettő között lényeges különbségek vannak a prioritásokban. A kézi vezérlésnél a legfontosabb a valós idejű megjelenítés, és a minél gyorsabb reagálás a felhasználói parancsokra. Az automata működésnél a megjelenítés kevésbé fontos, viszont a képfelismerés és ez által a célpont követése kiemelkedő fontosságú.
 
 
 \section{Használt Python modulok, eszközök}
@@ -100,7 +100,7 @@ A rendszer két alapvető részből áll: egy számítógépből (PC), amely fel
 
 \subsection{A PC-n futó program működése}
 
-A PC-s kód \code{main()} függvénye két külön folyamatot indít: egy videó-fogadó folyamatot és egy vezérlő-küldő folyamatot, melyek egy multiprocessing-eseményjelző (\code{stop\textunderscore event}) segítségével állnak meg szükség esetén. A két folyamat használ közös erőforrást, a \code{frame\textunderscore queue}-t, amelybe a videó-fogadó betölti a Raspberry-ből kapott képkockákat, a Pygame pedig felhasználja az a másik folyamatban. A felső szint folyamatábrája a \ref{fig:PC_main}. ábrán látható. 
+A PC-s kód \code{main()} függvénye két külön folyamatot indít: egy videó-fogadó folyamatot és egy vezérlő-küldő folyamatot, melyek egy multiprocessing-eseményjelző (\code{stop\textunderscore event}) segítségével állnak meg szükség esetén. A két folyamat használ közös erőforrást, a \code{frame\textunderscore queue}-t, amelybe a videó-fogadó betölti a Raspberry-ből kapott képkockákat, a Pygame pedig felhasználja azt a másik folyamatban. A felső szint folyamatábrája a \ref{fig:PC_main}. ábrán látható. 
 
 \begin{figure}[h!]
 	\centering
@@ -111,7 +111,7 @@ A PC-s kód \code{main()} függvénye két külön folyamatot indít: egy videó
 
 \subsubsection*{Videó-fogadó folyamat}
 
-A videó-fogadó folyamat (\code{video\textunderscore receiver}) UDP-n keresztül kapja a képkockákat, amelyek a Raspberry Pi-ről érkeznek csomagokra bontva. A folyamat összegyűjti ezeket a csomagokat, majd a kép adatokat újraegyesíti és és betölti a \code{frame\textunderscore queue}-ba. Az UDP protokoll nagy sebességet tud elérni, de nem garantált a célba érés. A videó esetében azonban ez nem probléma, ha elveszik egy képkocka attól még értelmezhető marad a videó. A folyamat a következőképpen működik:
+A videó-fogadó folyamat (\code{video\textunderscore receiver}) UDP-n keresztül kapja a képkockákat, amelyek a Raspberry Pi-ről érkeznek csomagokra bontva. A folyamat összegyűjti ezeket a csomagokat, majd a kép adatokat újraegyesíti és betölti a \code{frame\textunderscore queue}-ba. Az UDP protokoll nagy sebességet tud elérni, de nem garantált a célba érés. A videó esetében azonban ez nem probléma, ha elveszik egy képkocka attól még értelmezhető marad a videó. A folyamat a következőképpen működik:
 
 \begin{list}{$\bullet$}{}
 	\item A folyamat egy UDP socketet (\code{video\textunderscore socket}) hoz létre a megadott porton.
@@ -132,25 +132,7 @@ A folyamatábra a \ref{fig:PC_videoreceiver}. ábrán látható.
 
 \subsubsection*{Vezérlés-küldő folyamat}
 
-A vezérlés-küldő folyamat (\code{control\textunderscore sender}) a felhasználó irányítási parancsait továbbítja a Raspberry Pi felé. A folyamat a Pygame könyvtár segítségével észleli az egér- és billentyűeseményeket, majd a megfelelő parancsokat TCP csomag formájában küldi a Raspberry Pi irányába. Ezentúl felelős a HUD megjelenítéséért, amiről a felhasználó le tudja olvasni a prototípus állapotát. A folyamat illusztrációja a \ref{fig:PC_controlsender}. ábrán látható.\\
-
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics{PC_controlsender}
-	\caption{A \code{control\textunderscore sender} függvény folyamatábrája}
-	\label{fig:PC_controlsender}
-\end{figure}
-
-A felhasználó számára fontos, hogy minden információt le tudjon egyből olvasni a fegyver működéséről, így ezeket a PyGame ablakon megjelenítettem (\ref{fig:teszt_manual1}. ábra). Itt látható:
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.8\linewidth]{teszt_manual2}
-	\caption{Pygame HUD}
-	\label{fig:teszt_manual1}
-\end{figure}
-
+A vezérlés-küldő folyamat (\code{control\textunderscore sender}) a felhasználó irányítási parancsait továbbítja a Raspberry Pi felé. A folyamat a Pygame könyvtár segítségével észleli az egér- és billentyűeseményeket, majd a megfelelő parancsokat TCP csomag formájában küldi a Raspberry Pi irányába. Ezentúl felelős a HUD megjelenítéséért, amiről a felhasználó le tudja olvasni a prototípus állapotát. A folyamat illusztrációja a \ref{fig:PC_controlsender}. ábrán látható. A felhasználó számára fontos, hogy minden információt le tudjon egyből olvasni a fegyver működéséről, így ezeket a PyGame ablakon megjelenítettem (\ref{fig:teszt_manual1}. ábra). Itt látható:\\
 
 \begin{list}{$\bullet$}{}
 	\item Használható parancsok és a hozzájuk rendelt gombok
@@ -159,16 +141,38 @@ A felhasználó számára fontos, hogy minden információt le tudjon egyből ol
 	\item Működik-e a lézer
 \end{list}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics{PC_controlsender}
+	\caption{A \code{control\textunderscore sender} függvény folyamatábrája}
+	\label{fig:PC_controlsender}
+\end{figure}
+
+
+
+
+
+
+
+
 A PyGame ablak háttere pedig az éppen utolsó képkocka, amit a videó-fogadó folyamat a \code{frame\textunderscore queue}-ba tett. A vizuális megjelenítés mellett a folyamat feladata a parancsok küldése, ezek a következőek lehetnek:
 
 \begin{list}{$\bullet$}{}
 	\item Az egér mozgása esetén \code{MOVE} parancs az X és Y elmozdulási adatokkal, így irányítva a fegyver mechanikai elmozdulását.
-	\item Az bal egérgomb lenyomásakor (\code{SHOOT\textunderscore START}, a felengedésekor \code{SHOOT\textunderscore STOP}) parancsot adhatunk ki, értelemszerűen a tüzelés megkezdésére és befejezésére.
+	\item A bal egérgomb lenyomásakor (\code{SHOOT\textunderscore START}, a felengedésekor \code{SHOOT\textunderscore STOP}) parancsot adhatunk ki, értelemszerűen a tüzelés megkezdésére és befejezésére.
 	\item A billentyűzet gombjaival a lézert, (\code{LASERTOGGLE}) a biztosítást (\code{SAFETY}), illetve a működési módokat lehet állítani(\code{MANUALMODE} és \code{AUTOMODE}).
 	\item Amikor a felhasználó az ESCAPE gombot megnyomja, a folyamat küld egy leállítási parancsot (\code{STOP}), majd befejezi működését.
 \end{list}
 
 A program a működési módtól függetlenül működik, mindig ugyanazokat az üzeneteket küldi el. A kliens programtól függ, hogyan értelmezi azokat.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{teszt_manual2}
+	\caption{Pygame HUD}
+	\label{fig:teszt_manual1}
+\end{figure}
+
 
 \pagebreak
 
@@ -184,7 +188,7 @@ A Raspberry Pi-n több folyamat is fut: Egy videó-küldő, egy vezérlés-fogad
 
 \subsubsection*{Célfelismerő folyamat}
 
-A \code{target\textunderscore detection()} folyamat felelős az arcok felismeréséért, és a helyzetük meghatározásához.
+A \code{target\textunderscore detection()} folyamat felelős az arcok felismeréséért, és a helyzetük meghatározásáért.
 
 \begin{list}{$\bullet$}{}
 	\item A \code{cv2.CascadeClassifier()} függvénnyel betölti az előre betanított \textsl{haarcascade\textunderscore frontalface\textunderscore default.xml} modellt
@@ -250,7 +254,7 @@ A videó-küldő folyamat (\code{video\textunderscore sender}) a Raspberry Pi ka
 \end{figure}
 \begin{list}{$\bullet$}{}
 	\item A kamerakép feldolgozása során a kód rögzíti az egyes képkockákat, amelyeket JPEG formátumba kódol és pickle segítségével tömörít.
-	\item Amennyiben az \code{automode\textunderscore event} flag igaz, akkor beteszi a legutolsó képkockát a \code{frame\textunderscore queue}-ba, és a \code{pos\textunderscore queue} legutolsó elemei alapján húz egy téglalapot illeszt a képkockára, ezzel jelezve a talált arcot.
+	\item Amennyiben az \code{automode\textunderscore event} flag igaz, akkor beteszi a legutolsó képkockát a \code{frame\textunderscore queue}-ba, és a \code{pos\textunderscore queue} legutolsó elemei alapján egy téglalapot illeszt a képkockára, ezzel jelezve a talált arcot.
 	\item Az adatok nagy mennyiségét figyelembe véve a képkockákat kisebb csomagokra bontja, amelyekhez megfelelő fejlécek tartoznak.
 	\item A fejlécekben megtalálható a csomag azonosítója, amely segít a PC-n futó videó-fogadó folyamatnak a csomagok megfelelő sorrendbe állításában és összerakásában.
 	\item A csomagokat a megadott IP-címre és portra küldi, és minden új képkockához új azonosítót rendel.

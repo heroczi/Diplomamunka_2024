@@ -61,7 +61,7 @@ Az elsütő mechanizmusnak egy \textsl{Specna Arms M4}-ből kiszerelt gearbox-ot
 
 A hop-up kamrán belül még található egy gumi csúszófelület, amivel a kilőtt golyó perdületét lehet állítani, ezáltal pedig a fegyver effektív távolságát növelni.\\
 
-A gearbox-on belül kellett alakítanom a működésen, hogy az előbb leírt folyamatos működést biztosítani tudjam.  Az elsütőbillentyűt, a tűzkapcsolót és minden ehhez tartozó mechanikai elemet kiszereltem, illetve áthuzaloztam. Erre azért volt szükség, mert különben csak a ravasz meghúzásával lehetett volna tüzelni, ami bonyolít a rendszer megvalósításán. A gearbox belső kialakítása a \ref{fig:gearboxbele}. ábrán látható. \\
+A gearbox-on belül alakítanom kellett a működésen, hogy az előbb leírt folyamatos működést biztosítani tudjam.  Az elsütőbillentyűt, a tűzkapcsolót és minden ehhez tartozó mechanikai elemet kiszereltem, illetve áthuzaloztam. Erre azért volt szükség, mert különben csak a ravasz meghúzásával lehetett volna tüzelni, ami bonyolít a rendszer megvalósításán. A gearbox belső kialakítása a \ref{fig:gearboxbele}. ábrán látható. \\
 
 \begin{figure}[h!]
 	\centering
@@ -72,11 +72,11 @@ A gearbox-on belül kellett alakítanom a működésen, hogy az előbb leírt fo
 
 A fegyver gearbox-ot körülvevő alkatrészeiről le tudtam venni méreteket, ez alapján alakítottam ki később a 3D nyomtatott alkatrészeket. Így végeredményben egy magába zárt alkatrészem lett, amin habár mechanikus nem lehet állítani a tüzelés módját, de csupán két vezetékkel csatlakozik az elektronikához. \\
 
-A gearbox áramfogyasztását illetően találtam méréseket az internet, ahol kifejezetten az én modellemet tesztelték. Az Itteni mérések alapján arra következtettem, hogy 15 A-re méretezni az áramkört megfelelő lehet. \cite{airsoftteszt}
+A gearbox áramfogyasztását illetően találtam méréseket az interneten, ahol kifejezetten az én modellemet tesztelték. Az itteni mérések alapján arra következtettem, hogy 15 A-ra méretezni az áramkört megfelelő lehet. \cite{airsoftteszt}
 
 \subsubsection*{Motorok}
 
-A projekthez kettő \textbf{NEMA-17} léptetőmotort használok\cite{nema17}. Ezek a léptetőmotorok egy széles körben alkalmazott típusa, amelyet főként precíziós mozgatási feladatokhoz használnak, például CNC gépekben, 3D nyomtatókban, robotikai alkalmazásokban és automatizálási rendszerekben. A NEMA-17 esetében a szám a motor elülső oldalának névleges méretét jelenti, amely 1.7 hüvelyk, azaz körülbelül 42,3 mm. \\
+A projekthez kettő \textbf{NEMA-17} léptetőmotort használok\cite{nema17}. Ezek a léptetőmotoroknak egy széles körben alkalmazott típusa, amelyeket főként precíziós mozgatási feladatokhoz használnak, például CNC gépekben, 3D nyomtatókban, robotikai alkalmazásokban és automatizálási rendszerekben. A NEMA-17 esetében a szám a motor elülső oldalának névleges méretét jelenti, amely 1.7 hüvelyk, azaz körülbelül 42,3 mm. \\
 
  A léptetőmotorok a mozgásukat apró, egyenlő lépésekre osztják, így lehetővé téve a precíz pozícionálást és sebességszabályozást. A NEMA-17 léptetőmotor tipikusan kétfázisú bipoláris motor, amely négy vezetékes tekercseléssel rendelkezik. Minden lépés során a motor egy adott szöggel fordul el, ami az adott motor típusától és felépítésétől függően tipikusan 1.8 fok, így teljes fordulat esetén 200 lépésre van szükség.\\
 
@@ -140,7 +140,7 @@ A következő alösszeállítás a \textbf{tár} volt, amely a gearbox ház bal 
 	\label{fig:mech_tar}
 \end{figure}
 
-Ez a kialakítás végül nem volt sikeres, ugyanis a golyók nagyon könnyedén elakadtak, gyakorlatilag egyszer sem sikerült lőni vele. Újragondolás után egy hasonló megoldást használtam, ám a golyók egyesével sorakoznak a tárban, ez láthat a \ref{fig:mech_tar2}. ábrán.
+Ez a kialakítás végül nem volt sikeres, ugyanis a golyók nagyon könnyedén elakadtak, gyakorlatilag egyszer sem sikerült lőni vele. Újragondolás után egy hasonló megoldást használtam, ám a golyók egyesével sorakoznak a tárban, ez látható a \ref{fig:mech_tar2}. ábrán.
 
 
 
@@ -179,7 +179,7 @@ Kétséges rész volt a \textbf{motor} rögzítése, ugyanis nagy szükség van 
 	\label{fig:mech_motorbeepites}
 \end{figure}
 
-A kereten kaptak helyet a végálláskapcsolók is, amivel a rendszer indításkor kalibrálható. A egyik a vízszintes tengely nagy fogaskerekét, a másik pedig a függőleges tengely központi eleméhez viszonyít.
+A kereten kaptak helyet a végálláskapcsolók is, amivel a rendszer indításkor kalibrálható. A egyik a vízszintes tengely nagy fogaskerekéhez, a másik pedig a függőleges tengely központi eleméhez viszonyít.
 
 
 \begin{figure}
@@ -200,9 +200,9 @@ A kereten kaptak helyet a végálláskapcsolók is, amivel a rendszer indításk
 
 \subsection{Függőleges tengely elemei}
 
-Utolsó lépésként megterveztem a függőleges tengely mozgatásáért felelős elemeket. ezek kialakítása a \ref{fig:mech_alsoreszek}. ábrán látható. A narancssárga alakrész a központi elem, amelynek feladata a csapágy támasztása és a motor rögzítése. A motor vezetékei, valamint az elektronikából kilógó többi kábel ennek a közepén fut keresztül. A csapágy egyik fele ehhez az elemhez van rögzítve, a másik pedig  az ábrán kékkel ábrázolt alkatrészhez. Erre a kék elemere került rögzítésre a belsőfogazású fogaskerék is. \\ 
+Utolsó lépésként megterveztem a függőleges tengely mozgatásáért felelős elemeket. ezek kialakítása a \ref{fig:mech_alsoreszek}. ábrán látható. A narancssárga alakrész a központi elem, amelynek feladata a csapágy támasztása és a motor rögzítése. A motor vezetékei, valamint az elektronikából kilógó többi kábel ennek a közepén fut keresztül. A csapágy egyik fele ehhez az elemhez van rögzítve, a másik pedig  az ábrán kékkel ábrázolt alkatrészhez. Erre a kék elemre került rögzítésre a belsőfogazású fogaskerék is. \\ 
 
-A sárga alkatrész a talapzat része. Ez a legnagyobb kiterjedésű elem az egész modellben. Hogy elkerüljem a támaszanyag használatát, a csavarok fejeinek felfekvő felületeti egy külön alkatrész ragasztásával oldottam meg. Ez a talp 45 fokos belső felületére illeszkedik, és ragasztással kerül rögzítésre. A 4 oldalán kialakításra kerültek csatlakozó felületek, ahol különböző lábak helyezhetők az eszközre.
+A sárga alkatrész a talapzat része. Ez a legnagyobb kiterjedésű elem az egész modellben. Hogy elkerüljem a támaszanyag használatát, a csavarok fejeinek felfekvő felületeit egy külön alkatrész ragasztásával oldottam meg. Ez a talp 45 fokos belső felületére illeszkedik, és ragasztással kerül rögzítésre. A 4 oldalán kialakításra kerültek csatlakozó felületek, ahol különböző lábak helyezhetők az eszközre.
 
 \begin{figure}[h!]
 	\centering
@@ -230,7 +230,7 @@ A vízszintes tengely nagy fogaskereke a gearbox ház tengelyére lett erősítv
 	\label{fig:mech_fogpar2}
 \end{figure}
 
-Mind a két fogaskerékpár kisebb közvetlenül a motor tengelyére lett rögzítve, egy acél rögzítőgyűrűvel. Ennek kialakítása a \ref{fig:mech_alsoreszek}. ábra bal oldalán látható.
+Mind a két fogaskerékpár kisebb tagja közvetlenül a motor tengelyére lett rögzítve, egy acél rögzítőgyűrűvel. Ennek kialakítása a \ref{fig:mech_alsoreszek}. ábra bal oldalán látható.
 
 \pagebreak
 
@@ -253,7 +253,7 @@ A használt nyomtató bizonyos tulajdonságai meghatározták a tervezett alkatr
 
 \begin{itemize}
 	\item \textbf{Nyomtatási térfogat:} 256 × 256 × 256 mm, amely elég nagy volt a legtöbb általam tervezett elem számára.
-	\item \textbf{Nyomtatási pontosság:} Az nyomtató rétegvastagsága 0,1–0,4 mm között állítható. Főleg a nyomtatott fogaskerekeknél volt fontos a megfelelő pontosság, de kielégítő eredmény született.
+	\item \textbf{Nyomtatási pontosság:} A nyomtató rétegvastagsága 0,1–0,4 mm között állítható. Főleg a nyomtatott fogaskerekeknél volt fontos a megfelelő pontosság, de kielégítő eredmény született.
 	\item \textbf{Használható filamentek:} A nyomtató különféle anyagokkal kompatibilis, beleértve a PLA-t, ABS-t, PETG-t és TPU-t. Én a PLA mellett döntöttem, ugyanis nem szükséges a pl. ABS által nyújtott minőség, ellenben a költséghatékonyság igen.
 \end{itemize}
 
@@ -275,7 +275,7 @@ Ebben a fejezetben leírom az összeszerelés menetét. Először az elektronik�
 	\item Ráhúztam a motorok tengelyére a kisfogaskerekeket. 
 	\item Rácsavaroztam a távtartókat a Raspberry Pi-ra, a Stepper Motor HAT-ra és a DCDC konverterre, majd mind a hármat rácsavaroztam a 3D nyomtatott konzolra. Félretettem az összeállítást.
 	\item Összeraktam a torony elemeit, a gearboxot, a tartó elemét és a két végén lévő elemeket. Összecsavaroztam a tervezett furatokon, majd ezt az összeállítást is félretettem. 
-	\item Összeállítottam a prototípus 4 lábát és az ezeket tartó hengert. A lábak talpára gumi elemeket ragasztottam, hogy minél stabilabban legyen a rendszer. Félretettem száradni.
+	\item Összeállítottam a prototípus 4 lábát és az ezeket tartó hengert. A lábak talpára gumi elemeket ragasztottam, hogy minél stabilabb legyen a rendszer. Félretettem száradni.
 	\item Ezután összecsavaroztam a nagy csapágyhoz csatlakozó alkatrészeket, illetve a DT-1000 elemhez rögzítettem az egyik motort. A DT-2000 elemhez ragasztottam a hozzá tartozó fogaskereket.
 	\item A prototípus talpát összecsavaroztam az előző pontban lévő elemmel úgy, hogy a keretet is tartsák a csavarok.
 	\item A kerethez rögzítettem a megfelelő motort, beragasztottam a relét és a végálláskapcsolókat is. Kábelkötözővel rögzítettem az elektronikai elemek konzolját a kerethez.

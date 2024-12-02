@@ -35,7 +35,7 @@ A szoftver rendszere két alegységből áll, a Raspberry Pi-n \textbf{beágyazo
 
 A Raspberry Pi-n futó szoftver felelős a léptetőmotorok mozgatásáért, a felhasználó parancsainak fogadásáért, a célpont felismeréséért, illetve a  kamera képének továbbításáért a PC felé. Ezeket a folyamatokat jól elkülönülő modulokra bontottam, amelyek egyszerre futnak külön szálakon. A különböző folyamatok közötti kommunikációra használtam megosztott erőforrásokat, állapotjelzőket és queue-kat. A kézi vezérlés és az automata működés között is tettem különbséget, a szoftver bizonyos részei között is megosztott változókkal lehet választani. \\
 
-A PC-n futó szoftver felelős a Raspberry által küldött videó dekódolására, és megjelenítésére a \textsl{HUD}-on. A HUD-on szerepelnek még fontos állapotjelzők, pl. hogy éppen melyik működési módban van a rendszer, vagy hogy be van-e biztosítva a fegyver. Emellett A szoftvernek fel kell dolgozni a felhasználótól kapott parancsokat is, és tovább kel küldenie a Raspberry Pi felé. Ez a program is két külön szálon futó alegységből áll, amelyek megosztott erőforrásokkal kommunikálnak egymással. 
+A PC-n futó szoftver felelős a Raspberry által küldött videó dekódolásáért és megjelenítéséért a \textsl{HUD}-on. A HUD-on szerepelnek még fontos állapotjelzők, pl. hogy éppen melyik működési módban van a rendszer, vagy hogy be van-e biztosítva a fegyver. Emellett a szoftvernek fel kell dolgozni a felhasználótól kapott parancsokat is, és tovább kell küldenie a Raspberry Pi felé. Ez a program is két külön szálon futó alegységből áll, amelyek megosztott erőforrásokkal kommunikálnak egymással. 
 
 \pagebreak
 
@@ -71,7 +71,7 @@ A rendszer működéséhez szükséges szoftverfejlesztés során a következő 
 \begin{list}{$\bullet$}{}
 	\item \textbf{Valós idejű feldolgozás:}  A számítógépes látás szoftverének valós időben kell elemeznie a kamerák által közvetített adatokat, felismerve a célpontokat és kiszámítva a mozgás irányát. A célzási és lövési döntések gyors és hatékony adatfeldolgozást igényelnek.
 	\item \textbf{Biztonságos működés:} A rendszernek rendelkeznie kell olyan szoftveres biztonsági funkciókkal, amelyek megakadályozzák a véletlen tüzelést. Ez magában foglalja a lövési engedélykérés mechanizmusát és a manuális vészleállítás lehetőségét.
-	\item \textbf{Felhasználói interfész:} Az felhasználónak egyszerű és intuitív felhasználói felületet kellett biztosítani, amelyen keresztül könnyedén vezérelheti a rendszert, illetve áttekintheti a célpontok adatait és a kamera képét. A felületnek támogatnia kell a kézi irányítást és a lövési parancsok kiadását.
+	\item \textbf{Felhasználói interfész:} A felhasználónak egyszerű és intuitív felhasználói felületet kellett biztosítani, amelyen keresztül könnyedén vezérelheti a rendszert, illetve áttekintheti a célpontok adatait és a kamera képét. A felületnek támogatnia kell a kézi irányítást és a lövési parancsok kiadását.
 \end{list}
 
 

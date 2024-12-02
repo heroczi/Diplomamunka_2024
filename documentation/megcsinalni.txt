@@ -41,15 +41,12 @@ modell nevekkel csinálni valamit
 x képekre hivatkozás
 x irodalomjegyzéket sorba rakni/formázni
 x \code{} szürke mennyire látszik?
+x kpfonts?
+x formázni mi legyen félkövér/dőlt, egységesíteni a raspberryt
+x Köszönetnyilvánítás
 
-
-
-
-formázni mi legyen félkövér/dőlt, egységesíteni a raspberryt
-
-kpfonts?
 átnézni mindent
-Köszönetnyilvánítás
+írni kell a csávónak a zvről
 
 Háttér FFFFFF
 Függvény: 795E26

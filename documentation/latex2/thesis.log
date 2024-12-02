@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2024.11.25)  25 NOV 2024 10:41
+This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2024.11.25)  2 DEC 2024 11:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1957,6 +1957,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
  []
 
 
+Underfull \hbox (badness 1383) in paragraph at lines 13--14
+\TU/KpLight(1)/m/n/12 mind a beágyazott vezérlő szoftvert,mind a számítógépen f
+utó felhasználói
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
@@ -1967,9 +1973,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
  []
 
 
-Underfull \hbox (badness 2529) in paragraph at lines 17--18
-[]\TU/KpLight(1)/m/n/12 Úgy gondolom, a téma interdiszciplináris jellegét tekin
-tve jól illik a me-
+Underfull \hbox (badness 2564) in paragraph at lines 17--18
+\TU/KpLight(1)/m/n/12 ronikai tanulmányaimba, ugyanis egyaránt érinti a \TU/KpL
+ight(1)/m/sl/12 műszaki mechanika\TU/KpLight(1)/m/n/12 , a
  []
 
 
@@ -2375,9 +2381,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
 
 [19]
-Underfull \hbox (badness 2197) in paragraph at lines 79--80
-\TU/KpLight(1)/m/n/12 alkalmazásokban és automatizálási rendszerekben. A NEMA-1
-7 esetében a
+Underfull \hbox (badness 1708) in paragraph at lines 79--80
+\TU/KpLight(1)/m/n/12 toroknak egy széles körben alkalmazott típusa, amelyeket 
+főként precíziós
  []
 
 
@@ -2492,10 +2498,6 @@ File: ./figures/mech_bambu.png Graphic file (type bmp)
 
 
 [28]
-
-LaTeX Warning: Reference `sec:slicerbeallitasok' on page 29 undefined on input 
-line 260.
-
 File: ./figures/mech_bambustudio1.png Graphic file (type bmp)
 <./figures/mech_bambustudio1.png>
 
@@ -2766,22 +2768,20 @@ File: ./figures/PC_controlsender.pdf Graphic file (type pdf)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: ./figures/teszt_manual2.png Graphic file (type bmp)
-<./figures/teszt_manual2.png>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 
 
 [44]
 
 [45]
+File: ./figures/teszt_manual2.png Graphic file (type bmp)
+<./figures/teszt_manual2.png>
+
 
 [46]
 File: ./figures/RPI_main.pdf Graphic file (type pdf)
 <use ./figures/RPI_main.pdf>
 
-Overfull \hbox (6.82759pt too wide) in paragraph at lines 180--181
+Overfull \hbox (6.82759pt too wide) in paragraph at lines 184--185
  [][] 
  []
 
@@ -2793,7 +2793,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 [47]
-Underfull \hbox (badness 1502) in paragraph at lines 212--213
+Underfull \hbox (badness 1502) in paragraph at lines 216--217
 []\TU/KpLight(1)/m/n/12 A parancs típusa alapján ([], [], [], [],
  []
 
@@ -3115,10 +3115,6 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: F7B6A636BA22D85D4B00A3AE80B59E72;7606.
  )
@@ -3126,10 +3122,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  36725 strings out of 409029
  737742 string characters out of 5754101
- 1244054 words of memory out of 5000000
+ 1244108 words of memory out of 5000000
  58732 multiletter control sequences out of 15000+600000
  564167 words of font info for 126 fonts, out of 8000000 for 9000
  1352 hyphenation exceptions out of 8191
- 120i,17n,147p,1462b,2768s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 120i,17n,147p,1420b,2768s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on thesis.pdf (73 pages).
