@@ -26,25 +26,24 @@
 \select@language {magyar} \contentsline {chapter}{\numberline {5}Hardvertervezés}{32}{chapter.5}%
 \select@language {magyar} \contentsline {section}{\numberline {5.1}Áramköri tervezés}{32}{section.5.1}%
 \select@language {magyar} \contentsline {section}{\numberline {5.2}Elektronikai alkatrészek}{34}{section.5.2}%
-\select@language {magyar} \contentsline {section}{\numberline {5.3}Gyártás, forrasztás}{37}{section.5.3}%
-\select@language {magyar} \contentsline {chapter}{\numberline {6}Szoftverfejlesztés}{38}{chapter.6}%
-\select@language {magyar} \contentsline {section}{\numberline {6.1}Használt Python modulok, eszközök}{38}{section.6.1}%
-\select@language {magyar} \contentsline {section}{\numberline {6.2}Gépi látás}{40}{section.6.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}Template matching }{40}{subsection.6.2.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2.2}Feature Matching }{41}{subsection.6.2.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2.3}Target Tracking }{41}{subsection.6.2.3}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2.4}Haar cascade }{42}{subsection.6.2.4}%
-\select@language {magyar} \contentsline {section}{\numberline {6.3}A szoftver működése}{43}{section.6.3}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.3.1}A PC-n futó program működése}{43}{subsection.6.3.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {6.3.2}A Raspberry Pi-n futó program működése}{47}{subsection.6.3.2}%
-\select@language {magyar} \contentsline {chapter}{\numberline {7}Tesztelés}{53}{chapter.7}%
-\select@language {magyar} \contentsline {section}{\numberline {7.1}Elektronikai alkatrészek tesztje}{53}{section.7.1}%
-\select@language {magyar} \contentsline {section}{\numberline {7.2}Képfelismerő algoritmusok tesztje}{54}{section.7.2}%
-\select@language {magyar} \contentsline {section}{\numberline {7.3}Éles teszt}{57}{section.7.3}%
-\select@language {magyar} \contentsline {chapter}{\numberline {8}Hibák, észrevételek}{58}{chapter.8}%
-\select@language {magyar} \contentsline {chapter}{\numberline {9}Továbbfejlesztési lehetőségek}{59}{chapter.9}%
-\select@language {magyar} \contentsline {chapter}{\numberline {10}Konklúziók}{60}{chapter.10}%
-\select@language {magyar} \contentsline {chapter}{Köszönetnyilvánítás}{61}{chapter*.90}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{62}{chapter*.90}%
-\select@language {magyar} \contentsline {chapter}{Függelék}{64}{appendix*.92}%
-\select@language {magyar} \contentsline {section}{\numberline {F.1}A Bambu Slicer beállításai}{64}{section.F.1}%
+\select@language {magyar} \contentsline {chapter}{\numberline {6}Szoftverfejlesztés}{37}{chapter.6}%
+\select@language {magyar} \contentsline {section}{\numberline {6.1}Használt Python modulok, eszközök}{37}{section.6.1}%
+\select@language {magyar} \contentsline {section}{\numberline {6.2}Gépi látás}{39}{section.6.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}Template matching }{39}{subsection.6.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.2}Feature Matching }{40}{subsection.6.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.3}Target Tracking }{40}{subsection.6.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.4}Haar cascade }{41}{subsection.6.2.4}%
+\select@language {magyar} \contentsline {section}{\numberline {6.3}A szoftver működése}{42}{section.6.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.3.1}A PC-n futó program működése}{42}{subsection.6.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {6.3.2}A Raspberry Pi-n futó program működése}{46}{subsection.6.3.2}%
+\select@language {magyar} \contentsline {chapter}{\numberline {7}Tesztelés}{52}{chapter.7}%
+\select@language {magyar} \contentsline {section}{\numberline {7.1}Elektronikai alkatrészek tesztje}{52}{section.7.1}%
+\select@language {magyar} \contentsline {section}{\numberline {7.2}Képfelismerő algoritmusok tesztje}{53}{section.7.2}%
+\select@language {magyar} \contentsline {section}{\numberline {7.3}Éles teszt}{56}{section.7.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {8}Hibák, észrevételek}{57}{chapter.8}%
+\select@language {magyar} \contentsline {chapter}{\numberline {9}Továbbfejlesztési lehetőségek}{58}{chapter.9}%
+\select@language {magyar} \contentsline {chapter}{\numberline {10}Konklúziók}{59}{chapter.10}%
+\select@language {magyar} \contentsline {chapter}{Köszönetnyilvánítás}{60}{chapter*.90}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{61}{chapter*.90}%
+\select@language {magyar} \contentsline {chapter}{Függelék}{63}{appendix*.92}%
+\select@language {magyar} \contentsline {section}{\numberline {F.1}A Bambu Slicer beállításai}{63}{section.F.1}%
